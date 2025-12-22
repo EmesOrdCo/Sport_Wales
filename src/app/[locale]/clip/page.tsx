@@ -20,6 +20,8 @@ export default function CLIPPage() {
         </svg>
       ),
       color: 'bg-[#3B82F6]',
+      href: '/clip/communications-and-digital',
+      requiresLogin: false,
     },
     {
       title: isWelsh ? 'Taclo Digidol' : 'Tackle Digital',
@@ -32,6 +34,7 @@ export default function CLIPPage() {
         </svg>
       ),
       color: 'bg-[#10B981]',
+      requiresLogin: true,
     },
     {
       title: isWelsh ? 'Mewnwelediadau, Ymchwil a Materion Cyhoeddus' : 'Insights, Research and Public Affairs',
@@ -44,6 +47,7 @@ export default function CLIPPage() {
         </svg>
       ),
       color: 'bg-[#8B5CF6]',
+      requiresLogin: true,
     },
     {
       title: isWelsh ? 'Datblygiad Athletwyr' : 'Athlete Development',
@@ -56,6 +60,7 @@ export default function CLIPPage() {
         </svg>
       ),
       color: 'bg-[#F59E0B]',
+      requiresLogin: true,
     },
   ];
 
@@ -82,7 +87,7 @@ export default function CLIPPage() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              {isWelsh ? 'Adnodd Dysgu' : 'Learning Resource'}
+              CLIP
             </span>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold !text-white mb-6">
               {isWelsh ? 'Croeso i CLIP' : 'Welcome to CLIP'}
@@ -93,25 +98,21 @@ export default function CLIPPage() {
                 : 'A Sport Wales Learning Resource - your gateway to learning, development and networking in the sports sector.'}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="https://www.sport.wales/clip/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/clip/login"
                 className="btn btn-primary"
               >
                 {isWelsh ? 'Mewngofnodi i CLIP' : 'Login to CLIP'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
-                href="https://www.sport.wales/clip/"
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                href="/clip/login"
                 className="btn btn-secondary border-white/30 text-white hover:bg-white/10"
               >
                 {isWelsh ? 'Cofrestru ar gyfer CLIP' : 'Register for CLIP'}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -201,31 +202,57 @@ export default function CLIPPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
-            {learningThemes.map((theme, index) => (
-              <a
-                key={index}
-                href="https://www.sport.wales/clip/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#6366F1] hover:shadow-xl transition-all duration-300"
-              >
-                <div className={`w-14 h-14 rounded-xl ${theme.color} flex items-center justify-center text-white mb-6 group-hover:scale-105 transition-transform`}>
-                  {theme.icon}
+            {learningThemes.map((theme, index) => {
+              const CardContent = (
+                <>
+                  <div className={`w-14 h-14 rounded-xl ${theme.color} flex items-center justify-center text-white mb-6`}>
+                    {theme.icon}
+                  </div>
+                  <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                    {theme.title}
+                  </h3>
+                  <p className="text-[#64748B] mb-4">
+                    {theme.description}
+                  </p>
+                  {theme.requiresLogin ? (
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F1F5F9] text-sm font-medium text-[#64748B]">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                      {isWelsh ? 'Mewngofnodi i weld cynnwys' : 'Login to view content'}
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#3B82F6]">
+                      {isWelsh ? 'Archwilio' : 'Explore'}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  )}
+                </>
+              );
+
+              if (theme.href) {
+                return (
+                  <Link
+                    key={index}
+                    href={theme.href}
+                    className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#3B82F6] hover:shadow-xl transition-all duration-300 block"
+                  >
+                    {CardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div
+                  key={index}
+                  className="p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0]"
+                >
+                  {CardContent}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#6366F1] transition-colors">
-                  {theme.title}
-                </h3>
-                <p className="text-[#64748B] mb-4">
-                  {theme.description}
-                </p>
-                <span className="inline-flex items-center text-sm font-semibold text-[#6366F1]">
-                  {isWelsh ? 'Archwilio' : 'Explore'}
-                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </a>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

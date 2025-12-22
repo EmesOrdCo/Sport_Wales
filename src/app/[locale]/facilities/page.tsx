@@ -7,38 +7,35 @@ export default function FacilitiesPage() {
   const locale = useLocale();
   const isWelsh = locale === 'cy';
 
-  const facilities = [
+  const locations = [
     {
       name: isWelsh ? 'Canolfan Genedlaethol Chwaraeon Cymru' : 'Sport Wales National Centre',
       location: isWelsh ? 'Caerdydd' : 'Cardiff',
+      address: 'Sophia Garden Cardiff CF11 9SW',
+      email: 'nationalcentre@sport.wales',
+      phone: '0300 3003123',
       description: isWelsh
-        ? 'Mae Canolfan Genedlaethol Chwaraeon Cymru yn darparu cyfleusterau chwaraeon o safon fyd-eang ar gyfer athletwyr, clybiau a\'r gymuned. Mae\'r ganolfan yn cynnwys campfa, pwll nofio, neuaddau chwaraeon, ac ystafelloedd cyfarfod.'
-        : 'The Sport Wales National Centre provides world-class sports facilities for athletes, clubs and the community. The centre includes a gym, swimming pool, sports halls, and meeting rooms.',
-      features: [
-        isWelsh ? 'Pwll nofio 50m' : '50m swimming pool',
-        isWelsh ? 'Campfa o\'r radd flaenaf' : 'State-of-the-art gym',
-        isWelsh ? 'Neuaddau chwaraeon amlbwrpas' : 'Multi-purpose sports halls',
-        isWelsh ? 'Ystafelloedd cyfarfod a hyfforddi' : 'Meeting and training rooms',
-      ],
-      color: 'bg-[#B91C3C]',
-      bookingInfo: isWelsh
-        ? 'Mae cyfleusterau\'r Ganolfan Genedlaethol ar gael i\'w llogi ar gyfer digwyddiadau, hyfforddiant a gwersylloedd. Cysylltwch â ni am ragor o wybodaeth.'
-        : 'National Centre facilities are available for hire for events, training and camps. Contact us for more information.',
+        ? 'Wedi\'i leoli yn Sophia Gardens, mae\'r Ganolfan Genedlaethol yng Nghaerdydd yn gartref Chwaraeon Cymru. Mae\'n ganolfan o chwaraeon perfformiad uchel a chwaraeon cymunedol gyda gwasanaethau a chyfleusterau ar gyfer athletwyr Cymreig blaenllaw, swyddfeydd ar gyfer cyrff llywodraethu cenedlaethol, ac ystod o gyfleusterau mynediad cyhoeddus.'
+        : 'Based in Sophia Gardens, the National Centre in Cardiff is the home of Sport Wales. A hub of high performance and community sport the centre has services and facilities for top Welsh athletes, offices for national governing bodies, and a range of public access facilities.',
     },
     {
       name: 'Plas Menai',
       location: isWelsh ? 'Gogledd Cymru' : 'North Wales',
+      address: isWelsh ? 'Canolfan Awyr Agored Genedlaethol Chwaraeon Cymru, Caernarfon Gwynedd LL55 1UE' : 'Sport Wales National Outdoor Centre, Caernarfon Gwynedd LL55 1UE',
+      phone: '0300 300 3112',
       description: isWelsh
-        ? 'Os yw antur awyr agored yn eich denu, mae gan Plas Menai y cyfan. Dyma\'r Ganolfan Awyr Agored Genedlaethol i Gymru ac mae wedi\'i lleoli ar lannau Afon Menai yng Ngogledd Cymru.'
-        : "If it's outdoor adventure you're after, Plas Menai has got it all. It is The National Outdoor Centre for Wales and is situated on the banks of the Menai Strait in North Wales.",
-      features: [
-        isWelsh ? 'Hwylio a chaiacio' : 'Sailing and kayaking',
-        isWelsh ? 'Dringo creigiau' : 'Rock climbing',
-        isWelsh ? 'Beicio mynydd' : 'Mountain biking',
-        isWelsh ? 'Llety ar y safle' : 'On-site accommodation',
-      ],
-      color: 'bg-[#14B8A6]',
+        ? 'Mae Gogledd Cymru yn gartref i Plas Menai, y Ganolfan Awyr Agored Genedlaethol i Gymru sydd wedi\'i lleoli\'n berffaith ar gyfer yr antur awyr agored gorau. Wedi\'i leoli ar lannau Afon Menai, yn gyfleus rhwng Bangor a Chaernarfon, ar arfordir Gogledd Cymru. Mae\'r Ganolfan dim ond taith fer mewn car o Barc Cenedlaethol Eryri ac mae\'n edrych dros Ynys Môn.'
+        : 'North Wales is home to Plas Menai, the National Outdoor Centre for Wales is perfectly situated for the ultimate outdoor adventure. Situated on the banks of the Menai Strait, conveniently placed between Bangor and Caernarfon, on the North Wales coast. The Centre is only a short drive from the Snowdonia National Park and overlooks the Isle of Anglesey.',
       externalUrl: 'https://www.plasmenai.co.uk/',
+    },
+    {
+      name: isWelsh ? 'Swyddfa Ranbarthol Gogledd Ddwyrain' : 'North East Regional Office',
+      location: isWelsh ? 'Glannau Dyfrdwy' : 'Deeside',
+      address: isWelsh ? 'Canolfan Hamdden Glannau Dyfrdwy, Ffordd Caer, Gorllewin Queen Ferry, Glannau Dyfrdwy CH5 1SA' : 'Deeside Leisure Centre Chester Road West Queen ferry Deeside CH5 1SA',
+      phone: '0300 3003103',
+      description: isWelsh
+        ? 'Swyddfa ranbarthol Chwaraeon Cymru yng Ngogledd Ddwyrain Cymru.'
+        : 'Sport Wales regional office in North East Wales.',
     },
   ];
 
@@ -56,25 +53,39 @@ export default function FacilitiesPage() {
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              {isWelsh ? 'Ein Cyfleusterau' : 'Our Facilities'}
+              {isWelsh ? 'Lleoliad a Chysylltiadau' : 'Location and Contacts'}
             </span>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold text-white mb-6">
-              {isWelsh ? 'Cyfleusterau o Safon Fyd-eang' : 'World-Class Facilities'}
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold !text-white mb-6">
+              {isWelsh ? 'Lleoliad a Chysylltiadau' : 'Location and Contacts'}
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
+            <p className="text-xl text-white/90 leading-relaxed mb-6">
               {isWelsh
-                ? 'O\'r Ganolfan Genedlaethol yng Nghaerdydd i Plas Menai yng Ngogledd Cymru, rydym yn darparu cyfleusterau rhagorol ar gyfer chwaraeon yng Nghymru.'
-                : 'From the National Centre in Cardiff to Plas Menai in North Wales, we provide outstanding facilities for sport in Wales.'}
+                ? 'Mae gennym tua 160 o staff ledled Cymru gyda\'n prif swyddfa yng Nghaerdydd a\'n swyddfeydd rhanbarthol yn Glannau Dyfrdwy a Chaernarfon.'
+                : 'We have around 160 staff based across Wales with our head office in Cardiff and our regional offices in Deeside and Caernarfon.'}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn btn-primary">
-                {isWelsh ? 'Cysylltwch i Archebu' : 'Contact to Book'}
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+            <p className="text-lg text-white/80 leading-relaxed mb-4">
+              {isWelsh
+                ? 'Mae Chwaraeon Cymru yn berchen ac yn gweithredu dwy ganolfan genedlaethol yng Nghymru – un yn y gogledd ac un yn y de.'
+                : 'Sport Wales owns and operates two national centres in Wales – one in the north and one in the south.'}
+            </p>
+            <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <p className="text-white/90 text-sm">
+                {isWelsh
+                  ? 'Ar gyfer ymholiadau sy\'n ymwneud ag adrannau a staff Chwaraeon Cymru, ffoniwch '
+                  : 'For enquiries related to Sport Wales departments and staff, call '}
+                <a href="tel:03003003111" className="font-semibold text-white hover:text-[#DC2626] transition-colors">
+                  0300 3003111
+                </a>
+                {isWelsh ? '.' : '.'}
+              </p>
+              <p className="text-white/90 text-sm mt-2">
+                {isWelsh
+                  ? 'Ar gyfer pob ymholiad ganolfan arall gweler y manylion isod.'
+                  : 'For all other centre enquiries see the details below.'}
+              </p>
             </div>
           </div>
         </div>
@@ -87,118 +98,168 @@ export default function FacilitiesPage() {
         </div>
       </section>
 
-      {/* Facilities Grid */}
+      {/* Getting To Sport Wales National Centre */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="space-y-12 lg:space-y-16">
-            {facilities.map((facility, index) => (
-              <div 
-                key={index}
-                className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
-              >
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className={`w-14 h-14 rounded-xl ${facility.color} flex items-center justify-center text-white mb-6`}>
-                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  </div>
-                  <span className="inline-block text-[#64748B] text-sm font-medium mb-2">
-                    {facility.location}
-                  </span>
-                  <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-                    {facility.name}
-                  </h2>
-                  <p className="text-lg text-[#334155] mb-6">
-                    {facility.description}
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Cyrraedd Canolfan Genedlaethol Chwaraeon Cymru' : 'Getting To Sport Wales National Centre'}
+            </h2>
+
+            {/* Active Travel */}
+            <div className="mb-8">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                {isWelsh ? 'Teithio Gweithredol' : 'Active Travel'}
+              </h3>
+              <p className="text-[#334155] mb-3">
+                {isWelsh
+                  ? 'Gallwch ddod o hyd i wybodaeth ac adnoddau i helpu cynllunio eich taith ar feic, trên, bws neu gerdded '
+                  : 'You can find information and resources to help plan your journey by bike, train, bus or walking '}
+                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                  {isWelsh ? 'yma' : 'here'}
+                </a>
+                .
+              </p>
+              <p className="text-[#334155] mb-3">
+                {isWelsh
+                  ? 'Mae lleoedd parcio beiciau wrth brif fynedfa\'r ganolfan.'
+                  : 'There are locations for cycle parking at the main entrance of the centre.'}
+              </p>
+              <p className="text-[#334155]">
+                {isWelsh
+                  ? 'Mae llwybrau beicio ym mhob cyfeiriad. Mae gwefan Cyngor Caerdydd yn cynnwys adnoddau i helpu cynllunio eich taith.'
+                  : 'There are cycle trails in each direction. The Cardiff Council website has resources to help plan your journey.'}
+                {' '}
+                <a href="https://www.cardiff.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                  {isWelsh ? 'Gwefan Cyngor Caerdydd' : 'Cardiff Council website'}
+                </a>
+              </p>
+            </div>
+
+            {/* Train */}
+            <div className="mb-8">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                {isWelsh ? 'Trên' : 'Train'}
+              </h3>
+              <p className="text-[#334155]">
+                {isWelsh
+                  ? 'Mae gwasanaethau trên yn rhedeg o Orsaf Ganolog Caerdydd, mae\'r orsaf 15 munud o gerdded o\'r Ganolfan Genedlaethol. Gellir dod o hyd i ragor o wybodaeth ar '
+                  : 'Train services run from Cardiff Central Station, the station is a 15 minute walk from the National Centre. More information can be found on '}
+                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                  {isWelsh ? 'gwefan Traveline Cymru' : 'Traveline Cymru\'s website'}
+                </a>
+                .
+              </p>
+            </div>
+
+            {/* Car Parking */}
+            <div>
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                {isWelsh ? 'Parcio Car' : 'Car Parking'}
+              </h3>
+              <p className="text-[#334155]">
+                {isWelsh
+                  ? 'Mae maes parcio gyda pharcio anableddau o flaen Canolfan Genedlaethol Chwaraeon Cymru, mae parcio ar sail cyntaf i\'r cyntaf ac yn rhad ac am ddim wrth ddefnyddio\'r ganolfan.'
+                  : 'There is a car park with disabled parking at the front of Sport Wales National Centre, parking is on a first come first serve basis and is free while using the centre.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12 text-center">
+            {isWelsh ? 'Ein Lleoliadau' : 'Our Locations'}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {locations.map((location, index) => (
+              <div key={index} className="bg-white rounded-2xl p-6 lg:p-8 border border-[#E2E8F0] hover:shadow-lg transition-all duration-300">
+                <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-3">
+                  {location.name}
+                </h3>
+                <p className="text-[#64748B] text-sm font-medium mb-4">
+                  {location.location}
+                </p>
+                <div className="space-y-3 mb-6">
+                  <p className="text-[#334155] text-sm">
+                    {location.address}
                   </p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {facility.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3">
-                        <div className={`w-6 h-6 rounded-full ${facility.color}/10 flex items-center justify-center`}>
-                          <svg className={`w-4 h-4 ${facility.color === 'bg-[#B91C3C]' ? 'text-[#B91C3C]' : 'text-[#14B8A6]'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                        <span className="text-[#334155]">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {facility.externalUrl ? (
-                    <a
-                      href={facility.externalUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-primary"
-                    >
-                      {isWelsh ? 'Ymweld â\'r wefan' : 'Visit website'}
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
+                  {location.email && (
+                    <a href={`mailto:${location.email}`} className="block text-[#B91C3C] text-sm hover:underline">
+                      {location.email}
                     </a>
-                  ) : (
-                    <Link href="/contact" className="btn btn-primary">
-                      {isWelsh ? 'Cysylltwch i Archebu' : 'Contact to Book'}
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
                   )}
+                  <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="block text-[#B91C3C] text-sm hover:underline font-medium">
+                    {location.phone}
+                  </a>
                 </div>
-
-                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <div className={`aspect-[4/3] rounded-2xl ${facility.color} p-8 flex items-center justify-center`}>
-                    <div className="text-center text-white">
-                      <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                      <p className="text-xl font-display font-bold">{facility.name}</p>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-[#64748B] text-sm mb-6 leading-relaxed">
+                  {location.description}
+                </p>
+                {location.externalUrl ? (
+                  <a
+                    href={location.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-sm w-full"
+                  >
+                    {isWelsh ? 'Ymweld â\'r wefan' : 'Visit website'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                ) : (
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary btn-sm w-full"
+                  >
+                    {isWelsh ? 'Gweld ar Google Maps' : 'Find on Google Maps'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </a>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Booking Info */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+      {/* Media Enquiries */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Archebu' : 'Booking'}
-            </span>
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Archebwch Ein Cyfleusterau' : 'Book Our Facilities'}
+              {isWelsh ? 'Ar gyfer ymholiadau cyfryngau' : 'For media enquiries'}
             </h2>
-            <p className="text-lg text-[#64748B] mb-8">
+            <p className="text-lg text-[#64748B] mb-6">
               {isWelsh
-                ? 'Mae cyfleusterau\'r Ganolfan Genedlaethol ar gael i\'w llogi ar gyfer digwyddiadau, hyfforddiant, gwersylloedd a mwy. P\'un a ydych yn glwb chwaraeon, yn dîm corfforaethol, neu\'n grŵp cymunedol, gallwn helpu.'
-                : 'National Centre facilities are available for hire for events, training, camps and more. Whether you\'re a sports club, corporate team, or community group, we can help.'}
+                ? 'Os oes gennych ymholiad cyfryngau, cysylltwch â\'n tîm cyfathrebu.'
+                : 'If you have a media enquiry please contact our communications team.'}
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="btn btn-primary">
-                {isWelsh ? 'Cysylltwch â Ni' : 'Contact Us'}
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <a
-                href="tel:03003003102"
-                className="btn btn-secondary"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                0300 300 3102
-              </a>
-            </div>
+            <Link href="/contact" className="btn btn-primary">
+              {isWelsh ? 'Cysylltwch â\'n tîm cyfathrebu' : 'Contact our communications team'}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
     </>
   );
 }
-
