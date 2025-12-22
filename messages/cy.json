@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "title": "Chwaraeon Cymru | Datblygu a hyrwyddo chwaraeon yng Nghymru",
+    "description": "Ni yw'r sefydliad cenedlaethol sy'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru. Rydym am i Gymru fod yn genedl fwy actif ac iachach."
+  },
+  "header": {
+    "skipToContent": "Neidio i'r prif gynnwys",
+    "menu": "Dewislen",
+    "closeMenu": "Cau dewislen",
+    "search": "Chwilio",
+    "login": "Mewngofnodi",
+    "language": "Iaith",
+    "currentLanguage": "Cymraeg",
+    "switchLanguage": "English",
+    "home": "Hafan",
+    "logoAlt": "Chwaraeon Cymru - Ewch i'r hafan"
+  },
+  "navigation": {
+    "sportWalesFor": "Chwaraeon Cymru Ar Gyfer...",
+    "communityGrassroots": "Chwaraeon Cymunedol a Llawr Gwlad",
+    "sportInSchools": "Chwaraeon mewn Ysgolion",
+    "partners": "Partneriaid",
+    "performanceSport": "Chwaraeon Perfformiad",
+    "informationAbout": "Gwybodaeth Am...",
+    "welshSportLottery": "Chwaraeon Cymru a'r Loteri Genedlaethol",
+    "nationalCentre": "Archebwch nawr! - Canolfan Genedlaethol",
+    "fundingSupport": "Cyllid a Chefnogaeth",
+    "researchInsight": "Ymchwil a Mewnwelediad",
+    "policiesGovernance": "Polisïau a Llywodraethu",
+    "aboutSportWales": "Amdanom Chwaraeon Cymru",
+    "whatIsSportWales": "Beth yw Chwaraeon Cymru?",
+    "visionStrategy": "Gweledigaeth a Strategaeth",
+    "ourTeam": "Ein Tîm",
+    "careers": "Gyrfaoedd",
+    "contact": "Cysylltwch â Ni"
+  },
+  "hero": {
+    "headline": "Galluogi chwaraeon yng Nghymru i ffynnu",
+    "subheadline": "Ni yw Chwaraeon Cymru.",
+    "description": "Rydym am i Gymru fod yn genedl fwy actif ac iachach. Ni yw'r sefydliad cenedlaethol sy'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru.",
+    "cta": "Archwiliwch fwy am ein gwaith i helpu chwaraeon yng Nghymru i ffynnu."
+  },
+  "funding": {
+    "beActiveWales": "Cronfa Cymru Actif",
+    "beActiveDescription": "Grantiau o £300 i £50,000 ar gyfer offer neu gyrsiau hyfforddi",
+    "applyNow": "Gwneud cais nawr",
+    "energySavingGrant": "Grant Arbed Ynni",
+    "energySavingDescription": "Grantiau hyd at £25,000 ar gyfer gwelliannau arbed ynni i'ch cyfleuster",
+    "crowdfunder": "Lle i Chwaraeon - Crowdfunder",
+    "crowdfunderDescription": "Codi arian torfol i wella'ch cyfleusterau - gallwn addo hyd at 50%",
+    "startCrowdfunding": "Dechrau codi arian torfol",
+    "clubSupport": "Cefnogaeth Clybiau",
+    "clubSupportDescription": "Arweiniad ac adnoddau i helpu clybiau i reoli eu gweithrediadau'n effeithiol"
+  },
+  "news": {
+    "title": "Newyddion Diweddaraf",
+    "readMore": "Darllen mwy",
+    "viewAllNews": "Darllen mwy o newyddion Chwaraeon Cymru",
+    "featuredStory": "Stori dan Sylw"
+  },
+  "footer": {
+    "locationContact": "Lleoliad a Chysylltu",
+    "newsFeaturesEvents": "Newyddion, Nodweddion a Digwyddiadau",
+    "privacyPolicy": "Polisi Preifatrwydd",
+    "cookiePolicy": "Polisi Cwcis",
+    "freedomOfInformation": "Rhyddid Gwybodaeth",
+    "termsConditions": "Telerau ac Amodau",
+    "acceptableUse": "Polisi Defnydd Derbyniol",
+    "accessibility": "Hygyrchedd",
+    "followUs": "Dilynwch ni",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "copyright": "© {year} Chwaraeon Cymru. Cedwir pob hawl.",
+    "builtBy": "Adeiladwyd gan",
+    "address": {
+      "name": "Canolfan Genedlaethol Chwaraeon Cymru",
+      "line1": "Gerddi Sophia",
+      "city": "Caerdydd",
+      "postcode": "CF11 9SW",
+      "country": "Cymru, Y Deyrnas Unedig"
+    }
+  },
+  "search": {
+    "placeholder": "Chwilio Chwaraeon Cymru...",
+    "submit": "Chwilio",
+    "noResults": "Dim canlyniadau ar gyfer",
+    "resultsFor": "Canlyniadau ar gyfer",
+    "searchTips": "Awgrymiadau chwilio",
+    "tryDifferentKeywords": "Rhowch gynnig ar eiriau allweddol gwahanol",
+    "checkSpelling": "Gwiriwch eich sillafu"
+  },
+  "forms": {
+    "required": "Gofynnol",
+    "optional": "Dewisol",
+    "submit": "Cyflwyno",
+    "sending": "Yn anfon...",
+    "success": "Diolch! Mae eich cyflwyniad wedi'i dderbyn.",
+    "error": "Aeth rhywbeth o'i le. Rhowch gynnig arall arni.",
+    "name": "Enw",
+    "email": "Cyfeiriad e-bost",
+    "phone": "Rhif ffôn",
+    "message": "Neges",
+    "organisation": "Sefydliad"
+  },
+  "accessibility": {
+    "newWindow": "Yn agor mewn ffenestr newydd",
+    "externalLink": "Dolen allanol",
+    "download": "Lawrlwytho",
+    "loading": "Yn llwytho...",
+    "expandMenu": "Ehangu dewislen",
+    "collapseMenu": "Cau dewislen"
+  },
+  "cookies": {
+    "title": "Gosodiadau Cwcis",
+    "description": "Rydym yn defnyddio cwcis i wella eich profiad ar ein gwefan.",
+    "acceptAll": "Derbyn pob un",
+    "rejectAll": "Gwrthod pob un",
+    "customise": "Addasu",
+    "necessary": "Cwcis hollol angenrheidiol",
+    "analytics": "Cwcis dadansoddol/perfformiad",
+    "targeting": "Cwcis targedu",
+    "functionality": "Cwcis swyddogaethol",
+    "saveSettings": "Cadw gosodiadau",
+    "moreInfo": "Mwy o wybodaeth",
+    "viewPolicy": "Gweld ein polisi cwcis"
+  },
+  "errors": {
+    "404": {
+      "title": "Tudalen heb ei chanfod",
+      "description": "Mae'n ddrwg gennym, ni allem ddod o hyd i'r dudalen rydych chi'n chwilio amdani.",
+      "goHome": "Ewch i'r hafan"
+    },
+    "500": {
+      "title": "Aeth rhywbeth o'i le",
+      "description": "Mae'n ddrwg gennym, aeth rhywbeth o'i le ar ein hochr ni.",
+      "tryAgain": "Rhowch gynnig arall arni"
+    }
+  },
+  "common": {
+    "learnMore": "Dysgu mwy",
+    "viewAll": "Gweld y cyfan",
+    "backToTop": "Nôl i'r brig",
+    "share": "Rhannu",
+    "print": "Argraffu",
+    "date": "Dyddiad",
+    "category": "Categori",
+    "tags": "Tagiau",
+    "relatedContent": "Cynnwys cysylltiedig"
+  }
+}
+

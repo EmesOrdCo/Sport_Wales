@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "title": "Sport Wales | Developing and promoting sport in Wales",
+    "description": "We are the national organisation responsible for developing and promoting sport and physical activity in Wales. We want Wales to be a more active, healthier nation."
+  },
+  "header": {
+    "skipToContent": "Skip to main content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "search": "Search",
+    "login": "Login",
+    "language": "Language",
+    "currentLanguage": "English",
+    "switchLanguage": "Cymraeg",
+    "home": "Home",
+    "logoAlt": "Sport Wales - Go to homepage"
+  },
+  "navigation": {
+    "sportWalesFor": "Sport Wales For...",
+    "communityGrassroots": "Community and Grassroots Sport",
+    "sportInSchools": "Sport in Schools",
+    "partners": "Partners",
+    "performanceSport": "Performance Sport",
+    "informationAbout": "Information About...",
+    "welshSportLottery": "Welsh Sport and The National Lottery",
+    "nationalCentre": "Book now! - National Centre",
+    "fundingSupport": "Funding and Support",
+    "researchInsight": "Research and Insight",
+    "policiesGovernance": "Policies and Governance",
+    "aboutSportWales": "About Sport Wales",
+    "whatIsSportWales": "What is Sport Wales?",
+    "visionStrategy": "Vision and Strategy",
+    "ourTeam": "Our Team",
+    "careers": "Careers",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "headline": "Enabling sport in Wales to thrive",
+    "subheadline": "We are Sport Wales.",
+    "description": "We want Wales to be a more active, healthier nation. We are the national organisation responsible for developing and promoting sport and physical activity in Wales.",
+    "cta": "Explore more on our work to help sport in Wales thrive."
+  },
+  "funding": {
+    "beActiveWales": "Be Active Wales Fund",
+    "beActiveDescription": "Grants from £300 to £50,000 for equipment or coaching courses",
+    "applyNow": "Apply now",
+    "energySavingGrant": "Energy Saving Grant",
+    "energySavingDescription": "Grants up to £25,000 for energy-saving improvements to your facility",
+    "crowdfunder": "A Place for Sport - Crowdfunder",
+    "crowdfunderDescription": "Crowdfund to improve your facilities - we may pledge up to 50%",
+    "startCrowdfunding": "Start crowdfunding",
+    "clubSupport": "Club Support",
+    "clubSupportDescription": "Guidance and resources to help clubs manage their operations effectively"
+  },
+  "news": {
+    "title": "Latest News",
+    "readMore": "Read more",
+    "viewAllNews": "Read more Sport Wales news",
+    "featuredStory": "Featured Story"
+  },
+  "footer": {
+    "locationContact": "Location and Contact",
+    "newsFeaturesEvents": "News, Features and Events",
+    "privacyPolicy": "Privacy Policy",
+    "cookiePolicy": "Cookie Policy",
+    "freedomOfInformation": "Freedom of Information",
+    "termsConditions": "Terms & Conditions",
+    "acceptableUse": "Acceptable Use Policy",
+    "accessibility": "Accessibility",
+    "followUs": "Follow us",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "copyright": "© {year} Sport Wales. All rights reserved.",
+    "builtBy": "Built by",
+    "address": {
+      "name": "Sport Wales National Centre",
+      "line1": "Sophia Gardens",
+      "city": "Cardiff",
+      "postcode": "CF11 9SW",
+      "country": "Wales, United Kingdom"
+    }
+  },
+  "search": {
+    "placeholder": "Search Sport Wales...",
+    "submit": "Search",
+    "noResults": "No results found for",
+    "resultsFor": "Results for",
+    "searchTips": "Search tips",
+    "tryDifferentKeywords": "Try different keywords",
+    "checkSpelling": "Check your spelling"
+  },
+  "forms": {
+    "required": "Required",
+    "optional": "Optional",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "success": "Thank you! Your submission has been received.",
+    "error": "Something went wrong. Please try again.",
+    "name": "Name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "message": "Message",
+    "organisation": "Organisation"
+  },
+  "accessibility": {
+    "newWindow": "Opens in a new window",
+    "externalLink": "External link",
+    "download": "Download",
+    "loading": "Loading...",
+    "expandMenu": "Expand menu",
+    "collapseMenu": "Collapse menu"
+  },
+  "cookies": {
+    "title": "Cookie Settings",
+    "description": "We use cookies to improve your experience on our website.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "customise": "Customise",
+    "necessary": "Strictly necessary cookies",
+    "analytics": "Analytical/performance cookies",
+    "targeting": "Targeting cookies",
+    "functionality": "Functionality cookies",
+    "saveSettings": "Save settings",
+    "moreInfo": "More information",
+    "viewPolicy": "View our cookie policy"
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "description": "Sorry, we couldn't find the page you're looking for.",
+      "goHome": "Go to homepage"
+    },
+    "500": {
+      "title": "Something went wrong",
+      "description": "We're sorry, something went wrong on our end.",
+      "tryAgain": "Try again"
+    }
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "backToTop": "Back to top",
+    "share": "Share",
+    "print": "Print",
+    "date": "Date",
+    "category": "Category",
+    "tags": "Tags",
+    "relatedContent": "Related content"
+  }
+}
+
