@@ -118,7 +118,7 @@ export default async function FundingPage({
         {
           title: funding('beActiveWales'),
           description: funding('beActiveDescription'),
-          amount: '£300 - £50,000',
+          amount: 'Up to £50,000',
           href: '/funding/be-active-wales',
           gradient: 'from-[#B91C3C] to-[#991B1B]',
           accentColor: '#F59E0B',

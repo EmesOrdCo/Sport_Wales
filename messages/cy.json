@@ -29,7 +29,7 @@
     "policiesGovernance": "Polisïau a Llywodraethu",
     "aboutSportWales": "Amdanom Chwaraeon Cymru",
     "whatIsSportWales": "Beth yw Chwaraeon Cymru?",
-    "visionStrategy": "Gweledigaeth a Strategaeth",
+    "visionStrategy": "Y Weledigaeth a'n Strategaeth",
     "ourTeam": "Ein Tîm",
     "careers": "Gyrfaoedd",
     "contact": "Cysylltwch â Ni",
@@ -46,12 +46,12 @@
   },
   "funding": {
     "beActiveWales": "Cronfa Cymru Actif",
-    "beActiveDescription": "Grantiau o £300 i £50,000 ar gyfer offer neu gyrsiau hyfforddi",
+    "beActiveDescription": "Grantiau hyd at £50,000 ar gyfer offer neu gyrsiau hyfforddi",
     "applyNow": "Gwneud cais nawr",
     "energySavingGrant": "Grant Arbed Ynni",
     "energySavingDescription": "Grantiau hyd at £25,000 ar gyfer gwelliannau arbed ynni i'ch cyfleuster",
     "crowdfunder": "Lle i Chwaraeon - Crowdfunder",
-    "crowdfunderDescription": "Codi arian torfol i wella'ch cyfleusterau - gallwn addo hyd at 50%",
+    "crowdfunderDescription": "Cael hyd at £15,000 i wella'ch cyfleusterau",
     "startCrowdfunding": "Dechrau codi arian torfol",
     "clubSupport": "Cefnogaeth Clybiau",
     "clubSupportDescription": "Arweiniad ac adnoddau i helpu clybiau i reoli eu gweithrediadau'n effeithiol"
@@ -63,7 +63,7 @@
     "featuredStory": "Stori dan Sylw"
   },
   "footer": {
-    "locationContact": "Lleoliad a Chysylltu",
+    "locationContact": "Lleoliad a Chysylltiadau",
     "newsFeaturesEvents": "Newyddion, Nodweddion a Digwyddiadau",
     "privacyPolicy": "Polisi Preifatrwydd",
     "cookiePolicy": "Polisi Cwcis",

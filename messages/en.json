@@ -29,7 +29,7 @@
     "policiesGovernance": "Policies and Governance",
     "aboutSportWales": "About Sport Wales",
     "whatIsSportWales": "What is Sport Wales?",
-    "visionStrategy": "Vision and Strategy",
+    "visionStrategy": "The Vision and Our Strategy",
     "ourTeam": "Our Team",
     "careers": "Careers",
     "contact": "Contact Us",
@@ -46,12 +46,12 @@
   },
   "funding": {
     "beActiveWales": "Be Active Wales Fund",
-    "beActiveDescription": "Grants from £300 to £50,000 for equipment or coaching courses",
+    "beActiveDescription": "Grants up to £50,000 for equipment or coaching courses",
     "applyNow": "Apply now",
     "energySavingGrant": "Energy Saving Grant",
     "energySavingDescription": "Grants up to £25,000 for energy-saving improvements to your facility",
     "crowdfunder": "A Place for Sport - Crowdfunder",
-    "crowdfunderDescription": "Crowdfund to improve your facilities - we may pledge up to 50%",
+    "crowdfunderDescription": "Get up to £15,000 to improve your facilities",
     "startCrowdfunding": "Start crowdfunding",
     "clubSupport": "Club Support",
     "clubSupportDescription": "Guidance and resources to help clubs manage their operations effectively"
@@ -63,7 +63,7 @@
     "featuredStory": "Featured Story"
   },
   "footer": {
-    "locationContact": "Location and Contact",
+    "locationContact": "Location and Contacts",
     "newsFeaturesEvents": "News, Features and Events",
     "privacyPolicy": "Privacy Policy",
     "cookiePolicy": "Cookie Policy",
