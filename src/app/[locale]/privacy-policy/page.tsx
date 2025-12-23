@@ -29,8 +29,8 @@ export default async function PrivacyPolicyPage({
   const isWelsh = locale === 'cy';
 
   const breadcrumbs = [
-    { name: isWelsh ? 'Hafan' : 'Home', href: '/' },
-    { name: isWelsh ? 'Polisi Preifatrwydd' : 'Privacy Policy' },
+    { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
+    { name: isWelsh ? 'Polisi Preifatrwydd' : 'Privacy Policy', url: `https://www.sport.wales/${locale}/privacy-policy` },
   ];
 
   // Privacy policy sections matching real Sport Wales structure
@@ -629,7 +629,7 @@ export default async function PrivacyPolicyPage({
   return (
     <>
       <BreadcrumbSchema
-        items={breadcrumbs.map((b) => ({ name: b.name, href: b.href || '' }))}
+        items={breadcrumbs.map((b) => ({ name: b.name, url: b.url || '' }))}
       />
       <LegalPageLayout
         title={isWelsh ? 'Polisi Preifatrwydd' : 'Privacy Policy'}

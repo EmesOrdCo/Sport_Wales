@@ -29,8 +29,8 @@ export default async function TermsConditionsPage({
   const isWelsh = locale === 'cy';
 
   const breadcrumbs = [
-    { name: isWelsh ? 'Hafan' : 'Home', href: '/' },
-    { name: isWelsh ? 'Telerau Defnyddio\'r Wefan' : 'Terms of Website Use' },
+    { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
+    { name: isWelsh ? 'Telerau Defnyddio\'r Wefan' : 'Terms of Website Use', url: `https://www.sport.wales/${locale}/terms-conditions` },
   ];
 
   const content = isWelsh ? (
@@ -252,7 +252,7 @@ export default async function TermsConditionsPage({
   return (
     <>
       <BreadcrumbSchema
-        items={breadcrumbs.map((b) => ({ name: b.name, href: b.href || '' }))}
+        items={breadcrumbs.map((b) => ({ name: b.name, url: b.url || '' }))}
       />
       <LegalPageLayout
         title={isWelsh ? 'Telerau Defnyddio\'r Wefan' : 'Terms of Website Use'}

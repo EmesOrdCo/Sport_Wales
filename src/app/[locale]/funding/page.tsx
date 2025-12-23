@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema, FundingSchema } from '@/components/seo/StructuredData';
+import { getFundingOpportunities } from '@/lib/content';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -47,47 +48,113 @@ export default async function FundingPage({
 
   const isWelsh = locale === 'cy';
 
-  const mainFundingOptions = [
-    {
-      title: funding('beActiveWales'),
-      description: funding('beActiveDescription'),
-      amount: '£300 - £50,000',
-      href: '/funding/be-active-wales',
-      gradient: 'from-[#B91C3C] to-[#991B1B]',
-      accentColor: '#F59E0B',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  // Helper function to get icon component by type
+  const getIconByType = (type: string, index: number) => {
+    const iconClass = type === 'crowdfunder' ? 'w-6 h-6 text-[#14B8A6]' : 'w-6 h-6 text-white';
+    
+    if (type === 'be-active-wales' || index === 0) {
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
-      ),
-    },
-    {
-      title: funding('energySavingGrant'),
-      description: funding('energySavingDescription'),
-      amount: isWelsh ? 'Hyd at £25,000' : 'Up to £25,000',
-      href: '/funding/energy-saving-grant',
-      gradient: 'from-[#14B8A6] to-[#0F766E]',
-      accentColor: '#F59E0B',
-      icon: (
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      );
+    }
+    if (type === 'energy-saving' || index === 1) {
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
-      ),
-    },
-    {
-      title: funding('crowdfunder'),
-      description: funding('crowdfunderDescription'),
-      amount: isWelsh ? 'Hyd at £15,000' : 'Up to £15,000',
-      href: '/funding/crowdfunder',
-      gradient: 'from-[#0F172A] to-[#1E293B]',
-      accentColor: '#14B8A6',
-      icon: (
-        <svg className="w-6 h-6 text-[#14B8A6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      );
+    }
+    if (type === 'crowdfunder' || index === 2) {
+      return (
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
-      ),
-    },
-  ];
+      );
+    }
+    return (
+      <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    );
+  };
+
+  // Helper to get gradient and accent by type/index
+  const getStyleByType = (type: string, index: number) => {
+    if (type === 'be-active-wales' || index === 0) {
+      return { gradient: 'from-[#B91C3C] to-[#991B1B]', accentColor: '#F59E0B' };
+    }
+    if (type === 'energy-saving' || index === 1) {
+      return { gradient: 'from-[#14B8A6] to-[#0F766E]', accentColor: '#F59E0B' };
+    }
+    if (type === 'crowdfunder' || index === 2) {
+      return { gradient: 'from-[#0F172A] to-[#1E293B]', accentColor: '#14B8A6' };
+    }
+    return { gradient: 'from-[#0F172A] to-[#1E293B]', accentColor: '#14B8A6' };
+  };
+
+  // Fetch funding opportunities from CMS
+  const cmsFundingOpportunities = await getFundingOpportunities(locale as 'en' | 'cy');
+  
+  // Transform CMS opportunities to match page structure
+  const mainFundingOptions = cmsFundingOpportunities.length > 0 
+    ? cmsFundingOpportunities.slice(0, 3).map((opp, index) => {
+        const slugKey = opp.slug.toLowerCase();
+        const styles = getStyleByType(slugKey, index);
+        
+        return {
+          title: opp.title,
+          description: opp.description,
+          amount: opp.maxAmount || (isWelsh ? 'Hyd at £25,000' : 'Up to £25,000'),
+          href: opp.href,
+          gradient: styles.gradient,
+          accentColor: styles.accentColor,
+          icon: getIconByType(slugKey, index),
+        };
+      })
+    : [
+        // Fallback to hardcoded options if CMS returns no data
+        {
+          title: funding('beActiveWales'),
+          description: funding('beActiveDescription'),
+          amount: '£300 - £50,000',
+          href: '/funding/be-active-wales',
+          gradient: 'from-[#B91C3C] to-[#991B1B]',
+          accentColor: '#F59E0B',
+          icon: (
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          ),
+        },
+        {
+          title: funding('energySavingGrant'),
+          description: funding('energySavingDescription'),
+          amount: isWelsh ? 'Hyd at £25,000' : 'Up to £25,000',
+          href: '/funding',
+          gradient: 'from-[#14B8A6] to-[#0F766E]',
+          accentColor: '#F59E0B',
+          icon: (
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          ),
+        },
+        {
+          title: funding('crowdfunder'),
+          description: funding('crowdfunderDescription'),
+          amount: isWelsh ? 'Hyd at £15,000' : 'Up to £15,000',
+          href: '/funding/crowdfunder',
+          gradient: 'from-[#0F172A] to-[#1E293B]',
+          accentColor: '#14B8A6',
+          icon: (
+            <svg className="w-6 h-6 text-[#14B8A6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          ),
+        },
+      ];
 
   const breadcrumbItems = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
@@ -224,6 +291,15 @@ export default async function FundingPage({
                         <span className="text-2xl font-bold" style={{ color: option.accentColor }}>
                           {option.amount}
                         </span>
+                        {cmsFundingOpportunities[index]?.deadlineDate && (
+                          <div className="text-xs text-white/60 mt-1">
+                            {isWelsh ? 'Dyddiad cau:' : 'Deadline:'} {new Date(cmsFundingOpportunities[index].deadlineDate).toLocaleDateString(isWelsh ? 'cy-GB' : 'en-GB', {
+                              day: 'numeric',
+                              month: 'short',
+                              year: 'numeric',
+                            })}
+                          </div>
+                        )}
                       </div>
                       <span className="inline-flex items-center gap-2 text-sm font-semibold text-white group-hover:gap-3 transition-all">
                         {funding('applyNow')}
@@ -315,6 +391,90 @@ export default async function FundingPage({
                   <h3 className="font-semibold text-[#0F172A]">{item.title}</h3>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach to Investment Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Ein Dull' : 'Our Approach'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              {isWelsh ? 'Ein Dull o Fuddsoddi' : 'Our Approach to Investment'}
+            </h2>
+            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+              {isWelsh
+                ? 'Beth rydym yn anelu at ei gyflawni trwy ein buddsoddiad.'
+                : 'What we\'re aiming to achieve through our investment.'}
+            </p>
+            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+              {isWelsh
+                ? 'Rydym yn credu mewn cenedl wirioneddol weithgar lle mae gan bawb y cyfle i gymryd rhan mewn chwaraeon a mwynhau buddion bod yn weithgar yn gorfforol.'
+                : 'We believe in a truly active nation where everyone has the opportunity to take part in sport and enjoy the benefits of being physically active.'}
+            </p>
+            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+              {isWelsh
+                ? 'Er mwyn ceisio cyflawni hyn, rydym yn buddsoddi cyllid Llywodraeth Cymru a\'r Loteri Genedlaethol i lawer o sefydliadau gwahanol ar draws y wlad, sy\'n cynllunio, rheoli a chyflwyno cyfleoedd o fewn cymunedau lleol Cymru.'
+                : 'To try and achieve this we invest Welsh Government and National Lottery funding to many different organisations across the country, who plan, manage, and deliver opportunities within the local communities of Wales.'}
+            </p>
+            <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
+              {isWelsh
+                ? 'Rydym yn gwybod bod grwpiau penodol o bobl yn llai tebygol o gymryd rhan neu\'n cael mwy o anhawster i gael mynediad i gyfleoedd chwaraeon a gweithgarwch corfforol sy\'n addas iddynt. Gyda hyn mewn golwg, rydym yn ceisio sicrhau ein bod yn buddsoddi yn yr ardaloedd sydd eu hangen fwyaf, trwy\'r sefydliadau a fydd yn gallu creu\'r effaith fwyaf yn erbyn y Gweledigaeth ar gyfer Chwaraeon yng Nghymru, gyda chydraddoldebau ar flaen ein penderfyniadau.'
+                : 'We know that certain groups of people are less likely to take part or will find it more difficult to access sport and physical activity opportunities that are right for them. With this in mind, we look to ensure that we invest into the areas that need it most, through the organisations that will be able to create the most impact against the Vision for Sport in Wales, with equalities at the forefront of our decision making.'}
+            </p>
+
+            {/* Types of Investment */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+                {isWelsh ? 'Y mathau o fuddsoddiad a chyllid rydym yn eu cynnig' : 'The types of investment and funding that we offer'}
+              </h3>
+              <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+                {isWelsh
+                  ? 'Rydym yn gweithio mewn partneriaeth gyda sefydliadau sy\'n gyfrifol am lywio chwaraeon a darparu cyfleoedd cyfranogiad ar lefel genedlaethol ar draws y wlad. Rydym yn cynnig buddsoddiad blynyddol i\'r sefydliadau hyn i gefnogi eu gweithgaredd craidd. Rydym hefyd yn cynnig llifau ychwanegol o gyllid i gefnogi gweithgareddau penodol megis datblygu cyfleusterau.'
+                  : 'We work in partnership with organisations responsible for governing sports and providing participation opportunities at a national level across the country. We offer annual investment to these organisations to support their core activity. We also offer additional streams of funding to support specific activities such as facility development.'}
+              </p>
+              <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
+                {isWelsh
+                  ? 'Rydym hefyd yn deall pwysigrwydd buddsoddi\'n uniongyrchol i\'r clybiau a\'r sefydliadau sy\'n cynnig cyfleoedd a gweithgareddau gwreiddiol. Gall clybiau a sefydliadau cymunedol wneud cais am amrywiaeth o opsiynau cyllid gwahanol i gefnogi gweithgareddau craidd a datblygu.'
+                  : 'We also understand the importance of investing directly into the clubs and organisations who offer grassroots opportunities and activity. Community clubs and organisations can apply for a range of different funding options to support core and development activities.'}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0]">
+                <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                  {isWelsh ? 'Partneriaethau Strategol' : 'Strategic Partnerships'}
+                </h3>
+                <p className="text-[#64748B]">
+                  {isWelsh
+                    ? 'Rydym yn gweithio mewn partneriaeth gyda sefydliadau i ddatblygu a hyrwyddo chwaraeon, gan sicrhau bod buddsoddiadau yn cyfrannu at ein gweledigaeth ehangach ar gyfer chwaraeon yng Nghymru.'
+                    : 'We work in strategic partnerships with organisations to develop and promote sport, ensuring investments contribute to our broader vision for sport in Wales.'}
+                </p>
+              </div>
+              <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0]">
+                <div className="w-12 h-12 rounded-xl bg-[#14B8A6]/10 flex items-center justify-center text-[#14B8A6] mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                  {isWelsh ? 'Effaith Cadarnhaol' : 'Positive Impact'}
+                </h3>
+                <p className="text-[#64748B]">
+                  {isWelsh
+                    ? 'Mae pob buddsoddiad yn cael ei asesu ar sail y gwahaniaeth y gall ei wneud i chwaraeon yng Nghymru, gan ganolbwyntio ar gynyddu cyfranogiad a datblygu chwaraeon.'
+                    : 'Every investment is assessed on the difference it can make to sport in Wales, focusing on increasing participation and developing sport.'}
+                </p>
+              </div>
             </div>
           </div>
         </div>

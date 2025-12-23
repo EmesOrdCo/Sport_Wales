@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
+import { getNewsArticles } from '@/lib/content';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -35,70 +36,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-// Real news articles from Sport Wales website
-const newsArticles = [
-  {
-    id: '1',
-    slug: 'year-in-welsh-sport-2025',
-    title: {
-      en: 'A year in Welsh sport – 2025 replayed',
-      cy: 'Blwyddyn yn chwaraeon Cymru – 2025 yn cael ei hailchwarae',
-    },
-    excerpt: {
-      en: "Let's have a peek at just some of the highlights that have shaped Welsh sport this year.",
-      cy: 'Gadewch i ni gael cipolwg ar rai o\'r uchafbwyntiau sydd wedi siapio chwaraeon Cymru.',
-    },
-    date: '2025-12-20',
-    category: { en: 'News', cy: 'Newyddion' },
-    featured: true,
-  },
-  {
-    id: '2',
-    slug: 'volunteers-helping-community-sport',
-    title: {
-      en: 'The volunteers helping community sport to thrive across Wales',
-      cy: 'Y gwirfoddolwyr yn helpu chwaraeon cymunedol i ffynnu ar draws Cymru',
-    },
-    excerpt: {
-      en: 'We are celebrating some amazing volunteers and asking them what volunteering gives them in return.',
-      cy: 'Rydym yn dathlu rhai gwirfoddolwyr anhygoel ac yn gofyn iddynt beth mae gwirfoddoli yn ei roi iddynt yn ôl.',
-    },
-    date: '2025-12-18',
-    category: { en: 'Feature', cy: 'Nodwedd' },
-    featured: false,
-  },
-  {
-    id: '3',
-    slug: 'iori-horse-riding-club',
-    title: {
-      en: 'Iori takes the reins at Ceredigion horse-riding club thanks to National Lottery Grant',
-      cy: 'Iori yn cymryd yr awenau yng nghlwb marchogaeth Ceredigion diolch i Grant y Loteri Genedlaethol',
-    },
-    excerpt: {
-      en: "Iori's strength and confidence soars with new equipment provided by the funding.",
-      cy: "Mae cryfder a hyder Iori yn esgyn gydag offer newydd a ddarparwyd gan y cyllid.",
-    },
-    date: '2025-12-15',
-    category: { en: 'Funding', cy: 'Cyllid' },
-    featured: false,
-  },
-  {
-    id: '4',
-    slug: 'mams-with-prams-running-club',
-    title: {
-      en: 'Mams with prams: the running club helping parents stay active',
-      cy: 'Mamau gyda phramiau: y clwb rhedeg sy\'n helpu rhieni i aros yn actif',
-    },
-    excerpt: {
-      en: 'A running club in Pontypool is removing one of the biggest barriers to exercise for new parents – childcare.',
-      cy: 'Mae clwb rhedeg ym Mhont-y-pŵl yn cael gwared ar un o\'r rhwystrau mwyaf i ymarfer corff i rieni newydd – gofal plant.',
-    },
-    date: '2025-12-12',
-    category: { en: 'Feature', cy: 'Nodwedd' },
-    featured: false,
-  },
-];
-
 export default async function NewsPage({
   params,
 }: {
@@ -110,13 +47,43 @@ export default async function NewsPage({
 
   const isWelsh = locale === 'cy';
 
+  // Fetch articles from CMS (or fallback to mock data)
+  const { articles } = await getNewsArticles(locale as 'en' | 'cy', 1, 20);
+
   const breadcrumbItems = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
     { name: t('title'), url: `https://www.sport.wales/${locale}/news` },
   ];
 
-  const featuredArticle = newsArticles.find(a => a.featured);
-  const otherArticles = newsArticles.filter(a => !a.featured);
+  // Transform CMS articles to match page structure
+  const newsArticles = articles.map(article => ({
+    id: article.id,
+    slug: article.slug,
+    title: {
+      en: article.title,
+      cy: article.title, // In real implementation, you'd have separate translations
+    },
+    excerpt: {
+      en: article.excerpt,
+      cy: article.excerpt,
+    },
+    date: article.date.split('T')[0], // Extract date part
+    category: { 
+      en: article.category || 'News', 
+      cy: article.category || 'Newyddion' 
+    },
+    featured: article.featured || false,
+  }));
+
+  // Sort: featured first, then by date
+  const sortedArticles = [...newsArticles].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
+  const featuredArticle = sortedArticles.find(a => a.featured) || sortedArticles[0];
+  const otherArticles = sortedArticles.filter(a => !a.featured || a.id !== featuredArticle?.id).slice(0, 5);
 
   return (
     <>
@@ -284,7 +251,13 @@ export default async function NewsPage({
                             ? 'bg-[#B91C3C]/10 text-[#B91C3C]' 
                             : article.category.en === 'Funding'
                             ? 'bg-[#14B8A6]/10 text-[#14B8A6]'
-                            : 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            : article.category.en === 'Impact Story'
+                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            : article.category.en === 'Resources'
+                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            : article.category.en === 'Research'
+                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            : 'bg-[#14B8A6]/10 text-[#14B8A6]'
                         }`}>
                           {article.category[isWelsh ? 'cy' : 'en']}
                         </span>

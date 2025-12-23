@@ -290,6 +290,99 @@ export default async function ResearchPage({
         </div>
       </section>
 
+      {/* ComRes Research Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl">
+            <span className="inline-block text-[#6366F1] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Ymchwil Partneriaid' : 'Partner Research'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              {isWelsh ? 'Olrhain Gweithgarwch Cymru' : 'Wales Activity Tracker'}
+            </h2>
+            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+              {isWelsh
+                ? 'Mae Chwaraeon Cymru wedi partnerio â Savanta i gael mewnwelediad i arferion ac ymddygiadau gweithgarwch y genedl. Yn cael ei osod i olrhain lefelau gweithgarwch yn ystod pandemig y Coronafeirws, mae\'r arolwg wedi parhau yn rheolaidd i wirio lefelau gweithgarwch yng Nghymru.'
+                : 'Sport Wales teamed up with Savanta to get an insight into the nation\'s activity habits and behaviours. Put in place to track activity levels during the Coronavirus pandemic, the survey has continued regularly to check activity levels in Wales.'}
+            </p>
+            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+              {isWelsh
+                ? 'Mae\'r arolwg, sy\'n cael ei redeg ar wahanol adegau o\'r flwyddyn, yn darparu cipolwg ar weithgarwch corfforol a chwaraeon, yn ogystal ag agwedd pobl yng Nghymru tuag at ymarfer.'
+                : 'The surveys, run at different points of the year, provide a snapshot on physical activity and sport, as well as the attitude of people in Wales towards exercise.'}
+            </p>
+            <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
+              {isWelsh
+                ? 'Mae\'r data wedi\'i bwysau i fod yn demograffig o ran cynrychiolaeth oedolion Cymru 16+ yn ôl rhyw, oedran ac ystadegol cartrefi gyda phlant dan 16 oed.'
+                : 'The data has been weighted to be demographically representative of Welsh adults 16+ by gender, age and the estimated households with children under 16.'}
+            </p>
+            
+            <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] mb-8">
+              <p className="text-[#64748B] mb-4">
+                {isWelsh
+                  ? 'Am fwy o wybodaeth e-bostiwch'
+                  : 'For more information email'}
+                {' '}
+                <a href="mailto:insightteam@sport.wales" className="text-[#B91C3C] font-semibold hover:underline">
+                  insightteam@sport.wales
+                </a>
+              </p>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Neu'
+                  : 'Or'}
+                {' '}
+                <a 
+                  href="https://www.chwaraeon.cymru/ymchwil-a-gwybodaeth/comres/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#B91C3C] font-semibold hover:underline"
+                >
+                  {isWelsh ? 'Gweld yr adroddiadau yn Gymraeg' : 'View the reports in Cymraeg'}
+                </a>
+              </p>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+                {isWelsh ? 'Arolwgau Olrhain Gweithgarwch Cymru' : 'Wales Activity Tracker Surveys'}
+              </h3>
+              <p className="text-lg text-[#64748B] mb-6">
+                {isWelsh
+                  ? 'Mae gan Chwaraeon Cymru gyfres o arolwgau rheolaidd sy\'n olrhain gweithgarwch corfforol a chwaraeon yng Nghymru. Mae\'r arolwgau hyn yn darparu data gwerthfawr ar arferion ac ymddygiadau pobl yng Nghymru.'
+                  : 'Sport Wales has a series of regular surveys tracking physical activity and sport in Wales. These surveys provide valuable data on the habits and behaviours of people in Wales.'}
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <p className="text-sm text-[#64748B] mb-2">
+                    {isWelsh ? 'Arolwg Olrhain Gweithgarwch Cymru 16 - Ebrill 2025' : 'Wales Activity Tracker Survey 16 - April 2025'}
+                  </p>
+                  <p className="text-xs text-[#64748B]">
+                    {isWelsh 
+                      ? 'Cyfweliwyd 1,012 ymatebwr 16+ ar-lein rhwng 25 Ebrill – 29 Ebrill 2025 gan Savanta.'
+                      : 'Savanta interviewed 1,012 respondents aged 16+ online between 25th Apr – 29th Apr 2025.'}
+                  </p>
+                </div>
+                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <p className="text-sm text-[#64748B] mb-2">
+                    {isWelsh ? 'Arolwg Olrhain Gweithgarwch Cymru 15 - Chwefror 2025' : 'Wales Activity Tracker Survey 15 - Feb 2025'}
+                  </p>
+                  <p className="text-xs text-[#64748B]">
+                    {isWelsh
+                      ? 'Cyfweliwyd 1,070 ymatebwr 16+ ar-lein rhwng 25 Ionawr – 11 Chwefror 2025 gan Savanta.'
+                      : 'Savanta interviewed 1,070 respondents aged 16+ online between 25th Jan – 11th Feb 2025'}
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-[#64748B] mt-4">
+                {isWelsh
+                  ? 'Mae mwy o arolwgau ar gael ar wefan Chwaraeon Cymru, sy\'n olrhain datblygiad gweithgarwch corfforol a chwaraeon yng Nghymru dros amser.'
+                  : 'More surveys are available on the Sport Wales website, tracking the development of physical activity and sport in Wales over time.'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured: National Survey */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">

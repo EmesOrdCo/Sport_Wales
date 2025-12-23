@@ -12,11 +12,24 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [320, 420, 768, 1024, 1280, 1536, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Add any external image domains if needed
+    // Allow images from Strapi CMS (local and production)
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**.sport.wales',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '1337',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.strapiapp.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.strapi.cloud',
       },
     ],
   },

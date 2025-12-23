@@ -54,6 +54,9 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         { href: '/sport-in-schools', label: t('sportInSchools') },
         { href: '/partners', label: t('partners') },
         { href: '/performance-sport', label: t('performanceSport') },
+        { href: '/support-for-athletes', label: t('supportForAthletes') },
+        { href: '/women-girls', label: t('womenGirls') },
+        { href: '/education-and-teachers', label: t('educationAndTeachers') },
       ],
     },
     {
@@ -70,6 +73,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         { href: '/funding', label: t('fundingSupport') },
         { href: '/research', label: t('researchInsight') },
         { href: '/governance', label: t('policiesGovernance') },
+        { href: '/national-centre', label: t('nationalCentreLabel') },
         { href: '/clip', label: 'CLIP' },
         { href: '/careers', label: t('careers') },
       ],

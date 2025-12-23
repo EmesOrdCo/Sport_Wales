@@ -19,6 +19,9 @@ export function Footer() {
         { href: '/sport-in-schools', label: nav('sportInSchools') },
         { href: '/partners', label: nav('partners') },
         { href: '/performance-sport', label: nav('performanceSport') },
+        { href: '/support-for-athletes', label: nav('supportForAthletes') },
+        { href: '/women-girls', label: nav('womenGirls') },
+        { href: '/education-and-teachers', label: nav('educationAndTeachers') },
       ],
     },
     {
@@ -28,6 +31,7 @@ export function Footer() {
         { href: '/funding', label: nav('fundingSupport') },
         { href: '/research', label: nav('researchInsight') },
         { href: '/governance', label: nav('policiesGovernance') },
+        { href: '/national-centre', label: nav('nationalCentreLabel') },
         { href: '/clip', label: 'CLIP' },
         { href: '/careers', label: nav('careers') },
       ],

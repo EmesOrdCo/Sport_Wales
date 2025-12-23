@@ -104,7 +104,7 @@ export function CookieConsent() {
                   </h2>
                   <p id="cookie-description" className="text-sw-gray-600 text-sm mb-4">
                     {t.description}{' '}
-                    <Link href="/privacy" className="text-sw-teal hover:underline">
+                    <Link href="/privacy-policy" className="text-sw-teal hover:underline">
                       {t.learnMore}
                     </Link>
                   </p>

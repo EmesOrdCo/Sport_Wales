@@ -36,12 +36,36 @@ export interface StrapiMedia {
   };
 }
 
+// Strapi v5 uses direct properties, v4 uses attributes wrapper
 export interface StrapiLocalizedContent {
   id: number;
-  attributes: {
+  documentId?: string;
+  // Strapi v5 format (direct properties)
+  title?: string;
+  slug?: string;
+  content?: string | any[];
+  excerpt?: string;
+  locale?: 'en' | 'cy';
+  publishedAt?: string;
+  createdAt?: string;
+  updatedAt?: string;
+  featuredImage?: StrapiMedia | null | {
+    data?: StrapiMedia | null;
+  };
+  localizations?: Array<{
+    id: number;
+    locale?: 'en' | 'cy';
+    slug?: string;
+    attributes?: {
+      locale: 'en' | 'cy';
+      slug: string;
+    };
+  }>;
+  // Strapi v4 format (with attributes wrapper)
+  attributes?: {
     title: string;
     slug: string;
-    content: string;
+    content: string | any[];
     excerpt?: string;
     locale: 'en' | 'cy';
     publishedAt: string;
@@ -123,15 +147,33 @@ export async function fetchFromStrapi<T>(
   
   if (options?.populate) {
     if (Array.isArray(options.populate)) {
-      options.populate.forEach((p, i) => params.append(`populate[${i}]`, p));
+      // For Strapi v5, use indexed format: populate[0]=field1&populate[1]=field2
+      // Or use populate=* for all fields
+      if (options.populate.length === 0 || options.populate.includes('*')) {
+        params.append('populate', '*');
+      } else {
+        options.populate.forEach((p, i) => {
+          params.append(`populate[${i}]`, String(p));
+        });
+      }
+    } else if (options.populate === '*') {
+      params.append('populate', '*');
     } else {
-      params.append('populate', options.populate);
+      params.append('populate[0]', String(options.populate));
     }
   }
   
   if (options?.filters) {
+    // Handle nested filters for Strapi v5 (e.g., filters[slug][$eq]=value)
     Object.entries(options.filters).forEach(([key, value]) => {
-      params.append(`filters[${key}]`, String(value));
+      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        // Handle nested filter objects like { slug: { $eq: 'value' } }
+        Object.entries(value as Record<string, unknown>).forEach(([op, opValue]) => {
+          params.append(`filters[${key}][${op}]`, String(opValue));
+        });
+      } else {
+        params.append(`filters[${key}]`, String(value));
+      }
     });
   }
   
@@ -185,7 +227,7 @@ export async function fetchFromStrapi<T>(
 export async function getNewsArticles(locale: 'en' | 'cy', page = 1, pageSize = 10) {
   return fetchFromStrapi<StrapiLocalizedContent[]>('articles', {
     locale,
-    populate: ['featuredImage', 'localizations'],
+    populate: '*', // Populate all relations for Strapi v5
     sort: ['publishedAt:desc'],
     pagination: { page, pageSize },
   });
@@ -198,7 +240,7 @@ export async function getNewsArticleBySlug(slug: string, locale: 'en' | 'cy') {
   const response = await fetchFromStrapi<StrapiLocalizedContent[]>('articles', {
     locale,
     filters: { slug: { $eq: slug } },
-    populate: ['featuredImage', 'localizations'],
+    populate: '*', // Populate all relations for Strapi v5
   });
   
   return response.data[0] || null;
@@ -210,7 +252,7 @@ export async function getNewsArticleBySlug(slug: string, locale: 'en' | 'cy') {
 export async function getFundingOpportunities(locale: 'en' | 'cy') {
   return fetchFromStrapi<StrapiLocalizedContent[]>('funding-opportunities', {
     locale,
-    populate: ['featuredImage', 'localizations'],
+    populate: '*', // Populate all relations for Strapi v5
     sort: ['priority:asc'],
   });
 }
@@ -222,7 +264,7 @@ export async function getPageBySlug(slug: string, locale: 'en' | 'cy') {
   const response = await fetchFromStrapi<StrapiLocalizedContent[]>('pages', {
     locale,
     filters: { slug: { $eq: slug } },
-    populate: ['featuredImage', 'localizations', 'seo'],
+    populate: '*', // Populate all relations for Strapi v5
   });
   
   return response.data[0] || null;
@@ -275,15 +317,31 @@ export function getAlternateSlug(
   content: StrapiLocalizedContent,
   targetLocale: 'en' | 'cy'
 ): string | null {
-  if (content.attributes.locale === targetLocale) {
-    return content.attributes.slug;
+  // Handle both v4 (with attributes) and v5 (direct properties) formats
+  const data = content.attributes || content;
+  const currentLocale = data.locale;
+  
+  if (currentLocale === targetLocale) {
+    return data.slug || null;
   }
   
-  const localization = content.attributes.localizations?.data.find(
-    (loc) => loc.attributes.locale === targetLocale
-  );
+  // Handle localizations in both formats
+  const localizations = data.localizations;
+  if (localizations) {
+    // v4 format: { data: [...] }
+    const locs = Array.isArray(localizations) ? localizations : localizations.data || [];
+    const localization = locs.find((loc: any) => {
+      const locData = loc.attributes || loc;
+      return locData.locale === targetLocale;
+    });
+    
+    if (localization) {
+      const locData = localization.attributes || localization;
+      return locData.slug || null;
+    }
+  }
   
-  return localization?.attributes.slug || null;
+  return null;
 }
 
 /**
@@ -291,8 +349,10 @@ export function getAlternateSlug(
  */
 export async function isStrapiAvailable(): Promise<boolean> {
   try {
-    const response = await fetch(`${STRAPI_URL}/api`, {
-      method: 'HEAD',
+    // Try to fetch articles endpoint to verify Strapi is running
+    const response = await fetch(`${STRAPI_URL}/api/articles?pagination[limit]=1`, {
+      method: 'GET',
+      headers: getHeaders(),
       next: { revalidate: 300 }, // Check every 5 minutes
     });
     return response.ok;

@@ -73,13 +73,81 @@ export const routing = defineRouting({
       en: '/national-centre',
       cy: '/canolfan-genedlaethol'
     },
+    '/support-for-athletes': {
+      en: '/support-for-athletes',
+      cy: '/cefnogaeth-i-athletwyr'
+    },
+    '/women-girls': {
+      en: '/women-girls',
+      cy: '/merched-a-merched-ifanc'
+    },
+    '/education-and-teachers': {
+      en: '/education-and-teachers',
+      cy: '/addysg-ac-athrawon'
+    },
+    '/club-support': {
+      en: '/club-support',
+      cy: '/club-support'
+    },
+    '/governance': {
+      en: '/governance',
+      cy: '/governance'
+    },
+    '/facilities': {
+      en: '/facilities',
+      cy: '/facilities'
+    },
+    '/institute': {
+      en: '/institute',
+      cy: '/institute'
+    },
+    '/clip': {
+      en: '/clip',
+      cy: '/clip'
+    },
+    '/careers': {
+      en: '/careers',
+      cy: '/careers'
+    },
+    '/national-lottery': {
+      en: '/national-lottery',
+      cy: '/national-lottery'
+    },
     '/accessibility': {
       en: '/accessibility',
       cy: '/hygyrchedd'
     },
-    '/privacy': {
-      en: '/privacy',
-      cy: '/preifatrwydd'
+    '/privacy-policy': {
+      en: '/privacy-policy',
+      cy: '/polisi-preifatrwydd'
+    },
+    '/cookie-policy': {
+      en: '/cookie-policy',
+      cy: '/polisi-cwcis'
+    },
+    '/terms-conditions': {
+      en: '/terms-conditions',
+      cy: '/telerau-ac-amodau'
+    },
+    '/acceptable-use': {
+      en: '/acceptable-use',
+      cy: '/defnydd-derbyniol'
+    },
+    '/freedom-of-information': {
+      en: '/freedom-of-information',
+      cy: '/rhyddid-gwybodaeth'
+    },
+    '/vacancies': {
+      en: '/vacancies',
+      cy: '/swyddi-gwag'
+    },
+    '/clip/communications-and-digital': {
+      en: '/clip/communications-and-digital',
+      cy: '/clip/cyfathrebu-a-digidol'
+    },
+    '/clip/login': {
+      en: '/clip/login',
+      cy: '/clip/mewngofnodi'
     }
   }
 });

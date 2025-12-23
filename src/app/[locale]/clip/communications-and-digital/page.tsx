@@ -102,15 +102,15 @@ export default function CommunicationsAndDigitalPage() {
                 ? 'Ar gyfer dysgu am bynciau gan gynnwys cyfryngau cymdeithasol, marchnata a\'r cyfryngau.'
                 : 'For learning on topics including social media, marketing and media.'}
             </p>
-            <Link
-              href="/clip"
+            <a
+              href="https://www.sport.wales/clip/"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               {isWelsh ? 'Yn ôl i CLIP' : 'Back to CLIP'}
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -254,6 +254,122 @@ export default function CommunicationsAndDigitalPage() {
         </div>
       </section>
 
+      {/* Training and Support Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <span className="inline-block text-[#3B82F6] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Hyfforddiant a Chymorth' : 'Training and Support'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+              {isWelsh ? 'Hyfforddiant a Chymorth Cyfathrebu' : 'Communications Training and Support'}
+            </h2>
+            <p className="text-lg text-[#64748B] mb-6">
+              {isWelsh
+                ? 'Cysylltiadau i hyfforddiant a chefnogaeth i gefnogi gweithgareddau cyfathrebu.'
+                : 'Links to training and support to support communications activity.'}
+            </p>
+
+            {/* Training Links */}
+            <div className="space-y-4 mb-8">
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <a 
+                  href="https://newsroom.cipr.co.uk/cipr-launch-new-webinar-series-to-support-profession-through-the-coronavirus-crisis/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                >
+                  {isWelsh ? 'Mae CIPR yn lansio cyfres webinariau newydd i gefnogi\'r proffesiwn' : 'CIPR Launches new webinar series to support profession'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <a 
+                  href="https://www.facebook.com/groups/teamtwobees/?source_id=185311151535497" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                >
+                  {isWelsh ? 'Team TwoBees Learning Hive - Facebook' : 'Team TwoBees Learning Hive - Facebook'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <a 
+                  href="https://www.mediacurrent.com/blog/17-tips-leading-effective-conference-calls?mc_cid=d49b571d5f&mc_eid=b031ddff68" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                >
+                  {isWelsh ? '17 awgrym ar gyfer arwain galwadau cyfarfod effeithiol' : '17 tips for leading effective conference calls'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+              <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <a 
+                  href="https://www.allthingsic.com/how-to-communicate-covid-19-working-patterns/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                >
+                  {isWelsh ? 'Sut i gyfathrebu patrymau gwaith COVID-19' : 'How to communicate COVID-19 working patterns'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: isWelsh ? 'Webinariau a Chyrsiau' : 'Webinars and Courses',
+                description: isWelsh
+                  ? 'Cysylltiadau i webinariau a chyrsiau hyfforddi ar gyfer datblygu sgiliau cyfathrebu, gan gynnwys cyrsiau gan CIPR a sefydliadau eraill.'
+                  : 'Links to webinars and training courses for developing communications skills, including courses from CIPR and other organisations.',
+              },
+              {
+                title: isWelsh ? 'Arweiniad Ymarferol' : 'Practical Guidance',
+                description: isWelsh
+                  ? 'Canllawiau ymarferol ar gyfer cyfathrebu effeithiol, gan gynnwys awgrymiadau ar gyfer cyfathrebu patrymau gwaith newydd ac arweiniad ar gyfer cyfarfodydd.'
+                  : 'Practical guidance for effective communications, including tips for communicating new working patterns and guidance for meetings.',
+              },
+              {
+                title: isWelsh ? 'Adnoddau Cymuned' : 'Community Resources',
+                description: isWelsh
+                  ? 'Mynediad i adnoddau o gymunedau ymarfer ar draws sector chwaraeon Cymru, gan gynnwys rhannu syniadau a phrofiadau.'
+                  : 'Access to resources from communities of practice across the Welsh sport sector, including sharing ideas and experiences.',
+              },
+              {
+                title: isWelsh ? 'Cefnogaeth Ar-lein' : 'Online Support',
+                description: isWelsh
+                  ? 'Cymorth ar-lein a chymunedau ar-lein ar gyfer gweithwyr cyfathrebu yn sector chwaraeon Cymru.'
+                  : 'Online support and online communities for communications workers in the Welsh sport sector.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-all duration-300"
+              >
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[#64748B]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
@@ -276,9 +392,12 @@ export default function CommunicationsAndDigitalPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </a>
-              <Link href="/clip" className="btn btn-secondary">
+              <a
+                href="https://www.sport.wales/clip/"
+                className="btn btn-secondary"
+              >
                 {isWelsh ? 'Yn ôl i CLIP' : 'Back to CLIP'}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

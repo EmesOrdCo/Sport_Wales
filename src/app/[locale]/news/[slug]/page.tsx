@@ -3,8 +3,9 @@ import { Link } from '@/i18n/navigation';
 import { notFound } from 'next/navigation';
 import { BreadcrumbSchema, ArticleSchema } from '@/components/seo/StructuredData';
 import { ShareButtons } from '@/components/ui/ShareButtons';
+import { getNewsArticleBySlug } from '@/lib/content';
 
-// Mock news data - in production this would come from CMS
+// Mock news data - fallback when CMS is unavailable
 const newsArticles = [
   {
     id: '1',
@@ -168,13 +169,44 @@ const newsArticles = [
   },
 ];
 
-function getArticleBySlug(slug: string) {
+async function getArticleBySlug(slug: string, locale: 'en' | 'cy') {
+  // Try to fetch from CMS first
+  const cmsArticle = await getNewsArticleBySlug(slug, locale);
+  
+  if (cmsArticle) {
+    // Transform CMS article to match page format
+    return {
+      id: cmsArticle.id,
+      slug: cmsArticle.slug,
+      title: {
+        en: cmsArticle.title,
+        cy: cmsArticle.title, // In bilingual setup, this would come from locale-specific content
+      },
+      excerpt: {
+        en: cmsArticle.excerpt,
+        cy: cmsArticle.excerpt,
+      },
+      content: {
+        en: cmsArticle.content || `<p>${cmsArticle.excerpt || ''}</p>`,
+        cy: cmsArticle.content || `<p>${cmsArticle.excerpt || ''}</p>`,
+      },
+      date: cmsArticle.date.split('T')[0],
+      category: {
+        en: cmsArticle.category || 'News',
+        cy: cmsArticle.category || 'Newyddion',
+      },
+      author: cmsArticle.author || 'Sport Wales',
+      image: cmsArticle.image,
+    };
+  }
+  
+  // Fallback to mock data
   return newsArticles.find((article) => article.slug === slug);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
-  const article = getArticleBySlug(slug);
+  const article = await getArticleBySlug(slug, locale as 'en' | 'cy');
   const isWelsh = locale === 'cy';
   
   if (!article) {
@@ -210,11 +242,33 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export function generateStaticParams() {
+// Generate static params dynamically from CMS
+export async function generateStaticParams() {
+  try {
+    // Try to fetch articles from CMS
+    const { getNewsArticles } = await import('@/lib/content');
+    const { articles } = await getNewsArticles('en', 1, 100); // Get all articles
+    
+    if (articles && articles.length > 0) {
+      // Return CMS article slugs
+      return articles.map((article) => ({
+        slug: article.slug,
+      }));
+    }
+  } catch (error) {
+    console.error('Error generating static params:', error);
+  }
+  
+  // Fallback to mock data slugs
   return newsArticles.map((article) => ({
     slug: article.slug,
   }));
 }
+
+// Enable dynamic routes for CMS articles not in static params
+export const dynamicParams = true;
+// Force dynamic rendering in development to allow CMS articles
+export const dynamic = 'force-dynamic';
 
 export default async function NewsArticlePage({
   params,
@@ -224,7 +278,7 @@ export default async function NewsArticlePage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   
-  const article = getArticleBySlug(slug);
+  const article = await getArticleBySlug(slug, locale as 'en' | 'cy');
   const isWelsh = locale === 'cy';
   const t = await getTranslations({ locale, namespace: 'news' });
   
@@ -276,11 +330,16 @@ export default async function NewsArticlePage({
               </ol>
             </nav>
             
-            {/* Category & Date */}
-            <div className="flex items-center gap-4 mb-4">
-              <span className="bg-sw-red text-white px-3 py-1 rounded-full text-sm font-medium">
-                {article.category[isWelsh ? 'cy' : 'en']}
+            {/* Category, Author & Date */}
+            <div className="flex flex-wrap items-center gap-4 mb-4">
+              <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                {typeof article.category === 'string' ? article.category : article.category[isWelsh ? 'cy' : 'en']}
               </span>
+              {article.author && (
+                <span className="text-white/70 text-sm">
+                  {isWelsh ? 'Gan' : 'By'} {article.author}
+                </span>
+              )}
               <time dateTime={article.date} className="text-white/70 text-sm">
                 {new Date(article.date).toLocaleDateString(isWelsh ? 'cy-GB' : 'en-GB', {
                   day: 'numeric',

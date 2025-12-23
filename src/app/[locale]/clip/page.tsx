@@ -236,7 +236,7 @@ export default function CLIPPage() {
                 return (
                   <Link
                     key={index}
-                    href={theme.href}
+                    href={theme.href as any}
                     className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#3B82F6] hover:shadow-xl transition-all duration-300 block"
                   >
                     {CardContent}

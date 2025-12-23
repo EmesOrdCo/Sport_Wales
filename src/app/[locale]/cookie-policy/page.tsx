@@ -28,8 +28,8 @@ export default async function CookiePolicyPage({
   const isWelsh = locale === 'cy';
 
   const breadcrumbs = [
-    { name: isWelsh ? 'Hafan' : 'Home', href: '/' },
-    { name: isWelsh ? 'Polisi Cwcis' : 'Cookie Policy' },
+    { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
+    { name: isWelsh ? 'Polisi Cwcis' : 'Cookie Policy', url: `https://www.sport.wales/${locale}/cookie-policy` },
   ];
 
   const content = isWelsh ? (
@@ -218,7 +218,7 @@ export default async function CookiePolicyPage({
   return (
     <>
       <BreadcrumbSchema
-        items={breadcrumbs.map((b) => ({ name: b.name, href: b.href || '' }))}
+        items={breadcrumbs.map((b) => ({ name: b.name, url: b.url || '' }))}
       />
       <LegalPageLayout
         title={isWelsh ? 'Polisi Cwcis' : 'Cookie Policy'}

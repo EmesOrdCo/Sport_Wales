@@ -30,8 +30,8 @@ export default async function FreedomOfInformationPage({
   const isWelsh = locale === 'cy';
 
   const breadcrumbs = [
-    { name: isWelsh ? 'Hafan' : 'Home', href: '/' },
-    { name: isWelsh ? 'Rhyddid Gwybodaeth' : 'Freedom of Information' },
+    { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
+    { name: isWelsh ? 'Rhyddid Gwybodaeth' : 'Freedom of Information', url: `https://www.sport.wales/${locale}/freedom-of-information` },
   ];
 
   const content = isWelsh ? (
@@ -238,7 +238,7 @@ export default async function FreedomOfInformationPage({
   return (
     <>
       <BreadcrumbSchema
-        items={breadcrumbs.map((b) => ({ name: b.name, href: b.href || '' }))}
+        items={breadcrumbs.map((b) => ({ name: b.name, url: b.url || '' }))}
       />
       <LegalPageLayout
         title={isWelsh ? 'Rhyddid Gwybodaeth' : 'Freedom of Information'}

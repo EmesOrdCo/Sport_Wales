@@ -553,7 +553,7 @@ export default async function CareersPage({
 
             {/* Careers Guide */}
             <div className="text-center">
-              <Link
+              <a
                 href="https://www.sport.wales/careers-guide"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -563,7 +563,7 @@ export default async function CareersPage({
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -574,7 +574,7 @@ export default async function CareersPage({
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
-              <Link
+              <a
                 href="https://www.sport.wales/pay-scale"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -592,7 +592,7 @@ export default async function CareersPage({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

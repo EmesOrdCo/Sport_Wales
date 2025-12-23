@@ -2,8 +2,10 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import type { NewsArticle } from '@/lib/content';
+import { getCategoryDisplay, getCategoryColor } from '@/lib/categoryTranslations';
 
-// Mock news data - in production this would come from CMS
+// Mock news data - fallback when CMS data not provided
 const mockNewsArticles = [
   {
     id: '1',
@@ -55,13 +57,41 @@ const mockNewsArticles = [
   },
 ];
 
-export function NewsSection() {
+interface NewsSectionProps {
+  articles?: NewsArticle[];
+}
+
+export function NewsSection({ articles }: NewsSectionProps = {}) {
   const t = useTranslations('news');
   const locale = useLocale();
   const isWelsh = locale === 'cy';
 
-  const featured = mockNewsArticles.find(a => a.featured);
-  const others = mockNewsArticles.filter(a => !a.featured);
+  // Transform CMS articles or use mock data
+  const newsArticles = articles && articles.length > 0
+    ? articles.slice(0, 3).map((article) => ({
+        id: article.id,
+        slug: article.slug,
+        title: {
+          en: article.title,
+          cy: article.title, // In bilingual setup, this would come from locale-specific content
+        },
+        excerpt: {
+          en: article.excerpt,
+          cy: article.excerpt,
+        },
+        category: {
+          en: article.category || 'News',
+          cy: article.category || 'Newyddion',
+        },
+        date: article.date.split('T')[0],
+        featured: article.featured || false,
+        image: article.image || '/images/hero-judo.png',
+      }))
+    : mockNewsArticles;
+
+  // Find featured article first, then use first article as fallback
+  const featured = newsArticles.find((a: any) => a.featured) || newsArticles[0];
+  const others = newsArticles.filter((a: any) => !a.featured || a.id === featured?.id).slice(1, 3);
 
   return (
     <section 
@@ -156,10 +186,8 @@ export function NewsSection() {
               <Link href={`/news/${article.slug}` as any} className="block">
                 <div className="card p-6 lg:p-8 h-full flex flex-col bg-white hover:bg-[#FAFAFA] transition-colors">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className={`badge ${
-                      article.category.en === 'Feature' ? 'badge-crimson' : 'badge-teal'
-                    }`}>
-                      {article.category[isWelsh ? 'cy' : 'en']}
+                    <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColor(article.category.en)}`}>
+                      {getCategoryDisplay(article.category.en, isWelsh ? 'cy' : 'en')}
                     </span>
                     <span className="text-sm text-[#94A3B8]">
                       {new Date(article.date).toLocaleDateString(isWelsh ? 'cy-GB' : 'en-GB', {

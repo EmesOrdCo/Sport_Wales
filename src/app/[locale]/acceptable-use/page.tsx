@@ -31,8 +31,8 @@ export default async function AcceptableUsePage({
   const isWelsh = locale === 'cy';
 
   const breadcrumbs = [
-    { name: isWelsh ? 'Hafan' : 'Home', href: '/' },
-    { name: isWelsh ? 'Polisi Defnydd Derbyniol' : 'Acceptable Use Policy' },
+    { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
+    { name: isWelsh ? 'Polisi Defnydd Derbyniol' : 'Acceptable Use Policy', url: `https://www.sport.wales/${locale}/acceptable-use` },
   ];
 
   const content = isWelsh ? (
@@ -258,7 +258,7 @@ export default async function AcceptableUsePage({
   return (
     <>
       <BreadcrumbSchema
-        items={breadcrumbs.map((b) => ({ name: b.name, href: b.href || '' }))}
+        items={breadcrumbs.map((b) => ({ name: b.name, url: b.url || '' }))}
       />
       <LegalPageLayout
         title={isWelsh ? 'Polisi Defnydd Derbyniol' : 'Acceptable Use Policy'}

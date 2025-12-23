@@ -26,6 +26,8 @@ export interface NewsArticle {
   date: string;
   image?: string;
   imageAlt?: string;
+  author?: string;
+  featured?: boolean;
 }
 
 export interface FundingOpportunity {
@@ -36,6 +38,9 @@ export interface FundingOpportunity {
   maxAmount?: string;
   href: string;
   color: string;
+  status?: 'Open' | 'Closed' | 'Coming Soon';
+  deadlineDate?: string;
+  applicationLink?: string;
 }
 
 // ============================================
@@ -207,18 +212,68 @@ export async function getNewsArticles(
     try {
       const response = await getStrapiNewsArticles(locale, page, pageSize);
       
+      if (!response?.data) {
+        throw new Error('Invalid response from Strapi');
+      }
+      
       // Transform Strapi response to our format
-      const articles = response.data.map((item) => ({
-        id: String(item.id),
-        slug: item.attributes.slug,
-        title: item.attributes.title,
-        excerpt: item.attributes.excerpt || '',
-        content: item.attributes.content,
-        category: 'News', // You might want to add this field to Strapi
-        date: item.attributes.publishedAt,
-        image: item.attributes.featuredImage?.data?.attributes.url,
-        imageAlt: item.attributes.featuredImage?.data?.attributes.alternativeText || '',
-      }));
+      // Strapi v5 returns data directly, v4 uses attributes wrapper
+      const articles = response.data.map((item: any) => {
+        // Handle both Strapi v4 (with attributes) and v5 (without attributes) formats
+        const data = item.attributes || item;
+        
+        // Handle rich text content (can be array or string)
+        let contentText = '';
+        if (Array.isArray(data.content)) {
+          // Extract text from rich text structure
+          contentText = data.content
+            .map((block: any) => {
+              if (block.type === 'paragraph' && block.children) {
+                return block.children.map((child: any) => child.text || '').join('');
+              }
+              return '';
+            })
+            .join('\n\n');
+        } else {
+          contentText = data.content || '';
+        }
+
+        // Handle image - check both v4 and v5 formats
+        const featuredImage = data.featuredImage;
+        let imageUrl = null;
+        let imageAlt = '';
+        
+        if (featuredImage) {
+          // v5 format: featuredImage.data.attributes.url or featuredImage.url
+          if (featuredImage.data?.attributes?.url) {
+            imageUrl = featuredImage.data.attributes.url;
+            imageAlt = featuredImage.data.attributes.alternativeText || '';
+          } else if (featuredImage.data?.url) {
+            imageUrl = featuredImage.data.url;
+            imageAlt = featuredImage.data.alternativeText || '';
+          } else if (featuredImage.url) {
+            imageUrl = featuredImage.url;
+            imageAlt = featuredImage.alternativeText || '';
+          } else if (featuredImage.attributes?.url) {
+            imageUrl = featuredImage.attributes.url;
+            imageAlt = featuredImage.attributes.alternativeText || '';
+          }
+        }
+
+        return {
+          id: String(item.id),
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt || '',
+          content: contentText,
+          category: data.category || 'News',
+          date: data.publishedAt || data.createdAt,
+          image: imageUrl,
+          imageAlt: imageAlt,
+          author: data.author || 'Sport Wales',
+          featured: data.featured || false,
+        };
+      });
       
       return {
         articles,
@@ -226,6 +281,8 @@ export async function getNewsArticles(
       };
     } catch (error) {
       console.error('Failed to fetch from Strapi, using mock data:', error);
+      // Return empty array with 0 total to trigger fallback
+      return { articles: [], total: 0 };
     }
   }
   
@@ -254,16 +311,65 @@ export async function getNewsArticleBySlug(
       const article = await getStrapiNewsArticleBySlug(slug, locale);
       
       if (article) {
+        // Handle both Strapi v4 and v5 formats
+        const data = (article as any).attributes || article;
+        const featuredImage = data.featuredImage;
+        let imageUrl = null;
+        let imageAlt = '';
+        
+        if (featuredImage) {
+          if (featuredImage.data?.attributes?.url) {
+            imageUrl = featuredImage.data.attributes.url;
+            imageAlt = featuredImage.data.attributes.alternativeText || '';
+          } else if (featuredImage.data?.url) {
+            imageUrl = featuredImage.data.url;
+            imageAlt = featuredImage.data.alternativeText || '';
+          } else if (featuredImage.url) {
+            imageUrl = featuredImage.url;
+            imageAlt = featuredImage.alternativeText || '';
+          } else if (featuredImage.attributes?.url) {
+            imageUrl = featuredImage.attributes.url;
+            imageAlt = featuredImage.attributes.alternativeText || '';
+          }
+        }
+        
+        // Convert rich text content to HTML
+        let contentText = '';
+        if (Array.isArray(data.content)) {
+          // Extract text from rich text structure and convert to HTML
+          contentText = data.content
+            .map((block: any) => {
+              if (block.type === 'paragraph' && block.children) {
+                const text = block.children.map((child: any) => child.text || '').join('');
+                return `<p>${text}</p>`;
+              }
+              if (block.type === 'heading' && block.children) {
+                const level = block.level || 2;
+                const text = block.children.map((child: any) => child.text || '').join('');
+                return `<h${level}>${text}</h${level}>`;
+              }
+              return '';
+            })
+            .join('');
+        } else if (typeof data.content === 'string') {
+          contentText = data.content;
+        } else {
+          // Fallback to excerpt if content is in unexpected format
+          contentText = `<p>${data.excerpt || ''}</p>`;
+        }
+        
         return {
           id: String(article.id),
-          slug: article.attributes.slug,
-          title: article.attributes.title,
-          excerpt: article.attributes.excerpt || '',
-          content: article.attributes.content,
-          category: 'News',
-          date: article.attributes.publishedAt,
-          image: article.attributes.featuredImage?.data?.attributes.url,
-          imageAlt: article.attributes.featuredImage?.data?.attributes.alternativeText || '',
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt || '',
+          content: contentText,
+          category: data.category || 'News',
+          date: data.publishedAt || data.createdAt,
+          image: imageUrl,
+          imageAlt: imageAlt,
+          author: data.author || 'Sport Wales',
+          featured: data.featured || false,
         };
       }
     } catch (error) {
@@ -287,15 +393,30 @@ export async function getFundingOpportunities(
     try {
       const response = await getStrapiFundingOpportunities(locale);
       
-      return response.data.map((item) => ({
-        id: String(item.id),
-        slug: item.attributes.slug,
-        title: item.attributes.title,
-        description: item.attributes.excerpt || '',
-        maxAmount: undefined, // Add this field to Strapi if needed
-        href: `/funding/${item.attributes.slug}`,
-        color: 'bg-sw-teal', // You might want to add this to Strapi
-      }));
+      return response.data.map((item: any) => {
+        // Handle both Strapi v4 and v5 formats
+        const data = item.attributes || item;
+        
+        // Determine color based on status
+        const getColorByStatus = (status?: string) => {
+          if (status === 'Closed') return 'bg-sw-gray';
+          if (status === 'Coming Soon') return 'bg-sw-navy';
+          return 'bg-sw-teal';
+        };
+        
+        return {
+          id: String(item.id),
+          slug: data.slug,
+          title: data.title,
+          description: data.description || data.excerpt || '',
+          maxAmount: data.maxAmount || undefined,
+          href: data.applicationLink || `/funding/${data.slug}`,
+          color: getColorByStatus(data.status),
+          status: data.status || 'Open',
+          deadlineDate: data.deadlineDate || undefined,
+          applicationLink: data.applicationLink || undefined,
+        };
+      }).filter((opp) => opp.status === 'Open' || !opp.status); // Only show open opportunities by default
     } catch (error) {
       console.error('Failed to fetch from Strapi, using mock data:', error);
     }

@@ -246,6 +246,149 @@ export default async function ClubSupportPage({
         </div>
       </section>
 
+      {/* Getting Started Section - Individuals and Families */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+                {isWelsh ? 'Cychwyn Arni' : 'Getting Started'}
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+                {isWelsh ? 'I Unigolion a Theuluoedd' : 'For Individuals and Families'}
+              </h2>
+              <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+                {isWelsh
+                  ? "Dylai chwaraeon a gweithgarwch corfforol fod ar gyfer pawb. P'un a ydych eisoes yn hynod o chwaraeon ac yn cymryd rhan mewn ymarfer corff, neu'n edrych i gymryd eich camau cyntaf i gael ffit, mae yna wahanol ffyrdd y gallwn eich helpu i gymryd rhan."
+                  : "Sport and physical activity should be for everyone. Whether you're already quite sporty and take part in exercise or looking to take your first steps to getting fit, there are different ways we could help you take part."}
+              </p>
+              <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
+                {isWelsh
+                  ? 'Gallwch ddod o hyd i glybiau a sefydliadau yn eich ardal, dysgu am gyfleoedd chwaraeon ar gyfer plant ac oedolion, neu gael cymorth i ddechrau gyda chwaraeon a gweithgarwch corfforol.'
+                  : 'You can find clubs and organisations in your area, learn about sport opportunities for children and adults, or get support to get started with sport and physical activity.'}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                >
+                  {isWelsh ? 'Cael Cymorth' : 'Get Help'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/facilities"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                >
+                  {isWelsh ? 'Darganfod Cyfleusterau' : 'Find Facilities'}
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {
+                  title: isWelsh ? 'Clybiau Lleol' : 'Local Clubs',
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: isWelsh ? 'Chwaraeon Plant' : 'Children\'s Sport',
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: isWelsh ? 'Ymarfer Corff' : 'Physical Activity',
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: isWelsh ? 'Cyfleusterau' : 'Facilities',
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  )
+                },
+              ].map((item, index) => (
+                <div key={index} className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] text-center">
+                  <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mx-auto mb-4">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-semibold text-[#0F172A]">{item.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sport in the Community Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl">
+            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Chwaraeon yn y Gymuned' : 'Sport in the Community'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              {isWelsh ? 'Chwaraeon Cymunedol' : 'Sport in the Community'}
+            </h2>
+            <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
+              {isWelsh
+                ? 'Mae Chwaraeon Cymru yn cefnogi chwaraeon yn y gymuned gyda buddsoddiad trwy grantiau, adnoddau i helpu hyfforddwyr a gwirfoddolwyr, a gweithio gyda llawer o bartneriaid ym mhob cornel o\'r wlad.'
+                : 'Sport Wales supports sport in the community with investment through grants, resources to helps coaches and volunteers, and working with lots of partners in every corner of the country.'}
+            </p>
+
+            {/* Club Support */}
+            <div className="mb-8 p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+                {isWelsh ? 'Cefnogaeth Clybiau' : 'Club Support'}
+              </h3>
+              <p className="text-lg text-[#64748B] mb-4">
+                {isWelsh
+                  ? 'Yma fe welwch becyn offer Chwaraeon Cymru o arweiniad ar gyfer clybiau chwaraeon a sefydliadau.'
+                  : 'Here you\'ll find Sport Wales\' kitbag of guidance for sports clubs and organisations.'}
+              </p>
+            </div>
+
+            {/* Highlighted Resources */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                  {isWelsh ? 'Cyllid a Chymorth' : 'Funding and Support'}
+                </h3>
+                <p className="text-[#64748B] mb-4">
+                  {isWelsh
+                    ? 'Buddsoddi mewn chwaraeon gwreiddiol a chymunedol, yn ogystal ag athletwyr Cymru.'
+                    : 'Investing in grassroots and community sport, as well as Welsh athletes.'}
+                </p>
+              </div>
+              <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                  {isWelsh ? 'Llythrennedd Corfforol' : 'Physical Literacy'}
+                </h3>
+                <p className="text-[#64748B] mb-4">
+                  {isWelsh
+                    ? 'Rydym eisiau rhoi i bob person y sgiliau a\'r hyder i gymryd rhan mewn chwaraeon.'
+                    : 'We want to give every person the skills and confidence to take part in sport.'}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* BeActiveWales Campaign */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
