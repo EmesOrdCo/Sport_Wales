@@ -79,7 +79,7 @@ export default async function FundingPage({
         : 'Grants up to £25,000 for energy-saving improvements',
       cta: isWelsh ? 'Gwneud cais nawr' : 'Apply now',
       ctaStyle: 'bg-[#DC2626] text-white hover:bg-[#B91C3C]',
-      href: '/funding/energy-saving',
+      href: '/funding/energy-saving-grant',
       bgColor: 'bg-[#F59E0B]',
       textColor: 'text-[#0F172A]',
       titleColor: 'text-[#0F172A]',
@@ -134,6 +134,34 @@ export default async function FundingPage({
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
               {t('fundingSupport')}
             </h1>
+            <p className="text-xl text-white/80 leading-relaxed mb-6">
+              {isWelsh
+                ? 'Rydym yn darparu cyllid i glybiau chwaraeon a grwpiau cymunedol. Gall ein tîm grantiau eich cefnogi gyda gwybodaeth. Gall awdurdodau lleol a\'ch corff llywodraethu chwaraeon hefyd eich helpu gyda chais am grant.'
+                : 'We provide funding to sports clubs and community groups. Our grants team can support you with information. Local authorities and your governing body of sport can also help you with a grant application.'}
+            </p>
+            <div className="text-white/70">
+              <p className="font-semibold text-white/90 mb-3">
+                {isWelsh ? 'Rydym yn cefnogi ystod o anghenion cyllido fel:' : 'We support a range of funding needs such as:'}
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  {isWelsh ? 'Sefydlu tîm newydd' : 'Setting up a new team'}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  {isWelsh ? 'Uwchraddio eich cyfleusterau' : 'Upgrading your facilities'}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  {isWelsh ? 'Cefnogaeth i athletwyr unigol' : 'Support for individual athletes'}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  {isWelsh ? 'Mynd i\'r afael ag anghydraddoldebau' : 'Tackling inequalities'}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         
@@ -197,6 +225,81 @@ export default async function FundingPage({
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* When are our funds open? Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+            {isWelsh ? 'Pryd mae ein cronfeydd ar agor?' : 'When are our funds open?'}
+          </h2>
+
+          <div className="space-y-12">
+            {/* A Place for Sport - Crowdfunder */}
+            <div>
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+                {isWelsh ? 'Lle i Chwaraeon - Crowdfunder' : 'A Place for Sport - Crowdfunder'}
+              </h3>
+              <p className="text-lg text-[#14B8A6] font-semibold">
+                {isWelsh ? 'Ar agor drwy\'r flwyddyn' : 'Open all year round'}
+              </p>
+            </div>
+
+            {/* Be Active Wales Fund */}
+            <div>
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+                {isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund'}
+              </h3>
+              
+              <div className="space-y-8">
+                {/* Window 1 */}
+                <div>
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 1' : 'Window 1'}</h4>
+                  <div className="space-y-1 text-[#334155]">
+                    <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 2il Ebrill 2025, 9am' : 'Wednesday 2nd April 2025, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 30ain Mai 2025, 9am' : 'Friday 30th May 2025, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Cau:' : 'Close:'}</span> {isWelsh ? 'Mercher 4ydd Mehefin 2025, 4pm' : 'Wednesday 4th June 2025, 4pm'}</p>
+                  </div>
+                </div>
+
+                {/* Window 2 */}
+                <div>
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 2' : 'Window 2'}</h4>
+                  <div className="space-y-1 text-[#334155]">
+                    <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 9fed Gorffennaf 2025, 9am' : 'Wednesday 9th July 2025, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 12fed Medi 2025, 9am' : 'Friday 12th September 2025, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Cau:' : 'Close:'}</span> {isWelsh ? 'Mercher 17eg Medi 2025, 4pm' : 'Wednesday 17th September 2025, 4pm'}</p>
+                  </div>
+                </div>
+
+                {/* Window 3 */}
+                <div>
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 3' : 'Window 3'}</h4>
+                  <div className="space-y-1 text-[#334155]">
+                    <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 5ed Tachwedd 2025, 9am' : 'Wednesday 5th November 2025, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 9fed Ionawr 2026, 9am' : 'Friday 9th January 2026, 9am'}</p>
+                    <p><span className="font-semibold">{isWelsh ? 'Cau:' : 'Close:'}</span> {isWelsh ? 'Mercher 14eg Ionawr 2026, 4pm' : 'Wednesday 14th January 2026, 4pm'}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Energy Saving Grant */}
+            <div>
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+                {isWelsh ? 'Grant Arbed Ynni' : 'Energy Saving Grant'}
+              </h3>
+              
+              <div>
+                <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Cam 1' : 'Stage 1'}</h4>
+                <div className="space-y-1 text-[#334155]">
+                  <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 21ain Mai, 10am' : 'Wednesday 21st May, 10am'}</p>
+                  <p><span className="font-semibold">{isWelsh ? 'Cau:' : 'Close:'}</span> {isWelsh ? 'Mercher 25ain Mehefin, 3pm' : 'Wednesday 25th June, 3pm'}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

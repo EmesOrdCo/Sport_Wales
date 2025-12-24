@@ -1,14 +1,15 @@
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const funding = await getTranslations({ locale, namespace: 'funding' });
   const isWelsh = locale === 'cy';
   
-  const title = funding('beActiveWales');
-  const description = funding('beActiveDescription');
+  const title = isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund';
+  const description = isWelsh 
+    ? 'Darparu cyllid y Loteri Genedlaethol i helpu clybiau chwaraeon a grwpiau cymunedol yng Nghymru i gael mwy o bobl yn actif.'
+    : 'Providing National Lottery funding to help sports clubs and community groups in Wales to get more people active.';
   
   return {
     title,
@@ -40,69 +41,20 @@ export default async function BeActiveWalesPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'navigation' });
-  const funding = await getTranslations({ locale, namespace: 'funding' });
-
   const isWelsh = locale === 'cy';
 
   const breadcrumbItems = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
-    { name: t('fundingSupport'), url: `https://www.sport.wales/${locale}/funding` },
-    { name: funding('beActiveWales'), url: `https://www.sport.wales/${locale}/funding/be-active-wales` },
-  ];
-
-  const fundDetails = [
-    {
-      title: isWelsh ? 'Swm y Grant' : 'Grant Amount',
-      value: isWelsh ? 'Hyd at £50,000' : 'Up to £50,000',
-      description: isWelsh 
-        ? 'Mae grantiau ar gael hyd at £50,000 ar gyfer offer neu gyrsiau hyfforddi.'
-        : 'Grants available up to £50,000 for equipment or coaching courses.',
-    },
-    {
-      title: isWelsh ? 'Pwy All Wneud Cais?' : 'Who Can Apply?',
-      value: isWelsh ? 'Grwpiau a Sefydliadau' : 'Groups and Organisations',
-      description: isWelsh 
-        ? 'Clybiau chwaraeon, sefydliadau chwaraeon, ac mwy sy\'n gweithio yng Nghymru.'
-        : 'Sports clubs, sports organisations, and more working in Wales.',
-    },
-    {
-      title: isWelsh ? 'Beth All ei Arianwch?' : 'What Can You Fund?',
-      value: isWelsh ? 'Offer a Hyfforddiant' : 'Equipment & Training',
-      description: isWelsh 
-        ? 'Offer chwaraeon, cyrsiau hyfforddi, ac adnoddau eraill i helpu eich clwb neu sefydliad.'
-        : 'Sports equipment, coaching courses, and other resources to help your club or organisation.',
-    },
-  ];
-
-  const eligibilityCriteria = [
-    {
-      title: isWelsh ? 'Lleoliad' : 'Location',
-      description: isWelsh 
-        ? 'Rhaid i\'r prosiect ddigwydd yng Nghymru ac yn bennaf o fudd i drigolion Cymru.'
-        : 'Projects must take place in Wales and primarily benefit Welsh residents.',
-    },
-    {
-      title: isWelsh ? 'Amseriad' : 'Timing',
-      description: isWelsh 
-        ? 'Ni ddylai\'r prosiect fod wedi cychwyn cyn gwneud cais.'
-        : 'The project should not have commenced prior to application.',
-    },
-    {
-      title: isWelsh ? 'Budd Cymunedol' : 'Community Benefit',
-      description: isWelsh 
-        ? 'Rhaid defnyddio\'r arian er budd cymunedol ac i gynyddu cyfranogiad mewn chwaraeon.'
-        : 'Funds must be used for community benefit and to increase participation in sport.',
-    },
+    { name: isWelsh ? 'Cyllid a Chefnogaeth' : 'Funding and Support', url: `https://www.sport.wales/${locale}/funding` },
+    { name: isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund', url: `https://www.sport.wales/${locale}/funding/be-active-wales` },
   ];
 
   return (
     <>
-      {/* Structured Data */}
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#B91C3C] via-[#991B1B] to-[#B91C3C] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#DC2626] via-[#B91C3C] to-[#DC2626] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
@@ -115,24 +67,28 @@ export default async function BeActiveWalesPage({
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              {isWelsh ? 'Hyd at £50,000' : 'Up to £50,000'}
+              {isWelsh ? '£300 - £50,000' : '£300 - £50,000'}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
-              {funding('beActiveWales')}
+              {isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund'}
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
-              {funding('beActiveDescription')}
+              {isWelsh
+                ? 'Darparu cyllid y Loteri Genedlaethol i helpu clybiau chwaraeon a grwpiau cymunedol yng Nghymru i gael mwy o bobl yn actif.'
+                : 'Providing National Lottery funding to help sports clubs and community groups in Wales to get more people active.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/funding"
-                className="inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-white text-[#B91C3C] font-semibold hover:bg-[#F8FAFC] transition-colors"
+              <a 
+                href="https://www.sport.wales/grants-and-funding/beactivewalesfund/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-white text-[#DC2626] font-semibold hover:bg-[#F8FAFC] transition-colors"
               >
                 {isWelsh ? 'Gwneud Cais Nawr' : 'Apply Now'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </a>
               <Link 
                 href="/funding"
                 className="inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors"
@@ -151,123 +107,173 @@ export default async function BeActiveWalesPage({
         </div>
       </section>
 
-      {/* Fund Details Section */}
+      {/* About the Fund Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
-            {fundDetails.map((detail, index) => (
-              <div 
-                key={index}
-                className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]"
-              >
-                <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-2">
-                  {detail.title}
-                </div>
-                <div className="text-2xl font-display font-bold text-[#B91C3C] mb-3">
-                  {detail.value}
-                </div>
-                <p className="text-[#64748B]">
-                  {detail.description}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              {isWelsh ? 'Am y Gronfa' : 'About the Fund'}
+            </h2>
+            <p className="text-lg text-[#334155] leading-relaxed">
+              {isWelsh
+                ? 'Mae Cronfa Cymru Actif yn grant a gefnogir gan y Loteri Genedlaethol, sy\'n cynnig grantiau o £300 i £50,000 i glybiau chwaraeon dielw a grwpiau cymunedol ledled Cymru i annog mwy o bobl i gymryd rhan mewn chwaraeon.'
+                : 'The Be Active Wales Fund is a grant supported by the National Lottery, offering grants from £300 to £50,000 to not-for-profit sports clubs and community groups across Wales to encourage more people to participate in sport.'}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Eligibility Section */}
+      {/* What can you get funding for? */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-              {isWelsh ? 'Meini Prawf Cymhwysedd' : 'Eligibility Criteria'}
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Beth allwch chi gael cyllid ar ei gyfer?' : 'What can you get funding for?'}
             </h2>
-            <p className="text-lg text-[#64748B] mb-8">
-              {isWelsh
-                ? 'Er mwyn cymhwyso ar gyfer y Gronfa Cymru Actif, rhaid i\'ch prosiect fodloni\'r meini prawf canlynol:'
-                : 'To qualify for the Be Active Wales Fund, your project must meet the following criteria:'}
-            </p>
-
-            <div className="space-y-4">
-              {eligibilityCriteria.map((criterion, index) => (
-                <div 
-                  key={index}
-                  className="p-6 rounded-xl bg-white border border-[#E2E8F0]"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#B91C3C]/10 flex items-center justify-center flex-shrink-0">
-                      <span className="text-[#B91C3C] font-bold">{index + 1}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">
-                        {criterion.title}
-                      </h3>
-                      <p className="text-[#64748B]">
-                        {criterion.description}
-                      </p>
-                    </div>
+            <ul className="space-y-4">
+              {[
+                isWelsh ? 'Offer i helpu mwy o bobl i gymryd rhan mewn chwaraeon' : 'Equipment to help more people take part in sport',
+                isWelsh ? 'Cyrsiau hyfforddi (hyd at lefel 2) sy\'n uwchsgilio hyfforddwyr a gwirfoddolwyr' : 'Coaching courses (up to level 2) that upskill coaches and volunteers',
+                isWelsh ? 'Cyrsiau hyfforddi lefel mynediad, megis Cymorth Cyntaf neu Ddyfarnu' : 'Entry-level training courses, such as First Aid or Officiating',
+                isWelsh ? 'Llogi lleoliad ar gyfer timau newydd yn unig (am uchafswm o ddeg wythnos)' : 'Venue hire for new teams only (for a maximum of ten weeks)',
+                isWelsh ? 'Prosiectau gwella caeau' : 'Pitch improvement projects',
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
-                </div>
+                  <span className="text-lg text-[#334155]">{item}</span>
+                </li>
               ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Who can apply? */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Pwy all wneud cais?' : 'Who can apply?'}
+            </h2>
+            <ul className="space-y-4">
+              {[
+                isWelsh ? 'Clybiau chwaraeon dielw neu grwpiau cymunedol yng Nghymru' : 'Not-for-profit sports clubs or community groups in Wales',
+                isWelsh ? 'Rhaid i brosiectau ddigwydd yng Nghymru ac yn bennaf o fudd i drigolion Cymru' : 'Projects must take place in Wales and primarily benefit Welsh residents',
+                isWelsh ? 'Ni ddylai prosiectau fod wedi cychwyn nac yn cynnwys eitemau a brynwyd ymlaen llaw' : 'Projects should not have commenced or include pre-purchased items',
+                isWelsh ? 'Dylai prosiectau anelu at gynyddu cyfranogiad mewn chwaraeon' : 'Projects should aim to increase sports participation',
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-[#14B8A6] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-lg text-[#334155]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How is funding awarded? */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Sut mae cyllid yn cael ei ddyfarnu?' : 'How is funding awarded?'}
+            </h2>
+            <div className="space-y-6 text-lg text-[#334155]">
+              <p>
+                {isWelsh
+                  ? 'Mae grantiau\'n amrywio rhwng £300 a £50,000. Rhaid i glybiau gyfrannu o leiaf 10% o gyfanswm cost y prosiect.'
+                  : 'Grants range between £300 and £50,000. Clubs must contribute at least 10% of the total project cost.'}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0]">
+                <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-2">
+                  {isWelsh ? 'Grantiau £300 - £25,000' : 'Grants £300 - £25,000'}
+                </div>
+                <div className="text-3xl font-display font-bold text-[#DC2626] mb-3">
+                  {isWelsh ? 'Hyd at 90%' : 'Up to 90%'}
+                </div>
+                <p className="text-[#64748B]">
+                  {isWelsh
+                    ? 'Mae Chwaraeon Cymru yn ariannu hyd at 90% o gostau\'r prosiect'
+                    : 'Sport Wales funds up to 90% of project costs'}
+                </p>
+              </div>
+
+              <div className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0]">
+                <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-2">
+                  {isWelsh ? 'Grantiau £25,001 - £50,000' : 'Grants £25,001 - £50,000'}
+                </div>
+                <div className="text-3xl font-display font-bold text-[#DC2626] mb-3">
+                  {isWelsh ? 'Hyd at 80%' : 'Up to 80%'}
+                </div>
+                <p className="text-[#64748B]">
+                  {isWelsh
+                    ? 'Mae Chwaraeon Cymru yn ariannu hyd at 80% o gostau\'r prosiect'
+                    : 'Sport Wales funds up to 80% of project costs'}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Can Be Funded Section */}
+      {/* Need Help? */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Beth All ei Arianwch?' : 'What Can Be Funded?'}
+          <div className="max-w-4xl">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Angen help?' : 'Need help?'}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: isWelsh ? 'Offer Chwaraeon' : 'Sports Equipment',
-                  icon: (
+              <div className="p-6 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#DC2626]/10 flex items-center justify-center text-[#DC2626]">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                  ),
-                },
-                {
-                  title: isWelsh ? 'Cyrsiau Hyfforddi' : 'Coaching Courses',
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  ),
-                },
-                {
-                  title: isWelsh ? 'Gwelliannau Cyfleusterau' : 'Facility Improvements',
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
-                  ),
-                },
-                {
-                  title: isWelsh ? 'Gweithgareddau Cymunedol' : 'Community Activities',
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  ),
-                },
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className="p-6 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center gap-4"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] flex-shrink-0">
-                    {item.icon}
                   </div>
-                  <h3 className="text-lg font-display font-bold text-[#0F172A]">
-                    {item.title}
-                  </h3>
+                  <div>
+                    <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
+                      {isWelsh ? 'E-bost' : 'Email'}
+                    </div>
+                    <a href="mailto:beactivewales@sport.wales" className="text-[#DC2626] font-semibold hover:underline">
+                      beactivewales@sport.wales
+                    </a>
+                  </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="p-6 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#DC2626]/10 flex items-center justify-center text-[#DC2626]">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
+                      {isWelsh ? 'Ffôn' : 'Phone'}
+                    </div>
+                    <a href="tel:03003003102" className="text-[#DC2626] font-semibold hover:underline">
+                      0300 3003102
+                    </a>
+                    <p className="text-sm text-[#64748B] mt-1">
+                      {isWelsh ? 'Llun - Gwener: 10am - 12:30pm a 1:15pm – 4pm' : 'Monday to Friday: 10am - 12:30pm and 1:15pm – 4pm'}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -286,15 +292,17 @@ export default async function BeActiveWalesPage({
                 : 'Find out more about the fund and get started with your application today.'}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="/funding" 
-                className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+              <a 
+                href="https://www.sport.wales/grants-and-funding/beactivewalesfund/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-[#DC2626] text-white font-semibold hover:bg-[#B91C3C] transition-colors"
               >
                 {isWelsh ? 'Gwneud Cais Nawr' : 'Apply Now'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </Link>
+              </a>
               <Link 
                 href="/funding"
                 className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors"
@@ -308,4 +316,3 @@ export default async function BeActiveWalesPage({
     </>
   );
 }
-
