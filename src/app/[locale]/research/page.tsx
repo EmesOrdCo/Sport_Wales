@@ -1,4 +1,4 @@
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
 
@@ -48,92 +48,6 @@ export default async function ResearchPage({
     { name: isWelsh ? 'Ymchwil a Mewnwelediad' : 'Research and Insight', url: `https://www.sport.wales/${locale}/research` },
   ];
 
-  const researchAreas = [
-    {
-      title: isWelsh ? 'Arolygon ac Olrheinwyr' : 'Surveys & Trackers',
-      description: isWelsh
-        ? 'Gan gynnwys yr Arolwg Chwaraeon Ysgol a\'r Arolwg Chwaraeon a Ffordd o Fyw Actif.'
-        : 'Including the School Sport Survey and the Sport and Active Lifestyles Survey.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-      ),
-      color: 'bg-[#B91C3C]',
-      items: [
-        isWelsh ? 'Arolwg Chwaraeon Ysgol' : 'School Sport Survey',
-        isWelsh ? 'Arolwg Chwaraeon a Ffordd o Fyw Actif' : 'Sport and Active Lifestyles Survey',
-        isWelsh ? 'Arolwg Cenedlaethol Cymru 2024-25' : 'National Survey for Wales 2024-25',
-      ],
-    },
-    {
-      title: isWelsh ? 'Adolygiadau a Gwerthusiad' : 'Reviews & Evaluation',
-      description: isWelsh
-        ? 'Gan gynnwys Adenillion Cymdeithasol ar Fuddsoddiad ac Addysg Actif.'
-        : 'Including Social Return on Investment and Active Education.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      color: 'bg-[#14B8A6]',
-      items: [
-        isWelsh ? 'Adenillion Cymdeithasol ar Fuddsoddiad (SROI)' : 'Social Return on Investment (SROI)',
-        isWelsh ? 'Gwerthusiad Addysg Actif' : 'Active Education Evaluation',
-        isWelsh ? 'Effaith ar Iechyd a Lles' : 'Health and Wellbeing Impact',
-      ],
-    },
-    {
-      title: isWelsh ? 'Mewnwelediad Ansoddol' : 'Qualitative Insight',
-      description: isWelsh
-        ? 'Gan gynnwys yr adroddiad am y rhwystrau i gyfranogiad.'
-        : 'Including the report about the barriers to participation.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      color: 'bg-[#F59E0B]',
-      items: [
-        isWelsh ? 'Rhwystrau i Gyfranogiad' : 'Barriers to Participation',
-        isWelsh ? 'Cymhelliant i Fod yn Actif' : 'Motivation to be Active',
-        isWelsh ? 'Profiadau Cymunedol' : 'Community Experiences',
-      ],
-    },
-    {
-      title: isWelsh ? 'Ymchwil Ein Partneriaid' : 'Our Partners\' Research',
-      description: isWelsh
-        ? 'Gan gynnwys gwaith gan StreetGames a\'r SLC.'
-        : 'Including work by StreetGames and SLC.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-        </svg>
-      ),
-      color: 'bg-[#6366F1]',
-      items: [
-        'StreetGames',
-        isWelsh ? 'Ymchwil SLC' : 'SLC Research',
-        isWelsh ? 'Astudiaethau Partneriaeth' : 'Partnership Studies',
-      ],
-    },
-  ];
-
-  const keyStats = [
-    {
-      value: '£4.44',
-      label: isWelsh ? 'adenillion am bob £1 a fuddsoddir mewn chwaraeon' : 'return for every £1 invested in sport',
-    },
-    {
-      value: '£5.89bn',
-      label: isWelsh ? 'gwerth cymdeithasol cyfan i Gymru' : 'total social value to Wales',
-    },
-    {
-      value: '120,000+',
-      label: isWelsh ? 'pobl ifanc yn ymateb i\'r Arolwg Chwaraeon Ysgol' : 'young people respond to School Sport Survey',
-    },
-  ];
-
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
@@ -147,21 +61,62 @@ export default async function ResearchPage({
         </div>
 
         <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
+          <div className="max-w-4xl">
+            {/* School Sport Survey link */}
+            <Link 
+              href="/research/school-sport-survey"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6 hover:bg-white/20 transition-colors"
+            >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
-              {isWelsh ? 'Ymchwil a Mewnwelediad' : 'Research & Insight'}
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
-              {isWelsh ? 'Deall Chwaraeon yng Nghymru' : 'Understanding Sport in Wales'}
+              {isWelsh ? 'Arolwg Chwaraeon Ysgol 2022' : 'School Sport Survey 2022'}
+            </Link>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-8">
+              {isWelsh ? 'Ymchwil a Mewnwelediad' : 'Research and Insight'}
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              {isWelsh
-                ? 'Mae ein tîm Ymchwil a Mewnwelediad yn casglu a rheoli data ar weithgarwch chwaraeon yng Nghymru, gan helpu i lunio\'r dyfodol.'
-                : 'Our Research and Insight team collects and manages data on sporting activity in Wales, helping to shape the future.'}
-            </p>
+            <div className="space-y-6 text-lg text-white/80 leading-relaxed">
+              <p>
+                {isWelsh
+                  ? 'Mae ein tîm Ymchwil a Mewnwelediad yn casglu a rheoli data ar weithgarwch chwaraeon yng Nghymru.'
+                  : 'Our Research and Insight team collects and manages data on sporting activity in Wales.'}
+              </p>
+              <p>
+                {isWelsh
+                  ? 'Mae ein dwy brif arolwg cyfranogiad chwaraeon yng Nghymru - yr Arolwg Chwaraeon Ysgol a\'r Arolwg Chwaraeon a Ffordd o Fyw Actif - yn darparu darlun clir o gynnydd a\'r gwaith sydd ei angen i\'r sector.'
+                  : 'Our two major sport participation surveys in Wales - the School Sport Survey and the Sport and Active Lifestyles Survey - provide the sector with a clear picture of progress and the work that is required.'}
+              </p>
+              <p>
+                {isWelsh
+                  ? 'Ymhell o fod yn brosesu rhifau yn unig, mae ein tîm yn ein helpu i ddeall cymhelliant pobl i gymryd rhan mewn chwaraeon a\'r rhwystrau sy\'n eu hatal yn aml. Rydym yn rhannu ein canfyddiadau ar draws y sector fel y gallwn i gyd wneud penderfyniadau gwell.'
+                  : 'Far from just crunching numbers, our team helps us to understand people\'s motivations to take part in sport and the barriers that often prevent them. We share our findings across the sector so that we can all make better decisions.'}
+              </p>
+              <p>
+                {isWelsh
+                  ? 'Rydym yn gyflenwr ystadegau swyddogol, sy\'n golygu bod ein data yn cydymffurfio â lefelau uchel o ansawdd ac arfer da.'
+                  : 'We are a supplier of official statistics, meaning that our data complies to high levels of quality and good practice.'}
+              </p>
+            </div>
+
+            {/* Contact Info */}
+            <div className="mt-8 pt-8 border-t border-white/20">
+              <h3 className="text-xl font-display font-bold text-white mb-4">
+                {isWelsh ? 'Am ragor o wybodaeth' : 'For further information'}
+              </h3>
+              <p className="text-white/80 mb-4">{isWelsh ? 'Cysylltwch â ni ar:' : 'Please contact us on:'}</p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="mailto:insight@sport.wales" className="text-[#14B8A6] hover:underline font-medium">
+                    insight@sport.wales
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:03003003116" className="text-[#14B8A6] hover:underline font-medium">
+                    0300 300 3116
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -173,256 +128,226 @@ export default async function ResearchPage({
         </div>
       </section>
 
-      {/* Key Stats */}
-      <section className="py-12 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {keyStats.map((stat, index) => (
-              <div key={index} className="text-center p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-[#F8FAFC] to-white border border-[#E2E8F0]">
-                <div className="text-3xl lg:text-4xl font-display font-bold text-[#B91C3C] mb-2">
-                  {stat.value}
-                </div>
-                <p className="text-sm lg:text-base text-[#64748B]">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
+      {/* Featured: National Survey for Wales */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
-                {isWelsh ? 'Ein Gwaith' : 'Our Work'}
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-                {isWelsh ? 'Mwy na Dim ond Rhifau' : 'More Than Just Numbers'}
-              </h2>
-              <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
-                {isWelsh
-                  ? 'Ein dwy arolwg cyfranogiad chwaraeon mawr yng Nghymru - yr Arolwg Chwaraeon Ysgol a\'r Arolwg Chwaraeon a Ffordd o Fyw Actif - yn darparu darlun clir o gynnydd a\'r gwaith sydd ei angen.'
-                  : 'Our two major sport participation surveys in Wales - the School Sport Survey and the Sport and Active Lifestyles Survey - provide the sector with a clear picture of progress and the work that is required.'}
-              </p>
-              <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
-                {isWelsh
-                  ? 'Yn bell o fod yn brosesu rhifau yn unig, mae ein tîm yn ein helpu i ddeall cymhelliant pobl i gymryd rhan mewn chwaraeon a\'r rhwystrau sy\'n eu hatal yn aml.'
-                  : 'Far from just crunching numbers, our team helps us to understand people\'s motivations to take part in sport and the barriers that often prevent them.'}
-              </p>
-              <p className="text-lg text-[#64748B] leading-relaxed">
-                {isWelsh
-                  ? 'Rydym yn rhannu ein canfyddiadau ar draws y sector fel y gallwn i gyd wneud penderfyniadau gwell ar sail tystiolaeth.'
-                  : 'We share our findings across the sector so that we can all make better evidence-based decisions.'}
-              </p>
-            </div>
-
-            <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-10 text-white">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#14B8A6] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-bold !text-white">{isWelsh ? 'Ystadegau Swyddogol' : 'Official Statistics'}</h3>
-                  </div>
-                </div>
-                <p className="text-white/80 leading-relaxed">
-                  {isWelsh
-                    ? 'Rydym yn gyflenwr ystadegau swyddogol, sy\'n golygu bod ein data yn cydymffurfio â lefelau uchel o ansawdd ac arfer da.'
-                    : 'We are a supplier of official statistics, meaning that our data complies to high levels of quality and good practice.'}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Research Areas */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
-        <div className="container">
-          <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Ein Meysydd Ymchwil' : 'Our Research Areas'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-              {isWelsh ? 'Beth Rydym yn ei Astudio' : 'What We Study'}
-            </h2>
-            <p className="text-lg text-[#64748B]">
-              {isWelsh
-                ? 'Mae ein hymchwil yn cwmpasu amrywiaeth eang o bynciau i helpu i ddeall chwaraeon a gweithgarwch corfforol yng Nghymru.'
-                : 'Our research covers a wide range of topics to help understand sport and physical activity in Wales.'}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {researchAreas.map((area, index) => (
-              <div
-                key={index}
-                className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
-              >
-                <div className={`w-12 h-12 rounded-xl ${area.color} flex items-center justify-center text-white mb-6`}>
-                  {area.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
-                  {area.title}
-                </h3>
-                <p className="text-[#64748B] mb-4">
-                  {area.description}
-                </p>
-                <ul className="space-y-2">
-                  {area.items.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-[#64748B]">
-                      <svg className="w-4 h-4 text-[#14B8A6] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ComRes Research Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container">
-          <div className="max-w-4xl">
-            <span className="inline-block text-[#6366F1] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Ymchwil Partneriaid' : 'Partner Research'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Olrhain Gweithgarwch Cymru' : 'Wales Activity Tracker'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
-              {isWelsh
-                ? 'Mae Chwaraeon Cymru wedi partnerio â Savanta i gael mewnwelediad i arferion ac ymddygiadau gweithgarwch y genedl. Yn cael ei osod i olrhain lefelau gweithgarwch yn ystod pandemig y Coronafeirws, mae\'r arolwg wedi parhau yn rheolaidd i wirio lefelau gweithgarwch yng Nghymru.'
-                : 'Sport Wales teamed up with Savanta to get an insight into the nation\'s activity habits and behaviours. Put in place to track activity levels during the Coronavirus pandemic, the survey has continued regularly to check activity levels in Wales.'}
-            </p>
-            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
-              {isWelsh
-                ? 'Mae\'r arolwg, sy\'n cael ei redeg ar wahanol adegau o\'r flwyddyn, yn darparu cipolwg ar weithgarwch corfforol a chwaraeon, yn ogystal ag agwedd pobl yng Nghymru tuag at ymarfer.'
-                : 'The surveys, run at different points of the year, provide a snapshot on physical activity and sport, as well as the attitude of people in Wales towards exercise.'}
-            </p>
-            <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
-              {isWelsh
-                ? 'Mae\'r data wedi\'i bwysau i fod yn demograffig o ran cynrychiolaeth oedolion Cymru 16+ yn ôl rhyw, oedran ac ystadegol cartrefi gyda phlant dan 16 oed.'
-                : 'The data has been weighted to be demographically representative of Welsh adults 16+ by gender, age and the estimated households with children under 16.'}
-            </p>
-            
-            <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] mb-8">
-              <p className="text-[#64748B] mb-4">
-                {isWelsh
-                  ? 'Am fwy o wybodaeth e-bostiwch'
-                  : 'For more information email'}
-                {' '}
-                <a href="mailto:insightteam@sport.wales" className="text-[#B91C3C] font-semibold hover:underline">
-                  insightteam@sport.wales
-                </a>
-              </p>
-              <p className="text-[#64748B]">
-                {isWelsh
-                  ? 'Neu'
-                  : 'Or'}
-                {' '}
-                <a 
-                  href="https://www.chwaraeon.cymru/ymchwil-a-gwybodaeth/comres/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[#B91C3C] font-semibold hover:underline"
-                >
-                  {isWelsh ? 'Gweld yr adroddiadau yn Gymraeg' : 'View the reports in Cymraeg'}
-                </a>
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
-                {isWelsh ? 'Arolwgau Olrhain Gweithgarwch Cymru' : 'Wales Activity Tracker Surveys'}
-              </h3>
-              <p className="text-lg text-[#64748B] mb-6">
-                {isWelsh
-                  ? 'Mae gan Chwaraeon Cymru gyfres o arolwgau rheolaidd sy\'n olrhain gweithgarwch corfforol a chwaraeon yng Nghymru. Mae\'r arolwgau hyn yn darparu data gwerthfawr ar arferion ac ymddygiadau pobl yng Nghymru.'
-                  : 'Sport Wales has a series of regular surveys tracking physical activity and sport in Wales. These surveys provide valuable data on the habits and behaviours of people in Wales.'}
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                  <p className="text-sm text-[#64748B] mb-2">
-                    {isWelsh ? 'Arolwg Olrhain Gweithgarwch Cymru 16 - Ebrill 2025' : 'Wales Activity Tracker Survey 16 - April 2025'}
-                  </p>
-                  <p className="text-xs text-[#64748B]">
-                    {isWelsh 
-                      ? 'Cyfweliwyd 1,012 ymatebwr 16+ ar-lein rhwng 25 Ebrill – 29 Ebrill 2025 gan Savanta.'
-                      : 'Savanta interviewed 1,012 respondents aged 16+ online between 25th Apr – 29th Apr 2025.'}
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                  <p className="text-sm text-[#64748B] mb-2">
-                    {isWelsh ? 'Arolwg Olrhain Gweithgarwch Cymru 15 - Chwefror 2025' : 'Wales Activity Tracker Survey 15 - Feb 2025'}
-                  </p>
-                  <p className="text-xs text-[#64748B]">
-                    {isWelsh
-                      ? 'Cyfweliwyd 1,070 ymatebwr 16+ ar-lein rhwng 25 Ionawr – 11 Chwefror 2025 gan Savanta.'
-                      : 'Savanta interviewed 1,070 respondents aged 16+ online between 25th Jan – 11th Feb 2025'}
-                  </p>
-                </div>
-              </div>
-              <p className="text-sm text-[#64748B] mt-4">
-                {isWelsh
-                  ? 'Mae mwy o arolwgau ar gael ar wefan Chwaraeon Cymru, sy\'n olrhain datblygiad gweithgarwch corfforol a chwaraeon yng Nghymru dros amser.'
-                  : 'More surveys are available on the Sport Wales website, tracking the development of physical activity and sport in Wales over time.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured: National Survey */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container">
-          <div className="rounded-3xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-12 text-white overflow-hidden relative">
+          <Link 
+            href="/research/national-survey"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#14B8A6] to-[#0D9488] hover:shadow-2xl transition-all duration-500"
+          >
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white blur-3xl"></div>
+            </div>
+            
+            <div className="relative z-10 p-8 lg:p-12">
+              <h2 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-white/90 transition-colors">
+                {isWelsh ? 'Arolwg Cenedlaethol Cymru 2024-25' : 'National Survey for Wales 2024-25'}
+              </h2>
+              
+              <p className="text-lg !text-white/90 max-w-2xl mb-8">
+                {isWelsh
+                  ? 'Dyma\'r canfyddiadau allweddol o adran Chwaraeon a Ffordd o Fyw Actif Arolwg Cenedlaethol Cymru 2024-25'
+                  : 'Here are the key findings from the Sport & Active Lifestyles section of the National Survey for Wales 2024-25'}
+              </p>
+              
+              <span className="inline-flex items-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
+                {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* Four Research Category Cards */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Surveys & Trackers */}
+            <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-gradient-to-br from-[#B91C3C] to-[#991B1B] flex items-center justify-center">
+                <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                  {isWelsh ? 'Arolygon ac Olrheinwyr' : 'Surveys & Trackers'}
+                </h3>
+                <p className="text-[#64748B] text-sm mb-4">
+                  {isWelsh
+                    ? 'Gan gynnwys yr Arolwg Chwaraeon Ysgol a\'r Arolwg Chwaraeon a...'
+                    : 'Including the School Sport Survey and the Sport and...'}
+                </p>
+                <Link
+                  href="/research/surveys"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
             </div>
 
-            <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <span className="inline-block bg-white/20 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-6">
-                  {isWelsh ? 'Dan Sylw' : 'Featured'}
-                </span>
-                <h2 className="text-3xl lg:text-4xl font-display font-bold mb-4">
-                  {isWelsh ? 'Arolwg Cenedlaethol Cymru 2024-25' : 'National Survey for Wales 2024-25'}
-                </h2>
-                <p className="text-lg text-white/90 leading-relaxed">
+            {/* Reviews & Evaluation */}
+            <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-gradient-to-br from-[#14B8A6] to-[#0D9488] flex items-center justify-center">
+                <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#14B8A6] transition-colors">
+                  {isWelsh ? 'Adolygiadau a Gwerthusiad' : 'Reviews & Evaluation'}
+                </h3>
+                <p className="text-[#64748B] text-sm mb-4">
                   {isWelsh
-                    ? 'Dyma\'r canfyddiadau allweddol o adran Chwaraeon a Ffordd o Fyw Actif Arolwg Cenedlaethol Cymru 2024-25.'
-                    : 'Here are the key findings from the Sport & Active Lifestyles section of the National Survey for Wales 2024-25.'}
+                    ? 'Gan gynnwys Adenillion Cymdeithasol ar Fuddsoddiad ac Addysg Actif...'
+                    : 'Including Social Return on Investment and Active Education...'}
+                </p>
+                <Link
+                  href="/research/reviews"
+                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold text-sm group-hover:gap-3 transition-all"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Qualitative Insight */}
+            <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center">
+                <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#F59E0B] transition-colors">
+                  {isWelsh ? 'Mewnwelediad Ansoddol' : 'Qualitative Insight'}
+                </h3>
+                <p className="text-[#64748B] text-sm mb-4">
+                  {isWelsh
+                    ? 'Gan gynnwys yr adroddiad am y rhwystrau i symud ymlaen...'
+                    : 'Including the report about the barriers to progressing...'}
+                </p>
+                <Link
+                  href="/research/qualitative"
+                  className="inline-flex items-center gap-2 text-[#F59E0B] font-semibold text-sm group-hover:gap-3 transition-all"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Our Partners' Research */}
+            <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+              <div className="aspect-video bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center">
+                <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#6366F1] transition-colors">
+                  {isWelsh ? 'Ymchwil Ein Partneriaid' : 'Our Partners\' Research'}
+                </h3>
+                <p className="text-[#64748B] text-sm mb-4">
+                  {isWelsh
+                    ? 'Gan gynnwys gwaith gan StreetGames a\'r SLC.'
+                    : 'Including work by StreetGames and SLC.'}
+                </p>
+                <Link
+                  href="/research/partners"
+                  className="inline-flex items-center gap-2 text-[#6366F1] font-semibold text-sm group-hover:gap-3 transition-all"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Environmental Sustainability Consultation */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl">
+            <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+              <div className="p-8">
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#14B8A6] transition-colors">
+                  {isWelsh ? 'Ymgynghoriad Cynaliadwyedd Amgylcheddol mewn Chwaraeon a Gweithgarwch Corfforol' : 'Environmental Sustainability in Sport and Physical Activity Consultation'}
+                </h3>
+                <p className="text-[#64748B] mb-4">
+                  {isWelsh
+                    ? 'Mae Sport England, sportscotland a Chwaraeon Cymru yn ymwybodol iawn...'
+                    : 'Sport England, sportscotland and Sport Wales are acutely...'}
+                </p>
+                <Link
+                  href="/research/sustainability"
+                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold text-sm group-hover:gap-3 transition-all"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
+            {/* Left side - Content */}
+            <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+              <div>
+                <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
+                  {isWelsh ? 'Ystadegau' : 'Statistics'}
+                </h2>
+                <p className="text-lg text-white/90 leading-relaxed mb-8">
+                  {isWelsh
+                    ? 'Mae Chwaraeon Cymru yn gynhyrchydd Ystadegau Swyddogol, yn gyfrifol am gasglu, llunio, prosesu, dadansoddi, dehongli a lledaenu ystadegau yn unol â\'r egwyddorion a nodir yn...'
+                    : 'Sport Wales is a producer of Official Statistics, responsible for collecting, compiling, processing, analysing, interpreting and disseminating statistics in line with the principles set out in...'}
                 </p>
               </div>
+              <div>
+                <Link
+                  href="/research/statistics"
+                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-white/90 transition-colors"
+                >
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-display font-bold mb-1">53%</div>
-                  <p className="text-sm text-white/80">{isWelsh ? 'oedolion yn actif' : 'adults active'}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-display font-bold mb-1">2.4m</div>
-                  <p className="text-sm text-white/80">{isWelsh ? 'pobl yng Nghymru' : 'people in Wales'}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-display font-bold mb-1">32%</div>
-                  <p className="text-sm text-white/80">{isWelsh ? 'yn anactif' : 'inactive'}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-display font-bold mb-1">15%</div>
-                  <p className="text-sm text-white/80">{isWelsh ? 'yn weddol actif' : 'fairly active'}</p>
+            {/* Right side - Image placeholder */}
+            <div className="relative min-h-[350px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <svg className="w-24 h-24 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                  <p className="text-white/50 text-sm">{isWelsh ? 'Delwedd CMS' : 'CMS Image'}</p>
                 </div>
               </div>
             </div>
@@ -430,45 +355,46 @@ export default async function ResearchPage({
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+      {/* CMS Articles Section */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Cysylltwch â Ni' : 'Get in Touch'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-              {isWelsh ? 'Am Ragor o Wybodaeth' : 'For Further Information'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-8">
-              {isWelsh
-                ? 'Os hoffech chi ddysgu mwy am ein hymchwil neu gael mynediad at ddata, cysylltwch â\'n tîm Mewnwelediad.'
-                : 'If you would like to learn more about our research or access data, please contact our Insight team.'}
+          {/* CMS Placeholder Articles */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <svg className="w-12 h-12 text-[#94A3B8] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-sm text-[#94A3B8]">{isWelsh ? 'Delwedd Erthygl' : 'Article Image'}</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="h-6 bg-[#E2E8F0] rounded mb-3 w-3/4"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded mb-2"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded w-5/6 mb-4"></div>
+                  <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm">
+                    {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center p-8 bg-[#F8FAFC] rounded-2xl border-2 border-dashed border-[#E2E8F0]">
+            <p className="text-[#64748B] font-medium">
+              {isWelsh ? 'Golygu o\'r CMS' : 'Editable from CMS'}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="mailto:insight@sport.wales"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                insight@sport.wales
-              </a>
-              <a
-                href="tel:03003003116"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                0300 300 3116
-              </a>
-            </div>
+            <p className="text-sm text-[#94A3B8] mt-1">
+              {isWelsh ? 'Bydd erthyglau\'n cael eu tynnu o\'r system rheoli cynnwys' : 'Articles will be pulled from the content management system'}
+            </p>
           </div>
         </div>
       </section>
     </>
   );
 }
-

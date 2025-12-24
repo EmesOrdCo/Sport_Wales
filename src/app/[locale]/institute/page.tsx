@@ -220,14 +220,58 @@ export default function InstitutePage() {
         </div>
       </section>
 
+      {/* CMS Articles Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Newyddion Athletwyr' : 'Athlete News'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+              {isWelsh ? 'Y Diweddaraf o\'r Sefydliad' : 'Latest from the Institute'}
+            </h2>
+          </div>
+
+          {/* CMS Placeholder Articles */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <svg className="w-12 h-12 text-[#94A3B8] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-sm text-[#94A3B8]">{isWelsh ? 'Delwedd Erthygl' : 'Article Image'}</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="h-6 bg-[#E2E8F0] rounded mb-3 w-3/4"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded mb-2"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded w-5/6"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center p-8 bg-[#F8FAFC] rounded-2xl border-2 border-dashed border-[#E2E8F0]">
+            <p className="text-[#64748B] font-medium">
+              {isWelsh ? 'Golygu o\'r CMS' : 'Editable from CMS'}
+            </p>
+            <p className="text-sm text-[#94A3B8] mt-1">
+              {isWelsh ? 'Bydd erthyglau\'n cael eu tynnu o\'r system rheoli cynnwys' : 'Articles will be pulled from the content management system'}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
               {isWelsh ? 'Eisiau Gwybod Mwy?' : 'Want to Know More?'}
             </h2>
-            <p className="text-lg text-[#64748B] mb-8">
+            <p className="text-lg text-white/80 mb-8">
               {isWelsh
                 ? 'Cysylltwch â ni i ddysgu mwy am ein gwasanaethau a sut gallwn gefnogi athletwyr Cymreig.'
                 : 'Contact us to learn more about our services and how we can support Welsh athletes.'}
@@ -239,7 +283,7 @@ export default function InstitutePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link href="/performance-sport" className="btn btn-secondary">
+              <Link href="/performance-sport" className="btn btn-secondary border-white/30 text-white hover:bg-white/10">
                 {isWelsh ? 'Chwaraeon Perfformiad' : 'Performance Sport'}
               </Link>
             </div>

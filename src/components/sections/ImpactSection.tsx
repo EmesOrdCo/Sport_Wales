@@ -7,18 +7,6 @@ export function ImpactSection() {
   const locale = useLocale();
   const isWelsh = locale === 'cy';
 
-  // Real content from Sport Wales homepage
-  const featuredStory = {
-    title: isWelsh 
-      ? 'Fframwaith Sylfeini Cymru: Canllaw Arfer Da'
-      : 'Foundations Framework Wales: A Good Practice Guide',
-    description: isWelsh
-      ? "Er mwyn ein helpu i gyflawni sylfeini cryf ar gyfer taith gydol oes pobl ifanc gyda gweithgarwch corfforol a chwaraeon, mae'r sector chwaraeon yng Nghymru wedi dod at ei gilydd i greu'r canllaw arfer da hwn."
-      : "To help us achieve strong foundations for young people's lifelong journey with physical activity and sport, the sport sector in Wales has come together to create this good practice guide.",
-    link: '/resources/foundations-framework',
-    image: '/images/foundations-framework.jpg',
-  };
-
   // Real content from Sport Wales section pages
   const impactAreas = [
     {
@@ -112,41 +100,6 @@ export function ImpactSection() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Featured Story Card */}
-        <div className="mb-12 lg:mb-16">
-          <Link 
-            href={featuredStory.link as any}
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 hover:shadow-2xl transition-all duration-500"
-          >
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C] blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6] blur-3xl"></div>
-            </div>
-            
-            <div className="relative z-10">
-              <span className="inline-block bg-[#DC2626] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-6">
-                {isWelsh ? 'Straeon Nodwedd' : 'Featured'}
-              </span>
-              
-              <h3 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#DC2626] transition-colors">
-                {featuredStory.title}
-              </h3>
-              
-              <p className="text-lg !text-white max-w-2xl mb-8">
-                {featuredStory.description}
-              </p>
-              
-              <span className="inline-flex items-center gap-2 text-[#DC2626] font-semibold group-hover:gap-4 transition-all">
-                {isWelsh ? 'Darllenwch fwy' : 'Read more'}
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </div>
-          </Link>
         </div>
 
         {/* Impact Areas Grid */}

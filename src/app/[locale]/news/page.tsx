@@ -290,47 +290,6 @@ export default async function NewsPage({
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-16 lg:py-24 bg-[#0F172A]">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm font-medium mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              {isWelsh ? 'Cadwch mewn Cysylltiad' : 'Stay Connected'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
-              {isWelsh ? 'Cael y Newyddion Diweddaraf' : 'Get the Latest News'}
-            </h2>
-            <p className="text-white/70 text-lg mb-8">
-              {isWelsh
-                ? 'Dilynwch ni ar y cyfryngau cymdeithasol neu cysylltwch â ni am ragor o wybodaeth.'
-                : 'Follow us on social media or get in touch for more information.'}
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-[#F1F5F9] transition-colors"
-              >
-                {isWelsh ? 'Cysylltu â ni' : 'Contact us'}
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-              <a 
-                href="mailto:info@sport.wales"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@sport.wales
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

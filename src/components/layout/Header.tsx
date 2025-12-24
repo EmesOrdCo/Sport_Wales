@@ -52,21 +52,6 @@ export function Header() {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-2 lg:gap-3">
-            {/* Home Button - Always visible for consistency */}
-            <Link
-              href="/"
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 ${
-                isScrolled || !isHome
-                  ? 'text-[#0F172A] hover:bg-[#F1F5F9] border border-[#E2E8F0]'
-                  : 'text-white hover:bg-white/10 border border-white/20'
-              }`}
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              <span className="hidden sm:inline">{locale === 'cy' ? 'Hafan' : 'Home'}</span>
-            </Link>
-
             {/* Menu Button - Always Visible */}
             <button
               onClick={toggleMenu}
@@ -112,9 +97,7 @@ export function Header() {
             </Link>
 
             {/* Language Switcher */}
-            <div className={isScrolled || !isHome ? '' : 'lang-switch-dark'}>
-              <LanguageSwitcher variant={isScrolled || !isHome ? 'light' : 'dark'} />
-            </div>
+            <LanguageSwitcher variant={isScrolled || !isHome ? 'light' : 'dark'} />
 
             {/* CTA Button - Desktop */}
             <Link

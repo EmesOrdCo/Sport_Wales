@@ -20,7 +20,11 @@ export function LanguageSwitcher({ variant = 'light' }: LanguageSwitcherProps) {
 
   return (
     <div 
-      className={`lang-switch ${variant === 'dark' ? 'lang-switch-dark' : ''}`}
+      className={`flex items-center gap-0.5 p-1 rounded-full ${
+        variant === 'dark' 
+          ? 'border border-white/20' 
+          : 'border border-[#E2E8F0]'
+      }`}
       role="group" 
       aria-label={t('language')}
     >
@@ -28,7 +32,13 @@ export function LanguageSwitcher({ variant = 'light' }: LanguageSwitcherProps) {
         <button
           key={loc}
           onClick={() => switchLocale(loc)}
-          className={`lang-switch-btn ${locale === loc ? 'active' : ''}`}
+          className={`px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${
+            locale === loc
+              ? 'bg-white text-[#0F172A] shadow-sm'
+              : variant === 'dark'
+                ? 'text-white/70 hover:text-white'
+                : 'text-[#64748B] hover:text-[#0F172A]'
+          }`}
           aria-current={locale === loc ? 'true' : undefined}
           aria-label={loc === 'en' ? 'Switch to English' : 'Newid i Gymraeg'}
         >

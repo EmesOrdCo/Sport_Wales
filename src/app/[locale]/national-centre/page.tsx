@@ -48,42 +48,6 @@ export default async function NationalCentrePage({
     { name: isWelsh ? 'Canolfan Genedlaethol' : 'National Centre', url: `https://www.sport.wales/${locale}/national-centre` },
   ];
 
-  const facilities = [
-    {
-      title: isWelsh ? 'Gweithdai Hyfforddi' : 'Training Facilities',
-      description: isWelsh
-        ? 'Cyfleusterau hyfforddi modern ar gyfer athletwyr elît a chwaraeon cymunedol.'
-        : 'Modern training facilities for elite athletes and community sport.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: isWelsh ? 'Cyfleusterau Mynediad Cyhoeddus' : 'Public Access Facilities',
-      description: isWelsh
-        ? 'Ystod o gyfleusterau ar gael i\'r cyhoedd ar gyfer chwaraeon a gweithgarwch corfforol.'
-        : 'A range of facilities available to the public for sport and physical activity.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: isWelsh ? 'Swyddfeydd' : 'Offices',
-      description: isWelsh
-        ? 'Swyddfeydd ar gyfer cyrff llywodraethu cenedlaethol a staff Chwaraeon Cymru.'
-        : 'Offices for national governing bodies and Sport Wales staff.',
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
-    },
-  ];
-
   return (
     <>
       {/* Structured Data */}
@@ -109,11 +73,6 @@ export default async function NationalCentrePage({
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
               {isWelsh ? 'Canolfan Genedlaethol Chwaraeon Cymru' : 'Sport Wales National Centre'}
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
-              {isWelsh
-                ? 'Wedi\'i leoli yn Sophia Gardens, mae\'r Ganolfan Genedlaethol yng Nghaerdydd yn gartref Chwaraeon Cymru. Mae\'n ganolfan o chwaraeon perfformiad uchel a chwaraeon cymunedol gyda gwasanaethau a chyfleusterau ar gyfer athletwyr Cymreig blaenllaw, swyddfeydd ar gyfer cyrff llywodraethu cenedlaethol, ac ystod o gyfleusterau mynediad cyhoeddus.'
-                : 'Based in Sophia Gardens, the National Centre in Cardiff is the home of Sport Wales. A hub of high performance and community sport the centre has services and facilities for top Welsh athletes, offices for national governing bodies, and a range of public access facilities.'}
-            </p>
           </div>
         </div>
         
@@ -125,42 +84,127 @@ export default async function NationalCentrePage({
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Facilities Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Am y Ganolfan' : 'About the Centre'}
+              {isWelsh ? 'Cyfleusterau' : 'Facilities'}
             </h2>
-            <p className="text-lg text-[#64748B] mb-4 leading-relaxed">
-              {isWelsh
-                ? 'Mae Canolfan Genedlaethol Chwaraeon Cymru yn ganolfan modern sy\'n gwasanaethu athletwyr elît a chwaraeon cymunedol. Mae\'r ganolfan yn cynnwys cyfleusterau hyfforddi modern, swyddfeydd, ac adnoddau ar gyfer y cyhoedd.'
-                : 'Sport Wales National Centre is a modern facility serving elite athletes and community sport. The centre includes modern training facilities, offices, and resources for the public.'}
-            </p>
-            <p className="text-lg text-[#64748B] leading-relaxed">
-              {isWelsh
-                ? 'Mae\'r ganolfan yn gartref i nifer o gyfrifoldebau pwysig Chwaraeon Cymru, gan gynnwys cefnogi athletwyr Cymreig, darparu swyddfeydd i gyfrifon llywodraethu cenedlaethol, ac agor cyfleusterau i\'r cyhoedd.'
-                : 'The centre is home to many of Sport Wales\' important responsibilities, including supporting Welsh athletes, providing offices for national governing bodies, and opening facilities to the public.'}
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {facilities.map((facility, index) => (
-              <div 
-                key={index}
-                className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mb-6">
-                  {facility.icon}
-                </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
-                  {facility.title}
-                </h3>
-                <p className="text-[#64748B]">
-                  {facility.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+            {/* Main Arena */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Prif Arena' : 'Main Arena'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Cynnal cystadlaethau rhyngwladol neu ddigwyddiadau sefydliadol yn ein prif ardal 10 cwrt gyda seddi i wylwyr. Addas ar gyfer pêl-fasged, pêl-rwyd, badminton, gymnasteg ac yn addas ar gyfer chwaraeon eraill.'
+                  : 'Host international competitions or organisational events at our 10-court main area with spectator seating. Suitable for basketball, netball, badminton, gymnastics and adaptable for other sports.'}
+              </p>
+            </div>
+
+            {/* Jubilee Hall */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Neuadd Jiwbilî' : 'Jubilee Hall'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Archebwch y neuadd i chwarae pêl-fasged, pêl-rwyd, neu badminton yn ein neuadd chwaraeon llai.'
+                  : 'Book the hall to play basketball, netball, or badminton in our smaller sports hall.'}
+              </p>
+            </div>
+
+            {/* Fitness Studio */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Stiwdio Ffitrwydd' : 'Fitness Studio'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Chwarae tennis bwrdd neu boccia yn ein stiwdio ffitrwydd.'
+                  : 'Play table tennis or boccia in our fitness studio.'}
+              </p>
+            </div>
+
+            {/* National Judo Centre */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Canolfan Jiwdo Genedlaethol' : 'National Judo Centre'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Cartref Cymdeithas Jiwdo Cymru, mae\'r dojo pwrpasol hwn yn cynnig matiau o ansawdd uchel, seddi i wylwyr, ac amgylchedd pwrpasol ar gyfer hyfforddi a chystadlu.'
+                  : 'Home to the Welsh Judo Association, this dedicated dojo offers high-quality mats, spectator seating, and a purpose-built environment for training and competition.'}
+              </p>
+            </div>
+
+            {/* Meeting Rooms */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Ystafelloedd Cyfarfod' : 'Meeting Rooms'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Dewiswch o ystod o fannau cyfarfod hyblyg, yn ddelfrydol ar gyfer gweithdai, diwrnodau hyfforddi, a chynadleddau. Wedi\'u cyfarparu\'n llawn gyda Microsoft Teams a chyfleusterau AV gydag opsiynau arlwyo ar gael.'
+                  : 'Choose from a range of flexible meeting spaces, ideal for workshops, training days, and conferences. Fully equipped with Microsoft Teams and AV facilities with catering options available.'}
+              </p>
+            </div>
+
+            {/* High Performance Area */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Ardal Perfformiad Uchel' : 'High Performance Area'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Gofod hyfforddi arbenigol wedi\'i gadw ar gyfer athletwyr elît, yn cynnwys offer cryfder a chyflyru o\'r radd flaenaf i gefnogi perfformiad o\'r radd flaenaf. Defnyddiwyd gan Dîm Pêl-droed Menywod Denmarc.'
+                  : 'A specialist training space reserved for elite athletes, featuring cutting-edge strength and conditioning equipment to support world-class performance. Used by the Denmark Women\'s Football Team.'}
+              </p>
+            </div>
+
+            {/* Hockey Pitch */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Cae Hoci' : 'Hockey Pitch'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Cartref Hoci Cymru. Chwarae ar ein cae hoci seiliedig ar ddŵr o safon ryngwladol, gyda llifoleuadau ac ardaloedd i wylwyr ar gyfer hyfforddiant neu gemau.'
+                  : 'Home of Hoci Cymru. Play on our international-standard water-based hockey pitch, complete with floodlights and spectator areas for training or fixtures.'}
+              </p>
+            </div>
+
+            {/* Grass Pitch */}
+            <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                {isWelsh ? 'Cae Glaswellt' : 'Grass Pitch'}
+              </h3>
+              <p className="text-[#64748B]">
+                {isWelsh
+                  ? 'Cae glaswellt maint llawn ar gyfer rygbi neu bêl-droed. Defnyddiwyd yn flaenorol gan dimau rygbi\'r All Blacks a\'r Springboks.'
+                  : 'A full-size grass pitch for rugby or football. Used previously by the All Blacks and the Springboks rugby teams.'}
+              </p>
+            </div>
+          </div>
+
+          {/* Booking CTA */}
+          <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 lg:p-10 text-center">
+            <p className="text-lg text-white/90 mb-4">
+              {isWelsh ? 'I archebu unrhyw un o\'r uchod, ffoniwch' : 'To book any of the above, please call'}
+            </p>
+            <a
+              href="tel:03003003123"
+              className="inline-flex items-center gap-2 text-2xl font-display font-bold text-white hover:text-[#14B8A6] transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              0300 3003123
+            </a>
           </div>
         </div>
       </section>
@@ -237,17 +281,61 @@ export default async function NationalCentrePage({
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* CMS Articles Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Mwy o Wybodaeth' : 'More Information'}
+          <div className="text-center mb-12">
+            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Newyddion' : 'News'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-              {isWelsh ? 'Dysgwch Fwy' : 'Learn More'}
+              {isWelsh ? 'Y Diweddaraf o\'r Ganolfan' : 'Latest from the Centre'}
             </h2>
-            <p className="text-lg text-[#64748B] mb-8">
+          </div>
+
+          {/* CMS Placeholder Articles */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
+                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <svg className="w-12 h-12 text-[#94A3B8] mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-sm text-[#94A3B8]">{isWelsh ? 'Delwedd Erthygl' : 'Article Image'}</p>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="h-6 bg-[#E2E8F0] rounded mb-3 w-3/4"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded mb-2"></div>
+                  <div className="h-4 bg-[#F1F5F9] rounded w-5/6"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center p-8 bg-white rounded-2xl border-2 border-dashed border-[#E2E8F0]">
+            <p className="text-[#64748B] font-medium">
+              {isWelsh ? 'Golygu o\'r CMS' : 'Editable from CMS'}
+            </p>
+            <p className="text-sm text-[#94A3B8] mt-1">
+              {isWelsh ? 'Bydd erthyglau\'n cael eu tynnu o\'r system rheoli cynnwys' : 'Articles will be pulled from the content management system'}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+              {isWelsh ? 'Archebwch Nawr' : 'Book Now'}
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-4">
+              {isWelsh ? 'Ymweld â\'r Ganolfan Genedlaethol' : 'Visit the National Centre'}
+            </h2>
+            <p className="text-lg text-white/80 mb-8">
               {isWelsh
                 ? 'Gweler ein holl gyfleusterau a lleoliadau, neu cysylltwch â ni am ragor o wybodaeth.'
                 : 'View all our facilities and locations, or contact us for more information.'}
@@ -261,7 +349,7 @@ export default async function NationalCentrePage({
               </Link>
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
               </Link>

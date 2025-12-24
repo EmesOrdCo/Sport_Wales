@@ -50,13 +50,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </svg>
       ),
       links: [
-        { href: '/club-support', label: isWelsh ? 'Cefnogaeth i Glybiau' : 'Club Support' },
+        { href: '/community-grassroots', label: t('communityGrassroots') },
         { href: '/sport-in-schools', label: t('sportInSchools') },
         { href: '/partners', label: t('partners') },
         { href: '/performance-sport', label: t('performanceSport') },
-        { href: '/support-for-athletes', label: t('supportForAthletes') },
-        { href: '/women-girls', label: t('womenGirls') },
-        { href: '/education-and-teachers', label: t('educationAndTeachers') },
       ],
     },
     {
@@ -69,17 +66,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </svg>
       ),
       links: [
-        { href: '/national-lottery', label: isWelsh ? 'Y Loteri Genedlaethol' : 'National Lottery' },
+        { href: '/national-lottery', label: t('welshSportLottery') },
+        { href: '/national-centre', label: t('nationalCentre') },
         { href: '/funding', label: t('fundingSupport') },
         { href: '/research', label: t('researchInsight') },
         { href: '/governance', label: t('policiesGovernance') },
-        { href: '/national-centre', label: t('nationalCentreLabel') },
-        { href: '/clip', label: 'CLIP' },
-        { href: '/careers', label: t('careers') },
       ],
     },
     {
-      title: isWelsh ? 'Amdanom Ni' : 'About Us',
+      title: isWelsh ? 'Amdanom Chwaraeon Cymru' : 'About Sport Wales',
       subtitle: isWelsh ? 'Ein stori' : 'Our story',
       accent: '#0F172A',
       icon: (
@@ -88,11 +83,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         </svg>
       ),
       links: [
-        { href: '/about', label: t('whatIsSportWales') },
+        { href: '/about/what-is-sport-wales', label: t('whatIsSportWales') },
+        { href: '/about/vision-and-strategy', label: t('visionStrategy') },
         { href: '/facilities', label: isWelsh ? 'Ein Cyfleusterau' : 'Our Facilities' },
-        { href: '/institute', label: isWelsh ? 'Sefydliad Chwaraeon Cymru' : 'Sport Wales Institute' },
-        { href: '/news', label: isWelsh ? 'Newyddion' : 'News' },
-        { href: '/contact', label: t('contact') },
+        { href: '/institute', label: isWelsh ? 'Sefydliad Chwaraeon Cymru' : 'The Sport Wales Institute' },
+        { href: '/careers', label: t('careers') },
       ],
     },
   ];
