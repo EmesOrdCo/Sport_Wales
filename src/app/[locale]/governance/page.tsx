@@ -6,10 +6,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const isWelsh = locale === 'cy';
 
-  const title = isWelsh ? 'Llywodraethu' : 'Governance';
+  const title = isWelsh ? 'Polisïau a Llywodraethu' : 'Policies and Governance';
   const description = isWelsh
-    ? 'Gwybodaeth ddefnyddiol i helpu ein sefydliadau partner i ymdrechu tuag at lywodraethu da.'
-    : 'Useful information to help our partner organisations strive towards good governance.';
+    ? 'Ni yw\'r sefydliad cenedlaethol sy\'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru.'
+    : 'We are the national organisation responsible for developing and promoting sport and physical activity in Wales.';
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function GovernancePage({
+export default async function PoliciesAndGovernancePage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -45,65 +45,56 @@ export default async function GovernancePage({
 
   const breadcrumbItems = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
-    { name: isWelsh ? 'Partneriaid' : 'Partners', url: `https://www.sport.wales/${locale}/partners` },
-    { name: isWelsh ? 'Llywodraethu' : 'Governance', url: `https://www.sport.wales/${locale}/governance` },
+    { name: isWelsh ? 'Polisïau a Llywodraethu' : 'Policies and Governance', url: `https://www.sport.wales/${locale}/governance` },
   ];
 
-  const mainCards = [
+  const featuredCards = [
+    {
+      title: isWelsh ? 'Amrywiaeth y Bwrdd' : 'Board Diversity',
+      description: isWelsh
+        ? 'Credwn ei bod yn bwysig bod ein penderfynwyr yn dod o gefndiroedd gwahanol gyda...'
+        : 'We believe it is important that our decision-makers are drawn from different backgrounds with different…',
+      href: '#',
+    },
     {
       title: isWelsh ? 'Fframwaith Llywodraethu ac Arweinyddiaeth' : 'Governance and Leadership Framework',
       description: isWelsh
-        ? 'Wedi\'i gynllunio i helpu sefydliadau i ddatblygu strwythurau cadarn...'
-        : 'Designed to help organisations develop solid structures...',
+        ? 'Wedi\'i gynllunio i helpu sefydliadau i ddatblygu strwythurau cadarn a datblygu ymddygiadau arweinyddiaeth o ansawdd uchel.'
+        : 'Designed to help organisations develop solid structures and develop high quality leadership behaviours.',
       href: '#',
     },
     {
-      title: isWelsh ? 'Ein dull o fuddsoddi mewn partneriaid' : 'Our approach to partner investment',
+      title: isWelsh ? 'Cyhoeddiadau Allweddol' : 'Key Publications',
       description: isWelsh
-        ? 'Wedi\'i ddatblygu yn dilyn ymgysylltu â phartneriaid ac allweddol...'
-        : 'Developed following engagement with partners and key...',
+        ? 'Yma fe welwch ein llyfrgell o ddogfennau a chyhoeddiadau allweddol.'
+        : 'Here you will find our library of key documents and publications.',
       href: '#',
     },
   ];
 
-  const governanceCards = [
+  const newsArticles = [
     {
-      title: isWelsh ? 'Fframwaith Symud i Gynhwysiant' : 'Moving to Inclusion Framework',
+      title: isWelsh ? 'Sut gall chwaraeon helpu Cymru i ffynnu: Argymhellion Maniffesto ar gyfer 2026 a thu hwnt' : 'How sport can help Wales thrive: Manifesto Recommendations for 2026 and beyond',
+      description: isWelsh
+        ? 'Pedwar argymhelliad yr hoffem i bleidiau gwleidyddol eu cynnwys yn eu maniffestos etholiad 2026.'
+        : 'Four recommendations we would like political parties to include in their 2026 election manifestos.',
+      linkText: isWelsh ? 'Darllenwch yr argymhellion maniffesto' : 'Read the manifesto recommendations',
       href: '#',
     },
     {
-      title: isWelsh ? 'Canllawiau ar gyfer Cynhwysiant Trawsryweddol mewn Chwaraeon Domestig' : 'Guidance for Transgender Inclusion in Domestic Sport',
+      title: isWelsh ? 'Rhoi llais i bobl ifanc mewn diogelu' : 'Giving young people a voice in safeguarding',
+      description: isWelsh
+        ? 'Darganfyddwch pam y dylech gynnwys pobl ifanc mewn penderfyniadau diogelu yn eich clwb neu sefydliad chwaraeon.'
+        : 'Find out why you should involve young people in safeguarding decisions at your sports club or organisation.',
+      linkText: isWelsh ? 'Darllen Mwy' : 'Read More',
       href: '#',
     },
     {
-      title: isWelsh ? 'Amrywiaeth y Bwrdd' : 'Board Diversity',
-      href: '#',
-    },
-    {
-      title: isWelsh ? 'Gwybodaeth ac Adnoddau Gwrth-Gyffuriau' : 'Anti-Doping Information and Resources',
-      href: '#',
-    },
-    {
-      title: isWelsh ? 'Diogelu ar gyfer Partneriaid' : 'Safeguarding for Partners',
-      href: '#',
-    },
-    {
-      title: isWelsh ? 'Cydnabod cyrff llywodraethu newydd neu ddisgyblaethau chwaraeon' : 'Recognition of new governing bodies or sport disciplines',
-      href: '#',
-    },
-  ];
-
-  const additionalCards = [
-    {
-      title: isWelsh ? 'Adrodd Pryderon Lefel Is neu Arfer Gwael' : 'Reporting Lower-Level Concerns or Poor Practice',
-      href: '#',
-    },
-    {
-      title: isWelsh ? 'Cynllunio Olyniaeth' : 'Succession Planning',
-      href: '#',
-    },
-    {
-      title: isWelsh ? 'Academi Llywodraethu Chwaraeon' : 'Sports Governance Academy',
+      title: isWelsh ? 'Wythnos Hinsawdd Cymru 2023: Beth mae Chwaraeon Cymru yn ei wneud i fynd i\'r afael â newid hinsawdd?' : 'Wales Climate Week 2023: What is Sport Wales doing to tackle climate change?',
+      description: isWelsh
+        ? 'Rydym wedi ymrwymo i helpu\'r genedl i gyflawni sero net erbyn 2030 a chreu...'
+        : 'We\'re committed to helping the nation achieve net zero by 2030 and creating a greener, stronger and…',
+      linkText: isWelsh ? 'Darllen Mwy' : 'Read More',
       href: '#',
     },
   ];
@@ -121,31 +112,31 @@ export default async function GovernancePage({
         </div>
 
         <div className="container relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              {isWelsh ? 'Llywodraethu' : 'Governance'}
+              {isWelsh ? 'Polisïau a Llywodraethu' : 'Policies and Governance'}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
-              {isWelsh ? 'Llywodraethu' : 'Governance'}
+              {isWelsh ? 'Polisïau a Llywodraethu' : 'Policies and Governance'}
             </h1>
-            <div className="space-y-4 text-xl text-white/80 leading-relaxed">
+            <div className="space-y-4 text-lg text-white/90 leading-relaxed">
               <p>
                 {isWelsh
-                  ? 'Mae llywodraethu da yn sylfaen allweddol ar gyfer llwyddiant unrhyw sefydliad. Llywodraethu yw\'r fframwaith o strategaeth, rheoli risg, rheolaethau a phrosesau.'
-                  : 'Good governance is a key foundation for the success of any organisation. Governance is the framework of strategy, risk management, controls and processes.'}
+                  ? 'Ni yw\'r sefydliad cenedlaethol sy\'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru.'
+                  : 'We are the national organisation responsible for developing and promoting sport and physical activity in Wales.'}
               </p>
               <p>
                 {isWelsh
-                  ? 'Yn bwysig, mae hefyd yn ymwneud ag arweinyddiaeth y sefydliad o ran diwylliant, gwerthoedd, moeseg a chywirdeb. Mewn sefydliad sy\'n cael ei lywodraethu\'n dda, mae\'r elfennau hyn yn sail i bopeth y mae\'r sefydliad yn ei wneud a sut mae\'n ei wneud.'
-                  : 'Importantly, it also relates to the organisation\'s leadership in terms of culture, values, ethics and integrity. In a well-governed organisation, these elements underpin everything the organisation does and how it does it.'}
+                  ? 'Fel corff a noddir gan Lywodraeth Cymru rydym yn rhwym wrth reolau a chyfrifoldebau llywodraethu da ac mae gennym nifer o ddyletswyddau y mae\'n ofynnol i ni eu cyflawni.'
+                  : 'As a Welsh Government sponsored body we are bound by rules and responsibilities of good governance and we have a number of duties we are obligated to meet.'}
               </p>
               <p>
                 {isWelsh
-                  ? 'Mae llywodraethu da wedi\'i ddangos i fod yn gatalydd pwerus ar gyfer newid ac yn yrrwr perfformiad sefydliadol gwell, waeth beth fo\'r maint neu\'r strwythur.'
-                  : 'Good governance has been shown to be a powerful catalyst for change and a driver of improved organisational performance, regardless of size or structure.'}
+                  ? 'Mae\'r adran hon yn darparu gwybodaeth am ein dyletswyddau, llywodraethu Chwaraeon Cymru ac adnoddau a chefnogaeth ar gyfer y sector chwaraeon yng Nghymru.'
+                  : 'This section provides information on our duties, the governance of Sport Wales and resources and support for the sport sector in Wales.'}
               </p>
             </div>
           </div>
@@ -159,11 +150,53 @@ export default async function GovernancePage({
         </div>
       </section>
 
-      {/* Vision for Sport Featured Section */}
+      {/* Environmental Sustainability Plan Featured Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <Link
-            href="/vision"
+            href="/governance/environmental-sustainability-plan"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+          >
+            <div className="grid lg:grid-cols-2 gap-0">
+              {/* Left side - Content */}
+              <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
+                  {isWelsh ? 'Cynllun Cynaliadwyedd Amgylcheddol' : 'Environmental Sustainability Plan'}
+                </h2>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">
+                  {isWelsh
+                    ? 'Mae Chwaraeon Cymru wedi ymrwymo\'n llwyr i chwarae ein rhan wrth fynd i\'r afael â\'r argyfyngau hinsawdd a natur.'
+                    : 'Sport Wales is wholly committed to playing our part in tackling the climate and nature emergencies.'}
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+
+              {/* Right side - Image placeholder */}
+              <div className="relative min-h-[250px] lg:min-h-[300px] bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <svg className="w-20 h-20 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-white/50 text-sm">{isWelsh ? 'Paneli solar ar adeilad' : 'Solar panels on a building'}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* Strategic Equality Plan Featured Section */}
+      <section className="py-8 lg:py-12 bg-white">
+        <div className="container">
+          <Link
+            href="/governance/strategic-equality-plan"
             className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-0">
@@ -174,175 +207,140 @@ export default async function GovernancePage({
                     <svg className="w-20 h-20 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    <p className="text-white/50 text-sm">{isWelsh ? 'Delwedd CMS' : 'CMS Image'}</p>
+                    <p className="text-white/50 text-sm">{isWelsh ? 'Canolfan Genedlaethol Chwaraeon Cymru Caerdydd' : 'Sport Wales National Centre Cardiff Building'}</p>
                   </div>
                 </div>
               </div>
 
               {/* Right side - Content */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <p className="text-lg text-white/80 leading-relaxed mb-4">
-                  {isWelsh
-                    ? 'Y Weledigaeth ar gyfer Chwaraeon yng Nghymru yw bod yn genedl actif lle gall pawb fwynhau chwaraeon gydol oes. Mae ein strategaeth Galluogi Chwaraeon yng Nghymru i Ffynnu wedi\'i datblygu oherwydd ein bod am helpu...'
-                    : 'The Vision for Sport in Wales is to be an active nation where everyone can have a lifelong enjoyment of sport. Our strategy Enabling Sport in Wales to Thrive has been developed because we want to help...'}
-                </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
-                  {isWelsh ? 'Y Weledigaeth ar gyfer Chwaraeon' : 'The Vision for Sport'}
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* Main Cards Section */}
-      <section className="py-8 lg:py-12 bg-white">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {mainCards.map((card, index) => (
-              <Link
-                key={index}
-                href={card.href as any}
-                className="group block p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
-              >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
-                  {card.title}
-                </h3>
-                <p className="text-[#64748B] mb-4">
-                  {card.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
-                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Governance Cards Grid */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
-        <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {governanceCards.map((card, index) => (
-              <Link
-                key={index}
-                href={card.href as any}
-                className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
-              >
-                {/* Image placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
-                  <svg className="w-12 h-12 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
-                    {card.title}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
-                    {card.title}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Cards */}
-      <section className="py-8 lg:py-12 bg-white">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {additionalCards.map((card, index) => (
-              <Link
-                key={index}
-                href={card.href as any}
-                className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
-              >
-                {/* Image placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
-                  <svg className="w-12 h-12 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
-                    {card.title}
-                  </h3>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
-                    {card.title}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners CTA */}
-      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
-        <div className="container">
-          <Link
-            href="/partners"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
-          >
-            <div className="grid lg:grid-cols-2 gap-0">
-              {/* Left side - Content */}
-              <div className="p-8 lg:p-12">
-                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
-                  {isWelsh ? 'Partneriaid' : 'Partners'}
+                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
+                  {isWelsh ? 'Cynllun Cydraddoldeb Strategol 2024-2028' : 'Strategic Equality Plan 2024-2028'}
                 </h2>
-                <div className="space-y-4 text-white/80 leading-relaxed mb-8">
-                  <p>
-                    {isWelsh
-                      ? 'Mae\'n cymryd ymdrech fawr i helpu chwaraeon yng Nghymru i ffynnu.'
-                      : 'It takes a big effort to help sport in Wales thrive.'}
-                  </p>
-                  <p>
-                    {isWelsh
-                      ? 'O\'r gwirfoddolwyr sy\'n rhoi o\'u hamser fel y gall eraill gymryd rhan.'
-                      : 'From the volunteers who give up their time so that others can take part.'}
-                  </p>
-                  <p>
-                    {isWelsh
-                      ? 'Y canolfannau hamdden, campfeydd a phyllau nofio sy\'n ganolfannau i gymunedau lleol...'
-                      : 'The leisure centres, gyms and swimming pools that are hubs of local communities...'}
-                  </p>
-                </div>
+                <p className="text-lg text-white/80 leading-relaxed mb-6">
+                  {isWelsh
+                    ? 'Mae ein Cynllun Cydraddoldeb Strategol i ddechrau yn canolbwyntio ar y camau gweithredu y gall Chwaraeon Cymru eu cymryd o fewn ein sefydliad ein hunain. Fodd bynnag, ein huchelgais yw gwneud y mwyaf o\'r ysgogiadau sydd ar gael i ni i gefnogi mynd i\'r afael ag anghydraddoldeb o fewn y sector.'
+                    : 'Our Strategic Equality Plan is initially focused on the actions that Sport Wales can take within our own organisation. However, our ambition is to maximise the levers available to us to support tackling inequality within the sector.'}
+                </p>
                 <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
-                  {isWelsh ? 'Partneriaid' : 'Partners'}
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </div>
-
-              {/* Right side - Image placeholder */}
-              <div className="relative min-h-[300px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <svg className="w-20 h-20 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                    <p className="text-white/50 text-sm">{isWelsh ? 'Delwedd CMS' : 'CMS Image'}</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Featured Content Section */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            {isWelsh ? 'Cynnwys Dan Sylw - Polisïau a Llywodraethu' : 'Featured Content - Policies and Governance'}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {featuredCards.map((card, index) => (
+              <Link
+                key={index}
+                href={card.href as any}
+                className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
+              >
+                {/* Image placeholder */}
+                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
+                  <svg className="w-12 h-12 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-[#64748B] text-sm mb-4">
+                    {card.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                    {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* Explore All Link */}
+          <div className="mt-12 text-center">
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
+            >
+              {isWelsh ? 'Archwilio Pob Polisi a Llywodraethu' : 'Explore All Policies and Governance'}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            {isWelsh ? 'Newyddion Diweddaraf - Polisïau a Llywodraethu' : 'Latest News - Policies and Governance'}
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {newsArticles.map((article, index) => (
+              <Link
+                key={index}
+                href={article.href as any}
+                className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
+              >
+                {/* Image placeholder */}
+                <div className="aspect-video bg-gradient-to-br from-[#E2E8F0] to-[#F1F5F9] flex items-center justify-center">
+                  <svg className="w-12 h-12 text-[#94A3B8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-[#64748B] text-sm mb-4">
+                    {article.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                    {article.linkText}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CMS Articles Placeholder */}
+      <section className="py-16 lg:py-24 bg-[#F8FAFC]">
+        <div className="container">
+          <div className="bg-white rounded-2xl border-2 border-dashed border-[#E2E8F0] p-12 text-center">
+            <svg className="w-16 h-16 text-[#94A3B8] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+            <h3 className="text-xl font-display font-bold text-[#64748B] mb-2">
+              {isWelsh ? 'Golygadwy o\'r CMS' : 'Editable from CMS'}
+            </h3>
+            <p className="text-[#94A3B8]">
+              {isWelsh
+                ? 'Bydd erthyglau ychwanegol yn ymddangos yma pan gânt eu hychwanegu drwy\'r CMS'
+                : 'Additional articles will appear here when added through the CMS'}
+            </p>
+          </div>
         </div>
       </section>
     </>

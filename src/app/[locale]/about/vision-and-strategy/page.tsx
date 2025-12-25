@@ -9,8 +9,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   const title = t('visionStrategy');
   const description = isWelsh 
-    ? 'Dysgwch am weledigaeth Chwaraeon Cymru a\'n strategaeth ar gyfer datblygu chwaraeon yng Nghymru.'
-    : 'Learn about Sport Wales\' vision and strategy for developing sport in Wales.';
+    ? 'Mae\'r Weledigaeth ar gyfer Chwaraeon a Strategaeth Chwaraeon Cymru yn mynd law yn llaw.'
+    : 'The Vision for Sport and the Sport Wales Strategy go hand in hand.';
   
   return {
     title,
@@ -48,7 +48,6 @@ export default async function VisionAndStrategyPage({
 
   const breadcrumbItems = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
-    { name: t('whatIsSportWales'), url: `https://www.sport.wales/${locale}/about` },
     { name: t('visionStrategy'), url: `https://www.sport.wales/${locale}/about/vision-and-strategy` },
   ];
 
@@ -66,21 +65,14 @@ export default async function VisionAndStrategyPage({
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              {isWelsh ? 'Ein Gweledigaeth' : 'Our Vision'}
-            </span>
+          <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
               {t('visionStrategy')}
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed">
+            <p className="text-xl lg:text-2xl font-semibold text-white/90">
               {isWelsh
-                ? 'Ein gweledigaeth yw gweld cenedl iachach a mwy actif, lle mae pob person ifanc yn cael dechrau gwych mewn bywyd, gan eu galluogi i fwynhau oes o chwaraeon.'
-                : 'Our vision is to see a healthier and more active nation, where every young person has a great start in life, enabling them to enjoy a lifetime of sport.'}
+                ? 'Mae\'r Weledigaeth ar gyfer Chwaraeon a Strategaeth Chwaraeon Cymru yn mynd law yn llaw.'
+                : 'The Vision for Sport and the Sport Wales Strategy go hand in hand.'}
             </p>
           </div>
         </div>
@@ -93,168 +85,143 @@ export default async function VisionAndStrategyPage({
         </div>
       </section>
 
-      {/* Vision Section */}
+      {/* Introduction Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
-                {isWelsh ? 'Ein Gweledigaeth' : 'Our Vision'}
-              </span>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-                {isWelsh 
-                  ? 'Cenedl Iachach a Mwy Actif' 
-                  : 'A Healthier and More Active Nation'}
-              </h2>
-              <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
+          <div className="max-w-4xl">
+            <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
+              <p>
                 {isWelsh
-                  ? 'Ein gweledigaeth yw gweld cenedl iachach a mwy actif, lle mae pob person ifanc yn cael dechrau gwych mewn bywyd, gan eu galluogi i fwynhau oes o chwaraeon.'
-                  : 'Our vision is to see a healthier and more active nation, where every young person has a great start in life, enabling them to enjoy a lifetime of sport.'}
+                  ? 'Yng Nghymru, mae gennym Weledigaeth glir i greu cenedl actif lle gall pawb gael mwynhad gydol oes o chwaraeon. Crëwyd y Weledigaeth hon gan ac ar gyfer pobl Cymru, gan arwain pawb sy\'n gweithio, gwirfoddoli, cefnogi neu lywodraethu chwaraeon yma.'
+                  : 'In Wales, we have a clear Vision to create an active nation where everyone can have a lifetime enjoyment of sport. This Vision was created by and for the people of Wales, guiding all those who work, volunteer, support or govern sport here.'}
               </p>
-              <p className="text-lg text-[#64748B] leading-relaxed">
+              <p>
                 {isWelsh
-                  ? 'Ein nod yw rhoi\'r gefnogaeth sydd ei hangen ar ein hathletwyr mwyaf addawol i gystadlu\'n llwyddiannus ar lwyfan y byd.'
-                  : 'We aim to provide our most promising athletes with the support they need to compete successfully on the world stage.'}
+                  ? 'Nid yw\'n eiddo i un sefydliad. Mae\'r Weledigaeth ar gyfer Chwaraeon yn gosod uchelgais i bawb. Mae\'n gofyn i chwaraeon ymuno â meysydd eraill, oherwydd gellir gweld gwobrau cenedl actif mewn sawl ffurf wahanol, gan gyffwrdd â phob cymuned yng Nghymru.'
+                  : 'It is not owned by one organisation. The Vision for Sport sets an ambition for everyone. It asks that sport joins forces with other areas, because the rewards of an active nation can be seen in many different forms, touching every community in Wales.'}
               </p>
-            </div>
-            
-            <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-10 text-white">
-                <svg className="w-12 h-12 text-white/30 mb-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote className="text-xl lg:text-2xl font-display leading-relaxed mb-4">
-                  {isWelsh 
-                    ? '"Rydym am i Gymru fod yn genedl fwy egnïol ac iachach."'
-                    : '"We want Wales to be a more active, healthier nation."'}
-                </blockquote>
-                <p className="text-white/70 text-sm">
-                  — Sport Wales
-                </p>
-              </div>
+              <p>
+                {isWelsh
+                  ? 'I helpu i gyflawni hyn, mae Chwaraeon Cymru wedi datblygu strategaeth sy\'n dangos sut byddwn yn cefnogi\'r Weledigaeth.'
+                  : 'To help achieve this, Sport Wales has developed a strategy that shows how we\'ll support the Vision.'}
+              </p>
+              <p>
+                {isWelsh
+                  ? 'Yn Chwaraeon Cymru, gwyddom fod angen newidiadau mawr i wneud Cymru yn lle lle gall pawb fod yn actif am oes. Mae ein strategaeth, a gefnogir gan ein cynllun busnes, yn arwain sut rydym yn bwriadu chwarae ein rhan wrth gyflawni\'r newidiadau sydd eu hangen i wireddu\'r Weledigaeth ar gyfer Chwaraeon.'
+                  : 'At Sport Wales, we know that big changes are needed to make Wales a place where everyone can be active for life. Our strategy, supported by our business plan, guides how we plan to play our part in delivering the changes needed to realise the Vision for Sport.'}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Strategy Section */}
+      {/* Vision and Strategy Cards */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Ein Strategaeth' : 'Our Strategy'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh 
-                ? 'Strategaeth Chwaraeon Cymru' 
-                : 'Sport Wales Strategy'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
-              {isWelsh
-                ? 'Mae ein strategaeth yn esbonio sut y byddwn yn datblygu a hyrwyddo chwaraeon yng Nghymru. Ein nod yw ryddhau manteision chwaraeon i bawb.'
-                : 'Our strategy explains how we will develop and promote sport in Wales. Our aim is to unleash the benefits of sport for everyone.'}
-            </p>
-            <p className="text-lg text-[#64748B] leading-relaxed">
-              {isWelsh
-                ? 'Mae ein strategaeth yn canolbwyntio ar gynyddu cyfranogiad, datblygu chwaraeon elît, a sicrhau bod pawb yn cael cyfle i fwynhau chwaraeon.'
-                : 'Our strategy focuses on increasing participation, developing elite sport, and ensuring everyone has the opportunity to enjoy sport.'}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <div className="p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mb-6">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
-                {isWelsh ? 'Gweledigaeth ar gyfer Chwaraeon' : 'Vision for Sport'}
-              </h3>
-              <p className="text-[#64748B] mb-4">
-                {isWelsh
-                  ? 'Cenedl actif lle gall pawb gael bywyd gydol oes mewn chwaraeon a gweithgarwch corfforol.'
-                  : 'An active nation where everyone can have a lifelong involvement in sport and physical activity.'}
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
-              <div className="w-14 h-14 rounded-xl bg-[#14B8A6]/10 flex items-center justify-center text-[#14B8A6] mb-6">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
-                {isWelsh ? 'Strategaeth Chwaraeon Cymru' : 'Sport Wales Strategy'}
-              </h3>
-              <p className="text-[#64748B] mb-4">
-                {isWelsh
-                  ? 'Sut byddwn yn ryddhau manteision chwaraeon i bawb.'
-                  : 'How we will unleash the benefits of sport for everyone.'}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Public Duties Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Ein Dyletswyddau Cyhoeddus' : 'Our Public Duties'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
-              {isWelsh
-                ? 'Mae Chwaraeon Cymru yn sefydliad a ariennir yn gyhoeddus, ac felly mae\'n rhaid iddo adrodd ar nifer o ddyletswyddau craidd. Dyma\'r dyletswyddau cyhoeddus hynny.'
-                : 'Sport Wales is a publicly funded organisation, and as such, it must report on a number of core duties. Here are these public duties.'}
-            </p>
-            <Link 
-              href="/governance"
-              className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl">
+            {/* Vision for Sport Card */}
+            <Link
+              href="/vision"
+              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
             >
-              {isWelsh ? 'Gweld ein Dyletswyddau Cyhoeddus' : 'View Our Public Duties'}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <div className="p-8 lg:p-10">
+                <h3 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
+                  {isWelsh ? 'Gweledigaeth ar gyfer Chwaraeon' : 'Vision for Sport'}
+                </h3>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  {isWelsh
+                    ? 'Cenedl actif lle gall pawb gael mwynhad gydol oes...'
+                    : 'An active nation where everyone can have a lifelong…'}
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+              {/* Image placeholder */}
+              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#1E3A5F]/50 to-transparent"></div>
+            </Link>
+
+            {/* Sport Wales Strategy Card */}
+            <Link
+              href="/strategy"
+              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+            >
+              <div className="p-8 lg:p-10">
+                <h3 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
+                  {isWelsh ? 'Strategaeth Chwaraeon Cymru' : 'Sport Wales Strategy'}
+                </h3>
+                <p className="text-white/80 leading-relaxed mb-6">
+                  {isWelsh
+                    ? 'Sut byddwn yn rhyddhau manteision chwaraeon i bawb.'
+                    : 'How we will unleash the benefits of sport for everyone.'}
+                </p>
+                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                  {isWelsh ? 'Darllen Mwy' : 'Read More'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+              {/* Image placeholder */}
+              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#1E3A5F]/50 to-transparent"></div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Video Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container">
+          <div className="max-w-4xl">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+              {isWelsh ? 'Y Weledigaeth a\'r Strategaeth ar waith (5m 15s)' : 'The Vision and Strategy in action (5m 15s)'}
+            </h2>
+            
+            <p className="text-[#64748B] mb-6">
+              <a href="#" className="text-[#B91C3C] hover:underline">
+                {isWelsh ? 'Gwyliwch gyda disgrifiad sain (8m 37s)' : 'Watch with audio description (8m 37s)'}
+              </a>
+            </p>
+
+            {/* Video Placeholder */}
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#0F172A]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Play button */}
+                <button className="w-20 h-20 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-colors group">
+                  <svg className="w-8 h-8 text-[#0F172A] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </button>
+              </div>
+              {/* Image placeholder */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A] flex items-center justify-center">
+                <div className="text-center p-8">
+                  <svg className="w-16 h-16 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <p className="text-white/50 text-sm">{isWelsh ? 'Bachgen yn dal bat criced bach yn chwarae criced bwrdd' : 'A boy holding a small cricket bat playing table cricket'}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Public Duties Notice */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
-              {isWelsh ? 'Dysgu Mwy' : 'Learn More'}
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
-              {isWelsh ? 'Dysgwch Amdanom Ni' : 'Learn About Us'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-8">
+          <div className="max-w-4xl">
+            <p className="text-lg text-[#475569] leading-relaxed">
               {isWelsh
-                ? 'Dysgwch fwy am Chwaraeon Cymru a\'n gwaith i ddatblygu chwaraeon yng Nghymru.'
-                : 'Learn more about Sport Wales and our work to develop sport in Wales.'}
+                ? 'Mae Chwaraeon Cymru yn sefydliad a ariennir yn gyhoeddus, ac felly rhaid iddo adrodd ar nifer o ddyletswyddau craidd. Dyma\'r dyletswyddau cyhoeddus hyn.'
+                : 'Sport Wales is a publicly funded organisation, and as such, it must report on a number of core duties. Here are these public duties.'}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link 
-                href="/about/what-is-sport-wales" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
-              >
-                {isWelsh ? 'Beth yw Chwaraeon Cymru?' : 'What is Sport Wales?'}
-              </Link>
-              <Link 
-                href="/about"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
-              >
-                {isWelsh ? 'Amdanom Ni' : 'About Us'}
-              </Link>
-            </div>
           </div>
         </div>
       </section>
     </>
   );
 }
-
