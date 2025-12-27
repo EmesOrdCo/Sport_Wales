@@ -145,17 +145,11 @@ export function CookieConsent() {
                     <h3 className="font-semibold text-sw-navy">{t.essential}</h3>
                     <p className="text-sm text-sw-gray-600">{t.essentialDesc}</p>
                   </div>
-                  <div className="relative">
-                    <input
-                      type="checkbox"
-                      checked={true}
-                      disabled
-                      className="sr-only"
-                      aria-label={t.essential}
-                    />
-                    <div className="w-11 h-6 bg-sw-teal rounded-full">
-                      <div className="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow"></div>
-                    </div>
+                  <div 
+                    className="relative w-11 h-6 bg-[#B91C3C] rounded-full cursor-not-allowed opacity-90"
+                    title="Required - cannot be disabled"
+                  >
+                    <span className="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow-md" />
                   </div>
                 </div>
 
@@ -166,18 +160,20 @@ export function CookieConsent() {
                     <p className="text-sm text-sw-gray-600">{t.analyticsDesc}</p>
                   </div>
                   <button
-                    onClick={() => setPreferences((p) => ({ ...p, analytics: !p.analytics }))}
-                    className="relative w-11 h-6 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sw-teal focus:ring-offset-2"
-                    style={{ backgroundColor: preferences.analytics ? '#0F172A' : '#E0E0E0' }}
+                    type="button"
+                    onClick={() => setPreferences((prev) => ({ ...prev, analytics: !prev.analytics }))}
+                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:ring-offset-2 ${
+                      preferences.analytics ? 'bg-[#B91C3C]' : 'bg-[#CBD5E1]'
+                    }`}
                     role="switch"
                     aria-checked={preferences.analytics}
                     aria-label={t.analytics}
                   >
-                    <div
-                      className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-all ${
+                    <span
+                      className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-all duration-200 ${
                         preferences.analytics ? 'right-0.5' : 'left-0.5'
                       }`}
-                    ></div>
+                    />
                   </button>
                 </div>
 
@@ -188,32 +184,36 @@ export function CookieConsent() {
                     <p className="text-sm text-sw-gray-600">{t.marketingDesc}</p>
                   </div>
                   <button
-                    onClick={() => setPreferences((p) => ({ ...p, marketing: !p.marketing }))}
-                    className="relative w-11 h-6 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sw-teal focus:ring-offset-2"
-                    style={{ backgroundColor: preferences.marketing ? '#0F172A' : '#E0E0E0' }}
+                    type="button"
+                    onClick={() => setPreferences((prev) => ({ ...prev, marketing: !prev.marketing }))}
+                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:ring-offset-2 ${
+                      preferences.marketing ? 'bg-[#B91C3C]' : 'bg-[#CBD5E1]'
+                    }`}
                     role="switch"
                     aria-checked={preferences.marketing}
                     aria-label={t.marketing}
                   >
-                    <div
-                      className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow transition-all ${
+                    <span
+                      className={`absolute top-0.5 w-5 h-5 bg-white rounded-full shadow-md transition-all duration-200 ${
                         preferences.marketing ? 'right-0.5' : 'left-0.5'
                       }`}
-                    ></div>
+                    />
                   </button>
                 </div>
               </div>
 
-              <div className="flex justify-end gap-3">
+              <div className="flex justify-end gap-3 pt-4 border-t border-sw-gray-200">
                 <button
+                  type="button"
                   onClick={() => setShowPreferences(false)}
-                  className="px-4 py-2 text-sm font-medium text-sw-gray-600 border border-sw-gray-300 rounded-lg hover:bg-sw-gray-50 transition-colors"
+                  className="px-5 py-2.5 text-sm font-semibold text-[#0F172A] border-2 border-[#E2E8F0] rounded-full hover:bg-[#F8FAFC] transition-colors"
                 >
                   {locale === 'cy' ? 'Yn ôl' : 'Back'}
                 </button>
                 <button
+                  type="button"
                   onClick={handleSavePreferences}
-                  className="px-6 py-2 text-sm font-medium text-white bg-sw-red rounded-lg hover:bg-sw-red/90 transition-colors"
+                  className="px-6 py-2.5 text-sm font-semibold text-white bg-[#B91C3C] rounded-full hover:bg-[#991B1B] transition-colors shadow-lg"
                 >
                   {t.save}
                 </button>
