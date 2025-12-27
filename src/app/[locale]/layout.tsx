@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { SkipLink } from '@/components/ui/SkipLink';
 import { CookieConsent } from '@/components/ui/CookieConsent';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 import { OrganizationSchema, WebsiteSchema } from '@/components/seo/StructuredData';
 import '../globals.css';
 
@@ -98,7 +99,7 @@ export default async function LocaleLayout({
         <link rel="manifest" href="/manifest.json" />
         
         {/* Theme color */}
-        <meta name="theme-color" content="#E11D2E" />
+        <meta name="theme-color" content="#123F56" />
         
         {/* hreflang for bilingual SEO */}
         <link rel="alternate" hrefLang="en" href="https://www.sport.wales/en" />
@@ -123,6 +124,9 @@ export default async function LocaleLayout({
           
           {/* Cookie Consent Banner */}
           <CookieConsent />
+          
+          {/* Google Analytics - Only loads if user consents */}
+          <GoogleAnalytics />
           
           {/* Structured Data for SEO */}
           <OrganizationSchema locale={locale} />

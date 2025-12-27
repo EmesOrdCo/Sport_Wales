@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
+import { setLanguagePreference } from '@/lib/languagePreference';
 
 interface LanguageSwitcherProps {
   variant?: 'light' | 'dark';
@@ -15,6 +16,8 @@ export function LanguageSwitcher({ variant = 'light' }: LanguageSwitcherProps) {
   const router = useRouter();
 
   const switchLocale = (newLocale: Locale) => {
+    // Save the user's language preference (functionality cookie)
+    setLanguagePreference(newLocale);
     router.replace(pathname, { locale: newLocale });
   };
 

@@ -61,7 +61,7 @@ export default function LegalPageLayout({
             </ol>
           </nav>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 animate-slide-down">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 animate-slide-down !text-white">
             {title}
           </h1>
           {lastUpdated && (

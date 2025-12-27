@@ -68,17 +68,23 @@ export function CookieConsent() {
   const handleAcceptAll = () => {
     const allAccepted = { essential: true, analytics: true, marketing: true };
     localStorage.setItem('cookie-consent', JSON.stringify(allAccepted));
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: allAccepted }));
     setIsVisible(false);
   };
 
   const handleRejectNonEssential = () => {
     const essentialOnly = { essential: true, analytics: false, marketing: false };
     localStorage.setItem('cookie-consent', JSON.stringify(essentialOnly));
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: essentialOnly }));
     setIsVisible(false);
   };
 
   const handleSavePreferences = () => {
     localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new CustomEvent('cookie-consent-updated', { detail: preferences }));
     setIsVisible(false);
     setShowPreferences(false);
   };
