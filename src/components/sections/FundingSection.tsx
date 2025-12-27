@@ -17,8 +17,8 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
   const fundingCards = opportunities && opportunities.length > 0 
     ? opportunities.slice(0, 3).map((opp, index) => {
         const gradients = [
-          'from-[#E11D2E] to-[#E11D2E]',
-          'from-[#E11D2E] to-[#E11D2E]',
+          'from-[#123F56] to-[#1E4A62]',
+          'from-[#123F56] to-[#1E4A62]',
           'from-[#123F56] to-[#1E4A62]',
         ];
         const accentColors = ['#F4B400', '#F4B400', '#E11D2E'];
@@ -43,7 +43,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('beActiveDescription'),
           amount: '£50,000',
           href: '/funding/be-active-wales',
-          gradient: 'from-[#E11D2E] to-[#E11D2E]',
+          gradient: 'from-[#123F56] to-[#1E4A62]',
           accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 0,
@@ -63,7 +63,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('energySavingDescription'),
           amount: isWelsh ? 'Hyd at £25,000' : 'Up to £25,000',
           href: '/funding',
-          gradient: 'from-[#E11D2E] to-[#E11D2E]',
+          gradient: 'from-[#123F56] to-[#1E4A62]',
           accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 1,

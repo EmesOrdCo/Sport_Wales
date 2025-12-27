@@ -127,7 +127,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating accent - Now crimson/red - Top right */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-[#E11D2E] to-[#E11D2E] rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-[#123F56] to-[#1E4A62] rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

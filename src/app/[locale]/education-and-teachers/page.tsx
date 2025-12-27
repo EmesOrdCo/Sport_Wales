@@ -338,7 +338,7 @@ export default async function EducationAndTeachersPage({
             </div>
 
             {/* What do children want? */}
-            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white">
+            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] text-white">
               <h3 className="text-2xl font-display font-bold mb-6">
                 {isWelsh ? 'Beth mae plant eisiau?' : 'What do children want?'}
               </h3>
@@ -580,7 +580,7 @@ export default async function EducationAndTeachersPage({
               </div>
 
               {/* Download PDF Link */}
-              <div className="p-6 rounded-xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white text-center">
+              <div className="p-6 rounded-xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] text-white text-center">
                 <h3 className="text-xl font-display font-bold mb-4">
                   {isWelsh ? 'Fframwaith Sylfaenau: Canllaw Arfer Da' : 'Foundations Framework: A Good Practice Guide'}
                 </h3>
@@ -713,7 +713,7 @@ export default async function EducationAndTeachersPage({
             </div>
 
             {/* Making The Most Of It - Practice Section */}
-            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white">
+            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] text-white">
               <h2 className="text-2xl font-display font-bold mb-6">
                 {isWelsh ? 'Gwneud y Gorau Ohono' : 'Making The Most Of It'}
               </h2>

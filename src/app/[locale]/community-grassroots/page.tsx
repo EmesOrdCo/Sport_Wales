@@ -108,7 +108,7 @@ export default async function CommunityGrassrootsPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Red background with content */}
-            <div className="bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="bg-gradient-to-br from-[#123F56] to-[#1E4A62] p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
               <div>
                 <p className="text-white/90 text-sm font-semibold uppercase tracking-wider mb-4">
                   {isWelsh ? 'Adnodd Allweddol ar gyfer Clybiau Cymunedol a Gwirfoddolwyr' : 'Key Resource for Community Clubs and Volunteers'}
