@@ -71,7 +71,7 @@ export default async function CareersPage({
             </ol>
           </nav>
 
-          <div className="max-w-4xl">
+          <div>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold !text-white mb-6">
               {isWelsh ? 'Gyrfaoedd' : 'Careers'}
             </h1>
@@ -89,7 +89,7 @@ export default async function CareersPage({
       {/* Working for Sport Wales */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <div className="max-w-4xl">
+          <div>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
               {isWelsh ? 'Gweithio i Chwaraeon Cymru' : 'Working for Sport Wales'}
             </h2>
@@ -112,7 +112,7 @@ export default async function CareersPage({
       {/* More about our Recruitment Process */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="max-w-4xl">
+          <div>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
               {isWelsh ? 'Mwy am ein Proses Recriwtio' : 'More about our Recruitment Process'}
             </h2>

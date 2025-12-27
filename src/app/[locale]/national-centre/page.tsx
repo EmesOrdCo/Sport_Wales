@@ -332,7 +332,7 @@ export default async function NationalCentrePage({
             <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Archebwch Nawr' : 'Book Now'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
               {isWelsh ? 'Ymweld â\'r Ganolfan Genedlaethol' : 'Visit the National Centre'}
             </h2>
             <p className="text-lg text-white/80 mb-8">

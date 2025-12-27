@@ -100,7 +100,7 @@ export default async function ResearchPage({
 
             {/* Contact Info */}
             <div className="mt-8 pt-8 border-t border-white/20">
-              <h3 className="text-xl font-display font-bold text-white mb-4">
+              <h3 className="text-xl font-display font-bold !text-white mb-4">
                 {isWelsh ? 'Am ragor o wybodaeth' : 'For further information'}
               </h3>
               <p className="text-white/80 mb-4">{isWelsh ? 'Cysylltwch â ni ar:' : 'Please contact us on:'}</p>
@@ -133,12 +133,12 @@ export default async function ResearchPage({
         <div className="container">
           <Link 
             href="/research/national-survey"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#14B8A6] to-[#0D9488] hover:shadow-2xl transition-all duration-500"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] hover:shadow-2xl transition-all duration-500"
           >
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-white blur-3xl"></div>
+            <div className="absolute inset-0">
+              <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
             </div>
             
             <div className="relative z-10 p-8 lg:p-12">
@@ -318,7 +318,7 @@ export default async function ResearchPage({
             {/* Left side - Content */}
             <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
+                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
                   {isWelsh ? 'Ystadegau' : 'Statistics'}
                 </h2>
                 <p className="text-lg text-white/90 leading-relaxed mb-8">

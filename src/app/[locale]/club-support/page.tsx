@@ -234,7 +234,7 @@ export default async function ClubSupportPage({
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <Link href="/funding" className="group block">
-                <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-4 group-hover:text-[#14B8A6] transition-colors">
+                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#14B8A6] transition-colors">
                   {isWelsh ? 'Cyllid a Chymorth' : 'Funding and Support'}
                 </h2>
                 <p className="text-lg text-white/80 mb-6">

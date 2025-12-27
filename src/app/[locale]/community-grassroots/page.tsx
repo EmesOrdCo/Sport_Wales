@@ -200,7 +200,7 @@ export default async function CommunityGrassrootsPage({
             <span className="inline-block text-[#F59E0B] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Cychwyn Arni' : 'Get Started'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
               {isWelsh ? 'Angen Cefnogaeth ar gyfer eich Clwb?' : 'Need Support for Your Club?'}
             </h2>
             <p className="text-lg text-white/80 leading-relaxed mb-8">

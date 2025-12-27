@@ -46,7 +46,7 @@ export default function StrengthConditioningCoursePage() {
       {/* Main Content */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="container">
-          <div className="max-w-3xl prose prose-lg prose-slate">
+          <div className="prose prose-lg prose-slate max-w-none">
             
             {/* Course Title */}
             <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">

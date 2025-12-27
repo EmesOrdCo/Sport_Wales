@@ -118,7 +118,7 @@ export default async function VisionAndStrategyPage({
       {/* Vision and Strategy Cards */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {/* Vision for Sport Card */}
             <Link
               href="/vision"

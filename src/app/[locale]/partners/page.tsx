@@ -281,23 +281,6 @@ export default async function PartnersPage({
         </div>
       </section>
 
-      {/* Explore All Partners Link */}
-      <section className="py-8 bg-white border-t border-[#E2E8F0]">
-        <div className="container">
-          <div className="text-center">
-            <Link
-              href="/partners/all"
-              className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
-            >
-              {isWelsh ? 'Archwilio Pob Partner' : 'Explore All Partners'}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* News Articles Section */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">

@@ -105,7 +105,7 @@ export default async function FacilitiesPage({
             href="https://www.plasmenai.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500 max-w-4xl"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left side - Content */}

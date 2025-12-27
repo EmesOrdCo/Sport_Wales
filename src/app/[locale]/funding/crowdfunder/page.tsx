@@ -546,7 +546,7 @@ export default async function CrowdfunderPage({
           <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-8">
             {isWelsh ? 'Ein Cronfeydd Eraill' : 'Our Other Funds'}
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
+          <div className="grid md:grid-cols-2 gap-6">
             <Link 
               href="/funding/be-active-wales"
               className="group block p-6 rounded-2xl bg-[#DC2626] hover:bg-[#B91C3C] transition-colors"

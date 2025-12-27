@@ -115,7 +115,7 @@ export default function InstitutePage() {
       {/* Strength & Conditioning Featured */}
       <section className="py-12 bg-[#F8FAFC]">
         <div className="container">
-          <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 lg:p-10 max-w-4xl">
+          <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 lg:p-10">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-4">
@@ -187,17 +187,17 @@ export default function InstitutePage() {
             {/* WIPS */}
             <Link
               href="/institute/wips"
-              className="group block bg-white rounded-2xl p-8 border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-xl transition-all duration-300"
+              className="group block bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
             >
-              <h3 className="text-xl lg:text-2xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+              <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Sefydliad Gwyddoniaeth Perfformiad Cymru' : 'Welsh Institute of Performance Science'}
               </h3>
-              <p className="text-[#64748B] mb-4">
+              <p className="text-white/80 mb-4">
                 {isWelsh
                   ? 'Mae Sefydliad Gwyddoniaeth Perfformiad Cymru (WIPS)...'
                   : 'The Welsh Institute of Performance Science (WIPS)…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -208,17 +208,17 @@ export default function InstitutePage() {
             {/* WIPAHS */}
             <Link
               href="/institute/wipahs"
-              className="group block bg-white rounded-2xl p-8 border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-xl transition-all duration-300"
+              className="group block bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
             >
-              <h3 className="text-xl lg:text-2xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+              <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Sefydliad Gweithgarwch Corfforol, Iechyd a Chwaraeon Cymru' : 'Welsh Institute of Physical Activity, Health & Sport'}
               </h3>
-              <p className="text-[#64748B] mb-4">
+              <p className="text-white/80 mb-4">
                 {isWelsh
                   ? 'Mae Sefydliad Gweithgarwch Corfforol, Iechyd a Chwaraeon Cymru...'
                   : 'The Welsh Institute of Physical Activity, Health and…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

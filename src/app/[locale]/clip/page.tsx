@@ -257,37 +257,6 @@ export default function CLIPPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
-              {isWelsh ? 'Barod i Ddechrau Dysgu?' : 'Ready to Start Learning?'}
-            </h2>
-            <p className="text-lg text-[#64748B] mb-8">
-              {isWelsh
-                ? 'Ymunwch â channoedd o weithwyr proffesiynol chwaraeon sydd eisoes yn defnyddio CLIP i ddatblygu eu sgiliau.'
-                : 'Join hundreds of sports professionals already using CLIP to develop their skills.'}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="https://www.sport.wales/clip/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                {isWelsh ? 'Ewch i CLIP' : 'Go to CLIP'}
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-              <Link href="/contact" className="btn btn-secondary">
-                {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
