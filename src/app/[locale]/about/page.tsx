@@ -116,7 +116,7 @@ export default async function AboutPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -194,7 +194,7 @@ export default async function AboutPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Cyfrifoldebau' : 'Our Responsibilities'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
@@ -213,7 +213,7 @@ export default async function AboutPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#14B8A6]/10 flex items-center justify-center text-[#14B8A6] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mb-6">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
@@ -342,7 +342,7 @@ export default async function AboutPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Ein Lleoliadau' : 'Our Locations'}
               </span>
               <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -370,7 +370,7 @@ export default async function AboutPage({
                   },
                 ].map((office, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-white/5">
-                    <div className="w-10 h-10 rounded-lg bg-[#14B8A6]/20 flex items-center justify-center text-[#14B8A6] flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#B91C3C]/20 flex items-center justify-center text-[#B91C3C] flex-shrink-0">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -388,7 +388,7 @@ export default async function AboutPage({
             <div className="relative">
               <div className="rounded-3xl bg-gradient-to-br from-[#1E293B] to-[#334155] p-8 lg:p-10 border border-white/10">
                 <div className="text-center">
-                  <div className="text-6xl lg:text-7xl font-display font-bold text-[#14B8A6] mb-2">
+                  <div className="text-6xl lg:text-7xl font-display font-bold text-[#B91C3C] mb-2">
                     160+
                   </div>
                   <p className="text-white/70 text-lg mb-8">

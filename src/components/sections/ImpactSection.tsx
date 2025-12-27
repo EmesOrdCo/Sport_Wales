@@ -35,7 +35,7 @@ export function ImpactSection() {
         </svg>
       ),
       link: '/sport-in-schools',
-      color: 'bg-[#14B8A6]',
+      color: 'bg-[#B91C3C]',
     },
     {
       title: isWelsh ? 'Chwaraeon Perfformiad' : 'Performance Sport',

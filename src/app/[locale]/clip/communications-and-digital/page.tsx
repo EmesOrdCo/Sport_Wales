@@ -238,7 +238,7 @@ export default function CommunicationsAndDigitalPage() {
                       <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-[#14B8A6] font-medium mb-4">
+                      <p className="text-sm text-[#B91C3C] font-medium mb-4">
                         {item.description}
                       </p>
                       <p className="text-[#64748B]">

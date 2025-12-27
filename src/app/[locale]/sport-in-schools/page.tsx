@@ -57,7 +57,7 @@ export default async function SportInSchoolsPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#F59E0B]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -112,16 +112,16 @@ export default async function SportInSchoolsPage({
           >
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6] blur-3xl"></div>
+              <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C] blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#F59E0B] blur-3xl"></div>
             </div>
             
             <div className="relative z-10 p-8 lg:p-12">
-              <span className="inline-block text-[#14B8A6] text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#B91C3C] text-sm font-semibold uppercase tracking-wider mb-4">
                 {isWelsh ? 'Cynnwys Nodwedd' : 'Featured Content'}
               </span>
               
-              <h2 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#14B8A6] transition-colors">
+              <h2 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#B91C3C] transition-colors">
                 {isWelsh ? 'Arolwg Chwaraeon Ysgol 2022' : 'School Sport Survey 2022'}
               </h2>
               
@@ -131,7 +131,7 @@ export default async function SportInSchoolsPage({
                   : 'One of the world\'s biggest surveys of young people, the 2022 School Sport Survey will give young people a voice on sport and wellbeing.'}
               </p>
               
-              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                 {isWelsh ? 'Darllen mwy' : 'Read more'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -194,13 +194,13 @@ export default async function SportInSchoolsPage({
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {/* Young Ambassadors */}
             <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
-              <div className="aspect-video bg-gradient-to-br from-[#14B8A6] to-[#0D9488] flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-[#B91C3C] to-[#991B1B] flex items-center justify-center">
                 <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#14B8A6] transition-colors">
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Llysgenhadon Ifanc' : 'Young Ambassadors'}
                 </h3>
                 <p className="text-[#64748B] mb-4">
@@ -210,7 +210,7 @@ export default async function SportInSchoolsPage({
                 </p>
                 <Link
                   href="/sport-in-schools/young-ambassadors"
-                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold text-sm group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -95,7 +95,7 @@ export default async function NewsPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -174,7 +174,7 @@ export default async function NewsPage({
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C] blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6] blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C] blur-3xl"></div>
               </div>
               
               <div className="relative z-10 p-8 lg:p-12">
@@ -250,14 +250,14 @@ export default async function NewsPage({
                           article.category.en === 'Feature' 
                             ? 'bg-[#B91C3C]/10 text-[#B91C3C]' 
                             : article.category.en === 'Funding'
-                            ? 'bg-[#14B8A6]/10 text-[#14B8A6]'
+                            ? 'bg-[#B91C3C]/10 text-[#B91C3C]'
                             : article.category.en === 'Impact Story'
                             ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
                             : article.category.en === 'Resources'
                             ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
                             : article.category.en === 'Research'
                             ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
-                            : 'bg-[#14B8A6]/10 text-[#14B8A6]'
+                            : 'bg-[#B91C3C]/10 text-[#B91C3C]'
                         }`}>
                           {article.category[isWelsh ? 'cy' : 'en']}
                         </span>

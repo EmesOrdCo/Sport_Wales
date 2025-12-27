@@ -116,7 +116,7 @@ export default async function FundingPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -145,19 +145,19 @@ export default async function FundingPage({
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
                   {isWelsh ? 'Sefydlu tîm newydd' : 'Setting up a new team'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
                   {isWelsh ? 'Uwchraddio eich cyfleusterau' : 'Upgrading your facilities'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
                   {isWelsh ? 'Cefnogaeth i athletwyr unigol' : 'Support for individual athletes'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
                   {isWelsh ? 'Mynd i\'r afael ag anghydraddoldebau' : 'Tackling inequalities'}
                 </li>
               </ul>
@@ -242,7 +242,7 @@ export default async function FundingPage({
               <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
                 {isWelsh ? 'Lle i Chwaraeon - Crowdfunder' : 'A Place for Sport - Crowdfunder'}
               </h3>
-              <p className="text-lg text-[#14B8A6] font-semibold">
+              <p className="text-lg text-[#B91C3C] font-semibold">
                 {isWelsh ? 'Ar agor drwy\'r flwyddyn' : 'Open all year round'}
               </p>
             </div>
@@ -309,7 +309,7 @@ export default async function FundingPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Content */}
-            <div className="bg-gradient-to-br from-[#14B8A6] to-[#0F766E] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+            <div className="bg-gradient-to-br from-[#B91C3C] to-[#0F766E] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
                   {isWelsh ? 'Cefnogaeth i Glybiau' : 'Club Support'}

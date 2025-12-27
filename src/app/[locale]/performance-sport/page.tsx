@@ -136,7 +136,7 @@ export default async function PerformanceSportPage({
 
               {/* Content */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4 group-hover:text-[#14B8A6] transition-colors">
+                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Athletwyr Olympaidd Cymru ym Mharis 2024' : 'Welsh Olympic Athletes at Paris 2024'}
                 </h2>
                 <p className="text-white/70 mb-6 leading-relaxed">

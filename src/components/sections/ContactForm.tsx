@@ -23,8 +23,8 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-[#14B8A6]/10 border border-[#14B8A6]/20 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 rounded-full bg-[#14B8A6] mx-auto mb-4 flex items-center justify-center">
+      <div className="bg-[#B91C3C]/10 border border-[#B91C3C]/20 rounded-2xl p-8 text-center">
+        <div className="w-16 h-16 rounded-full bg-[#B91C3C] mx-auto mb-4 flex items-center justify-center">
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
@@ -54,7 +54,7 @@ export function ContactForm() {
           required
           autoComplete="name"
           aria-required="true"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all"
           placeholder={isWelsh ? 'Eich enw llawn' : 'Your full name'}
         />
       </div>
@@ -74,7 +74,7 @@ export function ContactForm() {
           required
           autoComplete="email"
           aria-required="true"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all"
           placeholder={isWelsh ? 'eich@ebost.com' : 'your@email.com'}
         />
       </div>
@@ -92,7 +92,7 @@ export function ContactForm() {
           id="phone"
           name="phone"
           autoComplete="tel"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all"
           placeholder={isWelsh ? '07xxx xxxxxx' : '07xxx xxxxxx'}
         />
       </div>
@@ -110,7 +110,7 @@ export function ContactForm() {
           id="organisation"
           name="organisation"
           autoComplete="organization"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all"
           placeholder={isWelsh ? 'Enw eich sefydliad' : 'Your organisation name'}
         />
       </div>
@@ -128,7 +128,7 @@ export function ContactForm() {
           name="enquiry-type"
           required
           aria-required="true"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all appearance-none cursor-pointer"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all appearance-none cursor-pointer"
           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394A3B8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', backgroundSize: '1.5rem' }}
         >
           <option value="">{isWelsh ? 'Dewiswch opsiwn' : 'Select an option'}</option>
@@ -154,7 +154,7 @@ export function ContactForm() {
           rows={5}
           required
           aria-required="true"
-          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-transparent transition-all resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-[#E2E8F0] bg-white text-[#0F172A] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent transition-all resize-none"
           placeholder={isWelsh ? 'Sut gallwn ni eich helpu?' : 'How can we help you?'}
         />
       </div>
@@ -167,7 +167,7 @@ export function ContactForm() {
           name="privacy"
           required
           aria-required="true"
-          className="w-5 h-5 mt-0.5 rounded border-[#E2E8F0] text-[#14B8A6] focus:ring-[#14B8A6] cursor-pointer"
+          className="w-5 h-5 mt-0.5 rounded border-[#E2E8F0] text-[#B91C3C] focus:ring-[#B91C3C] cursor-pointer"
         />
         <label htmlFor="privacy" className="text-sm text-[#64748B]">
           {isWelsh 

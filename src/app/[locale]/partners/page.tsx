@@ -101,7 +101,7 @@ export default async function PartnersPage({
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -172,7 +172,7 @@ export default async function PartnersPage({
                     ? 'Dyma wybodaeth ddefnyddiol i helpu ein sefydliadau partner i ymdrechu tuag at lywodraethu da.'
                     : 'Here is some useful information to help our partner organisations strive towards good governance.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

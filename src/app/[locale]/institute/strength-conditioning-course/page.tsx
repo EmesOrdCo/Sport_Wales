@@ -12,7 +12,7 @@ export default function StrengthConditioningCoursePage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#14B8A6] opacity-10 blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
         </div>
 
@@ -71,7 +71,7 @@ export default function StrengthConditioningCoursePage() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">
-              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#14B8A6] text-white font-semibold hover:bg-[#0D9488] transition-colors">
+              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors">
                 Apply for the Cardiff course
               </a>
               <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#0F172A] text-white font-semibold hover:bg-[#1E293B] transition-colors">

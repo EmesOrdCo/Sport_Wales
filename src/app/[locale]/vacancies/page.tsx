@@ -95,7 +95,7 @@ export default async function VacanciesPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -141,7 +141,7 @@ export default async function VacanciesPage({
                         <h2 className="text-2xl font-display font-bold text-[#0F172A]">
                           {vacancy.title}
                         </h2>
-                        <span className="px-3 py-1 rounded-full bg-[#14B8A6]/10 text-[#14B8A6] text-sm font-medium">
+                        <span className="px-3 py-1 rounded-full bg-[#B91C3C]/10 text-[#B91C3C] text-sm font-medium">
                           {vacancy.department}
                         </span>
                       </div>
@@ -210,7 +210,7 @@ export default async function VacanciesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Sut i Wneud Cais' : 'How to Apply'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
@@ -277,7 +277,7 @@ export default async function VacanciesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Cwestiynau?' : 'Questions?'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">

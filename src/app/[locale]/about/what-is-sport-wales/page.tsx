@@ -61,7 +61,7 @@ export default async function WhatIsSportWalesPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -273,7 +273,7 @@ export default async function WhatIsSportWalesPage({
                     ? 'Yma cewch ddod o hyd i\'n llyfrgell o ddogfennau a chyhoeddiadau allweddol.'
                     : 'Here you will find our library of key documents and publications.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

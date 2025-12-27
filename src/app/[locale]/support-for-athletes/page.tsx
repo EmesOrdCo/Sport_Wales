@@ -72,7 +72,7 @@ export default async function SupportForAthletesPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      color: 'bg-[#14B8A6]',
+      color: 'bg-[#B91C3C]',
     },
     {
       title: isWelsh ? 'Cefnogaeth Ariannol' : 'Financial Support',
@@ -137,7 +137,7 @@ export default async function SupportForAthletesPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -171,7 +171,7 @@ export default async function SupportForAthletesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Meysydd Cefnogaeth' : 'Support Areas'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">

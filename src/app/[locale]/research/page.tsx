@@ -56,7 +56,7 @@ export default async function ResearchPage({
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -106,12 +106,12 @@ export default async function ResearchPage({
               <p className="text-white/80 mb-4">{isWelsh ? 'Cysylltwch â ni ar:' : 'Please contact us on:'}</p>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:insight@sport.wales" className="text-[#14B8A6] hover:underline font-medium">
+                  <a href="mailto:insight@sport.wales" className="text-[#B91C3C] hover:underline font-medium">
                     insight@sport.wales
                   </a>
                 </li>
                 <li>
-                  <a href="tel:03003003116" className="text-[#14B8A6] hover:underline font-medium">
+                  <a href="tel:03003003116" className="text-[#B91C3C] hover:underline font-medium">
                     0300 300 3116
                   </a>
                 </li>
@@ -138,7 +138,7 @@ export default async function ResearchPage({
             {/* Background pattern */}
             <div className="absolute inset-0">
               <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
             </div>
             
             <div className="relative z-10 p-8 lg:p-12">
@@ -197,13 +197,13 @@ export default async function ResearchPage({
 
             {/* Reviews & Evaluation */}
             <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
-              <div className="aspect-video bg-gradient-to-br from-[#14B8A6] to-[#0D9488] flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-[#B91C3C] to-[#991B1B] flex items-center justify-center">
                 <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#14B8A6] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Adolygiadau a Gwerthusiad' : 'Reviews & Evaluation'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -213,7 +213,7 @@ export default async function ResearchPage({
                 </p>
                 <Link
                   href="/research/reviews"
-                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold text-sm group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,7 +288,7 @@ export default async function ResearchPage({
           <div className="max-w-4xl">
             <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
               <div className="p-8">
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#14B8A6] transition-colors">
+                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Ymgynghoriad Cynaliadwyedd Amgylcheddol mewn Chwaraeon a Gweithgarwch Corfforol' : 'Environmental Sustainability in Sport and Physical Activity Consultation'}
                 </h3>
                 <p className="text-[#64748B] mb-4">
@@ -298,7 +298,7 @@ export default async function ResearchPage({
                 </p>
                 <Link
                   href="/research/sustainability"
-                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold text-sm group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -72,7 +72,7 @@ export default async function NationalPartnersPage({
         {/* Background pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#14B8A6] opacity-10 blur-2xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -159,7 +159,7 @@ export default async function NationalPartnersPage({
               {isWelsh
                 ? 'Os gallwch ein helpu yn ein Gweledigaeth ar gyfer Chwaraeon, yna rydym am glywed gennych. Cysylltwch ag ni ac e-bostiwch ni ar '
                 : 'If you can help us in our Vision for Sport, then we want to hear from you. Please get in touch and email us on '}
-              <a href="mailto:communications@sport.wales" className="text-[#14B8A6] hover:underline">
+              <a href="mailto:communications@sport.wales" className="text-[#B91C3C] hover:underline">
                 communications@sport.wales
               </a>.
             </p>

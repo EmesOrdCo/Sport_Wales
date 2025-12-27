@@ -107,7 +107,7 @@ export default async function PoliciesAndGovernancePage({
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -168,7 +168,7 @@ export default async function PoliciesAndGovernancePage({
                     ? 'Mae Chwaraeon Cymru wedi ymrwymo\'n llwyr i chwarae ein rhan wrth fynd i\'r afael â\'r argyfyngau hinsawdd a natur.'
                     : 'Sport Wales is wholly committed to playing our part in tackling the climate and nature emergencies.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -222,7 +222,7 @@ export default async function PoliciesAndGovernancePage({
                     ? 'Mae ein Cynllun Cydraddoldeb Strategol i ddechrau yn canolbwyntio ar y camau gweithredu y gall Chwaraeon Cymru eu cymryd o fewn ein sefydliad ein hunain. Fodd bynnag, ein huchelgais yw gwneud y mwyaf o\'r ysgogiadau sydd ar gael i ni i gefnogi mynd i\'r afael ag anghydraddoldeb o fewn y sector.'
                     : 'Our Strategic Equality Plan is initially focused on the actions that Sport Wales can take within our own organisation. However, our ambition is to maximise the levers available to us to support tackling inequality within the sector.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -12,11 +12,11 @@ export const categoryTranslations: Record<string, { en: string; cy: string }> = 
 };
 
 export const categoryColors: Record<string, string> = {
-  'News': 'bg-[#14B8A6]/10 text-[#14B8A6]',
+  'News': 'bg-[#B91C3C]/10 text-[#B91C3C]',
   'Feature': 'bg-[#B91C3C]/10 text-[#B91C3C]',
   'Impact Story': 'bg-[#F59E0B]/10 text-[#F59E0B]',
   'Resources': 'bg-[#F59E0B]/10 text-[#F59E0B]',
-  'Funding': 'bg-[#14B8A6]/10 text-[#14B8A6]',
+  'Funding': 'bg-[#B91C3C]/10 text-[#B91C3C]',
   'Research': 'bg-[#F59E0B]/10 text-[#F59E0B]',
 };
 

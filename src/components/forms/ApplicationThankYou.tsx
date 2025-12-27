@@ -12,8 +12,8 @@ export function ApplicationThankYou({ applicationType = 'grant' }: ApplicationTh
   const isWelsh = locale === 'cy';
 
   return (
-    <div className="bg-[#14B8A6]/10 border border-[#14B8A6]/20 rounded-2xl p-8 lg:p-10 text-center">
-      <div className="w-16 h-16 rounded-full bg-[#14B8A6] mx-auto mb-6 flex items-center justify-center">
+    <div className="bg-[#B91C3C]/10 border border-[#B91C3C]/20 rounded-2xl p-8 lg:p-10 text-center">
+      <div className="w-16 h-16 rounded-full bg-[#B91C3C] mx-auto mb-6 flex items-center justify-center">
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>

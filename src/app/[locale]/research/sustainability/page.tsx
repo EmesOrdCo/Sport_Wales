@@ -56,8 +56,8 @@ export default async function SustainabilityConsultationPage({
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#14B8A6] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#22C55E] opacity-10 blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -204,31 +204,31 @@ export default async function SustainabilityConsultationPage({
               <ul className="space-y-3 text-[#475569]">
                 <li className="flex justify-between items-center">
                   <span>Moral/ethical environmental responsibility reasons</span>
-                  <span className="font-bold text-[#14B8A6]">56%</span>
+                  <span className="font-bold text-[#B91C3C]">56%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Long term business resilience planning (e.g., protecting sports facilities)</span>
-                  <span className="font-bold text-[#14B8A6]">49%</span>
+                  <span className="font-bold text-[#B91C3C]">49%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Saving money</span>
-                  <span className="font-bold text-[#14B8A6]">44%</span>
+                  <span className="font-bold text-[#B91C3C]">44%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Members/stakeholder expectation</span>
-                  <span className="font-bold text-[#14B8A6]">39%</span>
+                  <span className="font-bold text-[#B91C3C]">39%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Funding/investment requirement</span>
-                  <span className="font-bold text-[#14B8A6]">33%</span>
+                  <span className="font-bold text-[#B91C3C]">33%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Other</span>
-                  <span className="font-bold text-[#14B8A6]">11%</span>
+                  <span className="font-bold text-[#B91C3C]">11%</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Not sure</span>
-                  <span className="font-bold text-[#14B8A6]">5%</span>
+                  <span className="font-bold text-[#B91C3C]">5%</span>
                 </li>
               </ul>
               <p className="text-sm text-[#64748B] italic mt-4">Source: Useful Group Survey November 2023</p>
@@ -263,13 +263,13 @@ export default async function SustainabilityConsultationPage({
               href="/research/sustainability/key-findings"
               className="group block p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
             >
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4 group-hover:text-[#14B8A6] transition-colors">
+              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4 group-hover:text-[#B91C3C] transition-colors">
                 Environmental Sustainability in Sport and Physical Activity - Key Findings
               </h3>
               <p className="text-[#64748B] mb-6">
                 A wide range of environmental challenges are facing the sector. Many of these are common across all sports, but naturally, some sports face different issues to others.
               </p>
-              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
                 Read More
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

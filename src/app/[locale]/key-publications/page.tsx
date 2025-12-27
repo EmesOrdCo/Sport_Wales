@@ -56,7 +56,7 @@ export default async function KeyPublicationsPage({
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -80,7 +80,7 @@ export default async function KeyPublicationsPage({
               {isWelsh
                 ? 'Am ragor o wybodaeth cysylltwch â ni ar '
                 : 'For more information contact us on '}
-              <a href="mailto:info@sport.wales" className="text-[#14B8A6] hover:underline">info@sport.wales</a>
+              <a href="mailto:info@sport.wales" className="text-[#B91C3C] hover:underline">info@sport.wales</a>
             </p>
           </div>
         </div>

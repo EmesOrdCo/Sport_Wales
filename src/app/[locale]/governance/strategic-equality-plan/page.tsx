@@ -77,7 +77,7 @@ export default async function StrategicEqualityPlanPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#8B5CF6]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -205,7 +205,7 @@ export default async function StrategicEqualityPlanPage({
                 className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
                 {/* Image placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[#8B5CF6]/20 to-[#14B8A6]/20 flex items-center justify-center">
+                <div className="aspect-video bg-gradient-to-br from-[#8B5CF6]/20 to-[#B91C3C]/20 flex items-center justify-center">
                   <svg className="w-12 h-12 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
@@ -268,7 +268,7 @@ export default async function StrategicEqualityPlanPage({
                     ? 'Ni yw\'r sefydliad cenedlaethol sy\'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru. Fel corff a noddir gan Lywodraeth Cymru rydym yn rhwym wrth reolau a chyfrifoldebau llywodraethu da ac mae gennym nifer o ddyletswyddau y mae\'n ofynnol i ni eu cyflawni...'
                     : 'We are the national organisation responsible for developing and promoting sport and physical activity in Wales. As a Welsh Government sponsored body we are bound by rules and responsibilities of good governance and we have a number of duties we are obligated…'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

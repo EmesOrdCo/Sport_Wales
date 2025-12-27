@@ -57,7 +57,7 @@ export default async function FacilitiesPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -118,7 +118,7 @@ export default async function FacilitiesPage({
                     ? 'Os ydych chi\'n chwilio am antur awyr agored, mae gan Plas Menai y cyfan. Dyma\'r Ganolfan Awyr Agored Genedlaethol i Gymru ac mae wedi\'i lleoli ar lannau Afon Menai yng Ngogledd Cymru.'
                     : 'If it\'s outdoor adventure you\'re after, Plas Menai has got it all. It is The National Outdoor Centre for Wales and is situated on the banks of the Menai Strait in North Wales.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Dysgwch fwy am y Ganolfan Awyr Agored Genedlaethol' : 'Find out more about the National Outdoor Centre'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

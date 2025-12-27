@@ -18,11 +18,11 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
     ? opportunities.slice(0, 3).map((opp, index) => {
         const gradients = [
           'from-[#B91C3C] to-[#991B1B]',
-          'from-[#14B8A6] to-[#0F766E]',
+          'from-[#B91C3C] to-[#0F766E]',
           'from-[#0F172A] to-[#1E293B]',
         ];
-        const accentColors = ['#F59E0B', '#F59E0B', '#14B8A6'];
-        const iconClasses = ['text-white', 'text-white', 'text-[#14B8A6]'];
+        const accentColors = ['#F59E0B', '#F59E0B', '#B91C3C'];
+        const iconClasses = ['text-white', 'text-white', 'text-[#B91C3C]'];
         
         return {
           title: opp.title,
@@ -54,8 +54,8 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           amount: '£15,000',
           href: '/funding',
           gradient: 'from-[#0F172A] to-[#1E293B]',
-          accentColor: '#14B8A6',
-          iconClass: 'text-[#14B8A6]',
+          accentColor: '#B91C3C',
+          iconClass: 'text-[#B91C3C]',
           iconIndex: 2,
         },
         {
@@ -63,7 +63,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('energySavingDescription'),
           amount: isWelsh ? 'Hyd at £25,000' : 'Up to £25,000',
           href: '/funding',
-          gradient: 'from-[#14B8A6] to-[#0F766E]',
+          gradient: 'from-[#B91C3C] to-[#0F766E]',
           accentColor: '#F59E0B',
           iconClass: 'text-white',
           iconIndex: 1,
@@ -100,7 +100,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
       <div className="container">
         {/* Section Header - Reframed as support, not main focus */}
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
             {isWelsh ? 'Cefnogaeth a Chyllid' : 'Support & Funding'}
           </span>
           <h2 id="funding-heading" className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
@@ -132,7 +132,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                 
                 <div className="relative z-10 h-full flex flex-col">
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`w-10 h-10 rounded-lg ${card.iconClass === 'text-[#14B8A6]' ? 'bg-[#14B8A6]/20' : 'bg-white/20'} flex items-center justify-center`}>
+                    <div className={`w-10 h-10 rounded-lg ${card.iconClass === 'text-[#B91C3C]' ? 'bg-[#B91C3C]/20' : 'bg-white/20'} flex items-center justify-center`}>
                       {getIcon(card.iconIndex, card.iconClass)}
                     </div>
                   </div>
@@ -140,12 +140,12 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                   <h3 className="text-xl font-bold text-white mb-2">
                     {card.title}
                   </h3>
-                  <p className={`text-sm mb-4 flex-grow ${card.iconClass === 'text-[#14B8A6]' ? 'text-white/60' : 'text-white/70'}`}>
+                  <p className={`text-sm mb-4 flex-grow ${card.iconClass === 'text-[#B91C3C]' ? 'text-white/60' : 'text-white/70'}`}>
                     {card.description}
                   </p>
                   
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className={`text-xs uppercase tracking-wider ${card.iconClass === 'text-[#14B8A6]' ? 'text-white/40' : 'text-white/60'}`}>
+                    <span className={`text-xs uppercase tracking-wider ${card.iconClass === 'text-[#B91C3C]' ? 'text-white/40' : 'text-white/60'}`}>
                       {isWelsh ? 'Hyd at' : card.amount.includes('Up to') ? 'Up to' : ''}
                     </span>
                     <span className="text-2xl font-bold" style={{ color: card.accentColor }}>

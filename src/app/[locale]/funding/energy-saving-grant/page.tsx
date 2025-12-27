@@ -215,7 +215,7 @@ export default async function EnergySavingGrantPage({
                 isWelsh ? 'Gallwch dalu o leiaf 20% o gost y prosiect (mae hyn yn cynnwys yr arolwg ynni)' : 'You can pay at least 20% of the project cost (this includes the energy survey)',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#14B8A6] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}

@@ -76,7 +76,7 @@ export default async function SchoolSportSurveyPage({
     },
     {
       category: isWelsh ? 'Pawb' : 'Everyone',
-      color: 'bg-[#14B8A6]',
+      color: 'bg-[#B91C3C]',
       stats: [
         {
           value: '60%',
@@ -148,7 +148,7 @@ export default async function SchoolSportSurveyPage({
       <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -185,7 +185,7 @@ export default async function SchoolSportSurveyPage({
                 href="https://www.chwaraeon.cymru/ymchwil-a-gwybodaeth/arolwg-chwaraeon-ysgol/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
               >
                 {isWelsh ? 'Gweld yr adroddiad yn Gymraeg' : 'View the report in Cymraeg'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -369,7 +369,7 @@ export default async function SchoolSportSurveyPage({
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#14B8A6] text-white font-semibold hover:bg-[#0D9488] transition-colors"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
             >
               {isWelsh ? 'Gweld y templed' : 'View the template'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -73,7 +73,7 @@ export default async function ClubSupportPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      color: 'from-[#14B8A6] to-[#0D9488]',
+      color: 'from-[#B91C3C] to-[#991B1B]',
       href: '#people',
     },
     {
@@ -139,7 +139,7 @@ export default async function ClubSupportPage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -234,7 +234,7 @@ export default async function ClubSupportPage({
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <Link href="/funding" className="group block">
-                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#14B8A6] transition-colors">
+                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Cyllid a Chymorth' : 'Funding and Support'}
                 </h2>
                 <p className="text-lg text-white/80 mb-6">
@@ -242,7 +242,7 @@ export default async function ClubSupportPage({
                     ? 'Buddsoddi mewn chwaraeon llawr gwlad a chymunedol, yn ogystal ag athletwyr Cymru.'
                     : 'Investing in grassroots and community sport, as well as Welsh athletes.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold">
+                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

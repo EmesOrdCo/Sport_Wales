@@ -23,10 +23,10 @@
   --sw-slate-700: #334155;
   --sw-slate-600: #475569;
   
-  /* Teal - Modern and fresh */
-  --sw-teal: #0D9488;
-  --sw-teal-dark: #0F766E;
-  --sw-teal-light: #14B8A6;
+  /* Red - Brand accent color */
+  --sw-teal: #B91C3C;
+  --sw-teal-dark: #991B1B;
+  --sw-teal-light: #DC2626;
   
   /* Neutrals - Clean and minimal */
   --sw-white: #FFFFFF;
@@ -480,7 +480,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--sw-teal);
-  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.1);
+  box-shadow: 0 0 0 4px rgba(185, 28, 60, 0.1);
 }
 
 label {
@@ -633,7 +633,7 @@ label {
 }
 
 .badge-teal {
-  background: rgba(13, 148, 136, 0.1);
+  background: rgba(185, 28, 60, 0.1);
   color: var(--sw-teal-dark);
 }
 

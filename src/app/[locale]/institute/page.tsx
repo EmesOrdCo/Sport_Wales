@@ -71,7 +71,7 @@ export default function InstitutePage() {
         {/* Background Pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#14B8A6] opacity-10 blur-2xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -130,7 +130,7 @@ export default function InstitutePage() {
                 </p>
                 <Link
                   href="/institute/strength-conditioning-course"
-                  className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +197,7 @@ export default function InstitutePage() {
                   ? 'Mae Sefydliad Gwyddoniaeth Perfformiad Cymru (WIPS)...'
                   : 'The Welsh Institute of Performance Science (WIPS)…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -218,7 +218,7 @@ export default function InstitutePage() {
                   ? 'Mae Sefydliad Gweithgarwch Corfforol, Iechyd a Chwaraeon Cymru...'
                   : 'The Welsh Institute of Physical Activity, Health and…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#14B8A6] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

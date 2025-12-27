@@ -58,7 +58,7 @@ export default async function NationalCentrePage({
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#14B8A6]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -198,7 +198,7 @@ export default async function NationalCentrePage({
             </p>
             <a
               href="tel:03003003123"
-              className="inline-flex items-center gap-2 text-2xl font-display font-bold text-white hover:text-[#14B8A6] transition-colors"
+              className="inline-flex items-center gap-2 text-2xl font-display font-bold text-white hover:text-[#B91C3C] transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -285,7 +285,7 @@ export default async function NationalCentrePage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="text-center mb-12">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Newyddion' : 'News'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
@@ -329,7 +329,7 @@ export default async function NationalCentrePage({
       <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#14B8A6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Archebwch Nawr' : 'Book Now'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
