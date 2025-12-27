@@ -309,7 +309,7 @@ export default async function FundingPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Content */}
-            <div className="bg-gradient-to-br from-[#B91C3C] to-[#0F766E] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+            <div className="bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
                   {isWelsh ? 'Cefnogaeth i Glybiau' : 'Club Support'}

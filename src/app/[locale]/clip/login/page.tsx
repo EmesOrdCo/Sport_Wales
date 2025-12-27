@@ -22,7 +22,7 @@ export default function CLIPLoginPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#6366F1]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -86,7 +86,7 @@ export default function CLIPLoginPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
                     placeholder={isWelsh ? 'eich@e-bost.cymru' : 'your@email.com'}
                   />
                 </div>
@@ -100,7 +100,7 @@ export default function CLIPLoginPage() {
                     id="password"
                     name="password"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
                     placeholder={isWelsh ? 'Eich cyfrinair' : 'Your password'}
                   />
                 </div>
@@ -110,7 +110,7 @@ export default function CLIPLoginPage() {
                     <input
                       type="checkbox"
                       name="remember"
-                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#6366F1] focus:ring-2 focus:ring-[#6366F1]"
+                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#B91C3C] focus:ring-2 focus:ring-[#B91C3C]"
                     />
                     <span className="text-sm text-[#64748B]">
                       {isWelsh ? 'Cofio fi?' : 'Remember me?'}
@@ -120,7 +120,7 @@ export default function CLIPLoginPage() {
                     href="https://www.sport.wales/clip/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#6366F1] hover:underline"
+                    className="text-sm text-[#B91C3C] hover:underline"
                   >
                     {isWelsh ? 'Anghofio Cyfrinair?' : 'Forgot Password?'}
                   </a>
@@ -171,7 +171,7 @@ export default function CLIPLoginPage() {
                 </a>
                 <p className="text-sm text-[#94A3B8] mt-4 text-center">
                   {isWelsh ? 'Am wybodaeth bellach neu ymholiadau cysylltwch â: ' : 'For further information or enquiries contact: '}
-                  <a href="mailto:communications@sport.wales" className="text-[#6366F1] hover:underline">
+                  <a href="mailto:communications@sport.wales" className="text-[#B91C3C] hover:underline">
                     communications@sport.wales
                   </a>
                 </p>

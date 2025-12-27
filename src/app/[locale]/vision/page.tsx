@@ -114,7 +114,7 @@ export default async function VisionPage({
     {
       number: 4,
       title: isWelsh ? 'Cymru Fwy Cyfartal' : 'A More Equal Wales',
-      color: 'bg-[#6366F1]',
+      color: 'bg-[#B91C3C]',
     },
     {
       number: 5,
@@ -124,12 +124,12 @@ export default async function VisionPage({
     {
       number: 6,
       title: isWelsh ? 'Cymru â Diwylliant Bywiog a\'r Gymraeg yn Ffynnu' : 'A Wales of Vibrant Culture and Thriving Welsh Language',
-      color: 'bg-[#8B5CF6]',
+      color: 'bg-[#B91C3C]',
     },
     {
       number: 7,
       title: isWelsh ? 'Cymru sy\'n Gyfrifol yn Fyd-eang' : 'A Globally Responsible Wales',
-      color: 'bg-[#0EA5E9]',
+      color: 'bg-[#B91C3C]',
     },
   ];
 

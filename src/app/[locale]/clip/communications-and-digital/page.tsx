@@ -146,7 +146,7 @@ export default function CommunicationsAndDigitalPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
                     placeholder={isWelsh ? 'eich@e-bost.cymru' : 'your@email.com'}
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function CommunicationsAndDigitalPage() {
                     id="password"
                     name="password"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
                     placeholder={isWelsh ? 'Eich cyfrinair' : 'Your password'}
                   />
                 </div>
@@ -170,7 +170,7 @@ export default function CommunicationsAndDigitalPage() {
                     <input
                       type="checkbox"
                       name="remember"
-                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#6366F1] focus:ring-2 focus:ring-[#6366F1]"
+                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#B91C3C] focus:ring-2 focus:ring-[#B91C3C]"
                     />
                     <span className="text-sm text-[#64748B]">
                       {isWelsh ? 'Cofio fi?' : 'Remember me?'}
@@ -180,7 +180,7 @@ export default function CommunicationsAndDigitalPage() {
                     href="https://www.sport.wales/clip/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#6366F1] hover:underline"
+                    className="text-sm text-[#B91C3C] hover:underline"
                   >
                     {isWelsh ? 'Anghofio Cyfrinair?' : 'Forgot Password?'}
                   </a>

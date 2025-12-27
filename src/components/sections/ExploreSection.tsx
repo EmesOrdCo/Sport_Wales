@@ -62,8 +62,8 @@ export function ExploreSection() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6m3 0V5a2 2 0 012-2h2a2 2 0 012 2v14m-4 0h4m-4 0H9m7 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-4 0h4" />
         </svg>
       ),
-      color: 'bg-[#6366F1]',
-      hoverColor: 'group-hover:bg-[#4F46E5]',
+      color: 'bg-[#B91C3C]',
+      hoverColor: 'group-hover:bg-[#991B1B]',
     },
     {
       href: '/partners',

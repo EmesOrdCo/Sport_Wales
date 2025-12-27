@@ -112,7 +112,7 @@ export default async function SchoolSportSurveyPage({
     },
     {
       category: isWelsh ? 'Mwynhad' : 'Enjoyment',
-      color: 'bg-[#6366F1]',
+      color: 'bg-[#0F172A]',
       stats: [
         {
           value: '40%',

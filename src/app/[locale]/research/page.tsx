@@ -253,13 +253,13 @@ export default async function ResearchPage({
 
             {/* Our Partners' Research */}
             <div className="group bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300">
-              <div className="aspect-video bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-[#B91C3C] to-[#991B1B] flex items-center justify-center">
                 <svg className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#6366F1] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
                   {isWelsh ? 'Ymchwil Ein Partneriaid' : 'Our Partners\' Research'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -269,7 +269,7 @@ export default async function ResearchPage({
                 </p>
                 <Link
                   href="/research/partners"
-                  className="inline-flex items-center gap-2 text-[#6366F1] font-semibold text-sm group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

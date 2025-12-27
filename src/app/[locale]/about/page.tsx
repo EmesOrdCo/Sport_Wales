@@ -273,7 +273,7 @@ export default async function AboutPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#6366F1] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Bwrdd Chwaraeon Cymru' : 'Sport Wales Board'}
               </span>
               <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
@@ -298,8 +298,8 @@ export default async function AboutPage({
                   isWelsh ? 'Sicrhau llywodraethu effeithiol a rheoli risg' : 'Ensure effective governance and risk management',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-[#64748B]">
-                    <div className="w-6 h-6 rounded-full bg-[#6366F1]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-6 h-6 rounded-full bg-[#B91C3C]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-4 h-4 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -310,7 +310,7 @@ export default async function AboutPage({
             </div>
 
             <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] p-8 lg:p-10 text-white">
+              <div className="rounded-3xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-10 text-white">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

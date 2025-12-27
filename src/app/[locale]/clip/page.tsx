@@ -46,7 +46,7 @@ export default function CLIPPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      color: 'bg-[#8B5CF6]',
+      color: 'bg-[#B91C3C]',
       requiresLogin: true,
     },
     {
@@ -77,7 +77,7 @@ export default function CLIPPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#6366F1]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -130,7 +130,7 @@ export default function CLIPPage() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#6366F1] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Beth i\'w Ddisgwyl' : 'What to Expect'}
               </span>
               <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
@@ -139,8 +139,8 @@ export default function CLIPPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#6366F1]/10 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-[#6366F1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#B91C3C]/10 flex items-center justify-center mt-0.5">
+                      <svg className="w-4 h-4 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -175,7 +175,7 @@ export default function CLIPPage() {
               </Link>
               <p className="text-sm text-[#94A3B8] mt-4 text-center">
                 {isWelsh ? 'Am wybodaeth bellach cysylltwch â: ' : 'For further information contact: '}
-                <a href="mailto:communications@sport.wales" className="text-[#6366F1] hover:underline">
+                <a href="mailto:communications@sport.wales" className="text-[#B91C3C] hover:underline">
                   communications@sport.wales
                 </a>
               </p>
@@ -188,7 +188,7 @@ export default function CLIPPage() {
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block text-[#6366F1] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Themâu Dysgu' : 'Learning Themes'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
