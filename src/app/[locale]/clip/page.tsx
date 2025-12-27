@@ -19,7 +19,7 @@ export default function CLIPPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
       ),
-      color: 'bg-[#3B82F6]',
+      color: 'bg-[#0F172A]',
       href: '/clip/communications-and-digital',
       requiresLogin: false,
     },
@@ -222,7 +222,7 @@ export default function CLIPPage() {
                       {isWelsh ? 'Mewngofnodi i weld cynnwys' : 'Login to view content'}
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#3B82F6]">
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A]">
                       {isWelsh ? 'Archwilio' : 'Explore'}
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -237,7 +237,7 @@ export default function CLIPPage() {
                   <Link
                     key={index}
                     href={theme.href as any}
-                    className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#3B82F6] hover:shadow-xl transition-all duration-300 block"
+                    className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#0F172A] hover:shadow-xl transition-all duration-300 block"
                   >
                     {CardContent}
                   </Link>

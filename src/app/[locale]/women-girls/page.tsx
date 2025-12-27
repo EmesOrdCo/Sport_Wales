@@ -95,7 +95,7 @@ export default async function WomenGirlsPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      color: 'bg-[#EC4899]',
+      color: 'bg-[#B91C3C]',
     },
   ];
 
@@ -126,7 +126,7 @@ export default async function WomenGirlsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#EC4899] via-[#DB2777] to-[#BE185D] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#B91C3C] via-[#B91C3C] to-[#B91C3C] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
@@ -164,7 +164,7 @@ export default async function WomenGirlsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#EC4899] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Ffocws' : 'Our Focus'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
@@ -237,7 +237,7 @@ export default async function WomenGirlsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#EC4899] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Dysgu Mwy' : 'Learn More'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
@@ -251,7 +251,7 @@ export default async function WomenGirlsPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#EC4899] text-white font-semibold hover:bg-[#DB2777] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#B91C3C] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ export default async function WomenGirlsPage({
               </Link>
               <Link 
                 href="/funding"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#EC4899] hover:text-[#EC4899] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
               >
                 {isWelsh ? 'Cyfleoedd Cyllid' : 'Funding Opportunities'}
               </Link>

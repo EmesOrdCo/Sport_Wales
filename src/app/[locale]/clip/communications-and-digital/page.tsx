@@ -82,7 +82,7 @@ export default function CommunicationsAndDigitalPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#3B82F6]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#0F172A]/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
         </div>
 
@@ -230,7 +230,7 @@ export default function CommunicationsAndDigitalPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                       </div>
-                      <div className="w-12 h-12 rounded-xl bg-[#3B82F6] flex items-center justify-center text-white mb-8">
+                      <div className="w-12 h-12 rounded-xl bg-[#0F172A] flex items-center justify-center text-white mb-8">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
@@ -258,7 +258,7 @@ export default function CommunicationsAndDigitalPage() {
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#3B82F6] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#0F172A] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Hyfforddiant a Chymorth' : 'Training and Support'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">

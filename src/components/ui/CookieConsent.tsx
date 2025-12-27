@@ -168,7 +168,7 @@ export function CookieConsent() {
                   <button
                     onClick={() => setPreferences((p) => ({ ...p, analytics: !p.analytics }))}
                     className="relative w-11 h-6 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sw-teal focus:ring-offset-2"
-                    style={{ backgroundColor: preferences.analytics ? '#1E6B7D' : '#E0E0E0' }}
+                    style={{ backgroundColor: preferences.analytics ? '#0F172A' : '#E0E0E0' }}
                     role="switch"
                     aria-checked={preferences.analytics}
                     aria-label={t.analytics}
@@ -190,7 +190,7 @@ export function CookieConsent() {
                   <button
                     onClick={() => setPreferences((p) => ({ ...p, marketing: !p.marketing }))}
                     className="relative w-11 h-6 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sw-teal focus:ring-offset-2"
-                    style={{ backgroundColor: preferences.marketing ? '#1E6B7D' : '#E0E0E0' }}
+                    style={{ backgroundColor: preferences.marketing ? '#0F172A' : '#E0E0E0' }}
                     role="switch"
                     aria-checked={preferences.marketing}
                     aria-label={t.marketing}

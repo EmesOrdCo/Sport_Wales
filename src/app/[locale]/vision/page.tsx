@@ -119,7 +119,7 @@ export default async function VisionPage({
     {
       number: 5,
       title: isWelsh ? 'Cymru o Gymunedau Cydlynus' : 'A Wales of Cohesive Communities',
-      color: 'bg-[#EC4899]',
+      color: 'bg-[#B91C3C]',
     },
     {
       number: 6,
