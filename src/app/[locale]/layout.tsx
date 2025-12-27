@@ -98,7 +98,7 @@ export default async function LocaleLayout({
         <link rel="manifest" href="/manifest.json" />
         
         {/* Theme color */}
-        <meta name="theme-color" content="#C8102E" />
+        <meta name="theme-color" content="#E11D2E" />
         
         {/* hreflang for bilingual SEO */}
         <link rel="alternate" hrefLang="en" href="https://www.sport.wales/en" />

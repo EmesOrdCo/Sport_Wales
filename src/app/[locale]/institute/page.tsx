@@ -67,11 +67,11 @@ export default function InstitutePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#E11D2E] opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#E11D2E] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -115,7 +115,7 @@ export default function InstitutePage() {
       {/* Strength & Conditioning Featured */}
       <section className="py-12 bg-[#F8FAFC]">
         <div className="container">
-          <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 lg:p-10">
+          <div className="bg-gradient-to-br from-[#123F56] to-[#1E4A62] rounded-2xl p-8 lg:p-10">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-4">
@@ -130,7 +130,7 @@ export default function InstitutePage() {
                 </p>
                 <Link
                   href="/institute/strength-conditioning-course"
-                  className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:gap-3 transition-all"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,7 +151,7 @@ export default function InstitutePage() {
       {/* Our Services */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Sefydliad Chwaraeon Cymru - Ein Gwasanaethau' : 'The Sport Wales Institute - Our Services'}
           </h2>
 
@@ -160,15 +160,15 @@ export default function InstitutePage() {
               <Link
                 key={index}
                 href="/institute"
-                className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-xl transition-all duration-300"
+                className="group p-6 lg:p-8 bg-white rounded-2xl border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-[#64748B] mb-4">
                   {service.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -187,7 +187,7 @@ export default function InstitutePage() {
             {/* WIPS */}
             <Link
               href="/institute/wips"
-              className="group block bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
+              className="group block bg-gradient-to-br from-[#123F56] to-[#1E4A62] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Sefydliad Gwyddoniaeth Perfformiad Cymru' : 'Welsh Institute of Performance Science'}
@@ -197,7 +197,7 @@ export default function InstitutePage() {
                   ? 'Mae Sefydliad Gwyddoniaeth Perfformiad Cymru (WIPS)...'
                   : 'The Welsh Institute of Performance Science (WIPS)…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -208,7 +208,7 @@ export default function InstitutePage() {
             {/* WIPAHS */}
             <Link
               href="/institute/wipahs"
-              className="group block bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
+              className="group block bg-gradient-to-br from-[#123F56] to-[#1E4A62] rounded-2xl p-8 hover:shadow-2xl transition-all duration-300"
             >
               <h3 className="text-xl lg:text-2xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Sefydliad Gweithgarwch Corfforol, Iechyd a Chwaraeon Cymru' : 'Welsh Institute of Physical Activity, Health & Sport'}
@@ -218,7 +218,7 @@ export default function InstitutePage() {
                   ? 'Mae Sefydliad Gweithgarwch Corfforol, Iechyd a Chwaraeon Cymru...'
                   : 'The Welsh Institute of Physical Activity, Health and…'}
               </p>
-              <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -233,7 +233,7 @@ export default function InstitutePage() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Ein Dull' : 'Our approach'}
             </h2>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -261,7 +261,7 @@ export default function InstitutePage() {
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Cyfleoedd' : 'Opportunities'}
             </h2>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -284,7 +284,7 @@ export default function InstitutePage() {
             <div className="mt-8">
               <Link
                 href="/careers"
-                className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Gweld Swyddi Gwag' : 'View Job Vacancies'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -299,7 +299,7 @@ export default function InstitutePage() {
       {/* Latest News - Performance Sport */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Newyddion Diweddaraf - Chwaraeon Perfformiad' : 'Latest News - Performance Sport'}
           </h2>
 
@@ -315,7 +315,7 @@ export default function InstitutePage() {
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Blwyddyn mewn chwaraeon Cymru – 2025 wedi\'i ail-chwarae' : 'A year in Welsh sport – 2025 replayed'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -323,7 +323,7 @@ export default function InstitutePage() {
                     ? 'Gadewch i ni gael cipolwg ar rai o\'r uchafbwyntiau sydd wedi siapio chwaraeon Cymru.'
                     : 'Let\'s have a peek at just some of the highlights that have shaped Welsh sport.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -343,7 +343,7 @@ export default function InstitutePage() {
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Sut y bydd £3.3m yn cael ei wario ar welliannau cyfleusterau chwaraeon' : 'How £3.3m will be spent on sports facility improvements'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -351,7 +351,7 @@ export default function InstitutePage() {
                     ? 'Mae Chwaraeon Cymru yn buddsoddi £3.3m o arian Llywodraeth Cymru mewn 37 o brosiectau i wella cyfleusterau chwaraeon...'
                     : 'Sport Wales is investing £3.3m of Welsh Government funding into 37 projects to improve sports facilities…'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -371,7 +371,7 @@ export default function InstitutePage() {
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Sut mae chwaraeon yng Nghymru yn creu amgylcheddau gwell i fenywod a merched' : 'How sport in Wales is creating better environments for women and girls'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -379,7 +379,7 @@ export default function InstitutePage() {
                     ? 'Rydym wedi dod yn bell ond mae mwy i\'w wneud o hyd i sicrhau bod gan fenywod a merched lwyfan cyfartal...'
                     : 'We have come a long way but there\'s still more to do to make sure that women and girls have a level…'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

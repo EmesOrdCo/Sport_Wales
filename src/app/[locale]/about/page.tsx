@@ -112,11 +112,11 @@ export default async function AboutPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -151,10 +151,10 @@ export default async function AboutPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Ein Gweledigaeth' : 'Our Vision'}
               </span>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh 
                   ? 'Cenedl Iachach a Mwy Actif' 
                   : 'A Healthier and More Active Nation'}
@@ -172,7 +172,7 @@ export default async function AboutPage({
             </div>
             
             <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-10 text-white">
+              <div className="rounded-3xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] p-8 lg:p-10 text-white">
                 <svg className="w-12 h-12 text-white/30 mb-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
@@ -194,10 +194,10 @@ export default async function AboutPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Cyfrifoldebau' : 'Our Responsibilities'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Yr Hyn a Wnawn' : 'What We Do'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -213,10 +213,10 @@ export default async function AboutPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#E11D2E]/10 flex items-center justify-center text-[#E11D2E] mb-6">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {item.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -232,10 +232,10 @@ export default async function AboutPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#F59E0B] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#F4B400] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Arweinyddiaeth' : 'Leadership'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Tîm Gweithredol Chwaraeon Cymru' : 'Sport Wales Executive Team'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -251,12 +251,12 @@ export default async function AboutPage({
                 key={index}
                 className="p-6 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] text-center"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0F172A] to-[#334155] mx-auto mb-4 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#123F56] to-[#334155] mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-display font-bold text-white">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-1">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-1">
                   {member.name}
                 </h3>
                 <p className="text-sm text-[#64748B]">
@@ -273,10 +273,10 @@ export default async function AboutPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Bwrdd Chwaraeon Cymru' : 'Sport Wales Board'}
               </span>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Ein Llywodraethu' : 'Our Governance'}
               </h2>
               <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
@@ -298,8 +298,8 @@ export default async function AboutPage({
                   isWelsh ? 'Sicrhau llywodraethu effeithiol a rheoli risg' : 'Ensure effective governance and risk management',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-[#64748B]">
-                    <div className="w-6 h-6 rounded-full bg-[#B91C3C]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-6 h-6 rounded-full bg-[#E11D2E]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg className="w-4 h-4 text-[#E11D2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -310,7 +310,7 @@ export default async function AboutPage({
             </div>
 
             <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-10 text-white">
+              <div className="rounded-3xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] p-8 lg:p-10 text-white">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -338,11 +338,11 @@ export default async function AboutPage({
       </section>
 
       {/* Locations Section */}
-      <section className="py-16 lg:py-24 bg-[#0F172A]">
+      <section className="py-16 lg:py-24 bg-[#123F56]">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+              <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
                 {isWelsh ? 'Ein Lleoliadau' : 'Our Locations'}
               </span>
               <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -370,7 +370,7 @@ export default async function AboutPage({
                   },
                 ].map((office, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-white/5">
-                    <div className="w-10 h-10 rounded-lg bg-[#B91C3C]/20 flex items-center justify-center text-[#B91C3C] flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-[#E11D2E]/20 flex items-center justify-center text-[#E11D2E] flex-shrink-0">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -386,9 +386,9 @@ export default async function AboutPage({
             </div>
             
             <div className="relative">
-              <div className="rounded-3xl bg-gradient-to-br from-[#1E293B] to-[#334155] p-8 lg:p-10 border border-white/10">
+              <div className="rounded-3xl bg-gradient-to-br from-[#1E4A62] to-[#334155] p-8 lg:p-10 border border-white/10">
                 <div className="text-center">
-                  <div className="text-6xl lg:text-7xl font-display font-bold text-[#B91C3C] mb-2">
+                  <div className="text-6xl lg:text-7xl font-display font-bold text-[#E11D2E] mb-2">
                     160+
                   </div>
                   <p className="text-white/70 text-lg mb-8">
@@ -420,10 +420,10 @@ export default async function AboutPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Cysylltwch â Ni' : 'Get in Touch'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Hoffech Chi Ddysgu Mwy?' : 'Want to Learn More?'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -434,7 +434,7 @@ export default async function AboutPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â ni' : 'Contact us'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,7 +443,7 @@ export default async function AboutPage({
               </Link>
               <Link 
                 href="/news"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#123F56] font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Darllenwch ein newyddion' : 'Read our news'}
               </Link>

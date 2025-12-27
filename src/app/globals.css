@@ -7,26 +7,30 @@
    ============================================ */
 
 :root {
-  /* Primary Palette - Evolved from brand colors */
-  --sw-crimson: #B91C3C;         /* Deep crimson - more sophisticated than pure red */
-  --sw-crimson-dark: #991B1B;
-  --sw-crimson-light: #DC2626;
+  /* ========== SPORT WALES BRAND COLORS ========== */
   
-  /* Accent Colors - Vibrant & Fresh */
-  --sw-amber: #F59E0B;           /* Warm amber gold */
-  --sw-amber-light: #FBBF24;
-  --sw-amber-dark: #D97706;
+  /* Brand Red - CTAs & Accents */
+  --brand-red: #E11D2E;
+  --sw-crimson: #E11D2E;
+  --sw-crimson-dark: #E11D2E;
+  --sw-crimson-light: #E11D2E;
+  --sw-teal: #E11D2E;
+  --sw-teal-dark: #E11D2E;
+  --sw-teal-light: #E11D2E;
   
-  /* Deep Blues - Contemporary navy */
-  --sw-slate: #0F172A;           /* Rich deep slate */
-  --sw-slate-800: #1E293B;
-  --sw-slate-700: #334155;
-  --sw-slate-600: #475569;
+  /* Brand Yellow - Panels & Highlights */
+  --brand-yellow: #F4B400;
+  --sw-amber: #F4B400;
+  --sw-amber-light: #F4B400;
+  --sw-amber-dark: #F4B400;
   
-  /* Red - Brand accent color */
-  --sw-teal: #B91C3C;
-  --sw-teal-dark: #991B1B;
-  --sw-teal-light: #DC2626;
+  /* Brand Blue - Backgrounds */
+  --brand-blue: #123F56;
+  --brand-blue-alt: #1E4A62;
+  --sw-slate: #123F56;
+  --sw-slate-800: #1E4A62;
+  --sw-slate-700: #1E4A62;
+  --sw-slate-600: #1E4A62;
   
   /* Neutrals - Clean and minimal */
   --sw-white: #FFFFFF;
@@ -39,8 +43,8 @@
   --sw-gray-500: #64748B;
   --sw-gray-600: #475569;
   --sw-gray-700: #334155;
-  --sw-gray-800: #1E293B;
-  --sw-gray-900: #0F172A;
+  --sw-gray-800: #1E4A62;
+  --sw-gray-900: #123F56;
   
   /* Semantic Colors */
   --background: var(--sw-white);

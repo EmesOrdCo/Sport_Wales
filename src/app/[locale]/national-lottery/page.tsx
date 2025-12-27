@@ -104,11 +104,11 @@ export default async function NationalLotteryPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#FBBF24]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#F4B400]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -139,7 +139,7 @@ export default async function NationalLotteryPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh 
                 ? 'Sut mae\'r Loteri Genedlaethol wedi siapio chwaraeon yng Nghymru?' 
                 : 'How has the National Lottery shaped sport in Wales?'}
@@ -147,8 +147,8 @@ export default async function NationalLotteryPage({
             <div className="space-y-6 text-lg text-[#334155]">
               <p>
                 {isWelsh
-                  ? <>Ers 1994, mae mwy na £356 miliwn o gyllid y <a href="https://www.national-lottery.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">Loteri Genedlaethol</a> wedi\'i fuddsoddi yng nghwaraeon Cymru drwy Chwaraeon Cymru.</>
-                  : <>Since 1994, more than £356m of <a href="https://www.national-lottery.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">National Lottery</a> funding has been invested into Welsh sport through Sport Wales.</>}
+                  ? <>Ers 1994, mae mwy na £356 miliwn o gyllid y <a href="https://www.national-lottery.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">Loteri Genedlaethol</a> wedi\'i fuddsoddi yng nghwaraeon Cymru drwy Chwaraeon Cymru.</>
+                  : <>Since 1994, more than £356m of <a href="https://www.national-lottery.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">National Lottery</a> funding has been invested into Welsh sport through Sport Wales.</>}
               </p>
               <p>
                 {isWelsh
@@ -175,7 +175,7 @@ export default async function NationalLotteryPage({
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Video Placeholder */}
-            <div className="relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+            <div className="relative aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-white/30 transition-colors">
@@ -193,7 +193,7 @@ export default async function NationalLotteryPage({
             <div className="mt-6 text-center">
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:underline"
+                className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:underline"
               >
                 {isWelsh ? 'Gwyliwch y fideo gyda disgrifiad sain' : 'Watch the video with audio description'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,18 +209,18 @@ export default async function NationalLotteryPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Beth mae\'r Loteri Genedlaethol wedi\'i ariannu yng nghwaraeon Cymru?' : 'What has the National Lottery funded in Welsh sport?'}
             </h2>
 
             {/* First three grants */}
             <div className="mb-12">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Y tri grant cyntaf o\'r Loteri Genedlaethol a ddyfarnwyd gan Chwaraeon Cymru:' : 'First three National Lottery grants awarded by Sport Wales:'}
               </h3>
               <ul className="space-y-4 text-[#334155]">
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#FBBF24] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#F4B400] rounded-full flex-shrink-0"></span>
                   <span>
                     <strong>{isWelsh ? 'Ionawr 1995' : 'January 1995'}</strong> - {isWelsh 
                       ? 'Derbyniodd Cyngor Bwrdeistref Sirol Wrecsam £151,455 i wneud gwelliannau yng Nghanolfan Chwaraeon Darland.'
@@ -228,7 +228,7 @@ export default async function NationalLotteryPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#FBBF24] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#F4B400] rounded-full flex-shrink-0"></span>
                   <span>
                     <strong>{isWelsh ? 'Ebrill 1995' : 'April 1995'}</strong> - {isWelsh 
                       ? 'Derbyniodd Clwb Rhwyfo Llandaf £153,206 ar gyfer ailddatblygu\'r clwb.'
@@ -236,7 +236,7 @@ export default async function NationalLotteryPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#FBBF24] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#F4B400] rounded-full flex-shrink-0"></span>
                   <span>
                     <strong>{isWelsh ? 'Ebrill 1995' : 'April 1995'}</strong> - {isWelsh 
                       ? 'Derbyniodd Clwb Ieuenctid Canolog Caerdydd £95,192 ar gyfer aml-chwaraeon ac offer yn ystod adleoli i Sblot.'
@@ -248,7 +248,7 @@ export default async function NationalLotteryPage({
 
             {/* Smallest grant */}
             <div className="mb-12">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Y grant lleiaf o\'r Loteri Genedlaethol a ddyfarnwyd gan Chwaraeon Cymru:' : 'Smallest National Lottery grant awarded by Sport Wales:'}
               </h3>
               <p className="text-[#334155]">
@@ -260,7 +260,7 @@ export default async function NationalLotteryPage({
 
             {/* Largest grant */}
             <div className="mb-12">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Y grant mwyaf o\'r Loteri Genedlaethol a ddyfarnwyd yng Nghymru:' : 'Largest National Lottery grant awarded in Wales:'}
               </h3>
               <p className="text-[#334155]">
@@ -272,7 +272,7 @@ export default async function NationalLotteryPage({
 
             {/* Community and Grassroots Sport */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Chwaraeon Cymunedol a Llawr Gwlad' : 'Community and Grassroots Sport'}
               </h3>
               <div className="space-y-4 text-[#334155]">
@@ -296,7 +296,7 @@ export default async function NationalLotteryPage({
 
             {/* Elite Sport */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Chwaraeon Elît' : 'Elite Sport'}
               </h3>
               <div className="space-y-4 text-[#334155]">
@@ -320,7 +320,7 @@ export default async function NationalLotteryPage({
 
             {/* Partners */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Partneriaid' : 'Partners'}
               </h3>
               <div className="space-y-4 text-[#334155]">
@@ -360,13 +360,13 @@ export default async function NationalLotteryPage({
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                  <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                     {story.title}
                   </h3>
                   <p className="text-[#64748B] text-sm mb-4">
                     {story.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold text-sm group-hover:gap-3 transition-all">
                     {isWelsh ? 'Darllen Mwy' : 'Read More'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

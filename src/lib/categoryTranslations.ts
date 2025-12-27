@@ -12,12 +12,12 @@ export const categoryTranslations: Record<string, { en: string; cy: string }> = 
 };
 
 export const categoryColors: Record<string, string> = {
-  'News': 'bg-[#B91C3C]/10 text-[#B91C3C]',
-  'Feature': 'bg-[#B91C3C]/10 text-[#B91C3C]',
-  'Impact Story': 'bg-[#F59E0B]/10 text-[#F59E0B]',
-  'Resources': 'bg-[#F59E0B]/10 text-[#F59E0B]',
-  'Funding': 'bg-[#B91C3C]/10 text-[#B91C3C]',
-  'Research': 'bg-[#F59E0B]/10 text-[#F59E0B]',
+  'News': 'bg-[#E11D2E]/10 text-[#E11D2E]',
+  'Feature': 'bg-[#E11D2E]/10 text-[#E11D2E]',
+  'Impact Story': 'bg-[#F4B400]/10 text-[#F4B400]',
+  'Resources': 'bg-[#F4B400]/10 text-[#F4B400]',
+  'Funding': 'bg-[#E11D2E]/10 text-[#E11D2E]',
+  'Research': 'bg-[#F4B400]/10 text-[#F4B400]',
 };
 
 export function getCategoryDisplay(category: string, locale: 'en' | 'cy'): string {

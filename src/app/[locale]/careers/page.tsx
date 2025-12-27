@@ -54,11 +54,11 @@ export default async function CareersPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#334155] overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#E11D2E] opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#E11D2E] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -90,7 +90,7 @@ export default async function CareersPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Gweithio i Chwaraeon Cymru' : 'Working for Sport Wales'}
             </h2>
             
@@ -113,13 +113,13 @@ export default async function CareersPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
               {isWelsh ? 'Mwy am ein Proses Recriwtio' : 'More about our Recruitment Process'}
             </h2>
 
             {/* Our Strategy */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Ein Strategaeth' : 'Our Strategy'}
               </h3>
               <p className="text-[#475569] mb-4">
@@ -129,7 +129,7 @@ export default async function CareersPage({
               </p>
               <p className="text-[#475569]">
                 {isWelsh ? 'Gallwch weld ein strategaeth ' : 'You can view our strategy '}
-                <Link href="/about/vision-and-strategy" className="text-[#B91C3C] hover:underline font-semibold">
+                <Link href="/about/vision-and-strategy" className="text-[#E11D2E] hover:underline font-semibold">
                   {isWelsh ? 'yma' : 'here'}
                 </Link>.
               </p>
@@ -137,7 +137,7 @@ export default async function CareersPage({
 
             {/* Benefits at Sport Wales */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Buddion yn Chwaraeon Cymru' : 'Benefits at Sport Wales'}
               </h3>
               <p className="text-[#475569] mb-6">
@@ -147,61 +147,61 @@ export default async function CareersPage({
               </p>
               <ul className="space-y-2 text-[#475569] mb-6">
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? '33 diwrnod o wyliau blynyddol' : '33 days annual leave'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Opsiwn i brynu 5 diwrnod ychwanegol y flwyddyn' : 'Option to purchase 5 additional days per year'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Cyfleoedd gweithio hyblyg, gan gynnwys amser hyblyg (lle bo hynny\'n berthnasol)' : 'Flexible working opportunities, including flexi-time (where applicable)'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Cynllun Pensiwn Llywodraeth Leol neu Scottish Widows' : 'Local Government or Scottish Widows Pension Scheme'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Cyfleoedd dysgu a datblygu cynhwysfawr' : 'Comprehensive learning and development opportunities'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Defnyddio\'r gampfa ar y safle yn y Ganolfan Genedlaethol yng Nghaerdydd' : 'Use of on-site gym at the National Centre in Cardiff'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Rhaglen Gymorth i Weithwyr (Cwnsela)' : 'Employee Assistance (Counselling) Programme'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Aelodaeth Clwb Chwaraeon a Hamdden y Gwasanaeth Sifil' : 'Civil Service Sports & Leisure Club Membership'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Cynllun Beicio i\'r Gwaith' : 'Cycle to Work Scheme'}
                 </li>
                 <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-[#B91C3C] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-[#E11D2E] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   {isWelsh ? 'Maes parcio a sied beiciau am ddim' : 'Free car park and bike shed'}
@@ -211,15 +211,15 @@ export default async function CareersPage({
                 {isWelsh
                   ? 'Gallwch ddysgu mwy am ein polisi cyflog a buddion eraill yn ein '
                   : 'You can find out more about our pay policy and other benefits in our '}
-                <a href="#" className="text-[#B91C3C] hover:underline font-semibold">{isWelsh ? 'llawlyfr staff' : 'staff handbook'}</a>
+                <a href="#" className="text-[#E11D2E] hover:underline font-semibold">{isWelsh ? 'llawlyfr staff' : 'staff handbook'}</a>
                 {isWelsh ? '. Mae ein graddfeydd cyflog ar gael i\'w gweld ' : '. Our pay scales are available to view '}
-                <a href="#" className="text-[#B91C3C] hover:underline font-semibold">{isWelsh ? 'yma' : 'here'}</a>.
+                <a href="#" className="text-[#E11D2E] hover:underline font-semibold">{isWelsh ? 'yma' : 'here'}</a>.
               </p>
             </div>
 
             {/* Training and Development */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Hyfforddiant a Datblygiad' : 'Training and Development'}
               </h3>
               <p className="text-[#475569]">
@@ -231,7 +231,7 @@ export default async function CareersPage({
 
             {/* Equality, Diversity & Inclusion */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Cydraddoldeb, Amrywiaeth a Chynhwysiant' : 'Equality, Diversity & Inclusion'}
               </h3>
               <p className="text-[#475569] mb-4">
@@ -263,7 +263,7 @@ export default async function CareersPage({
 
             {/* Behaviours */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Ymddygiadau' : 'Behaviours'}
               </h3>
               <p className="text-[#475569] mb-6">
@@ -295,7 +295,7 @@ export default async function CareersPage({
 
             {/* Artificial Intelligence */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Deallusrwydd Artiffisial' : 'Artificial Intelligence'}
               </h3>
               <p className="text-[#475569] mb-4">
@@ -320,19 +320,19 @@ export default async function CareersPage({
 
             {/* Your Data */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Eich Data' : 'Your Data'}
               </h3>
               <p className="text-[#475569] mb-4">
                 {isWelsh
                   ? 'Rydym yn deall y byddwn, yn ystod eich cais, yn gofyn i chi rannu gwybodaeth bersonol sensitif. Mae Chwaraeon Cymru wedi ymrwymo i barchu eich preifatrwydd, a bydd yr holl wybodaeth bersonol a ddarperir yn ystod y broses gofrestru a chais yn cael ei chadw a\'i phrosesu yn unol â chofrestriad Chwaraeon Cymru o dan Ddeddf Diogelu Data 2018. Gallwch ddysgu mwy am sut mae Chwaraeon Cymru yn defnyddio gwybodaeth bersonol yn ein '
                   : 'We understand that during your application, we\'ll ask you to share sensitive, personal information. Sport Wales is committed to respecting your privacy, and all personal information provided during the registration and application process will be held and processed in accordance with Sport Wales\' registration under the Data Protection Act 2018. You can find out more about how Sport Wales uses personal information in our '}
-                <Link href="/privacy-policy" className="text-[#B91C3C] hover:underline font-semibold">
+                <Link href="/privacy-policy" className="text-[#E11D2E] hover:underline font-semibold">
                   {isWelsh ? 'Polisi Preifatrwydd' : 'Privacy Policy'}
                 </Link>.
               </p>
               <p className="text-[#475569]">
-                <a href="#" className="text-[#B91C3C] hover:underline font-semibold">
+                <a href="#" className="text-[#E11D2E] hover:underline font-semibold">
                   {isWelsh ? 'Gweld a lawrlwytho ein ffurflen gais.' : 'View and download our application form.'}
                 </a>
               </p>

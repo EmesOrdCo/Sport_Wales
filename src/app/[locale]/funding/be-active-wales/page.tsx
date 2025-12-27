@@ -54,11 +54,11 @@ export default async function BeActiveWalesPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#DC2626] via-[#B91C3C] to-[#DC2626] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#E11D2E] via-[#E11D2E] to-[#E11D2E] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#F59E0B]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#F4B400]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -82,7 +82,7 @@ export default async function BeActiveWalesPage({
                 href="https://www.sport.wales/grants-and-funding/beactivewalesfund/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-white text-[#DC2626] font-semibold hover:bg-[#F8FAFC] transition-colors"
+                className="inline-flex items-center justify-center gap-2 py-4 px-8 rounded-full bg-white text-[#E11D2E] font-semibold hover:bg-[#F8FAFC] transition-colors"
               >
                 {isWelsh ? 'Gwneud Cais Nawr' : 'Apply Now'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@ export default async function BeActiveWalesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Am y Gronfa' : 'About the Fund'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed">
@@ -127,7 +127,7 @@ export default async function BeActiveWalesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Beth allwch chi gael cyllid ar ei gyfer?' : 'What can you get funding for?'}
             </h2>
             <ul className="space-y-4">
@@ -139,7 +139,7 @@ export default async function BeActiveWalesPage({
                 isWelsh ? 'Prosiectau gwella caeau' : 'Pitch improvement projects',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#DC2626] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#E11D2E] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -156,7 +156,7 @@ export default async function BeActiveWalesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Pwy all wneud cais?' : 'Who can apply?'}
             </h2>
             <ul className="space-y-4">
@@ -167,7 +167,7 @@ export default async function BeActiveWalesPage({
                 isWelsh ? 'Dylai prosiectau anelu at gynyddu cyfranogiad mewn chwaraeon' : 'Projects should aim to increase sports participation',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-[#B91C3C] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#E11D2E] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -184,7 +184,7 @@ export default async function BeActiveWalesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Sut mae cyllid yn cael ei ddyfarnu?' : 'How is funding awarded?'}
             </h2>
             <div className="space-y-6 text-lg text-[#334155]">
@@ -200,7 +200,7 @@ export default async function BeActiveWalesPage({
                 <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-2">
                   {isWelsh ? 'Grantiau £300 - £25,000' : 'Grants £300 - £25,000'}
                 </div>
-                <div className="text-3xl font-display font-bold text-[#DC2626] mb-3">
+                <div className="text-3xl font-display font-bold text-[#E11D2E] mb-3">
                   {isWelsh ? 'Hyd at 90%' : 'Up to 90%'}
                 </div>
                 <p className="text-[#64748B]">
@@ -214,7 +214,7 @@ export default async function BeActiveWalesPage({
                 <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider mb-2">
                   {isWelsh ? 'Grantiau £25,001 - £50,000' : 'Grants £25,001 - £50,000'}
                 </div>
-                <div className="text-3xl font-display font-bold text-[#DC2626] mb-3">
+                <div className="text-3xl font-display font-bold text-[#E11D2E] mb-3">
                   {isWelsh ? 'Hyd at 80%' : 'Up to 80%'}
                 </div>
                 <p className="text-[#64748B]">
@@ -232,13 +232,13 @@ export default async function BeActiveWalesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Angen help?' : 'Need help?'}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-6 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#DC2626]/10 flex items-center justify-center text-[#DC2626]">
+                  <div className="w-12 h-12 rounded-xl bg-[#E11D2E]/10 flex items-center justify-center text-[#E11D2E]">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -247,7 +247,7 @@ export default async function BeActiveWalesPage({
                     <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
                       {isWelsh ? 'E-bost' : 'Email'}
                     </div>
-                    <a href="mailto:beactivewales@sport.wales" className="text-[#DC2626] font-semibold hover:underline">
+                    <a href="mailto:beactivewales@sport.wales" className="text-[#E11D2E] font-semibold hover:underline">
                       beactivewales@sport.wales
                     </a>
                   </div>
@@ -256,7 +256,7 @@ export default async function BeActiveWalesPage({
 
               <div className="p-6 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#DC2626]/10 flex items-center justify-center text-[#DC2626]">
+                  <div className="w-12 h-12 rounded-xl bg-[#E11D2E]/10 flex items-center justify-center text-[#E11D2E]">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
@@ -265,7 +265,7 @@ export default async function BeActiveWalesPage({
                     <div className="text-sm font-semibold text-[#64748B] uppercase tracking-wider">
                       {isWelsh ? 'Ffôn' : 'Phone'}
                     </div>
-                    <a href="tel:03003003102" className="text-[#DC2626] font-semibold hover:underline">
+                    <a href="tel:03003003102" className="text-[#E11D2E] font-semibold hover:underline">
                       0300 3003102
                     </a>
                     <p className="text-sm text-[#64748B] mt-1">
@@ -280,7 +280,7 @@ export default async function BeActiveWalesPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -296,7 +296,7 @@ export default async function BeActiveWalesPage({
                 href="https://www.sport.wales/grants-and-funding/beactivewalesfund/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-[#DC2626] text-white font-semibold hover:bg-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Gwneud Cais Nawr' : 'Apply Now'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

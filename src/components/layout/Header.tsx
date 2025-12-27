@@ -57,7 +57,7 @@ export function Header() {
               onClick={toggleMenu}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 ${
                 isScrolled || !isHome
-                  ? 'text-[#0F172A] hover:bg-[#F1F5F9] border border-[#E2E8F0]'
+                  ? 'text-[#123F56] hover:bg-[#F1F5F9] border border-[#E2E8F0]'
                   : 'text-white hover:bg-white/10 border border-white/20'
               }`}
               aria-expanded={isMenuOpen}

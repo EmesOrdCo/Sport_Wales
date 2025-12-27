@@ -57,11 +57,11 @@ export default async function WhatIsSportWalesPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -120,7 +120,7 @@ export default async function WhatIsSportWalesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-6">
+            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Gweithio mewn Partneriaeth' : 'Working in partnership'}
             </h3>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -144,7 +144,7 @@ export default async function WhatIsSportWalesPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Ble rydym wedi\'n lleoli?' : 'Where are we located?'}
               </h3>
               <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -152,7 +152,7 @@ export default async function WhatIsSportWalesPage({
                   {isWelsh
                     ? 'Mae gennym tua 160 o staff ledled Cymru gyda\'n prif swyddfa yng Nghaerdydd a swyddfeydd rhanbarthol yng Nglannau Dyfrdwy a Chaernarfon. I gysylltu ag unrhyw un o\'n swyddfeydd, '
                     : 'We have around 160 staff across Wales with our head office in Cardiff and regional offices in Deeside and Caernarfon. To contact any of our offices, please '}
-                  <Link href="/contact" className="text-[#B91C3C] hover:underline font-semibold">
+                  <Link href="/contact" className="text-[#E11D2E] hover:underline font-semibold">
                     {isWelsh ? 'cysylltwch â ni' : 'contact us'}
                   </Link>
                   .
@@ -178,7 +178,7 @@ export default async function WhatIsSportWalesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-6">
+            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Bwrdd Chwaraeon Cymru' : 'Sport Wales Board'}
             </h3>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -186,7 +186,7 @@ export default async function WhatIsSportWalesPage({
                 {isWelsh
                   ? 'Mae ein Bwrdd yn amrywiol, yn ceisio adlewyrchu\'r cymunedau y mae\'n eu gwasanaethu, ac yn dod â chyfoeth o brofiad o weithio gyda chymunedau sy\'n tan-gyfranogi ac athletwyr elitaidd. Mae\'n cynnwys unigolion o wahanol sectorau, gan gynnwys addysg, iechyd, busnes ac wrth gwrs chwaraeon. Mae rhagor o wybodaeth am ein Bwrdd ar gael drwy ddarllen ein '
                   : 'Our Board is diverse, seeking to reflect the communities it serves, and brings a wealth of experience of working with under-participating communities and elite athletes. It includes individuals from different sectors, including education, health, business and of course sport. More information about our Board is available by reading our '}
-                <Link href="/governance" className="text-[#B91C3C] hover:underline font-semibold">
+                <Link href="/governance" className="text-[#E11D2E] hover:underline font-semibold">
                   {isWelsh ? 'tudalen Aelodau\'r Bwrdd' : 'Board Members page'}
                 </Link>
                 .
@@ -200,7 +200,7 @@ export default async function WhatIsSportWalesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-6">
+            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Tîm Gweithredol Chwaraeon Cymru' : 'Sport Wales Executive'}
             </h3>
             <div className="prose prose-lg max-w-none text-[#475569] mb-8">
@@ -213,22 +213,22 @@ export default async function WhatIsSportWalesPage({
 
             <div className="space-y-4">
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <p className="text-[#0F172A]">
+                <p className="text-[#123F56]">
                   <span className="font-semibold">{isWelsh ? 'Prif Weithredwr' : 'CEO'}</span> – Brian Davies
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <p className="text-[#0F172A]">
+                <p className="text-[#123F56]">
                   <span className="font-semibold">{isWelsh ? 'Cyfarwyddwr Deallusrwydd Chwaraeon a Datblygu Gwasanaethau' : 'Director Sport Intelligence and Service Development'}</span> – Graham Williams
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <p className="text-[#0F172A]">
+                <p className="text-[#123F56]">
                   <span className="font-semibold">{isWelsh ? 'Cyfarwyddwr Cyllid a Gwasanaethau Busnes' : 'Director Finance and Business Services'}</span> – Emma Wilkins
                 </p>
               </div>
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <p className="text-[#0F172A]">
+                <p className="text-[#123F56]">
                   <span className="font-semibold">{isWelsh ? 'Cyfarwyddwr System Chwaraeon' : 'Director Sport System'}</span> – Owen Lewis
                 </p>
               </div>
@@ -241,7 +241,7 @@ export default async function WhatIsSportWalesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-6">
+            <h3 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Siarter Frenhinol' : 'Royal Charter'}
             </h3>
             <div className="prose prose-lg max-w-none text-[#475569]">
@@ -260,7 +260,7 @@ export default async function WhatIsSportWalesPage({
         <div className="container">
           <Link
             href="/key-publications"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500 max-w-4xl"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500 max-w-4xl"
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left side - Content */}
@@ -273,7 +273,7 @@ export default async function WhatIsSportWalesPage({
                     ? 'Yma cewch ddod o hyd i\'n llyfrgell o ddogfennau a chyhoeddiadau allweddol.'
                     : 'Here you will find our library of key documents and publications.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -282,7 +282,7 @@ export default async function WhatIsSportWalesPage({
               </div>
 
               {/* Right side - Image placeholder */}
-              <div className="relative min-h-[200px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+              <div className="relative min-h-[200px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <svg className="w-16 h-16 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

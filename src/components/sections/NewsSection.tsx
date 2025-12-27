@@ -104,8 +104,8 @@ export function NewsSection({ articles }: NewsSectionProps = {}) {
           <circle cx="400" cy="200" r="300" fill="url(#newsGradient)" fillOpacity="0.1"/>
           <defs>
             <linearGradient id="newsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#B91C3C"/>
-              <stop offset="100%" stopColor="#0F172A"/>
+              <stop offset="0%" stopColor="#E11D2E"/>
+              <stop offset="100%" stopColor="#123F56"/>
             </linearGradient>
           </defs>
         </svg>
@@ -154,7 +154,7 @@ export function NewsSection({ articles }: NewsSectionProps = {}) {
                   {/* Content */}
                   <div className="relative h-full min-h-[400px] lg:min-h-[500px] p-6 lg:p-8 flex flex-col justify-end">
                     <div className="mb-auto">
-                      <span className="badge bg-[#F59E0B] text-[#0F172A]">
+                      <span className="badge bg-[#F4B400] text-[#123F56]">
                         {t('featuredStory')}
                       </span>
                     </div>
@@ -167,7 +167,7 @@ export function NewsSection({ articles }: NewsSectionProps = {}) {
                           year: 'numeric',
                         })}
                       </span>
-                      <h3 className="text-2xl lg:text-3xl font-bold !text-white mb-3 group-hover:text-[#F59E0B] transition-colors">
+                      <h3 className="text-2xl lg:text-3xl font-bold !text-white mb-3 group-hover:text-[#F4B400] transition-colors">
                         {featured.title[isWelsh ? 'cy' : 'en']}
                       </h3>
                       <p className="text-white/70 line-clamp-2">
@@ -197,14 +197,14 @@ export function NewsSection({ articles }: NewsSectionProps = {}) {
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors line-clamp-2">
                     {article.title[isWelsh ? 'cy' : 'en']}
                   </h3>
                   <p className="text-[#64748B] text-sm flex-grow line-clamp-2 mb-4">
                     {article.excerpt[isWelsh ? 'cy' : 'en']}
                   </p>
                   
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] group-hover:text-[#B91C3C] transition-colors">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#123F56] group-hover:text-[#E11D2E] transition-colors">
                     {t('readMore')}
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

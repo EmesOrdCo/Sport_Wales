@@ -53,11 +53,11 @@ export default async function KeyPublicationsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -80,7 +80,7 @@ export default async function KeyPublicationsPage({
               {isWelsh
                 ? 'Am ragor o wybodaeth cysylltwch â ni ar '
                 : 'For more information contact us on '}
-              <a href="mailto:info@sport.wales" className="text-[#B91C3C] hover:underline">info@sport.wales</a>
+              <a href="mailto:info@sport.wales" className="text-[#E11D2E] hover:underline">info@sport.wales</a>
             </p>
           </div>
         </div>
@@ -97,55 +97,55 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Adolygiad Blynyddol a Chyfrifon' : 'Annual Review and Accounts'}
             </h2>
             <div className="space-y-3">
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2024/25</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2024/25</span>
                 <span className="text-[#64748B] text-sm ml-2">[PDF, 18.3MB]</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2024/25</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2024/25</span>
                 <span className="text-[#64748B] text-sm ml-2">[PDF, 11.4MB]</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2023/24</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2023/24</span>
                 <span className="text-[#64748B] text-sm ml-2">[PDF, 13.8MB]</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2023/24</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2023/24</span>
                 <span className="text-[#64748B] text-sm ml-2">[PDF 19.8MB]</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2022/23</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2022/23</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2022/23</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2022/23</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2021/22</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2021/22</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2021/22</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2021/22</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2020/21</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2020/21</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2020/21</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2020/21</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Annual Review and Accounts 2019/20</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Annual Review and Accounts 2019/20</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Lottery Annual Review and Accounts 2019/20</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Lottery Annual Review and Accounts 2019/20</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Integrated Annual Report 2020/21</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Integrated Annual Report 2020/21</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Integrated Annual Report 2019/20</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Integrated Annual Report 2019/20</span>
               </a>
             </div>
           </div>
@@ -156,12 +156,12 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Adroddiad Blynyddol Partneriaeth Gymdeithasol' : 'Social Partnership Annual Report'}
             </h2>
             <div className="space-y-3">
-              <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Social Partnership Annual Report 2024/25</span>
+              <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Social Partnership Annual Report 2024/25</span>
                 <span className="text-[#64748B] text-sm ml-2">[DOCx, 64.07KB]</span>
               </a>
             </div>
@@ -173,29 +173,29 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Y Gymraeg' : 'Welsh Language'}
             </h2>
             <div className="space-y-3">
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Welsh Language Standards</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Welsh Language Standards</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Welsh Language Standards Report 2024-2025</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Welsh Language Standards Report 2024-2025</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Welsh Language Standards Annual Report 2022-23</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Welsh Language Standards Annual Report 2022-23</span>
               </a>
               <p className="text-[#64748B] p-4">
                 {isWelsh
                   ? 'Mae adroddiad Safonau\'r Gymraeg ar gyfer 2020-21 yn ymddangos yn yr Adroddiad Blynyddol Integredig 2020-21. Mae adroddiad Safonau\'r Gymraeg ar gyfer 2021-22 yn ymddangos yn Adolygiad Blynyddol a Chyfrifon Chwaraeon Cymru 2021-22.'
                   : 'The Welsh Language Standards report for 2020-21 features within the Integrated Annual Report 2020-21. The Welsh Language Standards report for 2021-22 features within the Sport Wales Annual Review and Accounts 2021-22.'}
               </p>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Welsh Language Standards Annual Report 2019/20</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Welsh Language Standards Annual Report 2019/20</span>
               </a>
-              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Welsh Language Standards Annual Report 2018/19</span>
+              <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Welsh Language Standards Annual Report 2018/19</span>
               </a>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Adolygiad o Chwaraeon Cymru' : 'Review of Sport Wales'}
             </h2>
             <p className="text-[#64748B] mb-8">
@@ -215,8 +215,8 @@ export default async function KeyPublicationsPage({
                 : 'This section includes documents that track progress against actions from the review.'}
             </p>
             <div className="space-y-3">
-              <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all">
-                <span className="font-semibold text-[#0F172A]">Sport Wales Review – An Independent Report</span>
+              <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all">
+                <span className="font-semibold text-[#123F56]">Sport Wales Review – An Independent Report</span>
               </a>
             </div>
           </div>
@@ -227,14 +227,14 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Siarter Frenhinol' : 'Royal Charter'}
             </h2>
             <p className="text-[#475569] mb-6">
               {isWelsh
                 ? 'Sefydlwyd Chwaraeon Cymru gan '
                 : 'Sport Wales was established by '}
-              <a href="#" className="text-[#B91C3C] font-semibold hover:underline">
+              <a href="#" className="text-[#E11D2E] font-semibold hover:underline">
                 {isWelsh ? 'Siarter Frenhinol' : 'Royal Charter'}
               </a>
               {isWelsh
@@ -249,7 +249,7 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Grant Chwaraeon Cymru – Telerau ac Amodau' : 'Sport Wales Grant – Terms and Conditions'}
             </h2>
             <p className="text-[#475569] mb-6">
@@ -257,8 +257,8 @@ export default async function KeyPublicationsPage({
                 ? 'Cyn i chi wneud cais am grant Chwaraeon Cymru, dylech ddarllen copi o\'n Telerau ac Amodau.'
                 : 'Before you apply for a Sport Wales grant, you should read a copy of our Terms and Conditions.'}
             </p>
-            <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all max-w-md">
-              <span className="font-semibold text-[#0F172A]">{isWelsh ? 'Telerau ac Amodau' : 'Terms and Conditions'}</span>
+            <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all max-w-md">
+              <span className="font-semibold text-[#123F56]">{isWelsh ? 'Telerau ac Amodau' : 'Terms and Conditions'}</span>
             </a>
           </div>
         </div>
@@ -268,11 +268,11 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Polisi Pryderon a Chwynion Chwaraeon Cymru' : 'Sport Wales Concerns and Complaints Policy'}
             </h2>
-            <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all max-w-md">
-              <span className="font-semibold text-[#0F172A]">{isWelsh ? 'Polisi Pryderon a Chwynion Chwaraeon Cymru' : 'Sport Wales Concerns and Complaints Policy'}</span>
+            <a href="#" className="block p-4 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all max-w-md">
+              <span className="font-semibold text-[#123F56]">{isWelsh ? 'Polisi Pryderon a Chwynion Chwaraeon Cymru' : 'Sport Wales Concerns and Complaints Policy'}</span>
             </a>
           </div>
         </div>
@@ -282,11 +282,11 @@ export default async function KeyPublicationsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Gweithdrefn Apelio yn Erbyn Penderfyniadau Buddsoddi' : 'Appeals Procedure Against Investment Decisions'}
             </h2>
-            <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all max-w-md">
-              <span className="font-semibold text-[#0F172A]">{isWelsh ? 'Gweithdrefn Apelio yn Erbyn Penderfyniadau Buddsoddi' : 'Appeals Procedure Against Investment Decisions'}</span>
+            <a href="#" className="block p-4 rounded-xl bg-white border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all max-w-md">
+              <span className="font-semibold text-[#123F56]">{isWelsh ? 'Gweithdrefn Apelio yn Erbyn Penderfyniadau Buddsoddi' : 'Appeals Procedure Against Investment Decisions'}</span>
             </a>
           </div>
         </div>
@@ -308,7 +308,7 @@ export default async function KeyPublicationsPage({
               </div>
               <div className="p-6">
                 <p className="text-sm text-[#64748B] mb-2">{isWelsh ? 'Am Fwrdd Chwaraeon Cymru' : 'About the Sport Wales Board'}</p>
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Aelodau\'r Bwrdd' : 'Board Members'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -316,7 +316,7 @@ export default async function KeyPublicationsPage({
                     ? 'Mae aelodau\'n cael eu penodi i fwrdd Chwaraeon Cymru gan Lywodraeth Cymru.'
                     : 'Members are appointed to Sport Wales\' board by the Welsh Government.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -337,7 +337,7 @@ export default async function KeyPublicationsPage({
               </div>
               <div className="p-6">
                 <p className="text-sm text-[#64748B] mb-2">{isWelsh ? 'Mwy o Wybodaeth' : 'More Information'}</p>
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Ein Dyletswyddau' : 'Our Duties'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -345,7 +345,7 @@ export default async function KeyPublicationsPage({
                     ? 'Rydym eisiau galluogi chwaraeon yng Nghymru i ffynnu fel y gall pawb fod yn egnïol a mwynhau chwaraeon gydol oes.'
                     : 'We want to enable sport in Wales to thrive so that everyone can be active and have a lifelong enjoyment of sport.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -365,7 +365,7 @@ export default async function KeyPublicationsPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Rhyddid Gwybodaeth' : 'Freedom of Information'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -373,7 +373,7 @@ export default async function KeyPublicationsPage({
                     ? 'Gall unrhyw berson ofyn am wybodaeth yn ysgrifenedig gan Chwaraeon Cymru. Rhaid i ni ddarparu ymateb o fewn 20 diwrnod gwaith.'
                     : 'Any person can request information in writing from Sport Wales. We must provide a response within 20 working days.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

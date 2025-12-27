@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 export function Logo({ variant = 'dark', className = '' }: LogoProps) {
-  const fillColor = variant === 'dark' ? '#fff' : '#B91C3C';
+  const fillColor = variant === 'dark' ? '#fff' : '#E11D2E';
   
   return (
     <svg 

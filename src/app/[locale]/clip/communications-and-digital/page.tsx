@@ -79,11 +79,11 @@ export default function CommunicationsAndDigitalPage() {
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#0F172A]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#123F56]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -127,7 +127,7 @@ export default function CommunicationsAndDigitalPage() {
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border border-[#E2E8F0]">
-              <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-2">
+              <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Mewngofnodi i\'ch cyfrif' : 'Log in to your account'}
               </h2>
               <p className="text-[#64748B] mb-8">
@@ -146,7 +146,7 @@ export default function CommunicationsAndDigitalPage() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent text-[#123F56]"
                     placeholder={isWelsh ? 'eich@e-bost.cymru' : 'your@email.com'}
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function CommunicationsAndDigitalPage() {
                     id="password"
                     name="password"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:border-transparent text-[#0F172A]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] focus:outline-none focus:ring-2 focus:ring-[#E11D2E] focus:border-transparent text-[#123F56]"
                     placeholder={isWelsh ? 'Eich cyfrinair' : 'Your password'}
                   />
                 </div>
@@ -170,7 +170,7 @@ export default function CommunicationsAndDigitalPage() {
                     <input
                       type="checkbox"
                       name="remember"
-                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#B91C3C] focus:ring-2 focus:ring-[#B91C3C]"
+                      className="w-4 h-4 rounded border-[#E2E8F0] text-[#E11D2E] focus:ring-2 focus:ring-[#E11D2E]"
                     />
                     <span className="text-sm text-[#64748B]">
                       {isWelsh ? 'Cofio fi?' : 'Remember me?'}
@@ -180,7 +180,7 @@ export default function CommunicationsAndDigitalPage() {
                     href="https://www.sport.wales/clip/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#B91C3C] hover:underline"
+                    className="text-sm text-[#E11D2E] hover:underline"
                   >
                     {isWelsh ? 'Anghofio Cyfrinair?' : 'Forgot Password?'}
                   </a>
@@ -214,7 +214,7 @@ export default function CommunicationsAndDigitalPage() {
           <div>
             {mainSections.map((section, sectionIndex) => (
               <div key={sectionIndex} className={sectionIndex > 0 ? 'mt-24 lg:mt-32' : ''}>
-                <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-12 lg:mb-16">
+                <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-12 lg:mb-16">
                   {section.title}
                 </h2>
                 <div className="mt-8 lg:mt-12 pb-24 lg:pb-32">
@@ -226,19 +226,19 @@ export default function CommunicationsAndDigitalPage() {
                     >
                       {/* Locked icon - top right corner of the card box */}
                       <div className="absolute top-4 right-4">
-                        <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                        <svg className="w-6 h-6 text-[#E11D2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                       </div>
-                      <div className="w-12 h-12 rounded-xl bg-[#0F172A] flex items-center justify-center text-white mb-8">
+                      <div className="w-12 h-12 rounded-xl bg-[#123F56] flex items-center justify-center text-white mb-8">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                       </div>
-                      <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+                      <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-[#B91C3C] font-medium mb-4">
+                      <p className="text-sm text-[#E11D2E] font-medium mb-4">
                         {item.description}
                       </p>
                       <p className="text-[#64748B]">
@@ -258,10 +258,10 @@ export default function CommunicationsAndDigitalPage() {
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#0F172A] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#123F56] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Hyfforddiant a Chymorth' : 'Training and Support'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Hyfforddiant a Chymorth Cyfathrebu' : 'Communications Training and Support'}
             </h2>
             <p className="text-lg text-[#64748B] mb-6">
@@ -277,7 +277,7 @@ export default function CommunicationsAndDigitalPage() {
                   href="https://newsroom.cipr.co.uk/cipr-launch-new-webinar-series-to-support-profession-through-the-coronavirus-crisis/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                  className="text-[#E11D2E] font-semibold hover:underline flex items-center gap-2"
                 >
                   {isWelsh ? 'Mae CIPR yn lansio cyfres webinariau newydd i gefnogi\'r proffesiwn' : 'CIPR Launches new webinar series to support profession'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -290,7 +290,7 @@ export default function CommunicationsAndDigitalPage() {
                   href="https://www.facebook.com/groups/teamtwobees/?source_id=185311151535497" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                  className="text-[#E11D2E] font-semibold hover:underline flex items-center gap-2"
                 >
                   {isWelsh ? 'Team TwoBees Learning Hive - Facebook' : 'Team TwoBees Learning Hive - Facebook'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -303,7 +303,7 @@ export default function CommunicationsAndDigitalPage() {
                   href="https://www.mediacurrent.com/blog/17-tips-leading-effective-conference-calls?mc_cid=d49b571d5f&mc_eid=b031ddff68" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                  className="text-[#E11D2E] font-semibold hover:underline flex items-center gap-2"
                 >
                   {isWelsh ? '17 awgrym ar gyfer arwain galwadau cyfarfod effeithiol' : '17 tips for leading effective conference calls'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -316,7 +316,7 @@ export default function CommunicationsAndDigitalPage() {
                   href="https://www.allthingsic.com/how-to-communicate-covid-19-working-patterns/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-[#B91C3C] font-semibold hover:underline flex items-center gap-2"
+                  className="text-[#E11D2E] font-semibold hover:underline flex items-center gap-2"
                 >
                   {isWelsh ? 'Sut i gyfathrebu patrymau gwaith COVID-19' : 'How to communicate COVID-19 working patterns'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -358,7 +358,7 @@ export default function CommunicationsAndDigitalPage() {
                 key={index}
                 className="p-6 rounded-xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-3">
                   {item.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -374,7 +374,7 @@ export default function CommunicationsAndDigitalPage() {
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Angen Mwy o Gymorth?' : 'Need More Help?'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">

@@ -60,16 +60,16 @@ export default async function FundingPage({
         ? 'Grantiau hyd at £50,000 ar gyfer offer neu gyrsiau hyfforddi'
         : 'Grants up to £50,000 for equipment or coaching courses',
       cta: isWelsh ? 'Gwneud cais nawr' : 'Apply now',
-      ctaStyle: 'bg-white text-[#DC2626] hover:bg-gray-100',
+      ctaStyle: 'bg-white text-[#E11D2E] hover:bg-gray-100',
       href: '/funding/be-active-wales',
-      bgColor: 'bg-[#DC2626]',
+      bgColor: 'bg-[#E11D2E]',
       textColor: 'text-white',
-      titleColor: 'text-[#0F172A]',
+      titleColor: 'text-[#123F56]',
     },
     {
       branding: 'Grant Arbed Ynni\nEnergy Saving Grant',
       brandingIcon: (
-        <svg className="w-8 h-8 text-[#0F172A]" fill="currentColor" viewBox="0 0 24 24">
+        <svg className="w-8 h-8 text-[#123F56]" fill="currentColor" viewBox="0 0 24 24">
           <path d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
@@ -78,11 +78,11 @@ export default async function FundingPage({
         ? 'Grantiau hyd at £25,000 ar gyfer gwelliannau arbed ynni'
         : 'Grants up to £25,000 for energy-saving improvements',
       cta: isWelsh ? 'Gwneud cais nawr' : 'Apply now',
-      ctaStyle: 'bg-[#DC2626] text-white hover:bg-[#B91C3C]',
+      ctaStyle: 'bg-[#E11D2E] text-white hover:bg-[#E11D2E]',
       href: '/funding/energy-saving-grant',
-      bgColor: 'bg-[#F59E0B]',
-      textColor: 'text-[#0F172A]',
-      titleColor: 'text-[#0F172A]',
+      bgColor: 'bg-[#F4B400]',
+      textColor: 'text-[#123F56]',
+      titleColor: 'text-[#123F56]',
     },
     {
       branding: 'Crowdfunder.co.uk',
@@ -92,9 +92,9 @@ export default async function FundingPage({
         ? 'Cael hyd at £15,000 i wella\'ch cyfleusterau'
         : 'Get up to £15,000 to improve your facilities',
       cta: isWelsh ? 'Dechrau codi arian torfol' : 'Start crowdfunding',
-      ctaStyle: 'bg-[#DC2626] text-white hover:bg-[#B91C3C]',
+      ctaStyle: 'bg-[#E11D2E] text-white hover:bg-[#E11D2E]',
       href: '/funding/crowdfunder',
-      bgColor: 'bg-[#1E3A5F]',
+      bgColor: 'bg-[#123F56]',
       textColor: 'text-white',
       titleColor: 'text-white',
     },
@@ -112,11 +112,11 @@ export default async function FundingPage({
       />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -145,19 +145,19 @@ export default async function FundingPage({
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#E11D2E] rounded-full"></span>
                   {isWelsh ? 'Sefydlu tîm newydd' : 'Setting up a new team'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#E11D2E] rounded-full"></span>
                   {isWelsh ? 'Uwchraddio eich cyfleusterau' : 'Upgrading your facilities'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#E11D2E] rounded-full"></span>
                   {isWelsh ? 'Cefnogaeth i athletwyr unigol' : 'Support for individual athletes'}
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[#B91C3C] rounded-full"></span>
+                  <span className="w-1.5 h-1.5 bg-[#E11D2E] rounded-full"></span>
                   {isWelsh ? 'Mynd i\'r afael ag anghydraddoldebau' : 'Tackling inequalities'}
                 </li>
               </ul>
@@ -232,31 +232,31 @@ export default async function FundingPage({
       {/* When are our funds open? Section */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Pryd mae ein cronfeydd ar agor?' : 'When are our funds open?'}
           </h2>
 
           <div className="space-y-12">
             {/* A Place for Sport - Crowdfunder */}
             <div>
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Lle i Chwaraeon - Crowdfunder' : 'A Place for Sport - Crowdfunder'}
               </h3>
-              <p className="text-lg text-[#B91C3C] font-semibold">
+              <p className="text-lg text-[#E11D2E] font-semibold">
                 {isWelsh ? 'Ar agor drwy\'r flwyddyn' : 'Open all year round'}
               </p>
             </div>
 
             {/* Be Active Wales Fund */}
             <div>
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund'}
               </h3>
               
               <div className="space-y-8">
                 {/* Window 1 */}
                 <div>
-                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 1' : 'Window 1'}</h4>
+                  <h4 className="text-lg font-bold text-[#123F56] mb-3">{isWelsh ? 'Ffenestr 1' : 'Window 1'}</h4>
                   <div className="space-y-1 text-[#334155]">
                     <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 2il Ebrill 2025, 9am' : 'Wednesday 2nd April 2025, 9am'}</p>
                     <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 30ain Mai 2025, 9am' : 'Friday 30th May 2025, 9am'}</p>
@@ -266,7 +266,7 @@ export default async function FundingPage({
 
                 {/* Window 2 */}
                 <div>
-                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 2' : 'Window 2'}</h4>
+                  <h4 className="text-lg font-bold text-[#123F56] mb-3">{isWelsh ? 'Ffenestr 2' : 'Window 2'}</h4>
                   <div className="space-y-1 text-[#334155]">
                     <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 9fed Gorffennaf 2025, 9am' : 'Wednesday 9th July 2025, 9am'}</p>
                     <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 12fed Medi 2025, 9am' : 'Friday 12th September 2025, 9am'}</p>
@@ -276,7 +276,7 @@ export default async function FundingPage({
 
                 {/* Window 3 */}
                 <div>
-                  <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Ffenestr 3' : 'Window 3'}</h4>
+                  <h4 className="text-lg font-bold text-[#123F56] mb-3">{isWelsh ? 'Ffenestr 3' : 'Window 3'}</h4>
                   <div className="space-y-1 text-[#334155]">
                     <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 5ed Tachwedd 2025, 9am' : 'Wednesday 5th November 2025, 9am'}</p>
                     <p><span className="font-semibold">{isWelsh ? 'Dyddiad Cau Mynegi Diddordeb:' : 'Expression of Interest Closing Date:'}</span> {isWelsh ? 'Gwener 9fed Ionawr 2026, 9am' : 'Friday 9th January 2026, 9am'}</p>
@@ -288,12 +288,12 @@ export default async function FundingPage({
 
             {/* Energy Saving Grant */}
             <div>
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Grant Arbed Ynni' : 'Energy Saving Grant'}
               </h3>
               
               <div>
-                <h4 className="text-lg font-bold text-[#0F172A] mb-3">{isWelsh ? 'Cam 1' : 'Stage 1'}</h4>
+                <h4 className="text-lg font-bold text-[#123F56] mb-3">{isWelsh ? 'Cam 1' : 'Stage 1'}</h4>
                 <div className="space-y-1 text-[#334155]">
                   <p><span className="font-semibold">{isWelsh ? 'Agor:' : 'Open:'}</span> {isWelsh ? 'Mercher 21ain Mai, 10am' : 'Wednesday 21st May, 10am'}</p>
                   <p><span className="font-semibold">{isWelsh ? 'Cau:' : 'Close:'}</span> {isWelsh ? 'Mercher 25ain Mehefin, 3pm' : 'Wednesday 25th June, 3pm'}</p>
@@ -309,7 +309,7 @@ export default async function FundingPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Content */}
-            <div className="bg-gradient-to-br from-[#B91C3C] to-[#991B1B] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+            <div className="bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
                   {isWelsh ? 'Cefnogaeth i Glybiau' : 'Club Support'}
@@ -323,7 +323,7 @@ export default async function FundingPage({
               <div>
                 <Link
                   href="/club-support"
-                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-white/90 transition-colors"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -334,7 +334,7 @@ export default async function FundingPage({
             </div>
 
             {/* Right side - Image placeholder */}
-            <div className="relative min-h-[350px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+            <div className="relative min-h-[350px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <svg className="w-24 h-24 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -353,7 +353,7 @@ export default async function FundingPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A]">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56]">
               {isWelsh ? 'Cynnwys Wedi\'i Amlygu' : 'Highlighted Content'}
             </h2>
           </div>
@@ -374,7 +374,7 @@ export default async function FundingPage({
                   <div className="h-6 bg-[#E2E8F0] rounded mb-3 w-3/4"></div>
                   <div className="h-4 bg-[#F1F5F9] rounded mb-2"></div>
                   <div className="h-4 bg-[#F1F5F9] rounded w-5/6 mb-4"></div>
-                  <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm">
+                  <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold text-sm">
                     {isWelsh ? 'Darllen Mwy' : 'Read More'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -402,7 +402,7 @@ export default async function FundingPage({
           <div className="text-center">
             <Link
               href="/news"
-              className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:gap-3 transition-all"
             >
               {isWelsh ? 'Darllen mwy o newyddion Chwaraeon Cymru' : 'Read more Sport Wales news'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

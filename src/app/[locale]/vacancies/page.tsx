@@ -91,11 +91,11 @@ export default async function VacanciesPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -138,10 +138,10 @@ export default async function VacanciesPage({
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-3 mb-3">
-                        <h2 className="text-2xl font-display font-bold text-[#0F172A]">
+                        <h2 className="text-2xl font-display font-bold text-[#123F56]">
                           {vacancy.title}
                         </h2>
-                        <span className="px-3 py-1 rounded-full bg-[#B91C3C]/10 text-[#B91C3C] text-sm font-medium">
+                        <span className="px-3 py-1 rounded-full bg-[#E11D2E]/10 text-[#E11D2E] text-sm font-medium">
                           {vacancy.department}
                         </span>
                       </div>
@@ -173,7 +173,7 @@ export default async function VacanciesPage({
                         href={`https://sport.wales/careers/apply/${vacancy.id}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                        className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
                       >
                         {isWelsh ? 'Cymwys Nawr' : 'Apply Now'}
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,7 +190,7 @@ export default async function VacanciesPage({
               <svg className="w-16 h-16 text-[#64748B] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-2">
+              <h2 className="text-2xl font-display font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Dim Swyddi Gwag Ar Hyn o Bryd' : 'No Current Vacancies'}
               </h2>
               <p className="text-[#64748B] mb-6">
@@ -210,20 +210,20 @@ export default async function VacanciesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Sut i Wneud Cais' : 'How to Apply'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Y Broses Ymgeisio' : 'The Application Process'}
             </h2>
             <div className="space-y-6">
               <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0]">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#B91C3C] text-white flex items-center justify-center font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#E11D2E] text-white flex items-center justify-center font-bold">
                     1
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">
+                    <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">
                       {isWelsh ? 'Dewiswch Swydd' : 'Choose a Role'}
                     </h3>
                     <p className="text-[#64748B]">
@@ -236,11 +236,11 @@ export default async function VacanciesPage({
               </div>
               <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0]">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#B91C3C] text-white flex items-center justify-center font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#E11D2E] text-white flex items-center justify-center font-bold">
                     2
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">
+                    <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">
                       {isWelsh ? 'Cwblhewch y Ffurflen' : 'Complete the Form'}
                     </h3>
                     <p className="text-[#64748B]">
@@ -253,11 +253,11 @@ export default async function VacanciesPage({
               </div>
               <div className="p-6 rounded-2xl bg-white border border-[#E2E8F0]">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#B91C3C] text-white flex items-center justify-center font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#E11D2E] text-white flex items-center justify-center font-bold">
                     3
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">
+                    <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">
                       {isWelsh ? 'Aros am Ymateb' : 'Await Response'}
                     </h3>
                     <p className="text-[#64748B]">
@@ -277,10 +277,10 @@ export default async function VacanciesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Cwestiynau?' : 'Questions?'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Angen Mwy o Wybodaeth?' : 'Need More Information?'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -291,13 +291,13 @@ export default async function VacanciesPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/careers"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Yn ôl i Gyrfaoedd' : 'Back to Careers'}
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#123F56] font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
               </Link>

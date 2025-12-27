@@ -57,11 +57,11 @@ export default async function VisionAndStrategyPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -122,7 +122,7 @@ export default async function VisionAndStrategyPage({
             {/* Vision for Sport Card */}
             <Link
               href="/vision"
-              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
             >
               <div className="p-8 lg:p-10">
                 <h3 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
@@ -133,7 +133,7 @@ export default async function VisionAndStrategyPage({
                     ? 'Cenedl actif lle gall pawb gael mwynhad gydol oes...'
                     : 'An active nation where everyone can have a lifelong…'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -141,13 +141,13 @@ export default async function VisionAndStrategyPage({
                 </span>
               </div>
               {/* Image placeholder */}
-              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#1E3A5F]/50 to-transparent"></div>
+              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#123F56]/50 to-transparent"></div>
             </Link>
 
             {/* Sport Wales Strategy Card */}
             <Link
               href="/strategy"
-              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
             >
               <div className="p-8 lg:p-10">
                 <h3 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4">
@@ -158,7 +158,7 @@ export default async function VisionAndStrategyPage({
                     ? 'Sut byddwn yn rhyddhau manteision chwaraeon i bawb.'
                     : 'How we will unleash the benefits of sport for everyone.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -166,7 +166,7 @@ export default async function VisionAndStrategyPage({
                 </span>
               </div>
               {/* Image placeholder */}
-              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#1E3A5F]/50 to-transparent"></div>
+              <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#123F56]/50 to-transparent"></div>
             </Link>
           </div>
         </div>
@@ -176,28 +176,28 @@ export default async function VisionAndStrategyPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Y Weledigaeth a\'r Strategaeth ar waith (5m 15s)' : 'The Vision and Strategy in action (5m 15s)'}
             </h2>
             
             <p className="text-[#64748B] mb-6">
-              <a href="#" className="text-[#B91C3C] hover:underline">
+              <a href="#" className="text-[#E11D2E] hover:underline">
                 {isWelsh ? 'Gwyliwch gyda disgrifiad sain (8m 37s)' : 'Watch with audio description (8m 37s)'}
               </a>
             </p>
 
             {/* Video Placeholder */}
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#0F172A]">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-[#123F56]">
               <div className="absolute inset-0 flex items-center justify-center">
                 {/* Play button */}
                 <button className="w-20 h-20 rounded-full bg-white/90 hover:bg-white flex items-center justify-center transition-colors group">
-                  <svg className="w-8 h-8 text-[#0F172A] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-[#123F56] ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </button>
               </div>
               {/* Image placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A] flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#123F56] to-[#123F56] flex items-center justify-center">
                 <div className="text-center p-8">
                   <svg className="w-16 h-16 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />

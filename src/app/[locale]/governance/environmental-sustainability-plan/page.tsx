@@ -92,11 +92,11 @@ export default async function EnvironmentalSustainabilityPlanPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -137,7 +137,7 @@ export default async function EnvironmentalSustainabilityPlanPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Rhagair' : 'Foreword'}
             </h2>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -213,14 +213,14 @@ export default async function EnvironmentalSustainabilityPlanPage({
                 className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
                 {/* Image placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-[#B91C3C]/20 to-[#B91C3C]/20 flex items-center justify-center">
-                  <span className="text-4xl font-display font-bold text-[#B91C3C]">{section.number}</span>
+                <div className="aspect-video bg-gradient-to-br from-[#E11D2E]/20 to-[#E11D2E]/20 flex items-center justify-center">
+                  <span className="text-4xl font-display font-bold text-[#E11D2E]">{section.number}</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                  <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                     {section.number}. {section.title}
                   </h3>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                     {isWelsh ? 'Darllen Mwy' : 'Read More'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -238,7 +238,7 @@ export default async function EnvironmentalSustainabilityPlanPage({
         <div className="container">
           <Link
             href="/governance"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left side - Content */}
@@ -251,7 +251,7 @@ export default async function EnvironmentalSustainabilityPlanPage({
                     ? 'Ni yw\'r sefydliad cenedlaethol sy\'n gyfrifol am ddatblygu a hyrwyddo chwaraeon a gweithgarwch corfforol yng Nghymru. Fel corff a noddir gan Lywodraeth Cymru rydym yn rhwym wrth reolau a chyfrifoldebau llywodraethu da ac mae gennym nifer o ddyletswyddau y mae\'n ofynnol i ni eu cyflawni...'
                     : 'We are the national organisation responsible for developing and promoting sport and physical activity in Wales. As a Welsh Government sponsored body we are bound by rules and responsibilities of good governance and we have a number of duties we are obligated…'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -260,7 +260,7 @@ export default async function EnvironmentalSustainabilityPlanPage({
               </div>
 
               {/* Right side - Image placeholder */}
-              <div className="relative min-h-[300px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+              <div className="relative min-h-[300px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <svg className="w-20 h-20 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

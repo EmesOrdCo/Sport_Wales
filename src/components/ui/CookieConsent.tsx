@@ -146,7 +146,7 @@ export function CookieConsent() {
                     <p className="text-sm text-sw-gray-600">{t.essentialDesc}</p>
                   </div>
                   <div 
-                    className="relative w-11 h-6 bg-[#B91C3C] rounded-full cursor-not-allowed opacity-90"
+                    className="relative w-11 h-6 bg-[#E11D2E] rounded-full cursor-not-allowed opacity-90"
                     title="Required - cannot be disabled"
                   >
                     <span className="absolute right-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow-md" />
@@ -162,8 +162,8 @@ export function CookieConsent() {
                   <button
                     type="button"
                     onClick={() => setPreferences((prev) => ({ ...prev, analytics: !prev.analytics }))}
-                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:ring-offset-2 ${
-                      preferences.analytics ? 'bg-[#B91C3C]' : 'bg-[#CBD5E1]'
+                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E11D2E] focus:ring-offset-2 ${
+                      preferences.analytics ? 'bg-[#E11D2E]' : 'bg-[#CBD5E1]'
                     }`}
                     role="switch"
                     aria-checked={preferences.analytics}
@@ -186,8 +186,8 @@ export function CookieConsent() {
                   <button
                     type="button"
                     onClick={() => setPreferences((prev) => ({ ...prev, marketing: !prev.marketing }))}
-                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#B91C3C] focus:ring-offset-2 ${
-                      preferences.marketing ? 'bg-[#B91C3C]' : 'bg-[#CBD5E1]'
+                    className={`relative w-11 h-6 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#E11D2E] focus:ring-offset-2 ${
+                      preferences.marketing ? 'bg-[#E11D2E]' : 'bg-[#CBD5E1]'
                     }`}
                     role="switch"
                     aria-checked={preferences.marketing}
@@ -206,14 +206,14 @@ export function CookieConsent() {
                 <button
                   type="button"
                   onClick={() => setShowPreferences(false)}
-                  className="px-5 py-2.5 text-sm font-semibold text-[#0F172A] border-2 border-[#E2E8F0] rounded-full hover:bg-[#F8FAFC] transition-colors"
+                  className="px-5 py-2.5 text-sm font-semibold text-[#123F56] border-2 border-[#E2E8F0] rounded-full hover:bg-[#F8FAFC] transition-colors"
                 >
                   {locale === 'cy' ? 'Yn ôl' : 'Back'}
                 </button>
                 <button
                   type="button"
                   onClick={handleSavePreferences}
-                  className="px-6 py-2.5 text-sm font-semibold text-white bg-[#B91C3C] rounded-full hover:bg-[#991B1B] transition-colors shadow-lg"
+                  className="px-6 py-2.5 text-sm font-semibold text-white bg-[#E11D2E] rounded-full hover:bg-[#E11D2E] transition-colors shadow-lg"
                 >
                   {t.save}
                 </button>

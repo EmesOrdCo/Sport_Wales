@@ -59,7 +59,7 @@ export default async function WomenGirlsPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Arweinyddiaeth' : 'Leadership',
@@ -71,7 +71,7 @@ export default async function WomenGirlsPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Chwaraeon Elît' : 'Elite Sport',
@@ -83,7 +83,7 @@ export default async function WomenGirlsPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
         </svg>
       ),
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
     },
     {
       title: isWelsh ? 'Hygyrchedd ac Inclusio' : 'Accessibility & Inclusion',
@@ -95,7 +95,7 @@ export default async function WomenGirlsPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
   ];
 
@@ -126,11 +126,11 @@ export default async function WomenGirlsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#B91C3C] via-[#B91C3C] to-[#B91C3C] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#E11D2E] via-[#E11D2E] to-[#E11D2E] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -164,10 +164,10 @@ export default async function WomenGirlsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Ffocws' : 'Our Focus'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Sut Rydym Yn Cefnogi Merched a Merched Ifanc' : 'How We Support Women & Girls'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -186,7 +186,7 @@ export default async function WomenGirlsPage({
                 <div className={`w-12 h-12 rounded-xl ${area.color}/10 flex items-center justify-center text-${area.color.replace('bg-', '')} mb-6`}>
                   {area.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {area.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -202,10 +202,10 @@ export default async function WomenGirlsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Rhaglenni a Gwasanaethau' : 'Programmes & Services'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Rhaglenni a Chymorth' : 'Programmes & Support'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -221,7 +221,7 @@ export default async function WomenGirlsPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {programme.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -237,10 +237,10 @@ export default async function WomenGirlsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Dysgu Mwy' : 'Learn More'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Cysylltwch â Ni' : 'Get in Touch'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -251,7 +251,7 @@ export default async function WomenGirlsPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ export default async function WomenGirlsPage({
               </Link>
               <Link 
                 href="/funding"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#123F56] font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cyfleoedd Cyllid' : 'Funding Opportunities'}
               </Link>

@@ -53,11 +53,11 @@ export default async function CommunityGrassrootsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#F59E0B]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#F4B400]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -108,7 +108,7 @@ export default async function CommunityGrassrootsPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Red background with content */}
-            <div className="bg-gradient-to-br from-[#DC2626] to-[#B91C3C] p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
+            <div className="bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
               <div>
                 <p className="text-white/90 text-sm font-semibold uppercase tracking-wider mb-4">
                   {isWelsh ? 'Adnodd Allweddol ar gyfer Clybiau Cymunedol a Gwirfoddolwyr' : 'Key Resource for Community Clubs and Volunteers'}
@@ -125,7 +125,7 @@ export default async function CommunityGrassrootsPage({
               <div>
                 <Link
                   href="/club-support"
-                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-white/90 transition-colors"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ export default async function CommunityGrassrootsPage({
             </div>
 
             {/* Right side - Image placeholder (CMS editable) */}
-            <div className="relative min-h-[400px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+            <div className="relative min-h-[400px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
               {/* Placeholder for CMS image - showing rugby youth team */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
@@ -156,7 +156,7 @@ export default async function CommunityGrassrootsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Cynnwys Wedi\'i Amlygu - Chwaraeon Cymunedol a Llawr Gwlad' : 'Highlighted Content - Community and Grassroots Sport'}
             </h2>
           </div>
@@ -194,10 +194,10 @@ export default async function CommunityGrassrootsPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#F59E0B] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#F4B400] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Cychwyn Arni' : 'Get Started'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -211,7 +211,7 @@ export default async function CommunityGrassrootsPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/funding"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Gweld Opsiynau Cyllid' : 'View Funding Options'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

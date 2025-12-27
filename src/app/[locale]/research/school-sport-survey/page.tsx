@@ -52,7 +52,7 @@ export default async function SchoolSportSurveyPage({
   const headlineResults = [
     {
       category: isWelsh ? 'Cenedl Actif' : 'Active Nation',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
       stats: [
         {
           value: '39%',
@@ -76,7 +76,7 @@ export default async function SchoolSportSurveyPage({
     },
     {
       category: isWelsh ? 'Pawb' : 'Everyone',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
       stats: [
         {
           value: '60%',
@@ -94,7 +94,7 @@ export default async function SchoolSportSurveyPage({
     },
     {
       category: isWelsh ? 'Gydol Oes' : 'Lifelong',
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
       stats: [
         {
           value: '93%',
@@ -112,7 +112,7 @@ export default async function SchoolSportSurveyPage({
     },
     {
       category: isWelsh ? 'Mwynhad' : 'Enjoyment',
-      color: 'bg-[#0F172A]',
+      color: 'bg-[#123F56]',
       stats: [
         {
           value: '40%',
@@ -145,11 +145,11 @@ export default async function SchoolSportSurveyPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -185,7 +185,7 @@ export default async function SchoolSportSurveyPage({
                 href="https://www.chwaraeon.cymru/ymchwil-a-gwybodaeth/arolwg-chwaraeon-ysgol/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:gap-3 transition-all"
               >
                 {isWelsh ? 'Gweld yr adroddiad yn Gymraeg' : 'View the report in Cymraeg'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -208,7 +208,7 @@ export default async function SchoolSportSurveyPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Canlyniadau Pennawdol' : 'Headline Results'}
             </h2>
           </div>
@@ -225,7 +225,7 @@ export default async function SchoolSportSurveyPage({
                   <div className="space-y-6">
                     {section.stats.map((stat, i) => (
                       <div key={i} className="flex items-start gap-4">
-                        <div className="text-3xl font-display font-bold text-[#0F172A] min-w-[80px]">
+                        <div className="text-3xl font-display font-bold text-[#123F56] min-w-[80px]">
                           {stat.value}
                         </div>
                         <p className="text-[#64748B] leading-relaxed">
@@ -251,7 +251,7 @@ export default async function SchoolSportSurveyPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Canlyniadau Llawn' : 'Full Results'}
             </h2>
           </div>
@@ -263,14 +263,14 @@ export default async function SchoolSportSurveyPage({
                 className="group p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] font-bold">
+                  <div className="w-10 h-10 rounded-full bg-[#E11D2E]/10 flex items-center justify-center text-[#E11D2E] font-bold">
                     {section.num}
                   </div>
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] group-hover:text-[#B91C3C] transition-colors">
+                  <h3 className="text-lg font-display font-bold text-[#123F56] group-hover:text-[#E11D2E] transition-colors">
                     {section.title}
                   </h3>
                 </div>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold text-sm group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -284,7 +284,7 @@ export default async function SchoolSportSurveyPage({
           <div className="mt-12 flex flex-wrap gap-4">
             <a
               href="#"
-              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#0F172A] text-white font-semibold hover:bg-[#1E293B] transition-colors"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#123F56] text-white font-semibold hover:bg-[#1E4A62] transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -293,7 +293,7 @@ export default async function SchoolSportSurveyPage({
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[#0F172A] text-[#0F172A] font-semibold hover:bg-[#0F172A] hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[#123F56] text-[#123F56] font-semibold hover:bg-[#123F56] hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -308,7 +308,7 @@ export default async function SchoolSportSurveyPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6 uppercase">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6 uppercase">
               {isWelsh ? 'Adroddiadau Ysgol' : 'School Reports'}
             </h2>
             <div className="space-y-6 text-lg text-[#64748B] leading-relaxed">
@@ -317,7 +317,7 @@ export default async function SchoolSportSurveyPage({
                   ? 'Derbyniodd ysgolion a gymerodd ran yn yr arolwg ac a oedd yn gymwys adroddiad unigol o\'u canlyniad yn ystod gwyliau\'r haf ysgol. Bydd yr adroddiad hwn wedi\'i anfon drwy\'r cyfeiriad e-bost canlynol:'
                   : 'Schools who participated in the survey and qualified received an individualised report of their result during the school summer holidays. This report will have been sent via the following email address:'}
                 {' '}
-                <span className="font-bold text-[#0F172A]">SCHOOLSPORTSURVEY@SNAPSURVEYS.COM</span>
+                <span className="font-bold text-[#123F56]">SCHOOLSPORTSURVEY@SNAPSURVEYS.COM</span>
               </p>
               <p>
                 {isWelsh
@@ -347,7 +347,7 @@ export default async function SchoolSportSurveyPage({
                 ? 'Os oeddech yn disgwyl derbyn adroddiad ond heb wneud, cysylltwch â'
                 : 'If you expected to receive a report but have not, please contact'}
               {' '}
-              <a href="mailto:schoolsportsurvey@snapsurveys.com" className="text-[#B91C3C] font-semibold hover:underline">
+              <a href="mailto:schoolsportsurvey@snapsurveys.com" className="text-[#E11D2E] font-semibold hover:underline">
                 schoolsportsurvey@snapsurveys.com
               </a>
             </p>
@@ -359,7 +359,7 @@ export default async function SchoolSportSurveyPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Templedi Cynllun Gweithredu' : 'Action Plan Templates'}
             </h2>
             <p className="text-lg text-[#64748B] leading-relaxed mb-8">
@@ -369,7 +369,7 @@ export default async function SchoolSportSurveyPage({
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
             >
               {isWelsh ? 'Gweld y templed' : 'View the template'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -385,7 +385,7 @@ export default async function SchoolSportSurveyPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Content */}
-            <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+            <div className="bg-gradient-to-br from-[#123F56] to-[#1E4A62] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
                   {isWelsh ? 'Ystadegau' : 'Statistics'}
@@ -399,7 +399,7 @@ export default async function SchoolSportSurveyPage({
               <div>
                 <Link
                   href="/research/statistics"
-                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-white/90 transition-colors"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -410,7 +410,7 @@ export default async function SchoolSportSurveyPage({
             </div>
 
             {/* Right side - Image placeholder */}
-            <div className="relative min-h-[350px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+            <div className="relative min-h-[350px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <svg className="w-24 h-24 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

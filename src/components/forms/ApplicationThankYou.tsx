@@ -12,14 +12,14 @@ export function ApplicationThankYou({ applicationType = 'grant' }: ApplicationTh
   const isWelsh = locale === 'cy';
 
   return (
-    <div className="bg-[#B91C3C]/10 border border-[#B91C3C]/20 rounded-2xl p-8 lg:p-10 text-center">
-      <div className="w-16 h-16 rounded-full bg-[#B91C3C] mx-auto mb-6 flex items-center justify-center">
+    <div className="bg-[#E11D2E]/10 border border-[#E11D2E]/20 rounded-2xl p-8 lg:p-10 text-center">
+      <div className="w-16 h-16 rounded-full bg-[#E11D2E] mx-auto mb-6 flex items-center justify-center">
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
       </div>
       
-      <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A] mb-4">
+      <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56] mb-4">
         {isWelsh 
           ? 'Diolch i chi am eich cais' 
           : 'Thank you for your application'}
@@ -39,12 +39,12 @@ export function ApplicationThankYou({ applicationType = 'grant' }: ApplicationTh
           </p>
 
           <div className="max-w-xl mx-auto">
-            <p className="text-lg font-semibold text-[#0F172A] mb-4">
+            <p className="text-lg font-semibold text-[#123F56] mb-4">
               {isWelsh ? 'Efallai bod gennych chi ddiddordeb yn y canlynol hefyd:' : 'You might also be interested in:'}
             </p>
             <Link
               href="/club-support"
-              className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:underline text-lg"
+              className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:underline text-lg"
             >
               {isWelsh
                 ? 'Dyma ganllawiau a chefnogaeth ar gyfer clybiau chwaraeon yng Nghymru.'

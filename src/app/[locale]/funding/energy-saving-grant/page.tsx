@@ -54,11 +54,11 @@ export default async function EnergySavingGrantPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#FBBF24] via-[#F59E0B] to-[#FBBF24] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#F4B400] via-[#F4B400] to-[#F4B400] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#DC2626]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -88,7 +88,7 @@ export default async function EnergySavingGrantPage({
         <div className="container">
           <div className="max-w-4xl">
             {/* What is the Energy Saving Grant? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth yw\'r Grant Arbed Ynni?' : 'What is the Energy Saving Grant?'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -103,7 +103,7 @@ export default async function EnergySavingGrantPage({
             </p>
 
             {/* What can you get funding for? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth allwch chi gael cyllid ar ei gyfer?' : 'What can you get funding for?'}
             </h2>
             <p className="text-lg text-[#334155] mb-4">
@@ -119,7 +119,7 @@ export default async function EnergySavingGrantPage({
                 isWelsh ? 'Systemau dŵr cynaliadwy (e.e. cynaeafu dŵr glaw / tyllau turio)' : 'Sustainable water systems (e.g rainwater harvesting / boreholes)',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
@@ -136,7 +136,7 @@ export default async function EnergySavingGrantPage({
             </p>
 
             {/* When can you apply? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Pryd allwch chi wneud cais?' : 'When can you apply?'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed mb-8">
@@ -146,7 +146,7 @@ export default async function EnergySavingGrantPage({
             </p>
 
             {/* Stage 1 */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Cam 1' : 'Stage 1'}
             </h3>
             <p className="text-lg text-[#334155] mb-4">
@@ -156,13 +156,13 @@ export default async function EnergySavingGrantPage({
             </p>
             <ul className="space-y-2 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Agor: Dydd Mercher 21ain Mai, 10am' : 'Open: Wednesday 21st May, 10am'}
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Cau: Dydd Mercher 25ain Mehefin, 3pm' : 'Close: Wednesday 25th June, 3pm'}
                 </span>
@@ -170,7 +170,7 @@ export default async function EnergySavingGrantPage({
             </ul>
 
             {/* Stage 2 */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Cam 2' : 'Stage 2'}
             </h3>
             <p className="text-lg text-[#334155] mb-4">
@@ -180,13 +180,13 @@ export default async function EnergySavingGrantPage({
             </p>
             <ul className="space-y-2 mb-4">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Agor: Dydd Mercher 16eg Gorffennaf, 10am' : 'Open: Wednesday 16th July, 10am'}
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Dyddiad Cau: Dydd Mercher 1af Hydref, 3pm' : 'Close Date: Wednesday 1st October, 3pm'}
                 </span>
@@ -199,7 +199,7 @@ export default async function EnergySavingGrantPage({
             </p>
 
             {/* Who can apply? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Pwy all wneud cais?' : 'Who can apply?'}
             </h2>
             <p className="text-lg text-[#334155] mb-4">
@@ -215,14 +215,14 @@ export default async function EnergySavingGrantPage({
                 isWelsh ? 'Gallwch dalu o leiaf 20% o gost y prosiect (mae hyn yn cynnwys yr arolwg ynni)' : 'You can pay at least 20% of the project cost (this includes the energy survey)',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
             </ul>
 
             {/* How to apply? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Sut i wneud cais?' : 'How to apply?'}
             </h2>
             <ul className="space-y-3 mb-6">
@@ -235,7 +235,7 @@ export default async function EnergySavingGrantPage({
                 isWelsh ? 'Cwblhewch eich cais llawn erbyn 1 Hydref 2025' : 'Complete your full application by 1 October 2025',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-[#F59E0B] flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#F4B400] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="text-white text-sm font-bold">{index + 1}</span>
                   </div>
                   <span className="text-lg text-[#334155]">{item}</span>
@@ -254,7 +254,7 @@ export default async function EnergySavingGrantPage({
             </p>
 
             {/* How is funding awarded? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Sut mae cyllid yn cael ei ddyfarnu?' : 'How is funding awarded?'}
             </h2>
             <ul className="space-y-3 mb-12">
@@ -264,14 +264,14 @@ export default async function EnergySavingGrantPage({
                 isWelsh ? 'Rhaid i\'ch clwb dalu o leiaf 20% o\'r gost gyfan (yn cynnwys cost yr arolwg ynni)' : 'Your club must pay at least 20% of the total cost (includes the energy survey cost)',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#F59E0B] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#F4B400] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
             </ul>
 
             {/* Need help? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Angen help?' : 'Need help?'}
             </h2>
             <p className="text-lg text-[#334155] mb-6">
@@ -282,13 +282,13 @@ export default async function EnergySavingGrantPage({
             <div className="space-y-4">
               <p className="text-lg text-[#334155]">
                 <strong>{isWelsh ? 'E-bost:' : 'Email:'}</strong>{' '}
-                <a href="mailto:energy@sport.wales" className="text-[#F59E0B] hover:underline">
+                <a href="mailto:energy@sport.wales" className="text-[#F4B400] hover:underline">
                   energy@sport.wales
                 </a>
               </p>
               <p className="text-lg text-[#334155]">
                 <strong>{isWelsh ? 'Ffôn:' : 'Phone:'}</strong>{' '}
-                <a href="tel:03003003102" className="text-[#F59E0B] hover:underline">
+                <a href="tel:03003003102" className="text-[#F4B400] hover:underline">
                   0300 3003102
                 </a>
                 {' '}
@@ -296,7 +296,7 @@ export default async function EnergySavingGrantPage({
               </p>
               <p className="text-lg text-[#334155]">
                 <strong>{isWelsh ? 'Ceisiadau Presennol:' : 'Existing Applications:'}</strong>{' '}
-                <a href="https://www.sport.wales/login/" target="_blank" rel="noopener noreferrer" className="text-[#F59E0B] hover:underline">
+                <a href="https://www.sport.wales/login/" target="_blank" rel="noopener noreferrer" className="text-[#F4B400] hover:underline">
                   {isWelsh ? 'Mewngofnodwch i gael mynediad at eich cais.' : 'Log in to access your application.'}
                 </a>
               </p>
@@ -306,14 +306,14 @@ export default async function EnergySavingGrantPage({
       </section>
 
       {/* Apply Now CTA */}
-      <section className="py-12 bg-[#F59E0B]">
+      <section className="py-12 bg-[#F4B400]">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
               href="https://www.sport.wales/grants-and-funding/energy-saving-grant/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-[#F8FAFC] transition-colors"
+              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-[#F8FAFC] transition-colors"
             >
               {isWelsh ? 'Gwneud Cais Nawr' : 'Apply Now'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -332,7 +332,7 @@ export default async function EnergySavingGrantPage({
         <div className="container">
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <div className="group p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#F59E0B] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#F4B400] transition-colors">
                 {isWelsh 
                   ? 'Beth all eich clwb chwaraeon gael cyllid ar ei gyfer gyda\'r Grant Arbed Ynni?'
                   : 'What can your sports club get funding for with the Energy Saving Grant?'}
@@ -342,7 +342,7 @@ export default async function EnergySavingGrantPage({
                   ? 'Dyma 7 uwchraddiad clyfar y gall eich clwb eu hariannu gyda...'
                   : 'Here are 7 smart upgrades your club can fund with...'}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-[#F59E0B] font-semibold hover:gap-3 transition-all">
+              <a href="#" className="inline-flex items-center gap-2 text-[#F4B400] font-semibold hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -351,7 +351,7 @@ export default async function EnergySavingGrantPage({
             </div>
 
             <div className="group p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#F59E0B] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#F4B400] transition-colors">
                 {isWelsh 
                   ? 'Beth mae clybiau chwaraeon yng Nghymru yn ei ddweud am y Grant Arbed Ynni?'
                   : 'What are sports clubs in Wales saying about the Energy Saving Grant?'}
@@ -361,7 +361,7 @@ export default async function EnergySavingGrantPage({
                   ? 'Dyma rai o brofiadau a chyngor y...'
                   : 'Here are some of the experiences and advice of the...'}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-[#F59E0B] font-semibold hover:gap-3 transition-all">
+              <a href="#" className="inline-flex items-center gap-2 text-[#F4B400] font-semibold hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -378,7 +378,7 @@ export default async function EnergySavingGrantPage({
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <Link 
               href="/funding/be-active-wales"
-              className="group p-6 rounded-2xl bg-[#DC2626] hover:bg-[#B91C3C] transition-colors"
+              className="group p-6 rounded-2xl bg-[#E11D2E] hover:bg-[#E11D2E] transition-colors"
             >
               <h3 className="text-xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund'}
@@ -398,7 +398,7 @@ export default async function EnergySavingGrantPage({
 
             <Link 
               href="/funding/crowdfunder"
-              className="group p-6 rounded-2xl bg-[#1E3A5F] hover:bg-[#0F172A] transition-colors"
+              className="group p-6 rounded-2xl bg-[#123F56] hover:bg-[#123F56] transition-colors"
             >
               <h3 className="text-xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Lle i Chwaraeon - Crowdfunder' : 'A Place for Sport - Crowdfunder'}

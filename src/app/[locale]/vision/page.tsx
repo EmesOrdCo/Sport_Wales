@@ -99,37 +99,37 @@ export default async function VisionPage({
     {
       number: 1,
       title: isWelsh ? 'Cymru Lewyrchus' : 'A Prosperous Wales',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       number: 2,
       title: isWelsh ? 'Cymru Gydnerth' : 'A Resilient Wales',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       number: 3,
       title: isWelsh ? 'Cymru Iachach' : 'A Healthier Wales',
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
     },
     {
       number: 4,
       title: isWelsh ? 'Cymru Fwy Cyfartal' : 'A More Equal Wales',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       number: 5,
       title: isWelsh ? 'Cymru o Gymunedau Cydlynus' : 'A Wales of Cohesive Communities',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       number: 6,
       title: isWelsh ? 'Cymru â Diwylliant Bywiog a\'r Gymraeg yn Ffynnu' : 'A Wales of Vibrant Culture and Thriving Welsh Language',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       number: 7,
       title: isWelsh ? 'Cymru sy\'n Gyfrifol yn Fyd-eang' : 'A Globally Responsible Wales',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
   ];
 
@@ -181,11 +181,11 @@ export default async function VisionPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -196,7 +196,7 @@ export default async function VisionPage({
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold !text-white mb-6">
               {isWelsh ? 'Gweledigaeth ar gyfer Chwaraeon' : 'Vision for Sport'}
             </h1>
-            <p className="text-2xl md:text-3xl text-[#B91C3C] font-display font-bold mb-6">
+            <p className="text-2xl md:text-3xl text-[#E11D2E] font-display font-bold mb-6">
               {isWelsh
                 ? 'Cenedl actif lle gall pawb fwynhau chwaraeon gydol oes.'
                 : 'An active nation where everyone can have a lifelong enjoyment of sport.'}
@@ -226,7 +226,7 @@ export default async function VisionPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Beth yw\'r Weledigaeth ar gyfer Chwaraeon?' : 'What is the Vision for Sport?'}
             </h2>
             <p className="text-xl text-[#64748B]">
@@ -242,10 +242,10 @@ export default async function VisionPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-[#B91C3C] flex items-center justify-center text-white mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-[#E11D2E] flex items-center justify-center text-white mx-auto mb-6">
                   {pillar.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {pillar.title}
                 </h3>
                 <p className="text-[#64748B] text-sm">
@@ -258,10 +258,10 @@ export default async function VisionPage({
       </section>
 
       {/* Mission */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Beth yw\'r genhadaeth?' : 'What is the mission?'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white">
@@ -277,7 +277,7 @@ export default async function VisionPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Y 7 nod llesiant' : 'The 7 wellbeing goals'}
             </h2>
           </div>
@@ -302,7 +302,7 @@ export default async function VisionPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Chi a\'r Weledigaeth' : 'You and the Vision'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -318,13 +318,13 @@ export default async function VisionPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-[#B91C3C]/10 flex items-center justify-center text-[#B91C3C] mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-[#E11D2E]/10 flex items-center justify-center text-[#E11D2E] mx-auto mb-6">
                   {type.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-1">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-1">
                   {type.title}
                 </h3>
-                <p className="text-[#B91C3C] font-semibold text-sm mb-3">
+                <p className="text-[#E11D2E] font-semibold text-sm mb-3">
                   {type.subtitle}
                 </p>
                 <p className="text-[#64748B] text-sm">
@@ -341,7 +341,7 @@ export default async function VisionPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Cyflawni\'r Weledigaeth' : 'Achieving the Vision'}
               </h2>
               <p className="text-lg text-[#64748B] mb-6">
@@ -349,7 +349,7 @@ export default async function VisionPage({
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Gwella llesiant, hunanhyder a chymhelliant pobl i gymryd rhan a llwyddo drwy weithgareddau sy\'n hwyl ac yn gynaliadwy.'
@@ -357,7 +357,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Rhoi\'r sgiliau i bobl gyrraedd eu potensial a chyflawni eu nodau.'
@@ -365,7 +365,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Cefnogi cymunedau i ffynnu a bod yn fwy cysylltiedig drwy greu cyfleoedd i bawb ymuno.'
@@ -373,7 +373,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Hyrwyddo Cymru i\'r byd drwy ein rhagoriaeth chwaraeon.'
@@ -389,7 +389,7 @@ export default async function VisionPage({
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Gweithio, buddsoddi, dysgu a llwyddo gyda\'n gilydd.'
@@ -397,7 +397,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Creu profiadau sy\'n groesawgar, yn hwyl ac yn ddiogel.'
@@ -405,7 +405,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Datblygu cyfleoedd sy\'n lleol, yn weladwy ac yn ysbrydoledig.'
@@ -413,7 +413,7 @@ export default async function VisionPage({
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                   <span className="text-[#64748B]">
                     {isWelsh
                       ? 'Sicrhau bod chwaraeon yn hygyrch, yn gynhwysol ac yn fforddiadwy, heb adael neb ar ôl.'
@@ -427,7 +427,7 @@ export default async function VisionPage({
       </section>
 
       {/* Together We Can */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -443,7 +443,7 @@ export default async function VisionPage({
                 ? 'Os ydych chi\'n gwneud gwaith cymunedol, yn magu teulu neu\'n rhedeg busnes – gallwn ni i gyd rannu\'r weledigaeth hon a chwarae ein rhan.'
                 : 'If you carry out community work, raise a family or run a business – we can all share this vision and play our part.'}
             </p>
-            <p className="text-xl text-[#B91C3C] font-semibold">
+            <p className="text-xl text-[#E11D2E] font-semibold">
               {isWelsh
                 ? 'Drwy ddod at ein gilydd, gall pobl o bob oed a phob cymuned ryddhau buddion chwaraeon i bawb.'
                 : 'By coming together, people of all ages and all communities can unleash the benefits of sport for everyone.'}

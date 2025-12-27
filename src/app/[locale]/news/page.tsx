@@ -91,11 +91,11 @@ export default async function NewsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -130,7 +130,7 @@ export default async function NewsPage({
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h2 className="text-lg font-display font-bold text-[#0F172A] mb-1">
+              <h2 className="text-lg font-display font-bold text-[#123F56] mb-1">
                 {isWelsh ? 'Ymholiadau\'r Cyfryngau' : 'Media Enquiries'}
               </h2>
               <p className="text-sm text-[#64748B]">
@@ -142,7 +142,7 @@ export default async function NewsPage({
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="tel:03003003105" 
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#123F56] hover:text-[#E11D2E] transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -151,7 +151,7 @@ export default async function NewsPage({
               </a>
               <a 
                 href="mailto:media@sport.wales" 
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#123F56] hover:text-[#E11D2E] transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -169,19 +169,19 @@ export default async function NewsPage({
           <div className="container">
             <Link 
               href={`/news/${featuredArticle.slug}` as any}
-              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+              className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
             >
               {/* Background pattern */}
               <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C] blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C] blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E] blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E] blur-3xl"></div>
               </div>
               
               <div className="relative z-10 p-8 lg:p-12">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-8">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-6">
-                      <span className="inline-block bg-[#DC2626] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                      <span className="inline-block bg-[#E11D2E] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                         {isWelsh ? 'Stori Nodwedd' : 'Featured Story'}
                       </span>
                       <span className="text-white/60 text-sm">
@@ -193,7 +193,7 @@ export default async function NewsPage({
                       </span>
                     </div>
                     
-                    <h2 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#F59E0B] transition-colors">
+                    <h2 className="text-2xl lg:text-4xl font-display font-bold !text-white mb-4 group-hover:text-[#F4B400] transition-colors">
                       {featuredArticle.title[isWelsh ? 'cy' : 'en']}
                     </h2>
                     
@@ -201,7 +201,7 @@ export default async function NewsPage({
                       {featuredArticle.excerpt[isWelsh ? 'cy' : 'en']}
                     </p>
                     
-                    <span className="inline-flex items-center gap-2 text-[#DC2626] font-semibold group-hover:gap-4 transition-all">
+                    <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                       {t('readMore')}
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -219,7 +219,7 @@ export default async function NewsPage({
       <section className="py-12 lg:py-20 bg-[#F8FAFC]">
         <div className="container">
           <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#0F172A]">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-[#123F56]">
               {isWelsh ? 'Mwy o Straeon' : 'More Stories'}
             </h2>
           </div>
@@ -233,13 +233,13 @@ export default async function NewsPage({
                 >
                   <div className="h-full rounded-2xl bg-white border border-[#E2E8F0] overflow-hidden hover:shadow-xl hover:border-transparent transition-all duration-300">
                     {/* Image Placeholder */}
-                    <div className="relative aspect-video bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] overflow-hidden">
+                    <div className="relative aspect-video bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#334155] overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <svg className="w-16 h-16 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                       </div>
-                      <div className="absolute inset-0 bg-[#B91C3C]/0 group-hover:bg-[#B91C3C]/10 transition-colors" />
+                      <div className="absolute inset-0 bg-[#E11D2E]/0 group-hover:bg-[#E11D2E]/10 transition-colors" />
                     </div>
 
                     {/* Content */}
@@ -248,16 +248,16 @@ export default async function NewsPage({
                       <div className="flex items-center gap-3 text-sm mb-4">
                         <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
                           article.category.en === 'Feature' 
-                            ? 'bg-[#B91C3C]/10 text-[#B91C3C]' 
+                            ? 'bg-[#E11D2E]/10 text-[#E11D2E]' 
                             : article.category.en === 'Funding'
-                            ? 'bg-[#B91C3C]/10 text-[#B91C3C]'
+                            ? 'bg-[#E11D2E]/10 text-[#E11D2E]'
                             : article.category.en === 'Impact Story'
-                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            ? 'bg-[#F4B400]/10 text-[#F4B400]'
                             : article.category.en === 'Resources'
-                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
+                            ? 'bg-[#F4B400]/10 text-[#F4B400]'
                             : article.category.en === 'Research'
-                            ? 'bg-[#F59E0B]/10 text-[#F59E0B]'
-                            : 'bg-[#B91C3C]/10 text-[#B91C3C]'
+                            ? 'bg-[#F4B400]/10 text-[#F4B400]'
+                            : 'bg-[#E11D2E]/10 text-[#E11D2E]'
                         }`}>
                           {article.category[isWelsh ? 'cy' : 'en']}
                         </span>
@@ -269,13 +269,13 @@ export default async function NewsPage({
                         </time>
                       </div>
 
-                      <h3 className="text-lg font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors line-clamp-2">
+                      <h3 className="text-lg font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors line-clamp-2">
                         {article.title[isWelsh ? 'cy' : 'en']}
                       </h3>
                       <p className="text-[#64748B] text-sm line-clamp-2 mb-4">
                         {article.excerpt[isWelsh ? 'cy' : 'en']}
                       </p>
-                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                      <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                         {t('readMore')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

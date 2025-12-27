@@ -21,7 +21,7 @@ export function ImpactSection() {
         </svg>
       ),
       link: '/community-sport',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Chwaraeon mewn Ysgolion' : 'Sport in Schools',
@@ -35,7 +35,7 @@ export function ImpactSection() {
         </svg>
       ),
       link: '/sport-in-schools',
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Chwaraeon Perfformiad' : 'Performance Sport',
@@ -49,7 +49,7 @@ export function ImpactSection() {
         </svg>
       ),
       link: '/performance-sport',
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
     },
   ];
 
@@ -74,10 +74,10 @@ export function ImpactSection() {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
             {isWelsh ? 'Ein Gwaith' : 'Our Work'}
           </span>
-          <h2 id="impact-heading" className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+          <h2 id="impact-heading" className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
             {isWelsh ? 'Gwneud Gwahaniaeth Ledled Cymru' : 'Making a Difference Across Wales'}
           </h2>
           <p className="text-lg text-[#64748B]">
@@ -92,7 +92,7 @@ export function ImpactSection() {
         <div className="grid grid-cols-3 gap-4 lg:gap-8 mb-12 lg:mb-16">
           {impactStats.map((stat, index) => (
             <div key={index} className="text-center p-4 lg:p-6 rounded-2xl bg-[#F8FAFC]">
-              <div className="text-2xl lg:text-4xl font-display font-bold text-[#B91C3C] mb-1">
+              <div className="text-2xl lg:text-4xl font-display font-bold text-[#E11D2E] mb-1">
                 {stat.value}
               </div>
               <p className="text-xs lg:text-sm text-[#64748B]">
@@ -114,7 +114,7 @@ export function ImpactSection() {
                 {area.icon}
               </div>
               
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors">
                 {area.title}
               </h3>
               
@@ -122,7 +122,7 @@ export function ImpactSection() {
                 {area.description}
               </p>
               
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                 {isWelsh ? 'Dysgu mwy' : 'Learn more'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

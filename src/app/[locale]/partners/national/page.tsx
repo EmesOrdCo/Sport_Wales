@@ -68,11 +68,11 @@ export default async function NationalPartnersPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#334155] overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#334155] overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#E11D2E] opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#E11D2E] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -118,7 +118,7 @@ export default async function NationalPartnersPage({
       {/* Find out about our National Partners */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Dysgwch am ein Partneriaid Cenedlaethol' : 'Find out about our National Partners'}
           </h2>
 
@@ -134,7 +134,7 @@ export default async function NationalPartnersPage({
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0F172A] group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? partner.nameWelsh : partner.name}
                 </h3>
               </div>
@@ -144,7 +144,7 @@ export default async function NationalPartnersPage({
       </section>
 
       {/* Want to help us achieve an Active Nation CTA */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
@@ -159,14 +159,14 @@ export default async function NationalPartnersPage({
               {isWelsh
                 ? 'Os gallwch ein helpu yn ein Gweledigaeth ar gyfer Chwaraeon, yna rydym am glywed gennych. Cysylltwch ag ni ac e-bostiwch ni ar '
                 : 'If you can help us in our Vision for Sport, then we want to hear from you. Please get in touch and email us on '}
-              <a href="mailto:communications@sport.wales" className="text-[#B91C3C] hover:underline">
+              <a href="mailto:communications@sport.wales" className="text-[#E11D2E] hover:underline">
                 communications@sport.wales
               </a>.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/vision"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Gweledigaeth ar gyfer Chwaraeon' : 'Vision for Sport'}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

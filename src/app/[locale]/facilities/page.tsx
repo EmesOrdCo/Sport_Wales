@@ -53,11 +53,11 @@ export default async function FacilitiesPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -105,7 +105,7 @@ export default async function FacilitiesPage({
             href="https://www.plasmenai.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left side - Content */}
@@ -118,7 +118,7 @@ export default async function FacilitiesPage({
                     ? 'Os ydych chi\'n chwilio am antur awyr agored, mae gan Plas Menai y cyfan. Dyma\'r Ganolfan Awyr Agored Genedlaethol i Gymru ac mae wedi\'i lleoli ar lannau Afon Menai yng Ngogledd Cymru.'
                     : 'If it\'s outdoor adventure you\'re after, Plas Menai has got it all. It is The National Outdoor Centre for Wales and is situated on the banks of the Menai Strait in North Wales.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Dysgwch fwy am y Ganolfan Awyr Agored Genedlaethol' : 'Find out more about the National Outdoor Centre'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -127,7 +127,7 @@ export default async function FacilitiesPage({
               </div>
 
               {/* Right side - Image placeholder */}
-              <div className="relative min-h-[250px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+              <div className="relative min-h-[250px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <svg className="w-16 h-16 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default async function FacilitiesPage({
       {/* Latest News */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Newyddion Diweddaraf' : 'Latest News'}
           </h2>
 
@@ -161,7 +161,7 @@ export default async function FacilitiesPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Blwyddyn mewn chwaraeon Cymru – 2025 wedi\'i ail-chwarae' : 'A year in Welsh sport – 2025 replayed'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -169,7 +169,7 @@ export default async function FacilitiesPage({
                     ? 'Gadewch i ni gael cipolwg ar rai o\'r uchafbwyntiau sydd wedi siapio chwaraeon Cymru.'
                     : 'Let\'s have a peek at just some of the highlights that have shaped Welsh sport.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -189,7 +189,7 @@ export default async function FacilitiesPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Y gwirfoddolwyr sy\'n helpu chwaraeon cymunedol i ffynnu ledled Cymru' : 'The volunteers helping community sport to thrive across Wales'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -197,7 +197,7 @@ export default async function FacilitiesPage({
                     ? 'Rydym yn dathlu rhai gwirfoddolwyr anhygoel ac yn gofyn iddynt beth mae gwirfoddoli yn ei roi iddynt yn ôl.'
                     : 'We are celebrating some amazing volunteers and asking them what volunteering gives them in return.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Cwrdd â\'r gwirfoddolwyr' : 'Meet the volunteers'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -217,7 +217,7 @@ export default async function FacilitiesPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Mae Iori yn cymryd yr awenau yng nghlwb marchogaeth Ceredigion diolch i Grant y Loteri Genedlaethol' : 'Iori takes the reins at Ceredigion horse-riding club thanks to National Lottery Grant'}
                 </h3>
                 <p className="text-[#64748B] text-sm mb-4">
@@ -225,7 +225,7 @@ export default async function FacilitiesPage({
                     ? 'Mae cryfder a hyder Iori yn codi gyda chyfarpar newydd a ddarparwyd gan y cyllid.'
                     : 'Iori\'s strength and confidence soars with new equipment provided by the funding.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

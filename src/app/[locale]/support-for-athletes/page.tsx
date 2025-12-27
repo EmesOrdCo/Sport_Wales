@@ -60,7 +60,7 @@ export default async function SupportForAthletesPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Hyfforddiant a Datblygiad' : 'Training & Development',
@@ -72,7 +72,7 @@ export default async function SupportForAthletesPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Cefnogaeth Ariannol' : 'Financial Support',
@@ -84,7 +84,7 @@ export default async function SupportForAthletesPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
     },
     {
       title: isWelsh ? 'Cefnogaeth Iechyd Meddwl' : 'Mental Health Support',
@@ -96,7 +96,7 @@ export default async function SupportForAthletesPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
   ];
 
@@ -133,11 +133,11 @@ export default async function SupportForAthletesPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -171,10 +171,10 @@ export default async function SupportForAthletesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Meysydd Cefnogaeth' : 'Support Areas'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Sut Rydym Yn Cefnogi Athletwyr' : 'How We Support Athletes'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -193,7 +193,7 @@ export default async function SupportForAthletesPage({
                 <div className={`w-12 h-12 rounded-xl ${area.color}/10 flex items-center justify-center text-${area.color.replace('bg-', '')} mb-6`}>
                   {area.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {area.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -209,10 +209,10 @@ export default async function SupportForAthletesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Gwasanaethau' : 'Our Services'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Gwasanaethau a Rhaglenni' : 'Services & Programmes'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -228,7 +228,7 @@ export default async function SupportForAthletesPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {service.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -244,10 +244,10 @@ export default async function SupportForAthletesPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#F59E0B] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#F4B400] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Arweiniad Teithio' : 'Travel Guidance'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Arweiniad Teithio ar gyfer Athletwyr' : 'Elite Travel Guidance'}
             </h2>
             <p className="text-lg text-[#64748B] mb-6">
@@ -288,7 +288,7 @@ export default async function SupportForAthletesPage({
                 key={index}
                 className="p-6 rounded-xl bg-white border border-[#E2E8F0]"
               >
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-3">
                   {item.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -312,10 +312,10 @@ export default async function SupportForAthletesPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Dysgu Mwy' : 'Learn More'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Chwaraeon Perfformiad' : 'Performance Sport'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -326,13 +326,13 @@ export default async function SupportForAthletesPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/performance-sport" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Chwaraeon Perfformiad' : 'Performance Sport'}
               </Link>
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#123F56] font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
               </Link>

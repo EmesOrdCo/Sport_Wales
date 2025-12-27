@@ -139,7 +139,7 @@ export default async function PrivacyPolicyPage({
   const content = isWelsh ? (
     <>
       <div className="bg-[#F8FAFC] rounded-2xl p-6 mb-8 border border-[#E2E8F0]">
-        <h2 className="text-xl font-display font-bold text-[#0F172A] mb-2">
+        <h2 className="text-xl font-display font-bold text-[#123F56] mb-2">
           Trosolwg o&apos;r Polisi Preifatrwydd
         </h2>
         <p className="text-[#64748B]">
@@ -159,9 +159,9 @@ export default async function PrivacyPolicyPage({
           <a 
             key={section.id}
             href={`#${section.id}`}
-            className="block p-4 rounded-xl border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all"
+            className="block p-4 rounded-xl border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all"
           >
-            <h3 className="font-semibold text-[#0F172A] mb-1">{section.title}</h3>
+            <h3 className="font-semibold text-[#123F56] mb-1">{section.title}</h3>
             <p className="text-sm text-[#64748B]">{section.description}</p>
           </a>
         ))}
@@ -383,7 +383,7 @@ export default async function PrivacyPolicyPage({
   ) : (
     <>
       <div className="bg-[#F8FAFC] rounded-2xl p-6 mb-8 border border-[#E2E8F0]">
-        <h2 className="text-xl font-display font-bold text-[#0F172A] mb-2">
+        <h2 className="text-xl font-display font-bold text-[#123F56] mb-2">
           Privacy Policy Overview
         </h2>
         <p className="text-[#64748B]">
@@ -403,9 +403,9 @@ export default async function PrivacyPolicyPage({
           <a 
             key={section.id}
             href={`#${section.id}`}
-            className="block p-4 rounded-xl border border-[#E2E8F0] hover:border-[#B91C3C] hover:shadow-md transition-all"
+            className="block p-4 rounded-xl border border-[#E2E8F0] hover:border-[#E11D2E] hover:shadow-md transition-all"
           >
-            <h3 className="font-semibold text-[#0F172A] mb-1">{section.title}</h3>
+            <h3 className="font-semibold text-[#123F56] mb-1">{section.title}</h3>
             <p className="text-sm text-[#64748B]">{section.description}</p>
           </a>
         ))}

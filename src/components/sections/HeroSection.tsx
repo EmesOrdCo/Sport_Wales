@@ -28,7 +28,7 @@ export function HeroSection() {
           <div className="stagger-children">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-[#F4B400] animate-pulse"></span>
               {isWelsh ? 'Croeso i Chwaraeon Cymru' : 'Welcome to Sport Wales'}
             </div>
 
@@ -38,7 +38,7 @@ export function HeroSection() {
               className="mb-6 lg:mb-8"
             >
               <span className="block text-white drop-shadow-lg">{isWelsh ? 'Galluogi' : 'Enabling'}</span>
-              <span className="block text-[#DC2626]">{isWelsh ? 'Chwaraeon' : 'Sport'}</span>
+              <span className="block text-[#E11D2E]">{isWelsh ? 'Chwaraeon' : 'Sport'}</span>
               <span className="block text-white drop-shadow-lg">{isWelsh ? 'i Ffynnu' : 'to Thrive'}</span>
             </h1>
 
@@ -65,10 +65,10 @@ export function HeroSection() {
           <div className="hidden lg:block">
             <div className="relative">
               {/* Main Mission Card - Dark with red accents */}
-              <div className="rounded-3xl p-8 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] border border-white/10 shadow-2xl">
+              <div className="rounded-3xl p-8 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] border border-white/10 shadow-2xl">
                 {/* Quote/Mission Statement */}
                 <div className="mb-6">
-                  <svg className="w-10 h-10 text-[#DC2626] mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10 text-[#E11D2E] mb-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <blockquote className="text-xl lg:text-2xl text-white font-display leading-relaxed mb-4">
@@ -127,7 +127,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating accent - Now crimson/red - Top right */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-[#B91C3C] to-[#DC2626] rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-[#E11D2E] to-[#E11D2E] rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '0.5s' }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +170,7 @@ export function HeroSection() {
 function ImpactCard({ icon, label, description }: { icon: React.ReactNode; label: string; description: string }) {
   return (
     <div className="flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors">
-      <div className="w-8 h-8 rounded-lg bg-[#DC2626]/20 flex items-center justify-center text-[#DC2626] flex-shrink-0">
+      <div className="w-8 h-8 rounded-lg bg-[#E11D2E]/20 flex items-center justify-center text-[#E11D2E] flex-shrink-0">
         {icon}
       </div>
       <div>

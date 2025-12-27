@@ -98,11 +98,11 @@ export default async function PartnersPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -159,7 +159,7 @@ export default async function PartnersPage({
         <div className="container">
           <Link
             href="/governance"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left side - Content */}
@@ -172,7 +172,7 @@ export default async function PartnersPage({
                     ? 'Dyma wybodaeth ddefnyddiol i helpu ein sefydliadau partner i ymdrechu tuag at lywodraethu da.'
                     : 'Here is some useful information to help our partner organisations strive towards good governance.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-4 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-4 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -181,7 +181,7 @@ export default async function PartnersPage({
               </div>
 
               {/* Right side - Image placeholder */}
-              <div className="relative min-h-[250px] lg:min-h-0 bg-gradient-to-br from-[#1E3A5F] to-[#0F172A]">
+              <div className="relative min-h-[250px] lg:min-h-0 bg-gradient-to-br from-[#123F56] to-[#123F56]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <svg className="w-20 h-20 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,7 +205,7 @@ export default async function PartnersPage({
               href="/partners/national"
               className="group block p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
             >
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors">
                 {isWelsh ? 'Partneriaid Cenedlaethol' : 'National Partners'}
               </h3>
               <p className="text-[#64748B] mb-4">
@@ -213,7 +213,7 @@ export default async function PartnersPage({
                   ? 'Mae ein Partneriaid Cenedlaethol yn hanfodol i Weledigaeth Chwaraeon Cymru...'
                   : 'Our National Partners are vital to the Sport Wales Vision...'}
               </p>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -226,7 +226,7 @@ export default async function PartnersPage({
               href="/clip"
               className="group block p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
             >
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors">
                 {isWelsh ? 'Croeso i CLIP - Adnodd Dysgu Chwaraeon Cymru' : 'Welcome to CLIP - A Sport Wales Learning Resource'}
               </h3>
               <p className="text-[#64748B] mb-4">
@@ -234,7 +234,7 @@ export default async function PartnersPage({
                   ? 'Mae defnyddwyr yn cael mynediad at gynnwys unigryw a digwyddiadau, a...'
                   : 'Users get access to unique content and events, a...'}
               </p>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+              <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -262,13 +262,13 @@ export default async function PartnersPage({
                   </svg>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                  <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                     {card.title}
                   </h3>
                   <p className="text-[#64748B] text-sm mb-4">
                     {card.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C] group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E] group-hover:gap-3 transition-all">
                     {isWelsh ? 'Darllen Mwy' : 'Read More'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -293,7 +293,7 @@ export default async function PartnersPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh 
                     ? 'Y gwirfoddolwyr sy\'n helpu chwaraeon cymunedol i ffynnu ledled Cymru' 
                     : 'The volunteers helping community sport to thrive across Wales'}
@@ -303,7 +303,7 @@ export default async function PartnersPage({
                     ? 'Rydym yn dathlu rhai gwirfoddolwyr anhygoel ac yn gofyn iddynt beth mae gwirfoddoli yn ei roi iddynt yn ôl.'
                     : 'We are celebrating some amazing volunteers and asking them what volunteering gives them in return.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Cwrdd â\'r gwirfoddolwyr' : 'Meet the volunteers'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -320,7 +320,7 @@ export default async function PartnersPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh 
                     ? 'Chwaraeon Cymru yn cyhoeddi rhaglen ddysgu newydd ar gyfer y sector chwaraeon' 
                     : 'Sport Wales announces new sport sector learning programme'}
@@ -330,7 +330,7 @@ export default async function PartnersPage({
                     ? 'Bydd rhaglen fawr o ddysgu a datblygu ar gyfer sector chwaraeon Cymru yn dechrau ym mis Ionawr 2020,...'
                     : 'A major programme of learning and development for the Welsh sport sector will begin in January 2020,...'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -347,7 +347,7 @@ export default async function PartnersPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh 
                     ? 'Deg mlynedd o raglen Llysgenhadon Ifanc yn creu modelau rôl ysbrydoledig' 
                     : 'Ten years of Young Ambassadors programme creating inspirational role models'}
@@ -357,7 +357,7 @@ export default async function PartnersPage({
                     ? 'Bydd pen-blwydd deg mlynedd rhaglen Llysgenhadon Ifanc yng Nghymru yn cael ei nodi mewn digwyddiad arbennig...'
                     : 'The ten year anniversary of the Young Ambassadors programme in Wales will be marked at a special event...'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

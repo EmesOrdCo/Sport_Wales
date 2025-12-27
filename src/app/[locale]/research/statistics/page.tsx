@@ -96,11 +96,11 @@ export default async function StatisticsPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -128,14 +128,14 @@ export default async function StatisticsPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#B91C3C] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#E11D2E] mb-8">
               {isWelsh ? 'Datganiadau sydd ar y gweill' : 'Upcoming releases'}
             </h2>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
-                <p className="text-lg text-[#0F172A]">
-                  <a href="#" className="text-[#B91C3C] hover:underline">
+                <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
+                <p className="text-lg text-[#123F56]">
+                  <a href="#" className="text-[#E11D2E] hover:underline">
                     {isWelsh ? 'Chwaraeon a Ffordd o Fyw Actif' : 'Sport & Active Lifestyles'}
                   </a>
                   {' – '}
@@ -153,17 +153,17 @@ export default async function StatisticsPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#B91C3C] mb-12">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#E11D2E] mb-12">
               {isWelsh ? 'Datganiadau blaenorol' : 'Previous releases'}
             </h2>
 
             {/* The National Survey for Wales */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Arolwg Cenedlaethol Cymru' : 'The National Survey for Wales'}
               </h3>
               <p className="text-lg text-[#64748B] mb-4">
-                <a href="https://gov.wales/national-survey-wales" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                <a href="https://gov.wales/national-survey-wales" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">
                   {isWelsh ? 'Arolwg Cenedlaethol Cymru' : 'The National Survey for Wales'}
                 </a>
                 {' '}
@@ -181,9 +181,9 @@ export default async function StatisticsPage({
                 {previousReports.map((report, index) => (
                   <li key={index}>
                     <div className="flex items-start gap-3">
-                      <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                      <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                       <div>
-                        <a href={report.href} className="text-lg text-[#B91C3C] hover:underline">
+                        <a href={report.href} className="text-lg text-[#E11D2E] hover:underline">
                           {report.title}
                           {report.note && <span className="text-[#64748B]"> {report.note}</span>}
                         </a>
@@ -191,9 +191,9 @@ export default async function StatisticsPage({
                           <ul className="mt-2 space-y-2 ml-4">
                             {report.corrections.map((correction, i) => (
                               <li key={i} className="flex items-start gap-3">
-                                <span className="w-2 h-2 mt-2.5 bg-[#B91C3C] rounded-full flex-shrink-0"></span>
+                                <span className="w-2 h-2 mt-2.5 bg-[#E11D2E] rounded-full flex-shrink-0"></span>
                                 <p className="text-[#64748B]">
-                                  {correction.label && <span className="font-bold text-[#0F172A]">{correction.label}</span>}
+                                  {correction.label && <span className="font-bold text-[#123F56]">{correction.label}</span>}
                                   {' '}{correction.text}
                                 </p>
                               </li>
@@ -215,7 +215,7 @@ export default async function StatisticsPage({
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Left side - Content */}
-            <div className="bg-[#1E3A5F] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
+            <div className="bg-[#123F56] p-8 lg:p-12 flex flex-col justify-between min-h-[350px]">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
                   {isWelsh ? 'Ymchwil a Mewnwelediad' : 'Research and Insight'}
@@ -229,7 +229,7 @@ export default async function StatisticsPage({
               <div>
                 <Link
                   href="/research"
-                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 </Link>

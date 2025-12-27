@@ -54,11 +54,11 @@ export default async function NationalCentrePage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -88,7 +88,7 @@ export default async function NationalCentrePage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Cyfleusterau' : 'Facilities'}
             </h2>
           </div>
@@ -96,7 +96,7 @@ export default async function NationalCentrePage({
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
             {/* Main Arena */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Prif Arena' : 'Main Arena'}
               </h3>
               <p className="text-[#64748B]">
@@ -108,7 +108,7 @@ export default async function NationalCentrePage({
 
             {/* Jubilee Hall */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Neuadd Jiwbilî' : 'Jubilee Hall'}
               </h3>
               <p className="text-[#64748B]">
@@ -120,7 +120,7 @@ export default async function NationalCentrePage({
 
             {/* Fitness Studio */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Stiwdio Ffitrwydd' : 'Fitness Studio'}
               </h3>
               <p className="text-[#64748B]">
@@ -132,7 +132,7 @@ export default async function NationalCentrePage({
 
             {/* National Judo Centre */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Canolfan Jiwdo Genedlaethol' : 'National Judo Centre'}
               </h3>
               <p className="text-[#64748B]">
@@ -144,7 +144,7 @@ export default async function NationalCentrePage({
 
             {/* Meeting Rooms */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Ystafelloedd Cyfarfod' : 'Meeting Rooms'}
               </h3>
               <p className="text-[#64748B]">
@@ -156,7 +156,7 @@ export default async function NationalCentrePage({
 
             {/* High Performance Area */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Ardal Perfformiad Uchel' : 'High Performance Area'}
               </h3>
               <p className="text-[#64748B]">
@@ -168,7 +168,7 @@ export default async function NationalCentrePage({
 
             {/* Hockey Pitch */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Cae Hoci' : 'Hockey Pitch'}
               </h3>
               <p className="text-[#64748B]">
@@ -180,7 +180,7 @@ export default async function NationalCentrePage({
 
             {/* Grass Pitch */}
             <div className="p-6 lg:p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                 {isWelsh ? 'Cae Glaswellt' : 'Grass Pitch'}
               </h3>
               <p className="text-[#64748B]">
@@ -192,13 +192,13 @@ export default async function NationalCentrePage({
           </div>
 
           {/* Booking CTA */}
-          <div className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-8 lg:p-10 text-center">
+          <div className="bg-gradient-to-br from-[#123F56] to-[#1E4A62] rounded-2xl p-8 lg:p-10 text-center">
             <p className="text-lg text-white/90 mb-4">
               {isWelsh ? 'I archebu unrhyw un o\'r uchod, ffoniwch' : 'To book any of the above, please call'}
             </p>
             <a
               href="tel:03003003123"
-              className="inline-flex items-center gap-2 text-2xl font-display font-bold text-white hover:text-[#B91C3C] transition-colors"
+              className="inline-flex items-center gap-2 text-2xl font-display font-bold text-white hover:text-[#E11D2E] transition-colors"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -213,14 +213,14 @@ export default async function NationalCentrePage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12 text-center">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12 text-center">
               {isWelsh ? 'Lleoliad a Chysylltiadau' : 'Location and Contact'}
             </h2>
             
             <div className="bg-white rounded-2xl p-8 lg:p-10 border border-[#E2E8F0] shadow-lg">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+                  <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                     {isWelsh ? 'Canolfan Genedlaethol Chwaraeon Cymru' : 'Sport Wales National Centre'}
                   </h3>
                   <div className="space-y-3 text-[#64748B]">
@@ -230,12 +230,12 @@ export default async function NationalCentrePage({
                       CF11 9SW
                     </p>
                     <div>
-                      <a href="mailto:nationalcentre@sport.wales" className="text-[#B91C3C] hover:underline">
+                      <a href="mailto:nationalcentre@sport.wales" className="text-[#E11D2E] hover:underline">
                         nationalcentre@sport.wales
                       </a>
                     </div>
                     <div>
-                      <a href="tel:03003003123" className="text-[#B91C3C] hover:underline font-medium">
+                      <a href="tel:03003003123" className="text-[#E11D2E] hover:underline font-medium">
                         0300 3003123
                       </a>
                     </div>
@@ -243,7 +243,7 @@ export default async function NationalCentrePage({
                 </div>
                 
                 <div>
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-4">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-4">
                     {isWelsh ? 'Parcio' : 'Parking'}
                   </h4>
                   <p className="text-[#64748B] mb-4">
@@ -251,7 +251,7 @@ export default async function NationalCentrePage({
                       ? 'Mae maes parcio gyda pharcio anableddau o flaen Canolfan Genedlaethol Chwaraeon Cymru, mae parcio ar sail cyntaf i\'r cyntaf ac yn rhad ac am ddim wrth ddefnyddio\'r ganolfan.'
                       : 'There is a car park with disabled parking at the front of Sport Wales National Centre, parking is on a first come first serve basis and is free while using the centre.'}
                   </p>
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-4">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-4">
                     {isWelsh ? 'Trên' : 'Train'}
                   </h4>
                   <p className="text-[#64748B]">
@@ -267,7 +267,7 @@ export default async function NationalCentrePage({
                   href="https://www.google.com/maps/search/?api=1&query=Sophia+Gardens+Cardiff+CF11+9SW"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
                 >
                   {isWelsh ? 'Gweld ar Google Maps' : 'Find on Google Maps'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,10 +285,10 @@ export default async function NationalCentrePage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="text-center mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Newyddion' : 'News'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Y Diweddaraf o\'r Ganolfan' : 'Latest from the Centre'}
             </h2>
           </div>
@@ -326,10 +326,10 @@ export default async function NationalCentrePage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Archebwch Nawr' : 'Book Now'}
             </span>
             <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-4">
@@ -343,7 +343,7 @@ export default async function NationalCentrePage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/facilities" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Ein Cyfleusterau' : 'Our Facilities'}
               </Link>

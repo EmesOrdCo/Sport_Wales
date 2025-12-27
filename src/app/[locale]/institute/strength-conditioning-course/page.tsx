@@ -10,10 +10,10 @@ export default function StrengthConditioningCoursePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#B91C3C] opacity-10 blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#B91C3C] opacity-10 blur-2xl"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-[#E11D2E] opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-[#E11D2E] opacity-10 blur-2xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -49,7 +49,7 @@ export default function StrengthConditioningCoursePage() {
           <div className="prose prose-lg prose-slate max-w-none">
             
             {/* Course Title */}
-            <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               UK Strength and Conditioning Association's Level 3 Strength and Conditioning (S&C) Trainer Award
             </h2>
             
@@ -71,20 +71,20 @@ export default function StrengthConditioningCoursePage() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-6">
-              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors">
+              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors">
                 Apply for the Cardiff course
               </a>
-              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#0F172A] text-white font-semibold hover:bg-[#1E293B] transition-colors">
+              <a href="#" className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#123F56] text-white font-semibold hover:bg-[#1E4A62] transition-colors">
                 Apply for the Carmarthen course
               </a>
             </div>
 
             <p className="text-[#64748B] mb-12">
-              To speak to the course leader email <a href="mailto:strengthandconditioning@sport.wales" className="text-[#B91C3C] hover:underline">strengthandconditioning@sport.wales</a>
+              To speak to the course leader email <a href="mailto:strengthandconditioning@sport.wales" className="text-[#E11D2E] hover:underline">strengthandconditioning@sport.wales</a>
             </p>
 
             {/* What will I learn */}
-            <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">What will I learn?</h2>
+            <h2 className="text-2xl font-display font-bold text-[#123F56] mb-4">What will I learn?</h2>
             
             <p className="text-[#475569] mb-4">
               As a S&C Trainer, you will be taught the skills required to be fully qualified to deliver physical training to athletes taking part in sport (all the way from grassroots to elite level) in order to improve their performance and prevent injuries.
@@ -127,7 +127,7 @@ export default function StrengthConditioningCoursePage() {
             </p>
 
             {/* What does the course entail */}
-            <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">What does the course entail – what will be required of me?</h2>
+            <h2 className="text-2xl font-display font-bold text-[#123F56] mb-4">What does the course entail – what will be required of me?</h2>
             
             <p className="text-[#475569] mb-6">
               You will be required to complete 5 assessments. The first 3 assessments will be practical and completed at the face-to-face sessions with your peers on the course. Once you have completed these, you are required to deliver a 12-week program to someone outside your course. The final assessments will consist of creating a portfolio and presenting to your course leader whilst you plan, deliver, and reflect on the 12-week program.
@@ -150,7 +150,7 @@ export default function StrengthConditioningCoursePage() {
             <p className="text-[#475569] mb-12">Deliver and submit evidence of programme changes, and reflective log. You will be required to present your reflections and complete an anatomy and physiology quiz.</p>
 
             {/* Time commitment */}
-            <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">What is the time commitment?</h2>
+            <h2 className="text-2xl font-display font-bold text-[#123F56] mb-4">What is the time commitment?</h2>
             
             <p className="text-[#475569] mb-4">In person sessions:</p>
 
@@ -173,26 +173,26 @@ export default function StrengthConditioningCoursePage() {
             </p>
 
             {/* FAQs */}
-            <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">Do you cater for specific learning needs?</h3>
+            <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">Do you cater for specific learning needs?</h3>
             <p className="text-[#475569] mb-8">
               Yes. Please let us know if you have any specific learning requirements or ongoing injuries which may impact your ability to take part in a practical session, and we will cater for these on your course.
             </p>
 
-            <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">Will this allow me to be insured/covered to deliver in a gym-based environment?</h3>
+            <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">Will this allow me to be insured/covered to deliver in a gym-based environment?</h3>
             <p className="text-[#475569] mb-8">
               Yes! If you already work through a NGB or school, the qualification should allow you deliver S&C as part of your employment and be covered on their existing liability policy. You can also decide to take out private insurance if you would like to do your own private S&C work outside of your organisation.
             </p>
 
-            <h3 className="text-xl font-display font-bold text-[#0F172A] mb-2">What if I can't make one of the weekend?</h3>
+            <h3 className="text-xl font-display font-bold text-[#123F56] mb-2">What if I can't make one of the weekend?</h3>
             <p className="text-[#475569] mb-12">
               Whilst we recommend attending all face-to-face days to get the most out of the course, you will still be able to complete the qualification if you cannot attend one of the days/weekends. You may need to complete some catch up independent work at home, or come in during a weekday if you miss one of the practical assessments.
             </p>
 
             {/* Blog link */}
             <div className="bg-[#F8FAFC] rounded-lg p-6 mb-8">
-              <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2">Why has Sport Wales decided to launch this qualification?</h3>
+              <h3 className="text-lg font-display font-bold text-[#123F56] mb-2">Why has Sport Wales decided to launch this qualification?</h3>
               <p className="text-[#64748B] mb-4">Blog - Seb Moran on why this course is being delivered, why now, and how it's hoped it'll benefit the Welsh sport system</p>
-              <Link href="/institute/strength-conditioning-blog" className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:underline">
+              <Link href="/institute/strength-conditioning-blog" className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:underline">
                 Read More
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -209,7 +209,7 @@ export default function StrengthConditioningCoursePage() {
         <div className="container text-center">
           <Link
             href="/institute"
-            className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+            className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
           >
             Back to The Sport Wales Institute
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

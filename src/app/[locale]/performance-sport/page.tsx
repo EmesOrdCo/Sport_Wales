@@ -77,11 +77,11 @@ export default async function PerformanceSportPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section with Featured Welsh Olympic Athletes */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -121,11 +121,11 @@ export default async function PerformanceSportPage({
         <div className="container">
           <Link
             href="/performance-sport/welsh-olympic-athletes"
-            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] hover:shadow-2xl transition-all duration-500"
+            className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2">
               {/* Image placeholder */}
-              <div className="aspect-video lg:aspect-auto relative bg-gradient-to-br from-[#1E293B] to-[#334155] flex items-center justify-center">
+              <div className="aspect-video lg:aspect-auto relative bg-gradient-to-br from-[#1E4A62] to-[#334155] flex items-center justify-center">
                 <div className="text-center p-8">
                   <svg className="w-16 h-16 text-white/30 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -136,7 +136,7 @@ export default async function PerformanceSportPage({
 
               {/* Content */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4 group-hover:text-[#B91C3C] transition-colors">
+                <h2 className="text-2xl lg:text-3xl font-display font-bold !text-white mb-4 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Athletwyr Olympaidd Cymru ym Mharis 2024' : 'Welsh Olympic Athletes at Paris 2024'}
                 </h2>
                 <p className="text-white/70 mb-6 leading-relaxed">
@@ -144,7 +144,7 @@ export default async function PerformanceSportPage({
                     ? 'Gadewch i ni eich cyflwyno i\'r athletwyr Cymreig a gynrychiolodd Tîm GB ym Mharis 2024.'
                     : 'Let us introduce you to the Welsh athletes who will represent Team GB at Paris 2024.'}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -166,13 +166,13 @@ export default async function PerformanceSportPage({
                 href={card.href as any}
                 className="group p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl hover:border-transparent transition-all duration-300"
               >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#E11D2E] transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-[#64748B] mb-4">
                   {card.description}
                 </p>
-                <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold text-sm group-hover:gap-3 transition-all">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -220,13 +220,13 @@ export default async function PerformanceSportPage({
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                  <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                     {article.title}
                   </h3>
                   <p className="text-[#64748B] text-sm mb-4">
                     {article.description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold text-sm group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold text-sm group-hover:gap-3 transition-all">
                     {isWelsh ? 'Darllen Mwy' : 'Read More'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

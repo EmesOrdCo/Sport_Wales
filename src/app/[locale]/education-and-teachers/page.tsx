@@ -60,7 +60,7 @@ export default async function EducationAndTeachersPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Rhaglenni Hyfforddi' : 'Training Programmes',
@@ -72,7 +72,7 @@ export default async function EducationAndTeachersPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
     {
       title: isWelsh ? 'Rhaglenni Ysgolion' : 'School Programmes',
@@ -84,7 +84,7 @@ export default async function EducationAndTeachersPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       ),
-      color: 'bg-[#F59E0B]',
+      color: 'bg-[#F4B400]',
     },
     {
       title: isWelsh ? 'Cymorth a Chyngor' : 'Support & Guidance',
@@ -96,7 +96,7 @@ export default async function EducationAndTeachersPage({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
       ),
-      color: 'bg-[#B91C3C]',
+      color: 'bg-[#E11D2E]',
     },
   ];
 
@@ -135,11 +135,11 @@ export default async function EducationAndTeachersPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -173,10 +173,10 @@ export default async function EducationAndTeachersPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Ein Adnoddau' : 'Our Resources'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Adnoddau i Athrawon ac Ysgolion' : 'Resources for Teachers & Schools'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -195,7 +195,7 @@ export default async function EducationAndTeachersPage({
                 <div className={`w-12 h-12 rounded-xl ${resource.color}/10 flex items-center justify-center text-${resource.color.replace('bg-', '')} mb-6`}>
                   {resource.icon}
                 </div>
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {resource.title}
                 </h3>
                 <p className="text-[#64748B]">
@@ -211,10 +211,10 @@ export default async function EducationAndTeachersPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-3xl mb-12">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Rhaglenni' : 'Programmes'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Rhaglenni Arbenigol' : 'Specialist Programmes'}
             </h2>
             <p className="text-lg text-[#64748B]">
@@ -230,7 +230,7 @@ export default async function EducationAndTeachersPage({
                 key={index}
                 className="p-6 lg:p-8 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-3">
                   {programme.title}
                 </h3>
                 <p className="text-[#64748B] mb-4">
@@ -241,7 +241,7 @@ export default async function EducationAndTeachersPage({
                     href={programme.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:underline"
+                    className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:underline"
                   >
                     {isWelsh ? 'Mynediad' : 'Access'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -259,10 +259,10 @@ export default async function EducationAndTeachersPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Fframwaith Sylfaenau' : 'Foundations Framework'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Fframwaith Sylfaenau Cymru: Canllaw Arfer Da' : 'Foundations Framework Wales: A Good Practice Guide'}
             </h2>
             <p className="text-xl text-[#64748B] mb-4 leading-relaxed">
@@ -283,7 +283,7 @@ export default async function EducationAndTeachersPage({
 
             {/* Why has the Foundations Framework been developed? */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Pam mae\'r Fframwaith Sylfaenau wedi\'i ddatblygu?' : 'Why has the Foundations Framework been developed?'}
               </h3>
               <p className="text-lg text-[#64748B] mb-4 leading-relaxed">
@@ -305,28 +305,28 @@ export default async function EducationAndTeachersPage({
 
             {/* Our National Picture */}
             <div className="mb-12 p-8 rounded-2xl bg-white border border-[#E2E8F0]">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Ein Darlun Cenedlaethol - Y Sefyllfa Bresennol' : 'Our National Picture - The Current State of Affairs'}
               </h3>
               <ul className="space-y-4 text-lg text-[#64748B] mb-6">
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Mae\'r gostyngiad mewn lefelau gweithgarwch corfforol yn dechrau cyn gynted ag oedran' : 'The decline in physical activity levels begins as early as age'} <strong>7</strong>.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Dim ond' : 'Just'} <strong>22%</strong> {isWelsh ? 'o bobl ifanc 8-11 oed sy\'n cyrraedd canllawiau gweithgarwch corfforol.' : 'of 8–11-year-olds meet physical activity guidelines.'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span><strong>{isWelsh ? '1 mewn 4 o blant' : '1 in 4 children'}</strong> {isWelsh ? 'oed 4-5 (27.1%) yng Nghymru sy\'n ordewig neu dros bwysau.' : 'aged 4–5 (27.1%) in Wales are obese or overweight.'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span><strong>{isWelsh ? '1 mewn 3 o ddisgyblion' : '1 in 3 pupils'}</strong> {isWelsh ? '(31%) yng Nghymru nad ydynt yn hyderus wrth roi cynnig ar chwaraeon newydd.' : '(31%) in Wales are not confident trying new sports.'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Hyd yn oed o oedran ifanc, mae llawer o bobl ifanc yng Nghymru yn adrodd am' : 'Even from an early age, many young people in Wales report'} <strong>{isWelsh ? 'hyder a mwynhad isel' : 'low confidence and enjoyment'}</strong> {isWelsh ? 'mewn chwaraeon, ac nid ydynt bob amser yn teimlo bod ganddynt y sgiliau i gymryd rhan.' : 'in sport, and don\'t always feel that they have the skills to participate.'}</span>
                 </li>
               </ul>
@@ -338,7 +338,7 @@ export default async function EducationAndTeachersPage({
             </div>
 
             {/* What do children want? */}
-            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] text-white">
+            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white">
               <h3 className="text-2xl font-display font-bold mb-6">
                 {isWelsh ? 'Beth mae plant eisiau?' : 'What do children want?'}
               </h3>
@@ -373,7 +373,7 @@ export default async function EducationAndTeachersPage({
 
             {/* The Three Foundations */}
             <div className="mb-12">
-              <h2 className="text-3xl font-display font-bold text-[#0F172A] mb-4">
+              <h2 className="text-3xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Y Tair Sylfaen' : 'The Three Foundations'}
               </h2>
               <p className="text-lg text-[#64748B] mb-8 leading-relaxed">
@@ -383,8 +383,8 @@ export default async function EducationAndTeachersPage({
               </p>
 
               {/* Foundation 1: Safe */}
-              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#B91C3C]">
-                <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#E11D2E]">
+                <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                   {isWelsh ? 'Sylfaen 1: Diogel' : 'Foundation 1: Safe'}
                 </h3>
                 <p className="text-lg text-[#64748B] mb-6 font-semibold">
@@ -395,55 +395,55 @@ export default async function EducationAndTeachersPage({
                 </p>
                 <ul className="space-y-4 text-[#64748B]">
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Fel hwylusydd, dylech gael gwybodaeth am bolisïau ac weithdrefnau diogelu a gwybod pwy yw\'r arweinydd diogelu penodedig ar gyfer eich sefydliad.' : 'As a facilitator, you should have knowledge of safeguarding policies and procedures and know who the designated safeguarding lead for your organisation is.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Mae hyn yn cynnwys sicrhau bod yr amgylchedd yn cyrraedd y safon diogelu gofynnol ac bod digon o hyfforddwyr i sicrhau arfer diogel.' : 'This includes ensuring the environment meets the required safeguarding standard and has a sufficient number of coaches to ensure safe practice.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech greu amgylchedd lle gall plentyn wynebu heriau ac mae cyfle iddo ddod o hyd i atebion.' : 'You should create an environment where a child can face challenges and has the opportunity to come up with solutions.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Ystyriwch y heriau yn seiliedig ar anghenion datblygiadol a phrofiadau gorffennol y plentyn.' : 'Consider the challenges based on the developmental needs and past experiences of the child.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai pob plentyn gael campwr: oedolyn sy\'n poeni am eu mynediad i chwaraeon. Felly, treuliwch amser i ddod i adnabod eich cyfranogwyr a rhoi cefnogaeth i blant pan fyddant yn wynebu heriau allanol neu\'n cael trafferth i gymryd rhan mewn chwaraeon a gweithgarwch corfforol.' : 'Every child should have a champion: an adult who cares about their access into sport. So, spend time getting to know your participants and provide support to children when they are facing external challenges or are struggling to participate in sport and physical activity.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech sicrhau eich bod yn creu amgylchedd sy\'n caniatáu i blentyn deimlo\'n ddiogel i fynegi ei emosiynau am gymryd rhan yn eich gweithgaredd.' : 'You should ensure you create an environment which allows a child to feel safe to express their emotions about participating in your activity.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Byddwch yn groesawgar ac yn empathig i bawb.' : 'Be welcoming and empathetic to all.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Cymerwch amser i ddeall, dathlu a darparu ar gyfer amrywiaeth ac unigrywedd plant a\'u teuluoedd.' : 'Take time to understand, celebrate and cater for the diversity and uniqueness of children and their families.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Creuwch amgylchedd croesawgar lle mae plentyn a\'u oedolyn cyfrifol yn teimlo eu bod yn perthyn.' : 'Create a welcoming environment where a child and their responsible adult feel like they belong.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech greu diwylliant cefnogol i bawb lle mae rôl oedolion cyfrifol yn cael eu croesawu a\'u parchu.' : 'You should create a supportive culture for all where the role of responsible adults is welcomed and respected.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Gwnewch hyn trwy fabwysiadu agwedd gyson i ymddygiad, adlewyrchu a chanmol ymddygiad positif ac annog cyfranogwyr i barchu pawb, bod yn wydn ac colli gydag urddas.' : 'Do this by adopting a consistent approach to behaviour, mirroring and praising positive behaviour and encouraging participants to respect everyone, be resilient and lose with dignity.'}</span>
                   </li>
                 </ul>
               </div>
 
               {/* Foundation 2: Enjoyable */}
-              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#F59E0B]">
-                <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#F4B400]">
+                <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                   {isWelsh ? 'Sylfaen 2: Hwyl' : 'Foundation 2: Enjoyable'}
                 </h3>
                 <p className="text-lg text-[#64748B] mb-6 font-semibold">
@@ -454,59 +454,59 @@ export default async function EducationAndTeachersPage({
                 </p>
                 <ul className="space-y-4 text-[#64748B]">
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech ddeall bod plant yn dysgu mewn gwahanol ffyrdd.' : 'You should understand that children learn in different ways.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai gweithgareddau fod yn gynhwysol, hygyrch ac addas i bawb.' : 'Activities should be inclusive, accessible and suitable for all.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylid annog plant i gyfrannu at y gweithgareddau a theimlo\'n gyfforddus yn yr amgylchedd i rannu eu safbwyntiau.' : 'Children should be encouraged to contribute to the activities and feel comfortable in the environment to share their views.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech sylwi ar gyfathrebu llafar a di-lafar.' : 'You should take notice of both verbal and non-verbal communication.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai\'r gweithgareddau annog ymgysylltiad teuluol ac agwedd gymdeithasol chwaraeon.' : 'The activities should encourage family engagement and the social aspect of sport.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Gan fod yn arweinydd hwyl, hapus ac addas, dylech sicrhau bod pob profiad yn brofiad gwych, fel bod plant eisiau dychwelyd dro ar ôl tro.' : 'Being a fun, happy and approachable leader, you should ensure every experience is a great experience, so children to want to return again and again.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Heb weiddi neu ddefnyddio signalau garw, dylech ddarparu cyfarwyddiadau clir, cryno a chefnogi agwedd dawel sy\'n cynnal rheolaeth ac awdurdod.' : 'Without shouting or using harsh signals, you should provide clear, concise instructions and endorse a calm approach that maintains control and authority.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Osgoi cyfnodau o anweithgarwch, fel ymarferion neu sesiynau lle mae plant angen ciwio i aros eu tro.' : 'Avoid periods of inactivity, such as drills or sessions where children need to queue to wait their turn.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Gwnewch amser ar gyfer gweithgareddau anstrwythuredig yn ystod sesiynau i alluogi plant i chwarae a bod yn greadigol wrth ddysgu sgiliau newydd.' : 'Make time for unstructured activities during sessions to allow children to play and be creative while learning new skills.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Darparwch ganmoliaeth, annog ac atgyfnerthiad positif.' : 'Provide praise, encouragement and positive reinforcement.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Canolbwyntio ar y broses dros y canlyniad, gan gynnwys cydnabod gwaith caled plentyn, ei amcanion a\'i greadigrwydd.' : 'Focus on the process over the outcome, including recognising a child\'s hard work, intentions and creativity.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#F59E0B] mr-2">•</span>
+                    <span className="font-semibold text-[#F4B400] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai eich gweithgareddau ddatblygu hyder, cymhelliant a gwydnwch plant, fel eu bod yn barod i roi cynnig ar weithgareddau newydd a derbyn heriau newydd.' : 'Your activities should develop the confidence, motivation and resilience of children, so they are willing to try new activities and embrace new challenges.'}</span>
                   </li>
                 </ul>
               </div>
 
               {/* Foundation 3: Developmental */}
-              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#B91C3C]">
-                <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <div className="mb-10 p-8 rounded-2xl bg-white border-2 border-[#E11D2E]">
+                <h3 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                   {isWelsh ? 'Sylfaen 3: Datblygiadol' : 'Foundation 3: Developmental'}
                 </h3>
                 <p className="text-lg text-[#64748B] mb-6 font-semibold">
@@ -517,70 +517,70 @@ export default async function EducationAndTeachersPage({
                 </p>
                 <ul className="space-y-4 text-[#64748B]">
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai gweithgareddau gael eu siâp a\'u cyflwyno gan hyfforddwyr cymwysedig, gwirfoddolwyr, arweinwyr ac athrawon, sy\'n deall pwysigrwydd gweithgarwch corfforol i blant.' : 'Activities should be shaped and delivered by qualified coaches, volunteers, leaders and teachers, who understand the importance of physical activity for children.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Fel cyflwynydd, dylech ddarparu adborth ystyrlon, dealladwy a gofyn cwestiynau i\'r cyfranogwyr i wirio eu bod yn deall.' : 'As a deliverer, you should provide meaningful, understandable feedback and ask questions of the participants to check that they understand.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylech sicrhau bod plant yn gallu adeiladu amrywiaeth o sgiliau symud sylfaenol trwy amrywiaeth o weithgareddau corfforol a chwaraeon gwahanol.' : 'You should ensure that children are able to build a variety of fundamental movement skills through a range of different physical and sporting activities.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Gwnewch hyn trwy gynllunio rhaglenni sy\'n addas i ddatblygiad a chael gwybodaeth am sut y gall sgiliau trosglwyddadwy o wahanol chwaraeon fanteisio ar unigolyn.' : 'Do this by planning programmes which are developmentally appropriate and having knowledge about how transferable skills from different sports can benefit an individual.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Waeth beth yw\'r canlyniad perfformiad, dylech annog plant i gefnogi ei gilydd wrth iddynt archwilio eu symudiad o fewn gweithgarwch corfforol.' : 'Regardless of the performance outcome, you should encourage children to support each other while they explore their movement within physical activity.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Byddwch yn ymwybodol o deimladau, anghenion a risgiau cyfranogwyr wrth iddynt ddatblygu eu sgiliau.' : 'Be aware of the feelings, needs, and risks of participants while they are developing their skills.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai strwythur eich gweithgareddau ganiatáu digon o amser i blant fod yn weithgar.' : 'The structure of your activities should allow ample time for children to be active.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai eich amgylcheddau hyrwyddo symudiad dyddiol, a dylai hwyluswyr ddeall pwysigrwydd gweithgarwch corfforol rheolaidd i blant.' : 'Your environments should promote daily movement, and facilitators should understand the importance of regular physical activity for children.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Wrth gynllunio ac asesu eich gweithgareddau, dylech ystyried cam datblygiadol cymdeithasol, emosiynol, gwybyddol a chorfforol y plentyn.' : 'When planning and assessing your activities, you should take into consideration the child\'s stage of social, emotional, cognitive, and physical development.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai eich gweithgareddau herio a chefnogi gallu a datblygiad cyfannol y plentyn.' : 'Your activities should challenge and support the ability and holistic development of the child.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Mae plant yn datblygu ar gyfraddau gwahanol. Felly, gwahaniaethwch eich gweithgareddau yn seiliedig ar anghenion datblygiadol y plentyn, nid yn seiliedig ar oedran.' : 'Children develop at different rates. So, differentiate your activities based on the developmental needs of the child, not based on age.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Dylai eich amgylchedd fod yn lle diogel lle gall plant wneud camgymeriadau a chael arweiniad ar sut i ddysgu ohonynt.' : 'Your environment should be a safe space where children can make mistakes and be guided on how to learn from them.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Darparwch brofiadau gwahanol i blant trwy gael eich gweithgareddau mewn amgylcheddau gwahanol gan ddefnyddio amrywiaeth o offer, gan ddefnyddio pob cyfle i symud a bod yn weithgar.' : 'Provide children with different experiences by having your activities in different environments using a range of equipment, using every opportunity to be moving and active.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Cynnwys y plant a\'u oedolyn cyfrifol wrth ddewis gweithgareddau.' : 'Involve the children and their responsible adult in the selection of activities.'}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span>{isWelsh ? 'Mae angen i chi hefyd sicrhau eich bod yn dewis offer addas sy\'n cyfateb i lefelau datblygiadol a sgil y plentyn.' : 'You also need to make sure you are choosing suitable equipment matched to the child\'s developmental and skill levels.'}</span>
                   </li>
                 </ul>
               </div>
 
               {/* Download PDF Link */}
-              <div className="p-6 rounded-xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] text-white text-center">
+              <div className="p-6 rounded-xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white text-center">
                 <h3 className="text-xl font-display font-bold mb-4">
                   {isWelsh ? 'Fframwaith Sylfaenau: Canllaw Arfer Da' : 'Foundations Framework: A Good Practice Guide'}
                 </h3>
@@ -588,7 +588,7 @@ export default async function EducationAndTeachersPage({
                   href="https://www.sport.wales/download/file/3222/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-white text-[#B91C3C] font-semibold hover:bg-[#F8FAFC] transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-white text-[#E11D2E] font-semibold hover:bg-[#F8FAFC] transition-colors"
                 >
                   {isWelsh ? 'Lawrlwytho\'r PDF [4.02MB]' : 'Download the PDF [4.02MB]'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -605,10 +605,10 @@ export default async function EducationAndTeachersPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Dull Addysgu' : 'Teaching Approach'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Gwneud y Gorau o Fi: Dull Canolbwyntio ar Blentyn' : 'Making the Most of Me: A Child Centred Approach'}
             </h2>
             <p className="text-lg text-[#64748B] mb-4 leading-relaxed italic">
@@ -619,7 +619,7 @@ export default async function EducationAndTeachersPage({
 
             {/* What is a Child Centred Approach? */}
             <div className="mb-12">
-              <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Beth yw Dull Canolbwyntio ar Blentyn?' : 'What is a Child Centred Approach?'}
               </h3>
               <p className="text-lg text-[#64748B] mb-4 leading-relaxed">
@@ -629,11 +629,11 @@ export default async function EducationAndTeachersPage({
               </p>
               <ul className="space-y-3 text-lg text-[#64748B] mb-6">
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Mae sesiynau / gwersi yn cael eu trefnu o amgylch y plentyn a\'u hanghenion a\'u diddordebau personol.' : 'Sessions / lessons are organised around the child and their personal needs and interests.'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Mae Athrawon a Hyfforddwyr yno i ddarparu cefnogaeth a hwyluso dysgu\'r plentyn, ond plant sy\'n penderfynu cyfeiriad eu dysgu eu hunain gan ddilyn eu chwilfrydedd naturiol, diddordebau a phasiynau.' : 'Teachers and Coaches are there to provide support and facilitate the child\'s learning but children determine the direction of their own learning following their natural curiosities, interests and passions.'}</span>
                 </li>
               </ul>
@@ -641,12 +641,12 @@ export default async function EducationAndTeachersPage({
 
             {/* Making The Most Of The Experience */}
             <div className="mb-12 p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Gwneud y Gorau o\'r Profiad' : 'Making The Most Of The Experience'}
               </h2>
               
               <div className="mb-6">
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                   {isWelsh ? 'Pam mae Dull Canolbwyntio ar Blentyn yn bwysig?' : 'Why is a Child Centred Approach important?'}
                 </h3>
                 <p className="text-lg text-[#64748B] mb-4 leading-relaxed">
@@ -662,7 +662,7 @@ export default async function EducationAndTeachersPage({
               </div>
 
               <div className="mb-6">
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                   {isWelsh ? 'Beth yw buddion dull canolbwyntio ar blentyn?' : 'What are the benefits of a child centred approach?'}
                 </h3>
                 <p className="text-lg text-[#64748B] mb-4 italic">
@@ -675,8 +675,8 @@ export default async function EducationAndTeachersPage({
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="bg-[#E2E8F0]">
-                      <th className="px-4 py-3 text-left font-bold text-[#0F172A] border border-[#CBD5E1]">{isWelsh ? 'Cysyniad' : 'Concept'}</th>
-                      <th className="px-4 py-3 text-left font-bold text-[#0F172A] border border-[#CBD5E1]">{isWelsh ? 'Disgrifiad' : 'Description'}</th>
+                      <th className="px-4 py-3 text-left font-bold text-[#123F56] border border-[#CBD5E1]">{isWelsh ? 'Cysyniad' : 'Concept'}</th>
+                      <th className="px-4 py-3 text-left font-bold text-[#123F56] border border-[#CBD5E1]">{isWelsh ? 'Disgrifiad' : 'Description'}</th>
                     </tr>
                   </thead>
                   <tbody className="text-[#64748B]">
@@ -713,7 +713,7 @@ export default async function EducationAndTeachersPage({
             </div>
 
             {/* Making The Most Of It - Practice Section */}
-            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#B91C3C] to-[#991B1B] text-white">
+            <div className="mb-12 p-8 rounded-2xl bg-gradient-to-br from-[#E11D2E] to-[#E11D2E] text-white">
               <h2 className="text-2xl font-display font-bold mb-6">
                 {isWelsh ? 'Gwneud y Gorau Ohono' : 'Making The Most Of It'}
               </h2>
@@ -845,7 +845,7 @@ export default async function EducationAndTeachersPage({
 
             {/* Making The Most Of What Is Available - Resources */}
             <div className="mb-12 p-8 rounded-2xl bg-white border border-[#E2E8F0]">
-              <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Gwneud y Gorau o\'r Hyn sydd ar Gael' : 'Making The Most Of What Is Available'}
               </h2>
               <p className="text-lg text-[#64748B] mb-6 leading-relaxed">
@@ -860,40 +860,40 @@ export default async function EducationAndTeachersPage({
               </p>
 
               <div className="mb-6">
-                <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+                <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                   {isWelsh ? 'Pa adnoddau sydd ar gael i\'m cefnogi?' : 'What resources are available to support me?'}
                 </h3>
                 <ul className="space-y-2 text-lg text-[#64748B] mb-4">
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Modiwlau Gymnasteg' : 'Gymnastics Modules'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Chwarae i Ddysgu' : 'Play to Learn'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Dragon Sgiliau Lluosog' : 'Dragon Multi Skills'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Dragon Chwaraeon' : 'Dragon Sport'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Dawns' : 'Dance'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Symudiad Creadigol' : 'Creative Movement'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Gwneud Ystremp' : 'Making a Splash'}</strong></span>
                   </li>
                   <li className="flex items-start">
-                    <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                    <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                     <span><strong>{isWelsh ? 'Ffitrwydd sy\'n Gysylltiedig ag Iechyd' : 'Health Related Fitness'}</strong></span>
                   </li>
                 </ul>
@@ -901,14 +901,14 @@ export default async function EducationAndTeachersPage({
                   {isWelsh
                     ? 'Os nad oes gennych fynediad at yr adnoddau hyn, e-bostiwch'
                     : 'If you haven\'t got access to these resources, email'}{' '}
-                  <a href="mailto:communications@sport.wales" className="text-[#B91C3C] font-semibold hover:underline">
+                  <a href="mailto:communications@sport.wales" className="text-[#E11D2E] font-semibold hover:underline">
                     communications@sport.wales
                   </a>
                 </p>
 
                 {/* Warm Ups */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Ymgynhesu' : 'Warm Ups'}
                   </h4>
                   <p className="text-[#64748B] italic mb-3">
@@ -916,19 +916,19 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B]">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Dragon Sgiliau Lluosog - Crazy Capers' : 'Dragon Multi-Skills - Crazy Capers'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Gymnasteg - Thread the Needle' : 'Gymnastics - Thread the Needle'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Gymnasteg - Lily Pads' : 'Gymnastics - Lily Pads'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Gymnasteg - Sunbathing Crabs' : 'Gymnastics - Sunbathing Crabs'}</span>
                     </li>
                   </ul>
@@ -936,7 +936,7 @@ export default async function EducationAndTeachersPage({
 
                 {/* Skill Development */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Datblygu Sgiliau' : 'Skill Development'}
                   </h4>
                   <p className="text-[#64748B] italic mb-3">
@@ -944,31 +944,31 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B]">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Cardiau Sgiliau Technegol - Traed Cyflym' : 'Technical Skill Cards - Fast Feet'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Cardiau Sgiliau Technegol - Safle Barod' : 'Technical Skill Cards - Ready Position'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Cardiau Sgiliau Technegol - Ymatebion Cyflym' : 'Technical Skill Cards - Rapid Reactions'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Cardiau Sgiliau Technegol - Taflu o dan Ysgwydd' : 'Technical Skill Cards - Under Arm Throw'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Cardiau Sgiliau Technegol - Osgoi' : 'Technical Skill Cards - Dodging'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Gymnasteg - Neidio Broga' : 'Gymnastics - Frog Jumping'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Gymnasteg - Siâp Puck' : 'Gymnastics - Puck Shape'}</span>
                     </li>
                   </ul>
@@ -976,7 +976,7 @@ export default async function EducationAndTeachersPage({
 
                 {/* Creativity */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Creadigrwydd' : 'Creativity'}
                   </h4>
                   <p className="text-[#64748B] italic mb-3">
@@ -984,7 +984,7 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B] mb-4">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Dawns (KS2) - Creadigrwydd' : 'Dance (KS2) - Creativity'}</span>
                     </li>
                   </ul>
@@ -1002,7 +1002,7 @@ export default async function EducationAndTeachersPage({
 
                 {/* Health and Well-being */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Iechyd a Llesiant' : 'Health and Well-being'}
                   </h4>
                   <p className="text-[#64748B] leading-relaxed mb-3">
@@ -1015,7 +1015,7 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B]">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Iechyd, Ffitrwydd a Llesiant' : 'Health, Fitness and Well-Being'}</span>
                     </li>
                   </ul>
@@ -1023,7 +1023,7 @@ export default async function EducationAndTeachersPage({
 
                 {/* Mini Games */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Gemau Bach' : 'Mini Games'}
                   </h4>
                   <p className="text-[#64748B] italic mb-3">
@@ -1031,15 +1031,15 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B]">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Fi i ti i fi' : 'Me to you to me'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Rygbi Rounders' : 'Rugby Rounders'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Pen i Ben' : 'End to End'}</span>
                     </li>
                   </ul>
@@ -1047,7 +1047,7 @@ export default async function EducationAndTeachersPage({
 
                 {/* Leading the Learning */}
                 <div>
-                  <h4 className="text-lg font-display font-bold text-[#0F172A] mb-3">
+                  <h4 className="text-lg font-display font-bold text-[#123F56] mb-3">
                     {isWelsh ? 'Arwain y Dysgu' : 'Leading the Learning'}
                   </h4>
                   <p className="text-[#64748B] italic mb-3">
@@ -1055,7 +1055,7 @@ export default async function EducationAndTeachersPage({
                   </p>
                   <ul className="space-y-2 text-[#64748B]">
                     <li className="flex items-start">
-                      <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                      <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                       <span>{isWelsh ? 'Dawns (KS3) - Rolau Amgen' : 'Dance (KS3) - Alternative Roles'}</span>
                     </li>
                   </ul>
@@ -1065,31 +1065,31 @@ export default async function EducationAndTeachersPage({
 
             {/* Making The Most Out Of Reflection */}
             <div className="mb-12 p-8 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-              <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-6">
+              <h2 className="text-2xl font-display font-bold text-[#123F56] mb-6">
                 {isWelsh ? 'Gwneud y Gorau o Adfyfyrio' : 'Making The Most Out Of Reflection'}
               </h2>
-              <p className="text-lg font-semibold text-[#0F172A] mb-4">
+              <p className="text-lg font-semibold text-[#123F56] mb-4">
                 {isWelsh ? 'Cyflwynydd:' : 'Deliverer:'}
               </p>
               <ul className="space-y-3 text-lg text-[#64748B]">
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Beth wnaethom ni a pham?' : 'What did we do and why?'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Beth aeth yn dda?' : 'What went well?'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Beth ni aeth mor dda?' : 'What didn\'t go as well?'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Beth rwyf wedi\'i ddysgu?' : 'What have I learned?'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="font-semibold text-[#B91C3C] mr-2">•</span>
+                  <span className="font-semibold text-[#E11D2E] mr-2">•</span>
                   <span>{isWelsh ? 'Beth fyddwn i\'n ei wneud yn wahanol y tro nesaf a pham?' : 'What would I do differently next time and why?'}</span>
                 </li>
               </ul>
@@ -1102,10 +1102,10 @@ export default async function EducationAndTeachersPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
               {isWelsh ? 'Dysgu Mwy' : 'Learn More'}
             </span>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
               {isWelsh ? 'Chwaraeon mewn Ysgolion' : 'Sport in Schools'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -1116,13 +1116,13 @@ export default async function EducationAndTeachersPage({
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
                 href="/sport-in-schools" 
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Chwaraeon mewn Ysgolion' : 'Sport in Schools'}
               </Link>
               <Link 
                 href="/contact"
-                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                className="inline-flex items-center gap-2 py-3 px-8 rounded-full border-2 border-[#E2E8F0] text-[#123F56] font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
               >
                 {isWelsh ? 'Cysylltu â Ni' : 'Contact Us'}
               </Link>

@@ -54,11 +54,11 @@ export default async function NationalSurveyPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -96,7 +96,7 @@ export default async function NationalSurveyPage({
         <div className="container">
           <div className="max-w-4xl">
             {/* Headline Findings */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               Headline Findings:
             </h2>
             
@@ -105,56 +105,56 @@ export default async function NationalSurveyPage({
             </p>
 
             {/* Participation */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Participation:
             </h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">59% of adults in Wales participated in sport and physical activity [1] during the last four weeks.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">35% of adults in Wales participated in sport and physical activity three or more times per week (Future Generations Indicator No. 38). This is lower than in 2022-23 when the percentage was 39%.</span>
               </li>
             </ul>
 
             {/* Level of Participation */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Level of Participation [2]:
             </h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">79% of adults, who participate, do so non-competitively, for example for health or leisure.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">18% competed at an amateur level.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">2% competed at a professional or semi-professional level.</span>
               </li>
             </ul>
 
             {/* Demand */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Demand:
             </h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">Overall, 35% of all adults said they wanted to participate in more sport and physical activity.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">27% of adults who had not participated in sport and physical activity in the last four weeks indicated they would like to participate. This equates to 11% of the total adult population in Wales.</span>
               </li>
             </ul>
 
             {/* Reasons that would encourage future participation */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Reasons that would encourage future participation:
             </h3>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -168,21 +168,21 @@ export default async function NationalSurveyPage({
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">'If I was less busy with work' (44%)</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">'If there were more facilities, clubs or groups in my area' (41%)</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">'If it cost less' (31%)</span>
               </li>
             </ul>
 
             {/* Sport Facilities */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Sport Facilities:
             </h3>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -190,39 +190,39 @@ export default async function NationalSurveyPage({
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">Almost four in every ten adults in Wales (38%) had used a sport or physical activity facility in their local area within the last 12 months.</span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">27% of those who had not used a sport or physical activity facility in their local area had wanted to.</span>
               </li>
             </ul>
 
             {/* Volunteering in sport */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Volunteering in sport:
             </h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">Fewer than one in ten adults (9%) gave up time for free to help with a sporting activity in the last 12 months, i.e. they volunteered in sport.</span>
               </li>
             </ul>
 
             {/* Sport Spectating */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Sport Spectating:
             </h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">37% of adults had attended at least one sport event as a spectator in the last 12 months.</span>
               </li>
             </ul>
 
             {/* Attitudes towards Physical Activity */}
-            <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl font-display font-bold text-[#123F56] mb-4">
               Attitudes towards Physical Activity:
             </h3>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -230,7 +230,7 @@ export default async function NationalSurveyPage({
             </p>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">85% agreed or agreed strongly that 'I have the opportunity to be physically active' and 'I have the confidence to be physically active' and similarly 84% agreed or strongly agreed with the statement 'I find physical activity enjoyable'.</span>
               </li>
             </ul>
@@ -245,7 +245,7 @@ export default async function NationalSurveyPage({
 
             {/* Contact Info */}
             <div className="mt-12 pt-8 border-t border-[#E2E8F0]">
-              <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-4">
+              <h2 className="text-2xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Am ragor o wybodaeth' : 'For further information'}
               </h2>
               <p className="text-lg text-[#334155] mb-4">
@@ -253,12 +253,12 @@ export default async function NationalSurveyPage({
               </p>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:insight@sport.wales" className="text-[#B91C3C] hover:underline font-medium text-lg">
+                  <a href="mailto:insight@sport.wales" className="text-[#E11D2E] hover:underline font-medium text-lg">
                     insight@sport.wales
                   </a>
                 </li>
                 <li>
-                  <a href="tel:03003003116" className="text-[#B91C3C] hover:underline font-medium text-lg">
+                  <a href="tel:03003003116" className="text-[#E11D2E] hover:underline font-medium text-lg">
                     0300 300 3116
                   </a>
                 </li>

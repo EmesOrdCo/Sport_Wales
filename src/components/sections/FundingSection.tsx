@@ -17,12 +17,12 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
   const fundingCards = opportunities && opportunities.length > 0 
     ? opportunities.slice(0, 3).map((opp, index) => {
         const gradients = [
-          'from-[#B91C3C] to-[#991B1B]',
-          'from-[#B91C3C] to-[#991B1B]',
-          'from-[#0F172A] to-[#1E293B]',
+          'from-[#E11D2E] to-[#E11D2E]',
+          'from-[#E11D2E] to-[#E11D2E]',
+          'from-[#123F56] to-[#1E4A62]',
         ];
-        const accentColors = ['#F59E0B', '#F59E0B', '#B91C3C'];
-        const iconClasses = ['text-white', 'text-white', 'text-[#B91C3C]'];
+        const accentColors = ['#F4B400', '#F4B400', '#E11D2E'];
+        const iconClasses = ['text-white', 'text-white', 'text-[#E11D2E]'];
         
         return {
           title: opp.title,
@@ -43,8 +43,8 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('beActiveDescription'),
           amount: '£50,000',
           href: '/funding/be-active-wales',
-          gradient: 'from-[#B91C3C] to-[#991B1B]',
-          accentColor: '#F59E0B',
+          gradient: 'from-[#E11D2E] to-[#E11D2E]',
+          accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 0,
         },
@@ -53,9 +53,9 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('crowdfunderDescription'),
           amount: '£15,000',
           href: '/funding',
-          gradient: 'from-[#0F172A] to-[#1E293B]',
-          accentColor: '#B91C3C',
-          iconClass: 'text-[#B91C3C]',
+          gradient: 'from-[#123F56] to-[#1E4A62]',
+          accentColor: '#E11D2E',
+          iconClass: 'text-[#E11D2E]',
           iconIndex: 2,
         },
         {
@@ -63,8 +63,8 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           description: t('energySavingDescription'),
           amount: isWelsh ? 'Hyd at £25,000' : 'Up to £25,000',
           href: '/funding',
-          gradient: 'from-[#B91C3C] to-[#991B1B]',
-          accentColor: '#F59E0B',
+          gradient: 'from-[#E11D2E] to-[#E11D2E]',
+          accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 1,
         },
@@ -100,10 +100,10 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
       <div className="container">
         {/* Section Header - Reframed as support, not main focus */}
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="inline-block text-[#B91C3C] font-semibold text-sm uppercase tracking-wider mb-4">
+          <span className="inline-block text-[#E11D2E] font-semibold text-sm uppercase tracking-wider mb-4">
             {isWelsh ? 'Cefnogaeth a Chyllid' : 'Support & Funding'}
           </span>
-          <h2 id="funding-heading" className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-4">
+          <h2 id="funding-heading" className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-4">
             {isWelsh 
               ? 'Adnoddau i Helpu Chi Lwyddo' 
               : 'Resources to Help You Succeed'}
@@ -132,7 +132,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                 
                 <div className="relative z-10 h-full flex flex-col">
                   <div className="flex items-start justify-between mb-4">
-                    <div className={`w-10 h-10 rounded-lg ${card.iconClass === 'text-[#B91C3C]' ? 'bg-[#B91C3C]/20' : 'bg-white/20'} flex items-center justify-center`}>
+                    <div className={`w-10 h-10 rounded-lg ${card.iconClass === 'text-[#E11D2E]' ? 'bg-[#E11D2E]/20' : 'bg-white/20'} flex items-center justify-center`}>
                       {getIcon(card.iconIndex, card.iconClass)}
                     </div>
                   </div>
@@ -140,12 +140,12 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                   <h3 className="text-xl font-bold text-white mb-2">
                     {card.title}
                   </h3>
-                  <p className={`text-sm mb-4 flex-grow ${card.iconClass === 'text-[#B91C3C]' ? 'text-white/60' : 'text-white/70'}`}>
+                  <p className={`text-sm mb-4 flex-grow ${card.iconClass === 'text-[#E11D2E]' ? 'text-white/60' : 'text-white/70'}`}>
                     {card.description}
                   </p>
                   
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className={`text-xs uppercase tracking-wider ${card.iconClass === 'text-[#B91C3C]' ? 'text-white/40' : 'text-white/60'}`}>
+                    <span className={`text-xs uppercase tracking-wider ${card.iconClass === 'text-[#E11D2E]' ? 'text-white/40' : 'text-white/60'}`}>
                       {isWelsh ? 'Hyd at' : card.amount.includes('Up to') ? 'Up to' : ''}
                     </span>
                     <span className="text-2xl font-bold" style={{ color: card.accentColor }}>
@@ -168,7 +168,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                         <div className="mb-3">
                           <span className={`px-2 py-1 rounded text-xs font-semibold ${
                             card.originalOpp.status === 'Coming Soon' 
-                              ? 'bg-[#F59E0B]/20 text-[#F59E0B]'
+                              ? 'bg-[#F4B400]/20 text-[#F4B400]'
                               : 'bg-white/20 text-white'
                           }`}>
                             {card.originalOpp.status === 'Coming Soon' 
@@ -208,7 +208,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
         <div className="text-center mt-10">
           <Link 
             href="/funding"
-            className="inline-flex items-center gap-2 text-[#B91C3C] font-semibold hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:gap-3 transition-all"
           >
             {isWelsh ? 'Gweld yr holl gyfleoedd cyllid' : 'View all funding opportunities'}
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

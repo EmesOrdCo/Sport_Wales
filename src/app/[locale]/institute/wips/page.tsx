@@ -58,10 +58,10 @@ export default async function WIPSPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -88,7 +88,7 @@ export default async function WIPSPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Trosolwg' : 'Overview'}
             </h2>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -115,7 +115,7 @@ export default async function WIPSPage({
             </div>
 
             {/* Quote */}
-            <blockquote className="mt-8 p-6 bg-[#F8FAFC] border-l-4 border-[#B91C3C] rounded-r-lg">
+            <blockquote className="mt-8 p-6 bg-[#F8FAFC] border-l-4 border-[#E11D2E] rounded-r-lg">
               <p className="text-lg text-[#334155] italic mb-4">
                 {isWelsh
                   ? '"Mae cydweithio â Sefydliad Gwyddoniaeth Perfformiad Cymru yn ein galluogi i fanteisio ar gymuned academaidd gref yng Nghymru i greu atebion ymarferol i helpu ein hathletwyr i ragori ar y llwyfan byd."'
@@ -133,7 +133,7 @@ export default async function WIPSPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Enghreifftiau o gefnogaeth a ddarparwyd gan WIPS' : 'Examples of support provided by Welsh Institute of Performance Science'}
             </h2>
             <p className="text-lg text-[#64748B] mb-8">
@@ -145,7 +145,7 @@ export default async function WIPSPage({
             <div className="space-y-8">
               {examples.map((example, index) => (
                 <div key={index} className="bg-white rounded-2xl p-6 lg:p-8 border border-[#E2E8F0]">
-                  <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+                  <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                     {index + 1}. {example.title}
                   </h3>
                   <p className="text-[#64748B] leading-relaxed">
@@ -162,7 +162,7 @@ export default async function WIPSPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Dyfodol Sefydliad Gwyddoniaeth Perfformiad Cymru' : 'The future of the Welsh Institute of Performance Science'}
             </h2>
             <div className="prose prose-lg max-w-none text-[#475569] space-y-6">
@@ -185,7 +185,7 @@ export default async function WIPSPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Sut i gymryd rhan' : 'How to get involved'}
             </h2>
             <p className="text-lg text-[#475569] mb-6">
@@ -198,7 +198,7 @@ export default async function WIPSPage({
             </p>
 
             <div className="bg-white rounded-2xl p-6 lg:p-8 border border-[#E2E8F0]">
-              <p className="font-semibold text-[#0F172A]">Professor Liam Kilduff</p>
+              <p className="font-semibold text-[#123F56]">Professor Liam Kilduff</p>
               <p className="text-[#64748B]">School of Sport and Exercise Sciences</p>
               <p className="text-[#64748B]">Swansea University</p>
               <p className="text-[#64748B] mt-2">+44 (01792) 513441</p>
@@ -206,22 +206,22 @@ export default async function WIPSPage({
 
             {/* Further Information */}
             <div className="mt-12">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4">
                 {isWelsh ? 'Gwybodaeth Bellach' : 'Further Information'}
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://www.swansea.ac.uk/sport-science/wips/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline font-semibold">
+                  <a href="https://www.swansea.ac.uk/sport-science/wips/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline font-semibold">
                     {isWelsh ? 'Gwefan WIPS' : 'WIPS website'}
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/WIPSCymru" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline font-semibold">
+                  <a href="https://twitter.com/WIPSCymru" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline font-semibold">
                     {isWelsh ? 'Dilynwch WIPS Cymru ar Twitter' : 'Follow WIPS Cymru on Twitter'}
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/wips-cymru/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline font-semibold">
+                  <a href="https://www.linkedin.com/company/wips-cymru/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline font-semibold">
                     {isWelsh ? 'Cysylltwch â ni ar LinkedIn' : 'Connect with us on LinkedIn'}
                   </a>
                 </li>
@@ -234,7 +234,7 @@ export default async function WIPSPage({
       {/* Latest News */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12">
             {isWelsh ? 'Newyddion Diweddaraf - Chwaraeon Perfformiad' : 'Performance Sport - Latest News'}
           </h2>
 
@@ -246,10 +246,10 @@ export default async function WIPSPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Blwyddyn mewn chwaraeon Cymru – 2025 wedi\'i ail-chwarae' : 'A year in Welsh sport – 2025 replayed'}
                 </h3>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 </span>
               </div>
@@ -261,10 +261,10 @@ export default async function WIPSPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Sut y bydd £3.3m yn cael ei wario ar welliannau cyfleusterau chwaraeon' : 'How £3.3m will be spent on sports facility improvements'}
                 </h3>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 </span>
               </div>
@@ -276,10 +276,10 @@ export default async function WIPSPage({
                 </svg>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-display font-bold text-[#0F172A] mb-2 group-hover:text-[#B91C3C] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] mb-2 group-hover:text-[#E11D2E] transition-colors">
                   {isWelsh ? 'Sut mae chwaraeon yng Nghymru yn creu amgylcheddau gwell i fenywod a merched' : 'How sport in Wales is creating better environments for women and girls'}
                 </h3>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#B91C3C]">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-[#E11D2E]">
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 </span>
               </div>
@@ -289,7 +289,7 @@ export default async function WIPSPage({
       </section>
 
       {/* Sport Wales Institute CTA */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-[#123F56] to-[#1E4A62]">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -304,7 +304,7 @@ export default async function WIPSPage({
                 </p>
                 <Link
                   href="/institute"
-                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-white text-[#0F172A] font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-white text-[#123F56] font-semibold hover:bg-white/90 transition-colors"
                 >
                   {isWelsh ? 'Darllen Mwy' : 'Read More'}
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

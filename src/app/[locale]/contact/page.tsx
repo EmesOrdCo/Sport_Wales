@@ -84,11 +84,11 @@ export default async function ContactPage({
       <BreadcrumbSchema items={breadcrumbItems} />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#1E4A62] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
 
         <div className="container relative z-10">
@@ -141,14 +141,14 @@ export default async function ContactPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Cyrraedd Canolfan Genedlaethol Chwaraeon Cymru' : 'Getting To Sport Wales National Centre'}
             </h2>
 
             {/* Active Travel */}
             <div className="mb-8">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#E11D2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 {isWelsh ? 'Teithio Gweithredol' : 'Active Travel'}
@@ -157,7 +157,7 @@ export default async function ContactPage({
                 {isWelsh
                   ? 'Gallwch ddod o hyd i wybodaeth ac adnoddau i helpu cynllunio eich taith ar feic, trên, bws neu gerdded '
                   : 'You can find information and resources to help plan your journey by bike, train, bus or walking '}
-                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">
                   {isWelsh ? 'yma' : 'here'}
                 </a>.
               </p>
@@ -171,7 +171,7 @@ export default async function ContactPage({
                   ? 'Mae llwybrau beicio ym mhob cyfeiriad. Mae gwefan Cyngor Caerdydd yn cynnwys adnoddau i helpu cynllunio eich taith.'
                   : 'There are cycle trails in each direction. The Cardiff Council website has resources to help plan your journey.'}
                 {' '}
-                <a href="https://www.cardiff.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                <a href="https://www.cardiff.gov.uk/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">
                   {isWelsh ? 'Gwefan Cyngor Caerdydd' : 'Cardiff Council website'}
                 </a>
               </p>
@@ -179,8 +179,8 @@ export default async function ContactPage({
 
             {/* Train */}
             <div className="mb-8">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#E11D2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
                 {isWelsh ? 'Trên' : 'Train'}
@@ -189,7 +189,7 @@ export default async function ContactPage({
                 {isWelsh
                   ? 'Mae gwasanaethau trên yn rhedeg o Orsaf Ganolog Caerdydd, mae\'r orsaf 15 munud o gerdded o\'r Ganolfan Genedlaethol. Gellir dod o hyd i ragor o wybodaeth ar '
                   : 'Train services run from Cardiff Central Station, the station is a 15 minute walk from the National Centre. More information can be found on '}
-                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#B91C3C] hover:underline">
+                <a href="https://www.traveline.cymru/" target="_blank" rel="noopener noreferrer" className="text-[#E11D2E] hover:underline">
                   {isWelsh ? 'gwefan Traveline Cymru' : 'Traveline Cymru\'s website'}
                 </a>.
               </p>
@@ -197,8 +197,8 @@ export default async function ContactPage({
 
             {/* Car Parking */}
             <div>
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-4 flex items-center gap-2">
-                <svg className="w-6 h-6 text-[#B91C3C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-[#E11D2E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                 </svg>
                 {isWelsh ? 'Parcio Car' : 'Car Parking'}
@@ -216,13 +216,13 @@ export default async function ContactPage({
       {/* Our Locations */}
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-12 text-center">
+          <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-12 text-center">
             {isWelsh ? 'Ein Lleoliadau' : 'Our Locations'}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {locations.map((location, index) => (
               <div key={index} className="bg-white rounded-2xl p-6 lg:p-8 border border-[#E2E8F0] hover:shadow-lg transition-all duration-300">
-                <h3 className="text-2xl font-display font-bold text-[#0F172A] mb-3">
+                <h3 className="text-2xl font-display font-bold text-[#123F56] mb-3">
                   {location.name}
                 </h3>
                 <p className="text-[#64748B] text-sm font-medium mb-4">
@@ -233,11 +233,11 @@ export default async function ContactPage({
                     {location.address}
                   </p>
                   {location.email && (
-                    <a href={`mailto:${location.email}`} className="block text-[#B91C3C] text-sm hover:underline">
+                    <a href={`mailto:${location.email}`} className="block text-[#E11D2E] text-sm hover:underline">
                       {location.email}
                     </a>
                   )}
-                  <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="block text-[#B91C3C] text-sm hover:underline font-medium">
+                  <a href={`tel:${location.phone.replace(/\s/g, '')}`} className="block text-[#E11D2E] text-sm hover:underline font-medium">
                     {location.phone}
                   </a>
                 </div>
@@ -249,7 +249,7 @@ export default async function ContactPage({
                     href={location.externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-[#B91C3C] text-white text-sm font-semibold hover:bg-[#991B1B] transition-colors"
+                    className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-[#E11D2E] text-white text-sm font-semibold hover:bg-[#E11D2E] transition-colors"
                   >
                     {isWelsh ? 'Ymweld â\'r wefan' : 'Visit website'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,7 +261,7 @@ export default async function ContactPage({
                     href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 py-2 px-4 rounded-full border-2 border-[#E2E8F0] text-[#0F172A] text-sm font-semibold hover:border-[#B91C3C] hover:text-[#B91C3C] transition-colors"
+                    className="inline-flex items-center gap-2 py-2 px-4 rounded-full border-2 border-[#E2E8F0] text-[#123F56] text-sm font-semibold hover:border-[#E11D2E] hover:text-[#E11D2E] transition-colors"
                   >
                     {isWelsh ? 'Gweld ar Google Maps' : 'Find on Google Maps'}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -280,7 +280,7 @@ export default async function ContactPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Ar gyfer ymholiadau cyfryngau' : 'For media enquiries'}
             </h2>
             <p className="text-lg text-[#64748B] mb-6">
@@ -290,7 +290,7 @@ export default async function ContactPage({
             </p>
             <a 
               href="mailto:communications@sport.wales"
-              className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#B91C3C] text-white font-semibold hover:bg-[#991B1B] transition-colors"
+              className="inline-flex items-center gap-2 py-3 px-8 rounded-full bg-[#E11D2E] text-white font-semibold hover:bg-[#E11D2E] transition-colors"
             >
               {isWelsh ? 'Cysylltwch â\'n tîm cyfathrebu' : 'Contact our communications team'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -54,11 +54,11 @@ export default async function CrowdfunderPage({
       <BreadcrumbSchema items={breadcrumbItems} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#1E3A5F] via-[#0F172A] to-[#1E3A5F] overflow-hidden">
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-gradient-to-br from-[#123F56] via-[#123F56] to-[#123F56] overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B91C3C]/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#E11D2E]/20 blur-3xl"></div>
         </div>
         
         <div className="container relative z-10">
@@ -93,14 +93,14 @@ export default async function CrowdfunderPage({
         <div className="container">
           <div className="max-w-4xl">
             {/* What is A Place for Sport? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth yw Lle i Chwaraeon?' : 'What is A Place for Sport?'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
               {isWelsh
                 ? 'Mae Lle i Chwaraeon yn gronfa gan Chwaraeon Cymru. Mae\'n helpu clybiau chwaraeon i godi arian drwy '
                 : 'A Place for Sport is a fund by Sport Wales. It helps sports clubs raise money through '}
-              <a href="https://www.crowdfunder.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+              <a href="https://www.crowdfunder.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                 Crowdfunder
               </a>
               {isWelsh ? ' i wella eu cyfleusterau.' : ' to improve their facilities.'}
@@ -112,7 +112,7 @@ export default async function CrowdfunderPage({
             </p>
 
             {/* What is Crowdfunder? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth yw Crowdfunder?' : 'What is Crowdfunder?'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -131,14 +131,14 @@ export default async function CrowdfunderPage({
                 isWelsh ? 'Prisiau am ddim neu ostyngol mewn busnesau lleol' : 'Free or discounted prices at local businesses',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
             </ul>
 
             {/* What can you raise money for? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth allwch chi godi arian ar ei gyfer?' : 'What can you raise money for?'}
             </h2>
             <p className="text-lg text-[#334155] leading-relaxed mb-4">
@@ -161,7 +161,7 @@ export default async function CrowdfunderPage({
                 isWelsh ? 'Offer cynnal a chadw caeau' : 'Pitch maintenance tools',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
@@ -170,13 +170,13 @@ export default async function CrowdfunderPage({
               {isWelsh
                 ? 'Os ydych yn chwilio am gyllid ar gyfer offer chwaraeon neu gyrsiau hyfforddi, rhowch gynnig ar '
                 : 'If you are looking for funding for sports equipment or coaching courses, try the '}
-              <Link href="/funding/be-active-wales" className="text-[#1E3A5F] underline hover:no-underline">
+              <Link href="/funding/be-active-wales" className="text-[#123F56] underline hover:no-underline">
                 {isWelsh ? 'Cronfa Cymru Actif.' : 'Be Active Wales Fund.'}
               </Link>
             </p>
 
             {/* Who can apply? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Pwy all wneud cais?' : 'Who can apply?'}
             </h2>
             <p className="text-lg text-[#334155] mb-4">
@@ -188,21 +188,21 @@ export default async function CrowdfunderPage({
                 isWelsh ? 'Mae eich clwb wedi\'i leoli yng Nghymru, ac yn fuddiol i bobl sy\'n byw yng Nghymru' : 'Your club is based in Wales, and benefits people living in Wales',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#B91C3C] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#E11D2E] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
             </ul>
             <p className="text-lg text-[#334155] mb-12">
               {isWelsh ? 'Gwelwch ' : 'See '}
-              <a href="https://www.crowdfunder.co.uk/funds/a-place-for-sport" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+              <a href="https://www.crowdfunder.co.uk/funds/a-place-for-sport" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                 {isWelsh ? 'fanylion cymhwysedd llawn' : 'full eligibility details'}
               </a>
               {isWelsh ? ' ar Crowdfunder.' : ' on Crowdfunder.'}
             </p>
 
             {/* What do you need to receive money from Sport Wales? */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Beth sydd ei angen arnoch i dderbyn arian gan Chwaraeon Cymru?' : 'What do you need to receive money from Sport Wales?'}
             </h2>
             <p className="text-lg text-[#334155] mb-4">
@@ -215,14 +215,14 @@ export default async function CrowdfunderPage({
                 isWelsh ? 'Cyrraedd eich targed cyfan erbyn dyddiad cau penodol.' : 'Reach your target total by a set deadline.',
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                  <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                   <span className="text-lg text-[#334155]">{item}</span>
                 </li>
               ))}
             </ul>
             <p className="text-lg text-[#334155] mb-12">
               {isWelsh ? 'Defnyddiwch y ' : 'Use the '}
-              <a href="https://www.crowdfunder.co.uk/funds/a-place-for-sport" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+              <a href="https://www.crowdfunder.co.uk/funds/a-place-for-sport" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                 {isWelsh ? 'Cyfrifiannell Crowdfunder' : 'Crowdfunder Calculator'}
               </a>
               {isWelsh ? ' i weld faint sydd angen i chi ei godi a faint o bobl sydd angen rhoi.' : ' to see how much you need to raise and how many people need to donate.'}
@@ -232,14 +232,14 @@ export default async function CrowdfunderPage({
       </section>
 
       {/* Crowdfunder Calculator CTA */}
-      <section className="py-12 bg-[#1E3A5F]">
+      <section className="py-12 bg-[#123F56]">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
               href="https://www.crowdfunder.co.uk/funds/a-place-for-sport"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#1E3A5F] font-semibold hover:bg-[#F8FAFC] transition-colors"
+              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-[#F8FAFC] transition-colors"
             >
               {isWelsh ? 'Cyfrifiannell Crowdfunder' : 'Crowdfunder Calculator'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,13 +254,13 @@ export default async function CrowdfunderPage({
       <section className="py-16 lg:py-24 bg-[#F8FAFC]">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-8">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-8">
               {isWelsh ? 'Sut i Wneud Cais' : 'How to Apply'}
             </h2>
 
             {/* Step 1 */}
             <div className="mb-8">
-              <p className="text-xl font-bold text-[#0F172A] mb-2">
+              <p className="text-xl font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Cam 1: Llenwch y Ffurflen Mynegiant o Ddiddordeb' : 'Step 1: Fill in the Expression of Interest Form'}
               </p>
               <p className="text-lg text-[#334155]">
@@ -272,7 +272,7 @@ export default async function CrowdfunderPage({
 
             {/* Step 2 */}
             <div className="mb-8">
-              <p className="text-xl font-bold text-[#0F172A] mb-2">
+              <p className="text-xl font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Cam 2: Aros am Ymateb' : 'Step 2: Wait for a Response'}
               </p>
               <p className="text-lg text-[#334155]">
@@ -284,7 +284,7 @@ export default async function CrowdfunderPage({
 
             {/* Step 3 */}
             <div className="mb-8">
-              <p className="text-xl font-bold text-[#0F172A] mb-2">
+              <p className="text-xl font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Cam 3: Creu eich tudalen Crowdfunder' : 'Step 3: Create your Crowdfunder page'}
               </p>
               <p className="text-lg text-[#334155] mb-4">
@@ -300,7 +300,7 @@ export default async function CrowdfunderPage({
                   isWelsh ? 'Gwobrau i gefnogwyr' : 'Rewards for supporters',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                     <span className="text-lg text-[#334155]">{item}</span>
                   </li>
                 ))}
@@ -309,7 +309,7 @@ export default async function CrowdfunderPage({
 
             {/* Step 4 */}
             <div className="mb-8">
-              <p className="text-xl font-bold text-[#0F172A] mb-2">
+              <p className="text-xl font-bold text-[#123F56] mb-2">
                 {isWelsh ? 'Cam 4: Dechrau codi arian' : 'Step 4: Start fundraising'}
               </p>
               <ul className="space-y-2">
@@ -320,7 +320,7 @@ export default async function CrowdfunderPage({
                   isWelsh ? 'Gofynnwch i bobl roi a lledaenu\'r gair' : 'Ask people to donate and spread the word',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                     <span className="text-lg text-[#334155]">{item}</span>
                   </li>
                 ))}
@@ -328,13 +328,13 @@ export default async function CrowdfunderPage({
             </div>
 
             <p className="text-lg text-[#334155] mb-12">
-              <a href="https://www.sport.wales/content-vault/how-to-apply-for-a-place-for-sport-x-crowdfunder/" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+              <a href="https://www.sport.wales/content-vault/how-to-apply-for-a-place-for-sport-x-crowdfunder/" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                 {isWelsh ? 'Dyma ganllaw cam wrth gam defnyddiol i\'ch helpu i wneud cais.' : 'Here\'s a handy step-by-step guide to help you apply.'}
               </a>
             </p>
 
             {/* How funding is awarded */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Sut mae cyllid yn cael ei ddyfarnu' : 'How funding is awarded'}
             </h2>
             <p className="text-lg text-[#334155] mb-4">
@@ -344,7 +344,7 @@ export default async function CrowdfunderPage({
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh
                     ? '50% o\'ch cyfanswm – os yw eich prosiect yn debygol o lwyddo ar Crowdfunder'
@@ -352,13 +352,13 @@ export default async function CrowdfunderPage({
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh
                     ? '60% o\'ch cyfanswm – os yw eich prosiect yn targedu grwpiau sydd heb gynrychiolaeth ddigonol neu mewn ardal o amddifadedd uchel (yn seiliedig ar Fynegai Amddifadedd Lluosog Cymru – MALlC)'
                     : '60% of your total – if your project targets under-represented groups or is in a high-deprivation area (based on the '}
                   {!isWelsh && (
-                    <a href="https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Welsh-Index-of-Multiple-Deprivation" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+                    <a href="https://statswales.gov.wales/Catalogue/Community-Safety-and-Social-Inclusion/Welsh-Index-of-Multiple-Deprivation" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                       Welsh Index of Multiple Deprivation
                     </a>
                   )}
@@ -376,14 +376,14 @@ export default async function CrowdfunderPage({
       </section>
 
       {/* Expression of Interest CTA */}
-      <section className="py-12 bg-[#1E3A5F]">
+      <section className="py-12 bg-[#123F56]">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a 
               href="https://www.sport.wales/grants-and-funding/crowdfunder/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#1E3A5F] font-semibold hover:bg-[#F8FAFC] transition-colors"
+              className="inline-flex items-center gap-2 py-4 px-8 rounded-full bg-white text-[#123F56] font-semibold hover:bg-[#F8FAFC] transition-colors"
             >
               {isWelsh ? 'Llenwch Ffurflen Mynegiant o Ddiddordeb' : 'Fill out Expression of Interest Form'}
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -398,7 +398,7 @@ export default async function CrowdfunderPage({
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
           <div className="max-w-4xl">
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Angen help?' : 'Need help?'}
             </h2>
             <p className="text-lg text-[#334155] mb-6">
@@ -409,13 +409,13 @@ export default async function CrowdfunderPage({
             <div className="space-y-4 mb-6">
               <p className="text-lg text-[#334155]">
                 <strong>{isWelsh ? 'E-bost:' : 'Email:'}</strong>{' '}
-                <a href="mailto:aplaceforsport@sport.wales" className="text-[#1E3A5F] hover:underline">
+                <a href="mailto:aplaceforsport@sport.wales" className="text-[#123F56] hover:underline">
                   aplaceforsport@sport.wales
                 </a>
               </p>
               <p className="text-lg text-[#334155]">
                 <strong>{isWelsh ? 'Ffôn:' : 'Phone:'}</strong>{' '}
-                <a href="tel:03003003102" className="text-[#1E3A5F] hover:underline">
+                <a href="tel:03003003102" className="text-[#123F56] hover:underline">
                   0300 300 3102
                 </a>
                 {' '}
@@ -429,42 +429,42 @@ export default async function CrowdfunderPage({
             </p>
 
             {/* Useful links */}
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0F172A] mb-6">
+            <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#123F56] mb-6">
               {isWelsh ? 'Dolenni defnyddiol' : 'Useful links'}
             </h2>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Gwyliwch y ' : 'Watch the '}
-                  <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+                  <a href="https://www.youtube.com/watch?v=example" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                     {isWelsh ? 'weminar am brosiect Lle i Chwaraeon Holywell Town FC' : 'webinar about Holywell Town FC\'s A Place for Sport project'}
                   </a>
                   .
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Ewch i\'r ' : 'Visit the '}
-                  <a href="https://help.crowdfunder.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+                  <a href="https://help.crowdfunder.co.uk/" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                     {isWelsh ? 'Canolfan Gymorth Crowdfunder' : 'Crowdfunder Help Centre'}
                   </a>
                   {isWelsh ? ' ar-lein 24/7' : ' online 24/7'}
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#1E3A5F] flex-shrink-0 mt-2.5"></div>
+                <div className="w-2 h-2 rounded-full bg-[#123F56] flex-shrink-0 mt-2.5"></div>
                 <span className="text-lg text-[#334155]">
                   {isWelsh ? 'Darllenwch y ' : 'Read the '}
-                  <a href="https://help.crowdfunder.co.uk/hc/en-us/categories/360001180418-Creating-a-Project" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline">
+                  <a href="https://help.crowdfunder.co.uk/hc/en-us/categories/360001180418-Creating-a-Project" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline">
                     {isWelsh ? 'canllawiau ar sut i greu a hyrwyddo prosiect Crowdfunder' : 'guides on how to create and promote a Crowdfunder project'}
                   </a>
                 </span>
               </li>
             </ul>
             <p className="text-lg text-[#334155]">
-              <a href="https://www.sport.wales/grants-and-funding/crowdfunder/" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] underline hover:no-underline font-semibold">
+              <a href="https://www.sport.wales/grants-and-funding/crowdfunder/" target="_blank" rel="noopener noreferrer" className="text-[#123F56] underline hover:no-underline font-semibold">
                 {isWelsh ? 'Llenwch y Ffurflen Mynegiant o Ddiddordeb' : 'Fill out the Expression of Interest Form'}
               </a>
               {isWelsh ? ' i ddechrau eich cais heddiw' : ' to start your application today'}
@@ -486,7 +486,7 @@ export default async function CrowdfunderPage({
                 <div className="aspect-video bg-[#E2E8F0] rounded-xl mb-4 flex items-center justify-center">
                   <span className="text-[#94A3B8]">{isWelsh ? 'Delwedd' : 'Image'}</span>
                 </div>
-                <h3 className="text-lg font-display font-bold text-[#0F172A] group-hover:text-[#1E3A5F] transition-colors">
+                <h3 className="text-lg font-display font-bold text-[#123F56] group-hover:text-[#123F56] transition-colors">
                   {story.name}
                 </h3>
               </div>
@@ -500,7 +500,7 @@ export default async function CrowdfunderPage({
         <div className="container">
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <div className="group p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#1E3A5F] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#123F56] transition-colors">
                 {isWelsh 
                   ? 'Sut i wneud cais am Lle i Chwaraeon x Crowdfunder'
                   : 'How to apply for A Place for Sport x Crowdfunder'}
@@ -510,7 +510,7 @@ export default async function CrowdfunderPage({
                   ? 'Dyma ein canllaw cam wrth gam ar gyfer sut i wneud cais a...'
                   : 'Here\'s our step-by-step guide for how to apply and...'}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-[#1E3A5F] font-semibold hover:gap-3 transition-all">
+              <a href="#" className="inline-flex items-center gap-2 text-[#123F56] font-semibold hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -519,7 +519,7 @@ export default async function CrowdfunderPage({
             </div>
 
             <div className="group p-6 rounded-2xl bg-white border border-[#E2E8F0] hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-display font-bold text-[#0F172A] mb-3 group-hover:text-[#1E3A5F] transition-colors">
+              <h3 className="text-xl font-display font-bold text-[#123F56] mb-3 group-hover:text-[#123F56] transition-colors">
                 {isWelsh 
                   ? 'Crowdfunder - Cwestiynau Cyffredin'
                   : 'Crowdfunder - FAQ\'s'}
@@ -529,7 +529,7 @@ export default async function CrowdfunderPage({
                   ? 'Dyma\'r atebion i gwestiynau cyffredin...'
                   : 'Here are the answers to frequently asked questions...'}
               </p>
-              <a href="#" className="inline-flex items-center gap-2 text-[#1E3A5F] font-semibold hover:gap-3 transition-all">
+              <a href="#" className="inline-flex items-center gap-2 text-[#123F56] font-semibold hover:gap-3 transition-all">
                 {isWelsh ? 'Darllen Mwy' : 'Read More'}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -543,13 +543,13 @@ export default async function CrowdfunderPage({
       {/* Other Funds */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="container">
-          <h2 className="text-2xl font-display font-bold text-[#0F172A] mb-8">
+          <h2 className="text-2xl font-display font-bold text-[#123F56] mb-8">
             {isWelsh ? 'Ein Cronfeydd Eraill' : 'Our Other Funds'}
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Link 
               href="/funding/be-active-wales"
-              className="group block p-6 rounded-2xl bg-[#DC2626] hover:bg-[#B91C3C] transition-colors"
+              className="group block p-6 rounded-2xl bg-[#E11D2E] hover:bg-[#E11D2E] transition-colors"
             >
               <h3 className="text-xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Cronfa Cymru Actif' : 'Be Active Wales Fund'}
@@ -569,7 +569,7 @@ export default async function CrowdfunderPage({
 
             <Link 
               href="/funding/energy-saving-grant"
-              className="group block p-6 rounded-2xl bg-[#F59E0B] hover:bg-[#D97706] transition-colors"
+              className="group block p-6 rounded-2xl bg-[#F4B400] hover:bg-[#F4B400] transition-colors"
             >
               <h3 className="text-xl font-display font-bold !text-white mb-3">
                 {isWelsh ? 'Grant Arbed Ynni' : 'Energy Saving Grant'}
