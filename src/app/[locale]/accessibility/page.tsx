@@ -59,38 +59,44 @@ export default async function AccessibilityPage({
         lefel AA, oherwydd y diffygion cydymffurfio a restrir isod.
       </p>
 
-      <h2>Cynnwys Hygyrch</h2>
-      <p>Rydym wedi cymryd y camau canlynol i sicrhau hygyrchedd:</p>
+      <h2>Nodweddion Hygyrchedd</h2>
+      <p>Rydym wedi gweithredu&apos;r nodweddion hygyrchedd canlynol:</p>
       <ul>
         <li>
-          <strong>Llywio bysellfwrdd:</strong> Gellir llywio pob elfen ryngweithiol gan ddefnyddio
-          bysellfwrdd yn unig
+          <strong>Dolen &quot;neidio i&apos;r cynnwys&quot;:</strong> Darperir dolen i alluogi defnyddwyr
+          bysellfwrdd i neidio heibio&apos;r llywio
         </li>
         <li>
-          <strong>Cydweddoldeb darllenydd sgrin:</strong> Rydym wedi profi gyda NVDA, VoiceOver a
-          JAWS
+          <strong>HTML semantig:</strong> Rydym yn defnyddio hierarchaeth pennawd briodol (h1 → h2 → h3)
+          a HTML semantig drwyddo draw
         </li>
         <li>
-          <strong>Cyferbyniad lliw:</strong> Mae&apos;r holl destun yn bodloni gofynion cyferbyniad
-          WCAG 2.2 AA
+          <strong>Dangosyddion ffocws:</strong> Mae&apos;r holl elfennau rhyngweithiol yn dangos ffocws
+          gweladwy wrth lywio â bysellfwrdd
         </li>
         <li>
-          <strong>Testun amgen:</strong> Mae gan yr holl ddelweddau ystyrlonrwydd destun amgen
-          disgrifiadol
+          <strong>Cyferbyniad lliw:</strong> Mae&apos;r testun yn bodloni gofynion cyferbyniad WCAG 2.2 AA
+          (4.5:1 ar gyfer testun arferol, 3:1 ar gyfer testun mawr)
         </li>
         <li>
-          <strong>Strwythur pennawd:</strong> Mae penawdau wedi&apos;u strwythuro&apos;n
-          hierarchaidd
+          <strong>Labeli ffurflenni:</strong> Mae gan bob maes ffurflen labeli cysylltiedig a negeseuon
+          gwall hygyrch
         </li>
         <li>
-          <strong>Ffurflenni hygyrch:</strong> Mae gan bob maes ffurflen labeli a negeseuon gwall
-          priodol
+          <strong>Dyluniad ymatebol:</strong> Mae&apos;r wefan yn gweithio ar draws meintiau sgrin a
+          dyfeisiau
         </li>
         <li>
-          <strong>Dolen neidio:</strong> Darperir dolen &quot;neidio i&apos;r prif gynnwys&quot;
+          <strong>Cefnogaeth symudiad llai:</strong> Mae&apos;r wefan yn parchu dewis &quot;prefer-reduced-motion&quot;
+          y defnyddiwr
         </li>
         <li>
-          <strong>Ymatebol:</strong> Mae&apos;r wefan yn gweithio ar draws pob maint sgrin a dyfais
+          <strong>Priodoleddau ARIA:</strong> Rydym yn defnyddio priodoleddau ARIA lle bo angen i wella
+          cydnawsedd darllenydd sgrin
+        </li>
+        <li>
+          <strong>Maint targed cyffwrdd:</strong> Mae&apos;r elfennau rhyngweithiol yn bodloni gofynion
+          maint lleiaf o 44x44 picsel
         </li>
       </ul>
 
@@ -104,8 +110,11 @@ export default async function AccessibilityPage({
           rhain.
         </li>
         <li>
-          Efallai y bydd gan rai fideos a fewnosodwyd heb gapsiynau. Rydym yn ychwanegu capsiynau at
-          yr holl gynnwys fideo newydd.
+          Efallai na fydd gan rai fideos a fewnosodwyd gapsiynau. Rydym yn ychwanegu capsiynau at yr
+          holl gynnwys fideo newydd.
+        </li>
+        <li>
+          Efallai na fydd rhai delweddau wedi&apos;u rheoli gan y CMS yn cynnwys testun amgen eto.
         </li>
       </ul>
 
@@ -119,8 +128,8 @@ export default async function AccessibilityPage({
         Paratowyd y datganiad hwn ar Ragfyr 2025. Fe&apos;i hadolygwyd ddiwethaf ar Ragfyr 2025.
       </p>
       <p>
-        Cafodd y wefan hon ei phrofi ddiwethaf ar Ragfyr 2025. Cynhaliwyd y prawf yn fewnol gan
-        ddefnyddio offer awtomataidd ac adolygiad â llaw.
+        Mae hygyrchedd y wefan hon wedi&apos;i brofi gan ddefnyddio offer awtomataidd (axe DevTools,
+        WAVE) ac adolygiad â llaw o lywio bysellfwrdd a strwythur semantig.
       </p>
 
       <h2>Adborth a Gwybodaeth Gyswllt</h2>
@@ -168,10 +177,21 @@ export default async function AccessibilityPage({
       <h2>Technolegau Cydnaws</h2>
       <p>Mae hygyrchedd y wefan hon yn dibynnu ar y technolegau canlynol i weithio:</p>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ARIA</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (gyda diraddiad gosgeiddig)</li>
+        <li>WAI-ARIA 1.2</li>
+      </ul>
+
+      <h2>Gwella Parhaus</h2>
+      <p>
+        Rydym wedi ymrwymo i wella hygyrchedd y wefan hon yn barhaus. Mae hyn yn cynnwys:
+      </p>
+      <ul>
+        <li>Archwiliadau hygyrchedd rheolaidd</li>
+        <li>Hyfforddiant parhaus i staff</li>
+        <li>Ymgorffori hygyrchedd yn ein proses ddatblygu</li>
+        <li>Croesawu adborth gan ddefnyddwyr</li>
       </ul>
     </>
   ) : (
@@ -199,34 +219,43 @@ export default async function AccessibilityPage({
         level AA, due to the non-compliances listed below.
       </p>
 
-      <h2>Accessible Content</h2>
-      <p>We have taken the following steps to ensure accessibility:</p>
+      <h2>Accessibility Features</h2>
+      <p>We have implemented the following accessibility features:</p>
       <ul>
         <li>
-          <strong>Keyboard navigation:</strong> All interactive elements can be navigated using
-          keyboard only
+          <strong>Skip to content link:</strong> A skip link is provided to allow keyboard users to
+          bypass navigation
         </li>
         <li>
-          <strong>Screen reader compatibility:</strong> We have tested with NVDA, VoiceOver, and
-          JAWS
+          <strong>Semantic HTML:</strong> We use proper heading hierarchy (h1 → h2 → h3) and semantic
+          HTML throughout
         </li>
         <li>
-          <strong>Colour contrast:</strong> All text meets WCAG 2.2 AA contrast requirements
+          <strong>Focus indicators:</strong> All interactive elements display visible focus when
+          navigating with keyboard
         </li>
         <li>
-          <strong>Alternative text:</strong> All meaningful images have descriptive alt text
+          <strong>Colour contrast:</strong> Text meets WCAG 2.2 AA contrast requirements (4.5:1 for
+          normal text, 3:1 for large text)
         </li>
         <li>
-          <strong>Heading structure:</strong> Headings are structured hierarchically
+          <strong>Form labels:</strong> All form fields have associated labels and accessible error
+          messages
         </li>
         <li>
-          <strong>Accessible forms:</strong> All form fields have proper labels and error messages
+          <strong>Responsive design:</strong> The website works across screen sizes and devices
         </li>
         <li>
-          <strong>Skip link:</strong> A &quot;skip to main content&quot; link is provided
+          <strong>Reduced motion support:</strong> The website respects the user&apos;s
+          &quot;prefers-reduced-motion&quot; preference
         </li>
         <li>
-          <strong>Responsive:</strong> The website works across all screen sizes and devices
+          <strong>ARIA attributes:</strong> We use ARIA attributes where needed to improve screen
+          reader compatibility
+        </li>
+        <li>
+          <strong>Touch target size:</strong> Interactive elements meet the minimum 44x44 pixel size
+          requirement
         </li>
       </ul>
 
@@ -242,6 +271,9 @@ export default async function AccessibilityPage({
           Some embedded videos may be missing captions. We are adding captions to all new video
           content.
         </li>
+        <li>
+          Some CMS-managed images may not yet have alternative text provided.
+        </li>
       </ul>
 
       <h3>Disproportionate Burden</h3>
@@ -252,8 +284,8 @@ export default async function AccessibilityPage({
         This statement was prepared on December 2025. It was last reviewed on December 2025.
       </p>
       <p>
-        This website was last tested on December 2025. The test was carried out internally using
-        automated tools and manual review.
+        This website&apos;s accessibility has been tested using automated tools (axe DevTools, WAVE) and
+        manual review of keyboard navigation and semantic structure.
       </p>
 
       <h2>Feedback and Contact Information</h2>
@@ -301,10 +333,21 @@ export default async function AccessibilityPage({
         Accessibility of this website relies on the following technologies to work:
       </p>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ARIA</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (with graceful degradation)</li>
+        <li>WAI-ARIA 1.2</li>
+      </ul>
+
+      <h2>Continuous Improvement</h2>
+      <p>
+        We are committed to continuously improving the accessibility of this website. This includes:
+      </p>
+      <ul>
+        <li>Regular accessibility audits</li>
+        <li>Ongoing staff training</li>
+        <li>Incorporating accessibility into our development process</li>
+        <li>Welcoming user feedback</li>
       </ul>
     </>
   );
@@ -325,4 +368,3 @@ export default async function AccessibilityPage({
     </>
   );
 }
-

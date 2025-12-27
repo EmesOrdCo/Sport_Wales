@@ -202,35 +202,53 @@ h4 {
 }
 
 /* ============================================
-   FOCUS & ACCESSIBILITY
+   FOCUS & ACCESSIBILITY - WCAG 2.2 AA Compliant
    ============================================ */
 
+/* Remove default outline but ensure focus-visible works */
 *:focus { outline: none; }
 
+/* High contrast focus indicator - meets WCAG 2.2 AA (3:1 min for UI components) */
 *:focus-visible {
-  outline: 3px solid var(--focus-ring);
-  outline-offset: var(--focus-ring-offset);
+  outline: 3px solid #123F56 !important;
+  outline-offset: 3px !important;
   border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 6px rgba(18, 63, 86, 0.2);
 }
 
+/* Alternative focus for dark backgrounds */
+.dark-bg *:focus-visible,
+[class*="bg-[#123F56]"] *:focus-visible,
+[class*="bg-gradient"] *:focus-visible {
+  outline-color: #F4B400 !important;
+  box-shadow: 0 0 0 6px rgba(244, 180, 0, 0.3);
+}
+
+/* Skip link - WCAG requirement */
 .skip-link {
   position: absolute;
   left: -9999px;
   top: 0;
   z-index: 9999;
   padding: 1rem 2rem;
-  background: var(--sw-amber);
-  color: var(--sw-slate);
+  background: #123F56;
+  color: #FFFFFF;
   font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
   border-radius: 0 0 var(--radius-lg) 0;
   box-shadow: var(--shadow-lg);
+  transition: none; /* Immediate visibility for keyboard users */
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
   left: 0;
+  outline: 3px solid #F4B400;
+  outline-offset: 2px;
 }
 
+/* Screen reader only content */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -241,6 +259,62 @@ h4 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* Make sr-only content visible when focused (for skip links etc) */
+.sr-only-focusable:focus,
+.sr-only-focusable:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Reduced motion preference - WCAG 2.3.3 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  *:focus-visible {
+    outline-width: 4px !important;
+    outline-style: solid !important;
+  }
+  
+  .btn {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Ensure interactive elements have minimum touch target size (44x44px) - WCAG 2.5.8 */
+button, 
+a, 
+input[type="checkbox"], 
+input[type="radio"],
+[role="button"],
+[role="link"],
+[role="checkbox"],
+[role="radio"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for inline links which can be smaller */
+p a, li a, span a {
+  min-height: auto;
+  min-width: auto;
 }
 
 /* ============================================
@@ -477,14 +551,47 @@ textarea {
 input:hover,
 select:hover,
 textarea:hover {
-  border-color: var(--sw-gray-300);
+  border-color: var(--sw-gray-400);
 }
 
+/* WCAG 2.2 AA compliant focus states for form fields */
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--sw-teal);
-  box-shadow: 0 0 0 4px rgba(185, 28, 60, 0.1);
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(18, 63, 86, 0.25);
+  outline: none;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(18, 63, 86, 0.25);
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+/* Error state for form validation */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(225, 29, 46, 0.15);
+}
+
+input[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(225, 29, 46, 0.25);
+  outline-color: var(--brand-red);
+}
+
+/* Ensure placeholder text has sufficient contrast (4.5:1 for AA) */
+::placeholder {
+  color: #6B7280; /* Gray-500 - 4.6:1 contrast on white */
+  opacity: 1;
 }
 
 label {
@@ -495,9 +602,27 @@ label {
   font-size: 0.9375rem;
 }
 
+/* Required field indicator */
 .required::after {
   content: " *";
-  color: var(--sw-crimson);
+  color: var(--brand-red);
+}
+
+/* Error message styling */
+.error-message {
+  color: var(--brand-red);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Form field description/helper text */
+.field-description {
+  color: var(--sw-gray-600);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 /* ============================================
