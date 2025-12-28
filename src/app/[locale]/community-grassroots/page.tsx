@@ -113,7 +113,7 @@ export default async function CommunityGrassrootsPage({
                 <p className="text-white/90 text-sm font-semibold uppercase tracking-wider mb-4">
                   {isWelsh ? 'Adnodd Allweddol ar gyfer Clybiau Cymunedol a Gwirfoddolwyr' : 'Key Resource for Community Clubs and Volunteers'}
                 </p>
-                <h2 className="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
+                <h2 className="text-3xl lg:text-4xl font-display font-bold !text-white mb-6">
                   {isWelsh ? 'Cefnogaeth i Glybiau' : 'Club Support'}
                 </h2>
                 <p className="text-lg text-white/90 leading-relaxed mb-8">

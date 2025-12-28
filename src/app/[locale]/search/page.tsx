@@ -336,25 +336,6 @@ function performSearch(query: string, locale: string): typeof searchIndex.en {
     .slice(0, 10); // Limit to top 10 results
 }
 
-// Categories for browsing
-const browseCategories = {
-  en: [
-    { name: 'Funding & Grants', url: '/funding', icon: '💰' },
-    { name: 'Sport in Schools', url: '/sport-in-schools', icon: '🏫' },
-    { name: 'Community Sport', url: '/community-grassroots', icon: '🏃' },
-    { name: 'Research & Data', url: '/research', icon: '📊' },
-    { name: 'Elite Sport', url: '/performance-sport', icon: '🏅' },
-    { name: 'About Us', url: '/about/what-is-sport-wales', icon: 'ℹ️' },
-  ],
-  cy: [
-    { name: 'Cyllid a Grantiau', url: '/funding', icon: '💰' },
-    { name: 'Chwaraeon mewn Ysgolion', url: '/sport-in-schools', icon: '🏫' },
-    { name: 'Chwaraeon Cymunedol', url: '/community-grassroots', icon: '🏃' },
-    { name: 'Ymchwil a Data', url: '/research', icon: '📊' },
-    { name: 'Chwaraeon Elitaidd', url: '/performance-sport', icon: '🏅' },
-    { name: 'Amdanom Ni', url: '/about/what-is-sport-wales', icon: 'ℹ️' },
-  ]
-};
 
 export default async function SearchPage({
   params,
@@ -370,7 +351,6 @@ export default async function SearchPage({
 
   const isWelsh = locale === 'cy';
   const results = query ? performSearch(query, locale) : [];
-  const categories = isWelsh ? browseCategories.cy : browseCategories.en;
 
   const breadcrumbs = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
@@ -382,7 +362,7 @@ export default async function SearchPage({
       <BreadcrumbSchema items={breadcrumbs} />
       
       {/* Hero Search Section */}
-      <section className="relative bg-gradient-to-br from-[#123F56] to-[#0F172A] text-white py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#123F56] to-[#0F172A] text-white pt-32 md:pt-40 pb-40 md:pb-48 min-h-[600px] md:min-h-[700px] overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <div className="absolute top-10 left-10 w-72 h-72 bg-[#E11D2E] rounded-full blur-3xl"></div>
@@ -390,7 +370,7 @@ export default async function SearchPage({
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4 !text-white">
               {isWelsh ? 'Chwilio' : 'Search'}
             </h1>
@@ -498,28 +478,7 @@ export default async function SearchPage({
                   </div>
                 )}
               </>
-            ) : (
-              /* Browse Categories (no search query) */
-              <>
-                <h2 className="text-2xl font-heading font-bold text-[#0F172A] mb-6 text-center">
-                  {isWelsh ? 'Pori yn ôl Categori' : 'Browse by Category'}
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {categories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.url as any}
-                      className="bg-white rounded-xl p-6 shadow-sm border border-[#E2E8F0] hover:border-[#123F56] hover:shadow-md transition-all text-center group"
-                    >
-                      <span className="text-3xl mb-3 block">{category.icon}</span>
-                      <h3 className="font-semibold text-[#0F172A] group-hover:text-[#E11D2E] transition-colors">
-                        {category.name}
-                      </h3>
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
+            ) : null}
           </div>
         </div>
       </section>

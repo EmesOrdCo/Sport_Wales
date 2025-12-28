@@ -53,18 +53,6 @@ export function SearchForm({ initialQuery = '', variant = 'default', autoFocus =
       </label>
       
       <div className={`relative flex items-center ${isHero ? 'max-w-3xl mx-auto' : ''}`}>
-        {/* Search Icon */}
-        <div className="absolute left-4 pointer-events-none" aria-hidden="true">
-          <svg 
-            className={`w-5 h-5 ${isHero ? 'text-[#64748B]' : 'text-[#94A3B8]'}`} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
-
         {/* Input Field */}
         <input
           ref={inputRef}
@@ -75,7 +63,7 @@ export function SearchForm({ initialQuery = '', variant = 'default', autoFocus =
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t('placeholder')}
           className={`
-            w-full pl-12 pr-28 py-4 text-base
+            w-full pl-4 pr-28 py-4 text-base
             border rounded-full
             bg-white text-[#0F172A]
             placeholder-[#64748B]
