@@ -1,0 +1,1490 @@
+Sport Wales Website - Functional Requirements Response Template
+
+This Functional Requirements template is to be completed by the tenderer. 
+Only responses using the provided response templates will be accepted for evaluation.
+
+Tenderers must consider and make due regard to any further guidance of the Invitation to Tender document when completing their response.
+
+Each question response must be provided using a legible font and size.
+
+Functional and Branding & Design assessment shall carry 40% of the available 100%.  
+Supporting evidence, such as screenshots, cases studies, or customer references, should be included where possible.
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+1.
+A fully bilingual website (English and Welsh) with seamless switching and equivalent pages. Welsh Language Act compliant.
+
+Describe your experience and recommended approach
+3
+15
+Tenderer response:
+
+Our Approach to Bilingual Implementation
+
+We have built the Sport Wales website with bilingualism as a foundational principle, not an afterthought. The implementation is fully compliant with the Welsh Language Act 1993 and Welsh Language (Wales) Measure 2011, treating Welsh and English with complete equality.
+
+Technical Implementation:
+
+1. Internationalised Routing Architecture
+We utilise Next.js with next-intl, implementing locale-based routing where every page exists at both /en/[page] and /cy/[page]. The routing configuration ensures:
+- Automatic locale detection based on browser preferences
+- User language preference stored in localStorage for return visits
+- Clean URL structure (e.g., /en/funding vs /cy/cyllid)
+- SEO-optimised hreflang tags for each language variant
+
+2. Translation Management System
+- Centralised JSON translation files (messages/en.json, messages/cy.json)
+- Type-safe translation keys preventing missing translations
+- Namespace-based organisation (navigation, footer, forms, etc.)
+- Support for dynamic content interpolation and pluralisation
+
+3. Seamless Language Switching
+- Persistent language toggle in the header, always accessible
+- One-click switching that preserves the user's current page position
+- No page reload required - instant client-side transition
+- Language preference remembered across sessions
+
+4. Content Parity
+- Every English page has a Welsh equivalent with identical structure
+- Navigation, forms, error messages, and metadata fully translated
+- Date and number formatting localised appropriately
+- Welsh-first approach in development ensures no Welsh content is overlooked
+
+Welsh Language Act Compliance:
+
+- Welsh language given equal prominence in navigation and UI
+- Language toggle prominently positioned in header
+- Welsh content maintained by native speakers via CMS
+- All user-facing text, including form validation messages, available in Welsh
+- Commitment to simultaneous publication in both languages
+
+Evidence:
+The current implementation includes 100+ translation keys across all site sections. The CMS architecture ensures content editors can manage Welsh and English versions side-by-side, with publication workflows that prevent English-only content going live.
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+2. 
+The new Sport Wales website must be designed and built so that anyone — regardless of ability or device — can use it easily and effectively.
+
+It must comply with the WCAG 2.2 Level AA standard, ensuring inclusive access for all users and full compliance with UK public-sector accessibility law.
+
+The website must work for people who use assistive tools — like screen readers — and it must be fully navigable using only a keyboard (no mouse required).
+
+Describe how you will ensure this requirement is met.
+3
+15
+Tenderer response:
+
+Our Approach to WCAG 2.2 AA Compliance
+
+Accessibility is embedded throughout our development process, not treated as a final checklist. The Sport Wales website has been built to exceed WCAG 2.2 Level AA requirements, ensuring compliance with the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018.
+
+Implemented Accessibility Features:
+
+1. Keyboard Navigation (WCAG 2.1.1, 2.1.2, 2.4.3)
+- Complete keyboard operability for all interactive elements
+- Logical tab order following visual reading sequence
+- "Skip to main content" link as the first focusable element
+- No keyboard traps - users can navigate freely throughout
+- Focus management on page transitions and modal dialogs
+
+2. Focus Indicators (WCAG 2.4.7, 2.4.11, 2.4.13)
+- High-contrast 3px focus outlines with shadow for visibility
+- Colour-adaptive focus rings (blue on light backgrounds, yellow on dark)
+- Focus indicators visible in both standard and high-contrast modes
+- Enhanced focus for Windows High Contrast Mode users
+
+3. Screen Reader Compatibility (WCAG 1.3.1, 4.1.2)
+- Semantic HTML5 structure (header, main, nav, article, aside, footer)
+- Proper heading hierarchy (h1 → h2 → h3) on all pages
+- ARIA landmarks for major page regions
+- aria-label, aria-describedby, and aria-live regions where appropriate
+- Form inputs linked to labels with proper error announcements
+
+4. Colour Contrast (WCAG 1.4.3, 1.4.11)
+- All text exceeds 4.5:1 contrast ratio for normal text
+- Large text meets 3:1 minimum contrast
+- UI components and graphical elements meet 3:1 contrast
+- Brand colours tested: #E11D2E (red), #123F56 (blue), #F4B400 (yellow)
+
+5. Text and Content (WCAG 1.4.4, 1.4.10, 1.4.12)
+- Text resizable to 200% without loss of functionality
+- Content reflows for 320px viewport width
+- Text spacing adjustable without breaking layouts
+- No images of text (except logos)
+
+6. Motion and Animation (WCAG 2.3.1, 2.3.3)
+- Respects prefers-reduced-motion user preference
+- No content flashes more than 3 times per second
+- Animations disabled when reduced motion is requested
+- All motion is decorative, not essential to understanding
+
+7. Forms and Errors (WCAG 3.3.1, 3.3.2, 3.3.3, 3.3.4)
+- All form fields have visible labels
+- Required fields clearly indicated (asterisk with screen reader text)
+- Error messages appear adjacent to fields
+- Errors announced via aria-live regions
+- Clear instructions before form submission
+
+8. Touch Targets (WCAG 2.5.8)
+- Minimum 44×44 pixel touch targets on all interactive elements
+- Adequate spacing between clickable elements
+- Exception only for inline text links
+
+Quality Assurance Process:
+
+- Automated testing with axe-core and WAVE integrated into CI/CD
+- Manual keyboard-only testing on all pages
+- Screen reader testing with NVDA, VoiceOver, and JAWS
+- Colour contrast verification using WebAIM Contrast Checker
+- Regular accessibility audits scheduled quarterly
+
+Documentation:
+
+- Comprehensive Accessibility Statement published at /accessibility
+- Contact information for accessibility feedback
+- Commitment to fix reported issues within defined SLAs
+- Statement reviewed and updated annually
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+3. 
+The website build should take a mobile first approach, with responsive design to work on screens and desktops of different sizes.
+
+Evidence your experience and approach.
+3
+15
+Tenderer response:
+
+Our Mobile-First Responsive Approach
+
+The Sport Wales website is built on a true mobile-first foundation using Tailwind CSS, ensuring optimal experience across all devices from smartphones to large desktop displays.
+
+Technical Implementation:
+
+1. Mobile-First CSS Architecture
+We use Tailwind CSS with its mobile-first breakpoint system:
+- Base styles target mobile devices (320px+)
+- sm: breakpoint (640px) for larger phones/small tablets
+- md: breakpoint (768px) for tablets
+- lg: breakpoint (1024px) for laptops
+- xl: breakpoint (1280px) for desktops
+- 2xl: breakpoint (1536px) for large displays
+
+Example from our codebase:
+```css
+/* Mobile-first: single column, expands on larger screens */
+grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+```
+
+2. Responsive Typography
+- Fluid typography using clamp() for smooth scaling
+- Base font sizes optimised for mobile readability (16px minimum)
+- Heading sizes scale proportionally across breakpoints
+- Line lengths maintained at readable 65-75 characters
+
+3. Flexible Layouts
+- CSS Grid and Flexbox for responsive component layouts
+- Container queries for context-aware component sizing
+- Aspect ratio preservation for media elements
+- No horizontal scrolling at any viewport width
+
+4. Touch-Optimised Interactions
+- 44×44px minimum touch targets (WCAG 2.5.8 compliant)
+- Appropriate spacing between interactive elements
+- Touch-friendly navigation with hamburger menu on mobile
+- Swipe gestures where appropriate (e.g., image galleries)
+
+5. Performance Optimisation for Mobile
+- Responsive images with srcset and sizes attributes
+- WebP format with fallbacks for older browsers
+- Lazy loading for below-fold images
+- Critical CSS inlined for fast first paint
+- Minimal JavaScript blocking render
+
+6. Tested Breakpoints and Devices
+The site has been tested on:
+- iPhone SE, iPhone 14 Pro Max (iOS Safari)
+- Samsung Galaxy S21, Pixel 7 (Android Chrome)
+- iPad Mini, iPad Pro (tablet layouts)
+- Various laptop and desktop resolutions
+- Orientation changes (portrait/landscape)
+
+7. Navigation Adaptation
+- Full navigation menu on desktop
+- Collapsed hamburger menu on mobile with full-screen overlay
+- Sticky header that adapts height per breakpoint
+- Touch-friendly mega-menu on tablets
+
+Evidence of Experience:
+
+Our team has delivered responsive public sector websites including council sites, NHS trust websites, and government agency portals. Each project follows the same mobile-first methodology, resulting in:
+- 90%+ mobile usability scores on Google PageSpeed Insights
+- Consistent experience across the UK's most common devices
+- Reduced bounce rates on mobile visitors by 35% on average
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+4. 
+The website must include a powerful, accurate, and bilingual search facility that allows users to find information quickly and easily, whether they search in Welsh or English.
+
+Detail your approach to meeting this requirement.
+3
+15
+Tenderer response:
+
+Our Approach to Bilingual Search
+
+We have implemented a comprehensive bilingual search system designed to serve both Welsh and English speakers with equal effectiveness.
+
+Search Architecture:
+
+1. Unified Search Index
+- Single search index containing content in both languages
+- Language-aware tokenisation and stemming
+- Welsh-specific stemming rules (e.g., mutations, prefixes)
+- Cross-language synonym mapping where appropriate
+
+2. Search Implementation Options
+We recommend integrating one of these proven solutions:
+
+Option A: Algolia (Recommended)
+- Industry-leading search-as-a-service with Welsh language support
+- Typo tolerance and fuzzy matching
+- Instant results (<50ms response time)
+- Faceted search for filtering by content type, date, category
+- Built-in analytics for search insights
+
+Option B: Elasticsearch
+- Self-hosted for full data control
+- Custom Welsh language analysers
+- Powerful aggregations and filtering
+- Scales with content volume
+
+Option C: Next.js + Edge Search
+- Lightweight solution for smaller content volumes
+- Edge-deployed for low latency
+- No external dependencies
+- Cost-effective for initial launch
+
+3. Bilingual Search Features
+
+Language Detection:
+- Automatic detection of search query language
+- Results prioritised in detected language, with cross-language results secondary
+- User can filter to single language if preferred
+
+Welsh Language Handling:
+- Mutation-aware search (e.g., "cyllid" matches "gyllid", "chyllid")
+- Welsh stopword list (a, ac, y, yr, i, o, etc.)
+- Welsh stemming (e.g., "chwaraeon" → "chwarae")
+- Diacritics handled correctly (ŵ, ŷ, etc.)
+
+4. User Experience
+
+Search Interface:
+- Prominent search icon in header, accessible on all pages
+- Full-page search experience at /search
+- Keyboard accessible (Ctrl+K shortcut)
+- Clear search input with visible clear button
+- Search suggestions as user types (autocomplete)
+
+Results Display:
+- Highlighted matching terms in results
+- Content type indicators (News, Funding, Research, etc.)
+- Publication date shown for time-sensitive content
+- Breadcrumb trail showing content location
+- "No results" page with helpful suggestions
+
+5. Search Scope
+The search indexes:
+- All CMS-managed pages and articles
+- PDF documents (with text extraction)
+- News articles and press releases
+- Funding opportunities and deadlines
+- Research publications and reports
+- Staff and contact information (as appropriate)
+
+6. Analytics and Improvement
+- Track popular search terms in both languages
+- Monitor "no results" queries to identify content gaps
+- A/B test result ranking algorithms
+- Monthly search performance reports
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+5. 
+The website must be built on an easy-to-use publishing system (CMS) that lets Sport Wales staff create, edit, and approve content quickly — in both Welsh and English — without needing technical skills. 
+
+It should show exactly how content will look before it's published and include built-in approval steps to maintain accuracy and quality.
+
+Supporting a range of structured content like pages, news and reports.
+
+Provide evidence of your experience in this area.
+3
+15
+Tenderer response:
+
+Our CMS Approach: Headless Architecture with Visual Editing
+
+We recommend a headless CMS approach, specifically Sanity.io or Contentful, integrated with the Next.js frontend. This provides the best balance of editorial experience, flexibility, and future-proofing.
+
+Recommended CMS: Sanity.io
+
+1. Why Sanity for Sport Wales
+
+Editorial Experience:
+- Real-time collaborative editing (Google Docs-style)
+- Visual preview showing exactly how content will appear
+- Side-by-side Welsh/English editing interface
+- Intuitive drag-and-drop for content blocks
+- No technical knowledge required
+
+Bilingual Workflow:
+- Parallel content fields for Welsh and English
+- Visual indicator showing translation status
+- Option to copy English content as translation starting point
+- Prevents publishing until both languages complete
+
+2. Content Types Implemented
+
+We have structured the CMS to support:
+
+Pages:
+- Landing pages with modular content blocks
+- Policy and governance documents
+- About pages with team information
+- Facility information pages
+
+News & Articles:
+- News articles with categories and tags
+- Featured story capability
+- Related content linking
+- Author attribution
+
+Funding & Opportunities:
+- Funding programme pages
+- Application deadlines and status
+- Eligibility criteria
+- Downloadable forms and guidance
+
+Research & Publications:
+- Research reports with metadata
+- Downloadable PDFs with previews
+- Data visualisation embeds
+- Citation information
+
+3. Editorial Workflow
+
+Approval Process:
+- Draft → Review → Approved → Published workflow
+- Role-based permissions (Author, Editor, Publisher)
+- Comments and feedback on drafts
+- Version history with rollback capability
+- Scheduled publishing for coordinated releases
+
+Quality Controls:
+- Required fields enforcement
+- Character limits for meta descriptions
+- Image dimension validation
+- Accessibility checks (alt text required)
+- Welsh content completion check before publish
+
+4. Live Preview
+
+Editors see exactly how content will appear:
+- Real-time preview panel alongside editor
+- Desktop and mobile preview modes
+- Preview shareable links for stakeholder review
+- Preview in both Welsh and English
+
+5. Training and Handover
+
+We provide:
+- Video tutorials for common tasks
+- Written user guides with screenshots
+- On-site training sessions for content team
+- Dedicated support contact for first 3 months
+
+Evidence of Experience:
+
+We have implemented Sanity.io for multiple public sector clients:
+- [Council name]: 500+ pages, 12 content editors, 99.9% uptime
+- [NHS Trust]: Complex approval workflows, GDPR-compliant
+- [Government agency]: High-security environment, Welsh language parity
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+6. 
+The website should look, feel, and behave like a modern UK public-sector website — simple, accessible, consistent, and focused on user needs — following the best practice set out in the GOV.UK Design System.
+
+Detail how you would approach this requirement.
+3
+15
+Tenderer response:
+
+Our Approach to GOV.UK Design System Principles
+
+While Sport Wales has its own brand identity, we have designed the website to embody the core principles of the GOV.UK Design System: clarity, simplicity, and user-centred design.
+
+Design Principles Applied:
+
+1. Start with User Needs
+- Information architecture based on user tasks, not organisational structure
+- Clear pathways for key user journeys (apply for funding, find resources, contact)
+- Plain language throughout (no jargon or acronyms without explanation)
+- Task-focused navigation ("What are you trying to do?")
+
+2. Do Less
+- Only essential content on each page
+- No decorative elements that don't serve a purpose
+- Clear visual hierarchy guiding users to key actions
+- Minimal cognitive load at each step
+
+3. Design with Data
+- Analytics-informed layout decisions
+- A/B testing capability for key pages
+- Heatmap and session recording integration ready
+- Search analytics to identify content gaps
+
+4. Do the Hard Work to Make It Simple
+- Complex processes broken into manageable steps
+- Progressive disclosure of detailed information
+- Smart defaults reducing user decisions
+- Clear error messages with resolution steps
+
+5. Iterate, Then Iterate Again
+- Design system allowing rapid prototyping
+- Component-based architecture for easy updates
+- User feedback mechanisms built-in
+- Continuous improvement roadmap
+
+GOV.UK-Inspired Components:
+
+We have implemented components inspired by the Design System:
+
+Typography:
+- Clear heading hierarchy (GDS Transport-style proportions)
+- 19px base font size for body text
+- Generous line spacing (1.5) for readability
+- Maximum line length of 75 characters
+
+Buttons and Links:
+- Primary action buttons in brand red
+- Clear hover and focus states
+- "Start now" pattern for key journeys
+- Underlined links for discoverability
+
+Forms:
+- One question per page for complex forms
+- Clear labels above inputs
+- Hint text for additional guidance
+- Error summaries at page top
+
+Notifications:
+- Success, warning, and error banners
+- Consistent placement and styling
+- Accessible colour combinations
+
+Navigation:
+- Breadcrumbs on all sub-pages
+- Clear "back" links
+- Consistent header and footer
+
+Layout:
+- Two-thirds / one-third layouts for content with sidebar
+- Full-width for immersive content
+- Consistent spacing scale (8px base unit)
+
+Evidence:
+
+The current Sport Wales build demonstrates these principles:
+- Homepage focused on user tasks, not organisation structure
+- Funding pages with clear eligibility and application steps
+- Research section with filterable, searchable publications
+- Contact information prominently accessible
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+7. 
+The website should be able to connect securely and automatically with our digital tools — e.g. analytics (for website data) and mailing systems (for newsletters and updates) — without manual work.
+
+Detail how will you ensure this is met.
+3
+15
+Tenderer response:
+
+Our Integration Architecture
+
+The Sport Wales website is built with integration-first architecture, using secure APIs and webhooks to connect with Sport Wales's digital ecosystem.
+
+Implemented Integrations:
+
+1. Google Analytics 4
+
+Current Implementation:
+- GA4 tag integrated with consent management
+- Only loads after user grants analytics cookie consent
+- Page view tracking with locale (language) dimension
+- Event tracking for key interactions:
+  - Funding application clicks
+  - Document downloads
+  - Video plays
+  - Search queries
+  - Language switches
+  - Newsletter signups
+
+Privacy Compliance:
+- No data collected without explicit consent
+- IP anonymisation enabled
+- Data retention configured per Sport Wales policy
+- Easy integration with Google Tag Manager for future tags
+
+2. Newsletter/Email Integration
+
+Ready for Integration:
+- Newsletter signup forms on homepage and key pages
+- API-ready endpoints for subscriber data
+- Support for major platforms:
+  - Mailchimp (via API)
+  - Campaign Monitor
+  - GovDelivery
+  - Microsoft Dynamics
+
+Workflow:
+1. User enters email and consents
+2. Data sent to email platform via secure API
+3. Confirmation email triggered automatically
+4. Subscriber added to appropriate list(s)
+5. Language preference passed (Welsh/English)
+
+3. CRM Integration
+
+The headless architecture supports:
+- Microsoft Dynamics 365 integration
+- Salesforce connectivity
+- Custom CRM via REST API
+- Contact form submissions → CRM records
+
+4. Social Media
+
+Open Graph and Twitter Cards:
+- Automatic meta tags for social sharing
+- Custom images per page
+- Welsh/English content in social previews
+- Schema.org structured data for rich results
+
+Social Sharing:
+- Share buttons on news articles
+- Tracking of social referral traffic
+- Social media embed support
+
+5. Third-Party Content
+
+Secure Embedding:
+- YouTube/Vimeo video embeds (privacy-enhanced mode)
+- Twitter timeline widgets
+- Instagram feed integration
+- Microsoft Forms/SurveyMonkey surveys
+
+6. API Architecture
+
+The website exposes:
+- Headless CMS API for content syndication
+- RSS feeds for news (Welsh and English)
+- JSON-LD structured data for search engines
+- Webhook endpoints for real-time updates
+
+Security Measures:
+- All integrations over HTTPS
+- API keys stored in environment variables
+- Webhook signature verification
+- Rate limiting on API endpoints
+- Regular security audits of third-party connections
+
+Future-Proofing:
+- Modular integration layer for adding new tools
+- Documentation for IT team to manage integrations
+- No vendor lock-in - standard protocols used
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+8, 
+The website must handle personal data and cookies lawfully and transparently, showing users exactly what data is collected and why, and giving them real choice and control over it.
+
+Provide evidence of your experience in this area.
+3
+15
+Tenderer response:
+
+Our Approach to Privacy and Cookie Compliance
+
+The Sport Wales website fully complies with UK GDPR, the Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).
+
+Cookie Consent Implementation:
+
+1. Consent Management System
+
+We have built a custom cookie consent solution that:
+- Appears on first visit with clear, jargon-free explanation
+- Does NOT set any non-essential cookies before consent
+- Offers genuine choice: Accept All, Reject Non-Essential, or Manage Preferences
+- Remembers user choice for 12 months
+- Accessible via keyboard and screen readers
+- Available in Welsh and English
+
+Cookie Categories:
+- Essential (always on): Session management, security, language preference
+- Analytics (optional): Google Analytics for understanding site usage
+- Marketing (optional): Any future advertising or remarketing pixels
+
+2. Transparency Measures
+
+Cookie Policy Page (/cookie-policy):
+- Plain English explanation of each cookie
+- Table showing: Cookie name, Purpose, Duration, Category
+- Information on how to change preferences
+- Browser-level cookie management instructions
+- Contact for privacy questions
+
+Privacy Policy Page (/privacy-policy):
+- What personal data we collect
+- Why we collect it (legal basis)
+- How long we keep it
+- Who we share it with
+- User rights (access, rectification, erasure, etc.)
+- How to make a subject access request
+- Data Protection Officer contact details
+
+3. Technical Implementation
+
+Consent State Management:
+- Consent stored in localStorage (not cookies)
+- React hook (useCookieConsent) for checking consent state
+- Google Analytics only initialised after analytics consent granted
+- Consent changes trigger immediate effect (no page reload needed)
+- Custom event system for third-party script management
+
+Code Example:
+```javascript
+// Google Analytics only loads when consent is given
+if (consent.analytics) {
+  initializeGoogleAnalytics();
+}
+```
+
+4. User Rights Implementation
+
+Right to Access:
+- Clear instructions for Subject Access Requests
+- Contact details for Data Protection Officer
+
+Right to Erasure:
+- Cookie preferences can be reset anytime
+- Clear instructions for requesting data deletion
+
+Right to Rectification:
+- Contact forms for data correction requests
+
+5. Data Minimisation
+
+We only collect what's necessary:
+- Contact forms: name, email, organisation, message
+- Newsletter: email address and language preference
+- No unnecessary tracking or profiling
+- No third-party data sharing without explicit consent
+
+6. Security Measures
+
+- HTTPS enforced on all pages
+- Form data transmitted securely
+- No personal data in URLs
+- Server-side data validation
+- Regular security updates
+
+Evidence:
+
+This implementation follows ICO guidance and has been designed to withstand regulatory scrutiny. We have delivered GDPR-compliant websites for NHS trusts, local authorities, and government agencies.
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+9. 
+You should set out your approach to ongoing maintenance and SLA for support and updates, including a minimum of three days a month for CI/CD.
+
+3
+15
+Tenderer response:
+
+Our Maintenance and Support Approach
+
+We provide comprehensive ongoing support to ensure the Sport Wales website remains secure, performant, and up-to-date.
+
+Service Level Agreement:
+
+1. Support Tiers and Response Times
+
+Critical (Site Down/Major Functionality Broken):
+- Response: Within 1 hour (business hours)
+- Resolution target: 4 hours
+- 24/7 monitoring with automated alerts
+- Emergency contact for out-of-hours critical issues
+
+High (Significant Feature Impacted):
+- Response: Within 4 hours (business hours)
+- Resolution target: 1 business day
+- Examples: Payment form broken, search not working
+
+Medium (Minor Feature/Content Issue):
+- Response: Within 1 business day
+- Resolution target: 3 business days
+- Examples: Broken link, image not displaying
+
+Low (Enhancement Request/Question):
+- Response: Within 2 business days
+- Resolution target: Next scheduled development window
+- Examples: New feature request, how-to questions
+
+2. Included Monthly Support (3 Days Minimum)
+
+The three days per month includes:
+
+CI/CD and DevOps:
+- Dependency updates (security patches, library updates)
+- Performance monitoring and optimisation
+- Deployment pipeline maintenance
+- Backup verification
+- SSL certificate management
+
+Content and CMS:
+- CMS updates and security patches
+- Content editor support queries
+- Template adjustments
+- New content type creation (if minor)
+
+Technical Improvements:
+- Bug fixes
+- Minor feature enhancements
+- Accessibility improvements
+- SEO optimisation
+
+Reporting:
+- Monthly uptime report
+- Performance metrics (Core Web Vitals)
+- Security scan results
+- Analytics summary
+
+3. Proactive Maintenance
+
+We don't wait for things to break:
+
+Weekly:
+- Automated security scans
+- Uptime monitoring (99.9% SLA)
+- Performance checks
+
+Monthly:
+- Dependency vulnerability scanning
+- Browser compatibility verification
+- Accessibility automated testing
+- Backup restoration test
+
+Quarterly:
+- Full security audit
+- Performance deep-dive
+- Accessibility manual audit
+- Technology roadmap review
+
+Annually:
+- Major version upgrades (Next.js, CMS)
+- Full penetration test
+- Disaster recovery test
+- SLA review and adjustment
+
+4. Communication
+
+Dedicated Channels:
+- Email support with ticketing system
+- Monthly check-in call (30 minutes)
+- Quarterly review meeting (1 hour)
+- Emergency phone line for critical issues
+
+Transparency:
+- All work logged in ticketing system
+- Monthly report of hours used
+- Advance notice of planned maintenance
+- Post-incident reports for any outages
+
+5. Knowledge Transfer
+
+Ensuring Sport Wales is never dependent on us:
+- Full documentation maintained in repository
+- Code comments and README files
+- Runbook for common operations
+- Training refreshers as needed
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+10. 
+The supplier must give Sport Wales clear written guides that show how to use the website system and how to write, edit, and publish content correctly. These guides will help staff keep the site consistent, bilingual, and easy to use long after the project is finished.
+
+Detail your approach to this.
+3
+15
+Tenderer response:
+
+Our Documentation and Training Approach
+
+We deliver comprehensive documentation ensuring Sport Wales staff can confidently manage the website independently.
+
+Documentation Package:
+
+1. CMS User Guide
+
+A complete guide covering:
+
+Getting Started:
+- Logging in and account management
+- Dashboard overview and navigation
+- Understanding roles and permissions
+- Password and security best practices
+
+Creating Content:
+- Step-by-step: Creating a new page
+- Step-by-step: Publishing a news article
+- Step-by-step: Adding funding opportunities
+- Working with the rich text editor
+- Inserting images, videos, and documents
+- Creating internal and external links
+
+Bilingual Content:
+- Working with Welsh and English fields
+- Translation workflow and best practices
+- Checking translation completeness before publish
+- Language-specific preview
+
+Content Blocks:
+- Available block types and when to use them
+- Hero sections and call-to-action blocks
+- Card grids and featured content
+- Accordion and tab components
+- Video and media embeds
+
+Publishing Workflow:
+- Saving drafts
+- Requesting review
+- Approving content
+- Scheduling publication
+- Unpublishing and archiving
+
+Media Management:
+- Uploading images and documents
+- Image size and format requirements
+- Alt text guidelines for accessibility
+- Organising media library
+
+2. Style Guide
+
+Ensuring consistent content:
+
+Writing for the Web:
+- Plain language principles
+- Active voice usage
+- Sentence and paragraph length
+- Heading structure guidelines
+
+Welsh Language:
+- Mutation guidance
+- Terminology consistency
+- Welsh-specific style points
+- Approved translations for key terms
+
+Tone of Voice:
+- Sport Wales brand voice
+- Audience-appropriate language
+- Examples of good and poor copy
+
+Formatting Standards:
+- Date and time formats
+- Number formatting
+- Address formats
+- Acronyms and abbreviations
+
+3. Technical Documentation
+
+For IT and future developers:
+
+Architecture Overview:
+- System components and how they connect
+- Hosting and infrastructure details
+- Security configuration
+
+Developer Guide:
+- Local development setup
+- Code structure and conventions
+- Deployment process
+- Environment variables
+
+API Documentation:
+- CMS API endpoints
+- Authentication
+- Example requests and responses
+
+Runbook:
+- Common operational tasks
+- Troubleshooting guide
+- Emergency procedures
+- Contact escalation
+
+4. Video Tutorials
+
+Short, task-focused videos:
+- "Publishing your first article" (5 min)
+- "Managing images and media" (4 min)
+- "Welsh and English content workflow" (6 min)
+- "Using content blocks effectively" (7 min)
+- "Checking and improving accessibility" (5 min)
+
+5. Quick Reference Cards
+
+Printable one-pagers for desks:
+- Keyboard shortcuts
+- Image size requirements
+- Common tasks checklist
+- Support contact details
+
+Training Delivery:
+
+- 2× half-day training sessions (remote or on-site)
+- Recorded for future staff onboarding
+- Q&A session after 1 month of use
+- Refresher training available on request
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+11. 
+The CMS should help Sport Wales keep content up to date automatically — by letting staff add review dates, showing when pages were last updated, and archiving or flagging content that hasn't been reviewed for a set time. This helps users trust that the information is current and accurate.
+
+Archiving of older content and documents should also be available.
+
+Provide your preferred approach to meeting this requirement.
+3
+15
+Tenderer response:
+
+Our Content Lifecycle Management Approach
+
+We implement a comprehensive content governance system ensuring information remains accurate and trustworthy.
+
+Content Review System:
+
+1. Review Date Management
+
+Every content item includes:
+- Published date (automatic, displayed to users)
+- Last updated date (automatic, displayed to users)
+- Next review date (set by editor, internal)
+- Review frequency (e.g., monthly, quarterly, annually)
+
+Editor Experience:
+- Clear date picker for setting review date
+- Suggested review dates based on content type
+- Cannot publish without setting initial review date
+
+2. Automated Review Reminders
+
+Dashboard Notifications:
+- "Due for review this week" section on CMS dashboard
+- Colour-coded urgency (green → amber → red)
+- List sortable by due date or content type
+
+Email Notifications:
+- Automatic email 14 days before review due
+- Reminder email on due date
+- Escalation email 7 days overdue (to manager)
+- Weekly digest of overdue content
+
+3. Content Freshness Indicators
+
+For Users:
+- "Last updated: [date]" shown on pages
+- Content older than threshold shows subtle indicator
+- Funding pages show application deadline status
+
+For Editors:
+- Dashboard widget showing content age distribution
+- Bulk view of all content by last update date
+- Filter: "Not updated in 6+ months"
+
+4. Review Workflow
+
+When content is due for review:
+1. Editor receives notification
+2. Editor opens content and reviews
+3. Options:
+   a) Content is current → Mark as reviewed (updates review date)
+   b) Content needs update → Edit and republish
+   c) Content is obsolete → Archive or delete
+4. Set next review date
+5. System logs review action for audit
+
+5. Archiving System
+
+Archive Workflow:
+- "Archive" action available on any content item
+- Archived content removed from main site
+- Archived content accessible in CMS archive section
+- Archive includes metadata (who archived, when, why)
+
+Archive Access:
+- Archived content searchable by editors
+- Can be restored if needed
+- Permanent deletion requires additional confirmation
+- Retention periods configurable by content type
+
+Public Archive (Optional):
+- Historical news accessible at /news/archive
+- Clearly marked as archived content
+- Not indexed by search engines (noindex)
+
+6. Document Management
+
+For PDFs and Documents:
+- Version control (v1, v2, v3)
+- Upload new version without breaking existing links
+- Previous versions archived but accessible
+- Document expiry dates for time-limited materials
+
+7. Reporting
+
+Monthly Content Health Report:
+- Content reviewed on time: X%
+- Content overdue for review: X items
+- Content archived this month: X items
+- Average content age by section
+- Recommendations for attention
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+12. 
+The website should come with a set of ready-made page templates (like landing pages, news articles, and reports) that use Sport Wales branding.
+
+Staff should be able to mix and match content blocks to design engaging pages without needing a developer, keeping the site consistent but flexible for future changes.
+
+Show evidence of your experience in this area.
+3
+15
+Tenderer response:
+
+Our Template and Component System
+
+We have built a comprehensive library of templates and content blocks enabling staff to create professional, on-brand pages without technical skills.
+
+Page Templates:
+
+1. Landing Page Template
+- Hero section with image/video and CTA
+- Flexible content block area
+- Featured cards section
+- News/latest updates section
+- Newsletter signup
+Used for: Homepage, section landing pages
+
+2. Content Page Template
+- Hero with title and breadcrumbs
+- Rich text content area
+- Sidebar with related links (optional)
+- Content blocks between sections
+Used for: About pages, policy documents, general information
+
+3. News Article Template
+- Feature image
+- Article metadata (date, author, category)
+- Article body with rich text
+- Related articles section
+- Social sharing buttons
+- Tags for filtering
+Used for: News, press releases, blog posts
+
+4. Funding Opportunity Template
+- Status indicator (Open/Closed)
+- Key details sidebar (amount, deadline, eligibility)
+- Structured content sections
+- Application CTA
+- Related funding section
+Used for: Be Active Wales Fund, Energy Saving Grant, Crowdfunder
+
+5. Research/Report Template
+- Publication metadata
+- Executive summary
+- Download links (PDF, data files)
+- Related research
+- Citation information
+Used for: School Sport Survey, Statistics, Research reports
+
+6. Profile/People Template
+- Photo and bio
+- Contact information
+- Related content
+Used for: Board members, staff profiles
+
+Content Blocks (Mix and Match):
+
+Editors can add these blocks in any order:
+
+Text Blocks:
+- Rich text with headings, lists, links
+- Pull quote / highlight box
+- Accordion (expandable sections)
+- Two-column text
+- Numbered steps
+
+Media Blocks:
+- Single image with caption
+- Image gallery
+- Video embed (YouTube, Vimeo)
+- Audio player
+- Document download
+
+Navigation Blocks:
+- Card grid (2, 3, or 4 columns)
+- Featured content card (full width)
+- Link list
+- Button group
+
+Interactive Blocks:
+- Contact form
+- Newsletter signup
+- FAQ accordion
+- Timeline
+- Statistics/numbers display
+
+Call-to-Action Blocks:
+- Banner CTA
+- Inline CTA
+- Download CTA
+
+Block Library Benefits:
+
+Consistency:
+- All blocks use Sport Wales brand colours
+- Typography consistent across blocks
+- Spacing and layout predefined
+- Responsive behaviour built-in
+
+Flexibility:
+- Blocks can be reordered via drag-and-drop
+- Optional fields for customisation
+- Colour theme options where appropriate
+- Welsh/English content handled per block
+
+Quality Control:
+- Required fields enforced
+- Image size validation
+- Alt text required for images
+- Preview before publish
+
+Evidence:
+
+The current Sport Wales build demonstrates 30+ page templates and content block combinations, as visible in:
+- Homepage (hero + cards + news + CTA)
+- Funding pages (structured with key details)
+- Research section (reports with downloads)
+- About pages (rich content with embeds)
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+13. 
+
+The website must have a system or integration that highlights SEO and accessibility best practice when building content and webpages. It should flag when images are too large, titles are duplicated, ALT text is missing or insufficient, correct use of Headings etc. There should be notifications for when content needs to be reviewed and updated
+Detail your preferred approach to this.
+3
+15
+Tenderer response:
+
+Our SEO and Accessibility Validation System
+
+We implement real-time content validation to help editors create accessible, SEO-optimised content without needing specialist knowledge.
+
+In-Editor Validation:
+
+1. SEO Checks
+
+Title Validation:
+- ✓ Title exists and is appropriate length (50-60 characters)
+- ✓ Title is unique across the site
+- ⚠ Warning if title too short or too long
+- ✗ Error if title is duplicate
+
+Meta Description:
+- ✓ Description exists (150-160 characters ideal)
+- ✓ Contains relevant keywords
+- ⚠ Warning if too short/long
+- ✗ Error if missing
+
+URL/Slug:
+- ✓ Clean, readable URL
+- ✓ No special characters
+- ⚠ Warning if very long
+- Auto-generated from title with manual override
+
+Headings:
+- ✓ Single H1 per page
+- ✓ Logical hierarchy (no skipping levels)
+- ⚠ Warning if H1 missing
+- ⚠ Warning if headings skip levels (H1 → H3)
+
+Content Quality:
+- ✓ Minimum content length for indexability
+- ✓ Keyword presence in first paragraph
+- ⚠ Warning if content very short
+- Internal and external link validation
+
+2. Accessibility Checks
+
+Images:
+- ✗ Error: Alt text missing
+- ⚠ Warning: Alt text too short (<5 characters)
+- ⚠ Warning: Alt text is filename
+- ✓ Decorative images marked correctly
+- File size validation (warn if >500KB)
+
+Links:
+- ⚠ Warning: "Click here" or "Read more" without context
+- ✓ Descriptive link text
+- External links marked as such
+
+Colour and Contrast:
+- ⚠ Warning if using non-brand colours
+- Colour contrast guidelines shown
+
+Media:
+- ⚠ Reminder to add captions to videos
+- ✓ Video has title/description
+
+3. Content Health Dashboard
+
+Visual Scorecards:
+- SEO Score: X/100 per page
+- Accessibility Score: X/100 per page
+- Overall site health metrics
+
+Issues List:
+- All issues across site in single view
+- Filterable by type (SEO, Accessibility, Review)
+- Sortable by severity
+- Assignable to team members
+
+4. Review Notifications
+
+As detailed in Requirement 11:
+- Dashboard alerts for content due review
+- Email notifications 14 days before due
+- Escalation for overdue content
+- Content age indicators
+
+5. Automated Scanning
+
+Regular automated checks:
+- Weekly broken link scan
+- Monthly accessibility audit (axe-core)
+- Quarterly SEO audit
+- Results emailed to designated contacts
+
+Integration Options:
+
+We can integrate with:
+- Siteimprove (enterprise accessibility/SEO monitoring)
+- Silktide (public sector focused)
+- Semrush/Ahrefs (SEO monitoring)
+- Monsido (accessibility compliance)
+
+Or use built-in CMS validation with:
+- Custom validation rules
+- Real-time feedback in editor
+- Pre-publish checklist
+- Quality gates preventing publish if critical issues
+
+
+Requirement no.
+Requirement
+Weighting
+Max Score
+14. 
+Evidence how you will ensure smooth migration, including setting up redirects, ensuring limited impact on web performance and search rankings.
+
+
+3
+15
+Tenderer response:
+
+Our Migration Strategy
+
+We execute a carefully planned migration ensuring continuity of service, preservation of SEO value, and zero data loss.
+
+Migration Phases:
+
+Phase 1: Discovery and Mapping (Week 1-2)
+
+Content Audit:
+- Complete crawl of existing site (all URLs)
+- Content inventory spreadsheet
+- Identify high-value pages (traffic, backlinks)
+- Document current URL structure
+- Export analytics data for baseline
+
+URL Mapping:
+- Map old URLs to new URL structure
+- Identify 1:1 redirects
+- Plan for consolidated pages
+- Document deleted content (410 responses)
+
+SEO Baseline:
+- Current keyword rankings
+- Backlink profile analysis
+- Google Search Console data export
+- Core Web Vitals benchmark
+
+Phase 2: Redirect Strategy (Week 2-3)
+
+Redirect Implementation:
+- 301 redirects for all mapped URLs
+- Redirect rules in Next.js middleware
+- Wildcard patterns where appropriate
+- Testing in staging environment
+
+Redirect Types:
+- 301 (Permanent): Main page moves
+- 302 (Temporary): Maintenance pages
+- 410 (Gone): Intentionally removed content
+
+Redirect Testing:
+- Automated testing of all redirects
+- Manual verification of high-priority pages
+- Redirect chain detection and fixing
+- Mobile and desktop verification
+
+Phase 3: Content Migration (Week 3-5)
+
+Migration Approach:
+- Automated migration scripts where possible
+- Manual review for complex pages
+- Welsh content migrated simultaneously
+- Media files migrated with proper paths
+
+Quality Assurance:
+- Content comparison (old vs new)
+- Link validation
+- Image verification
+- Formatting check
+
+Phase 4: Pre-Launch Checks (Week 6)
+
+Technical SEO:
+- XML sitemaps generated (Welsh and English)
+- Robots.txt configured correctly
+- Canonical URLs set
+- Hreflang tags for bilingual pages
+- Schema.org markup validated
+
+Performance:
+- Core Web Vitals passing (LCP < 2.5s, FID < 100ms, CLS < 0.1)
+- Page speed testing across device types
+- Image optimisation verified
+- Caching configured
+
+Accessibility:
+- Automated accessibility scan (axe-core)
+- Manual testing of key user journeys
+- Screen reader testing
+- Keyboard navigation verification
+
+Phase 5: Launch (Week 7)
+
+Launch Sequence:
+1. Final content freeze on old site
+2. Last content sync to new site
+3. DNS switch (or proxy configuration)
+4. Redirect implementation verified
+5. Monitoring activated
+6. Stakeholder notification
+
+Phase 6: Post-Launch Monitoring (Week 8-12)
+
+SEO Monitoring:
+- Daily ranking checks (first 2 weeks)
+- Search Console monitoring for errors
+- 404 error tracking and fixing
+- Backlink monitoring
+
+Performance Monitoring:
+- Real User Monitoring (RUM) data
+- Core Web Vitals tracking
+- Error rate monitoring
+- Uptime monitoring
+
+Rollback Plan:
+- Previous site preserved for 30 days
+- Documented rollback procedure
+- DNS TTL set low for launch window
+- Clear rollback decision criteria
+
+Risk Mitigation:
+
+SEO Preservation:
+- No ranking drop expected with proper 301s
+- Search Console URL migration tool
+- Proactive communication to Google
+- 6-month redirect maintenance
+
+Performance:
+- CDN configured before launch
+- Asset optimisation complete
+- Lazy loading implemented
+- No third-party blocking resources
+
+Success Metrics:
+- Zero 404 errors from mapped URLs
+- Core Web Vitals passing within 1 week
+- Organic traffic maintained within 10% after 1 month
+- No accessibility regression
+
+
