@@ -336,12 +336,6 @@ function performSearch(query: string, locale: string): typeof searchIndex.en {
     .slice(0, 10); // Limit to top 10 results
 }
 
-// Popular searches
-const popularSearches = {
-  en: ['Funding', 'Grants', 'Schools', 'Clubs', 'Careers', 'Contact'],
-  cy: ['Cyllid', 'Grantiau', 'Ysgolion', 'Clybiau', 'Gyrfaoedd', 'Cyswllt']
-};
-
 // Categories for browsing
 const browseCategories = {
   en: [
@@ -377,7 +371,6 @@ export default async function SearchPage({
   const isWelsh = locale === 'cy';
   const results = query ? performSearch(query, locale) : [];
   const categories = isWelsh ? browseCategories.cy : browseCategories.en;
-  const popular = isWelsh ? popularSearches.cy : popularSearches.en;
 
   const breadcrumbs = [
     { name: isWelsh ? 'Hafan' : 'Home', url: `https://www.sport.wales/${locale}` },
@@ -409,26 +402,6 @@ export default async function SearchPage({
             </p>
             
             <SearchForm initialQuery={query || ''} variant="hero" autoFocus={!query} />
-            
-            {/* Popular Searches */}
-            {!query && (
-              <div className="mt-6">
-                <p className="text-sm text-white/60 mb-3">
-                  {isWelsh ? 'Chwiliadau poblogaidd:' : 'Popular searches:'}
-                </p>
-                <div className="flex flex-wrap justify-center gap-2">
-                  {popular.map((term) => (
-                    <Link
-                      key={term}
-                      href={`/search?q=${encodeURIComponent(term)}`}
-                      className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm transition-colors"
-                    >
-                      {term}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </section>

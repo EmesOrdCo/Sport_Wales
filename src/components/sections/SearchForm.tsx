@@ -76,14 +76,14 @@ export function SearchForm({ initialQuery = '', variant = 'default', autoFocus =
           placeholder={t('placeholder')}
           className={`
             w-full pl-12 pr-28 py-4 text-base
-            border-2 rounded-full
+            border rounded-full
             bg-white text-[#0F172A]
             placeholder-[#64748B]
             transition-all duration-200
-            focus:outline-none focus:ring-2 focus:ring-offset-0
+            focus:outline-none
             ${isHero 
-              ? 'border-[#E2E8F0] focus:border-[#123F56] focus:ring-[#123F56]/20 shadow-lg' 
-              : 'border-[#CBD5E1] focus:border-[#123F56] focus:ring-[#123F56]/20'
+              ? 'border-transparent shadow-lg' 
+              : 'border-[#CBD5E1]'
             }
           `}
           autoComplete="off"
