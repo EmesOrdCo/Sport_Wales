@@ -99,10 +99,10 @@ export function Header() {
             {/* Language Switcher */}
             <LanguageSwitcher variant={isScrolled || !isHome ? 'light' : 'dark'} />
 
-            {/* CTA Button - Desktop */}
+            {/* CTA Button - Desktop Only (hidden on mobile/tablet via CSS) */}
             <Link
               href="/funding"
-              className="hidden lg:flex btn btn-primary text-sm py-2.5 px-5"
+              className="btn btn-primary text-sm py-2.5 px-5 header-funding-btn"
             >
               {locale === 'cy' ? 'Gwneud Cais' : 'Apply for Funding'}
             </Link>

@@ -137,7 +137,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">
+                  <h3 className="text-xl font-bold !text-white mb-2">
                     {card.title}
                   </h3>
                   <p className={`text-sm mb-4 flex-grow ${card.iconClass === 'text-[#E11D2E]' ? 'text-white/60' : 'text-white/70'}`}>
