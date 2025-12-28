@@ -80,12 +80,13 @@ export function SearchForm({ initialQuery = '', variant = 'default', autoFocus =
             bg-white text-[#0F172A]
             placeholder-[#64748B]
             transition-all duration-200
-            focus:outline-none
+            !outline-none focus:!outline-none focus-visible:!outline-none
             ${isHero 
               ? 'border-transparent shadow-lg' 
               : 'border-[#CBD5E1]'
             }
           `}
+          style={{ outline: 'none', boxShadow: isHero ? '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)' : undefined }}
           autoComplete="off"
           aria-describedby={`${searchId}-hint`}
         />
