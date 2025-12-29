@@ -37,6 +37,14 @@ export const routing = defineRouting({
       en: '/funding/be-active-wales',
       cy: '/cyllid/cymru-actif'
     },
+    '/funding/crowdfunder': {
+      en: '/funding/crowdfunder',
+      cy: '/cyllid/crowdfunder'
+    },
+    '/funding/energy-saving-grant': {
+      en: '/funding/energy-saving-grant',
+      cy: '/cyllid/grant-arbed-ynni'
+    },
     '/contact': {
       en: '/contact',
       cy: '/cysylltu'
