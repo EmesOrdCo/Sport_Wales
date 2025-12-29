@@ -152,6 +152,10 @@ export const routing = defineRouting({
     '/vision': {
       en: '/vision',
       cy: '/gweledigaeth'
+    },
+    '/key-publications': {
+      en: '/key-publications',
+      cy: '/cyhoeddiadau-allweddol'
     }
   }
 });
