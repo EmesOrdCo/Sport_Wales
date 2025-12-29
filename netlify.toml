@@ -9,6 +9,32 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Force HTTPS redirect
+[[redirects]]
+  from = "http://sportwalesdemo.online/*"
+  to = "https://sportwalesdemo.online/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.sportwalesdemo.online/*"
+  to = "https://sportwalesdemo.online/:splat"
+  status = 301
+  force = true
+
+# Force HTTPS redirect (will work once certificate is provisioned)
+[[redirects]]
+  from = "http://sportwalesdemo.online/*"
+  to = "https://sportwalesdemo.online/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.sportwalesdemo.online/*"
+  to = "https://sportwalesdemo.online/:splat"
+  status = 301
+  force = true
+
 # Redirects for locale handling
 [[redirects]]
   from = "/"
