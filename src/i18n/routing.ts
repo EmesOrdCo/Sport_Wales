@@ -101,6 +101,14 @@ export const routing = defineRouting({
       en: '/governance',
       cy: '/governance'
     },
+    '/governance/environmental-sustainability-plan': {
+      en: '/governance/environmental-sustainability-plan',
+      cy: '/governance/cynllun-cynaliadwyedd-amgylcheddol'
+    },
+    '/governance/strategic-equality-plan': {
+      en: '/governance/strategic-equality-plan',
+      cy: '/governance/cynllun-cyfartaledd-strategol'
+    },
     '/facilities': {
       en: '/facilities',
       cy: '/facilities'
