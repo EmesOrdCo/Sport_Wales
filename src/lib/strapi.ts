@@ -5,6 +5,9 @@
  * Configure STRAPI_URL in your environment variables to enable.
  */
 
+// Import SSRF protection
+import { isSafeUrl } from './security/url-validation';
+
 // Types for Strapi API responses
 export interface StrapiResponse<T> {
   data: T;
@@ -124,6 +127,7 @@ function getHeaders(): HeadersInit {
 
 /**
  * Generic fetch function for Strapi API
+ * Includes SSRF protection
  */
 export async function fetchFromStrapi<T>(
   endpoint: string,
@@ -138,6 +142,11 @@ export async function fetchFromStrapi<T>(
     };
   }
 ): Promise<StrapiResponse<T>> {
+  // SSRF protection: Validate Strapi URL before making request
+  if (!isSafeUrl(STRAPI_URL)) {
+    throw new Error('SSRF protection: Strapi URL is not safe');
+  }
+
   // Build query parameters
   const params = new URLSearchParams();
   
@@ -337,7 +346,7 @@ export function getAlternateSlug(
     
     if (localization) {
       const locData = localization.attributes || localization;
-      return locData.slug || null;
+      return (locData && typeof locData === 'object' && 'slug' in locData) ? (locData.slug ?? null) : null;
     }
   }
   
@@ -349,6 +358,11 @@ export function getAlternateSlug(
  */
 export async function isStrapiAvailable(): Promise<boolean> {
   try {
+    // SSRF protection: Validate Strapi URL before making request
+    if (!isSafeUrl(STRAPI_URL)) {
+      return false;
+    }
+
     // Try to fetch articles endpoint to verify Strapi is running
     const response = await fetch(`${STRAPI_URL}/api/articles?pagination[limit]=1`, {
       method: 'GET',

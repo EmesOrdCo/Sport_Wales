@@ -343,8 +343,20 @@ p a, li a, span a {
 
 /* Hide funding button on mobile/tablet - only show on desktop (xl breakpoint: 1280px+) */
 @media (max-width: 1279px) {
-  .header-funding-btn {
+  .header-funding-btn,
+  header .header-funding-btn,
+  header a.header-funding-btn,
+  header a[href*="funding"].header-funding-btn {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
   }
 }
 

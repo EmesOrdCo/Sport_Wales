@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- iOS icon - clean and professional -->
+  <rect width="180" height="180" rx="40" fill="#B91C3C"/>
+  
+  <!-- Large "SW" monogram -->
+  <text 
+    x="90" 
+    y="128" 
+    font-family="Arial, 'Helvetica Neue', sans-serif" 
+    font-size="110" 
+    font-weight="900" 
+    fill="#FFFFFF" 
+    text-anchor="middle" 
+    letter-spacing="-3"
+    font-style="normal"
+  >SW</text>
+</svg>

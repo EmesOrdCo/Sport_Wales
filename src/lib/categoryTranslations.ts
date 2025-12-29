@@ -28,3 +28,4 @@ export function getCategoryColor(category: string): string {
   return categoryColors[category] || 'bg-[#64748B]/10 text-[#64748B]';
 }
 
+

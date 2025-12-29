@@ -18,3 +18,4 @@ echo "1. The Strapi admin panel should open in your browser"
 echo "2. Create an admin account (name, email, password)"
 echo "3. Follow the guide in TESTING_CMS.md for the next steps"
 
+

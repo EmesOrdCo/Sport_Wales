@@ -170,3 +170,4 @@ export function NewsletterSignup({ variant = 'default' }: NewsletterSignupProps)
   );
 }
 
+

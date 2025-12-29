@@ -47,6 +47,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 0,
+          originalOpp: undefined,
         },
         {
           title: t('crowdfunder'),
@@ -57,6 +58,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           accentColor: '#E11D2E',
           iconClass: 'text-[#E11D2E]',
           iconIndex: 2,
+          originalOpp: undefined,
         },
         {
           title: t('energySavingGrant'),
@@ -67,6 +69,7 @@ export function FundingSection({ opportunities }: FundingSectionProps = {}) {
           accentColor: '#F4B400',
           iconClass: 'text-white',
           iconIndex: 1,
+          originalOpp: undefined,
         },
       ];
   

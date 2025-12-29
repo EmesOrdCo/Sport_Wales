@@ -78,3 +78,4 @@ Wait for Strapi to start, then:
 
 *Everything is ready! Just restart Strapi and start creating content!*
 
+

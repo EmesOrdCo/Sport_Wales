@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
+import type { Pathnames } from '@/i18n/routing';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -48,38 +49,47 @@ export default async function PoliciesAndGovernancePage({
     { name: isWelsh ? 'Polisïau a Llywodraethu' : 'Policies and Governance', url: `https://www.sport.wales/${locale}/governance` },
   ];
 
-  const featuredCards = [
+  const featuredCards: Array<{
+    title: string;
+    description: string;
+    href: Pathnames;
+  }> = [
     {
       title: isWelsh ? 'Amrywiaeth y Bwrdd' : 'Board Diversity',
       description: isWelsh
         ? 'Credwn ei bod yn bwysig bod ein penderfynwyr yn dod o gefndiroedd gwahanol gyda...'
         : 'We believe it is important that our decision-makers are drawn from different backgrounds with different…',
-      href: '#',
+      href: '/governance',
     },
     {
       title: isWelsh ? 'Fframwaith Llywodraethu ac Arweinyddiaeth' : 'Governance and Leadership Framework',
       description: isWelsh
         ? 'Wedi\'i gynllunio i helpu sefydliadau i ddatblygu strwythurau cadarn a datblygu ymddygiadau arweinyddiaeth o ansawdd uchel.'
         : 'Designed to help organisations develop solid structures and develop high quality leadership behaviours.',
-      href: '#',
+      href: '/governance',
     },
     {
       title: isWelsh ? 'Cyhoeddiadau Allweddol' : 'Key Publications',
       description: isWelsh
         ? 'Yma fe welwch ein llyfrgell o ddogfennau a chyhoeddiadau allweddol.'
         : 'Here you will find our library of key documents and publications.',
-      href: '#',
+      href: '/key-publications',
     },
   ];
 
-  const newsArticles = [
+  const newsArticles: Array<{
+    title: string;
+    description: string;
+    linkText: string;
+    href: Pathnames;
+  }> = [
     {
       title: isWelsh ? 'Sut gall chwaraeon helpu Cymru i ffynnu: Argymhellion Maniffesto ar gyfer 2026 a thu hwnt' : 'How sport can help Wales thrive: Manifesto Recommendations for 2026 and beyond',
       description: isWelsh
         ? 'Pedwar argymhelliad yr hoffem i bleidiau gwleidyddol eu cynnwys yn eu maniffestos etholiad 2026.'
         : 'Four recommendations we would like political parties to include in their 2026 election manifestos.',
       linkText: isWelsh ? 'Darllenwch yr argymhellion maniffesto' : 'Read the manifesto recommendations',
-      href: '#',
+      href: '/news',
     },
     {
       title: isWelsh ? 'Rhoi llais i bobl ifanc mewn diogelu' : 'Giving young people a voice in safeguarding',
@@ -87,7 +97,7 @@ export default async function PoliciesAndGovernancePage({
         ? 'Darganfyddwch pam y dylech gynnwys pobl ifanc mewn penderfyniadau diogelu yn eich clwb neu sefydliad chwaraeon.'
         : 'Find out why you should involve young people in safeguarding decisions at your sports club or organisation.',
       linkText: isWelsh ? 'Darllen Mwy' : 'Read More',
-      href: '#',
+      href: '/news',
     },
     {
       title: isWelsh ? 'Wythnos Hinsawdd Cymru 2023: Beth mae Chwaraeon Cymru yn ei wneud i fynd i\'r afael â newid hinsawdd?' : 'Wales Climate Week 2023: What is Sport Wales doing to tackle climate change?',
@@ -95,7 +105,7 @@ export default async function PoliciesAndGovernancePage({
         ? 'Rydym wedi ymrwymo i helpu\'r genedl i gyflawni sero net erbyn 2030 a chreu...'
         : 'We\'re committed to helping the nation achieve net zero by 2030 and creating a greener, stronger and…',
       linkText: isWelsh ? 'Darllen Mwy' : 'Read More',
-      href: '#',
+      href: '/news',
     },
   ];
 
@@ -244,7 +254,7 @@ export default async function PoliciesAndGovernancePage({
             {featuredCards.map((card, index) => (
               <Link
                 key={index}
-                href={card.href as any}
+                href={card.href}
                 className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
                 {/* Image placeholder */}
@@ -274,7 +284,7 @@ export default async function PoliciesAndGovernancePage({
           {/* Explore All Link */}
           <div className="mt-12 text-center">
             <Link
-              href="#"
+              href="/governance"
               className="inline-flex items-center gap-2 text-[#E11D2E] font-semibold hover:gap-3 transition-all"
             >
               {isWelsh ? 'Archwilio Pob Polisi a Llywodraethu' : 'Explore All Policies and Governance'}
@@ -296,7 +306,7 @@ export default async function PoliciesAndGovernancePage({
             {newsArticles.map((article, index) => (
               <Link
                 key={index}
-                href={article.href as any}
+                href={article.href}
                 className="group block bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] hover:shadow-xl transition-all duration-300"
               >
                 {/* Image placeholder */}
@@ -346,3 +356,4 @@ export default async function PoliciesAndGovernancePage({
     </>
   );
 }
+

@@ -143,3 +143,4 @@ After creating content:
 5. Verify categories display correctly
 6. Check article detail pages load
 
+
