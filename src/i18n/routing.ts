@@ -61,17 +61,69 @@ export const routing = defineRouting({
       en: '/sport-in-schools',
       cy: '/chwaraeon-mewn-ysgolion'
     },
+    '/sport-in-schools/young-ambassadors': {
+      en: '/sport-in-schools/young-ambassadors',
+      cy: '/chwaraeon-mewn-ysgolion/llysgenhadon-ifanc'
+    },
+    '/sport-in-schools/physical-literacy': {
+      en: '/sport-in-schools/physical-literacy',
+      cy: '/chwaraeon-mewn-ysgolion/llythrennedd-corfforol'
+    },
     '/partners': {
       en: '/partners',
       cy: '/partneriaid'
+    },
+    '/partners/national': {
+      en: '/partners/national',
+      cy: '/partneriaid/cenedlaethol'
     },
     '/performance-sport': {
       en: '/performance-sport',
       cy: '/chwaraeon-perfformiad'
     },
+    '/performance-sport/welsh-olympic-athletes': {
+      en: '/performance-sport/welsh-olympic-athletes',
+      cy: '/chwaraeon-perfformiad/athletwyr-olympaidd-cymru'
+    },
     '/research': {
       en: '/research',
       cy: '/ymchwil'
+    },
+    '/research/school-sport-survey': {
+      en: '/research/school-sport-survey',
+      cy: '/ymchwil/arolwg-chwaraeon-ysgol'
+    },
+    '/research/national-survey': {
+      en: '/research/national-survey',
+      cy: '/ymchwil/arolwg-cenedlaethol'
+    },
+    '/research/statistics': {
+      en: '/research/statistics',
+      cy: '/ymchwil/ystadegau'
+    },
+    '/research/sustainability': {
+      en: '/research/sustainability',
+      cy: '/ymchwil/cynaliadwyedd'
+    },
+    '/research/sustainability/key-findings': {
+      en: '/research/sustainability/key-findings',
+      cy: '/ymchwil/cynaliadwyedd/canfyddiadau-allweddol'
+    },
+    '/research/surveys': {
+      en: '/research/surveys',
+      cy: '/ymchwil/arolygon'
+    },
+    '/research/reviews': {
+      en: '/research/reviews',
+      cy: '/ymchwil/adolygiadau'
+    },
+    '/research/qualitative': {
+      en: '/research/qualitative',
+      cy: '/ymchwil/ansoddol'
+    },
+    '/research/partners': {
+      en: '/research/partners',
+      cy: '/ymchwil/partneriaid'
     },
     '/policies': {
       en: '/policies',
@@ -116,6 +168,22 @@ export const routing = defineRouting({
     '/institute': {
       en: '/institute',
       cy: '/institute'
+    },
+    '/institute/strength-conditioning-course': {
+      en: '/institute/strength-conditioning-course',
+      cy: '/institute/cwrs-cryfder-a-chyflyriad'
+    },
+    '/institute/strength-conditioning-blog': {
+      en: '/institute/strength-conditioning-blog',
+      cy: '/institute/blog-cryfder-a-chyflyriad'
+    },
+    '/institute/wips': {
+      en: '/institute/wips',
+      cy: '/institute/wips'
+    },
+    '/institute/wipahs': {
+      en: '/institute/wipahs',
+      cy: '/institute/wipahs'
     },
     '/clip': {
       en: '/clip',
