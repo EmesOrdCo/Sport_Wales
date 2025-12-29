@@ -146,7 +146,7 @@ export default async function VisionAndStrategyPage({
 
             {/* Sport Wales Strategy Card */}
             <Link
-              href="/strategy"
+              href="/about/vision-and-strategy"
               className="group block relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#123F56] to-[#1E4A62] hover:shadow-2xl transition-all duration-500"
             >
               <div className="p-8 lg:p-10">
@@ -225,3 +225,4 @@ export default async function VisionAndStrategyPage({
     </>
   );
 }
+

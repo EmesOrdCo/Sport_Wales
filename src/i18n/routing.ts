@@ -148,6 +148,10 @@ export const routing = defineRouting({
     '/clip/login': {
       en: '/clip/login',
       cy: '/clip/mewngofnodi'
+    },
+    '/vision': {
+      en: '/vision',
+      cy: '/gweledigaeth'
     }
   }
 });
